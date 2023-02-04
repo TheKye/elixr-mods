@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{465489F0-3AE1-4094-B36C-1D58CAE0D905}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Eco.Mods.TechTree</RootNamespace>
+    <AssemblyName>em-homeobjects</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\EM-DecoPack\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\dlls\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="C5">
+      <HintPath>..\dlls\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=12.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip">
+      <HintPath>..\dlls\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Core">
+      <HintPath>..\dlls\Eco.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Gameplay">
+      <HintPath>..\dlls\Eco.Gameplay.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.LocalizationTools">
+      <HintPath>..\dlls\Eco.LocalizationTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.ModKit">
+      <HintPath>..\dlls\Eco.ModKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Mods">
+      <HintPath>..\dlls\Eco.Mods.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Plugins">
+      <HintPath>..\dlls\Eco.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Shared">
+      <HintPath>..\dlls\Eco.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Simulation">
+      <HintPath>..\dlls\Eco.Simulation.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Stats">
+      <HintPath>..\dlls\Eco.Stats.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Tests">
+      <HintPath>..\dlls\Eco.Tests.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WebServer">
+      <HintPath>..\dlls\Eco.WebServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.World">
+      <HintPath>..\dlls\Eco.World.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WorldGenerator">
+      <HintPath>..\dlls\Eco.WorldGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="Humanizer">
+      <HintPath>..\dlls\Humanizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\dlls\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteDB">
+      <HintPath>..\dlls\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="LZ4">
+      <HintPath>..\dlls\LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\dlls\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.FileSystems">
+      <HintPath>..\dlls\Microsoft.Owin.FileSystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener">
+      <HintPath>..\dlls\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting">
+      <HintPath>..\dlls\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.StaticFiles">
+      <HintPath>..\dlls\Microsoft.Owin.StaticFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq, Version=2.10.21623.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\dlls\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NodeGraphControl">
+      <HintPath>..\dlls\NodeGraphControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Open.Nat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f22a6a4582336c76, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\Open.Nat.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\dlls\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Priority Queue">
+      <HintPath>..\dlls\Priority Queue.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyChanged">
+      <HintPath>..\dlls\PropertyChanged.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpNoise">
+      <HintPath>..\dlls\SharpNoise.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpNoise.Utilities">
+      <HintPath>..\dlls\SharpNoise.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core">
+      <HintPath>..\dlls\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Github\Eco\Server\Eco.Gameplay\bin\x64\Debug\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Compile Include="Furniture\bedframe.cs" />
+    <Compile Include="Storage\BedroomChestObject.cs" />
+    <Compile Include="Storage\BedroomDresserObject.cs" />
+    <Compile Include="Storage\BedroomSmallDresserObject.cs" />
+    <None Include="FarmerStand.cs" />
+    <Compile Include="Flag.cs" />
+    <Compile Include="Paintings\CloudsPaintingObject.cs" />
+    <Compile Include="Doors\DoubleWoodDoorObject.cs" />
+    <Compile Include="Doors\ElegantDoorObject.cs" />
+    <Compile Include="Furniture\KingsBedObject.cs" />
+    <Compile Include="Windows\MetalSlidingWindow.cs" />
+    <Compile Include="Paintings\MountainPaintingObject.cs" />
+    <Compile Include="Occupancy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\SlidingWindow.cs" />
+    <Compile Include="Doors\StainedGlassDoor.cs" />
+    <Compile Include="Doors\StainedGlassDoubleDoorObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dyes\em-dyes.csproj">
+      <Project>{d8061bb9-5c8f-4ca0-bd82-5a74cfca69b2}</Project>
+      <Name>em-dyes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\em-greenenergy\em-greenenergy.csproj">
+      <Project>{F9177521-E7C4-401A-ABA3-0722FE812EFC}</Project>
+      <Name>em-greenenergy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cd $(TargetDir)
+del *.pdb
+del *.config
+del Eco*
+del em-base.dll
+del A*
+del B*
+del C*
+del D*
+del F*
+del G*
+del H*
+del I*
+del J*
+del K*
+del L*
+del M*
+del N*
+del O*
+del P*
+del Q*
+del R*
+del S*
+del T*
+del U*
+del V*
+del W*
+del X*
+del Y*
+del Z*</PostBuildEvent>
+  </PropertyGroup>
+</Project>

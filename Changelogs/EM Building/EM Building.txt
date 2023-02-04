@@ -1,0 +1,86 @@
+# Basic Change Logs ! 
+# Use something nice to break up each section, and its probably best to post most recent changes at the top :)
+# Example Changelog Provided!
+# use <br> to act as a blank line
+# you can also use <hr> For Horizontal Lines
+# Please Note, this system is not perfect and doesn't support html/ Code Phrases Everything prints as plain text
+#
+# Please Don't Delete The Header here as the system also relies on it
+#
+# Version 1.0.0 - Hot Fix
+# Fixed Issue With Item 4
+# <br>
+# ===============================
+# Version 1.0.0 - First Release!!
+# Added: 
+# New Item 1
+# New Item 2
+# Fixed Item 3
+==============================================================================================
+
+- Arches
+
+V3.0.0:
+Updated For Eco 9.4.x
+Requires EM Framework 3.1.0+
+
+- Bricks 
+
+v3.0.1:
+Fixed an Exploit where Cleaning bricks would result in more bricks then what you would have before
+
+V3.0.0:
+Added New Colored Bricks!
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+Black
+Blue
+Brown
+Green
+Grey
+Orange
+Red
+Pink
+Purple
+White
+Yellow
+
+==============================================================================================
+
+- Concrete - Currently To Large to download normally! Requires Manual Install at this time!
+
+V3.0.0: 
+Added New Colored Concrete!
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+Black
+Blue
+Brown
+Green
+Grey
+Orange
+Red
+Pink
+Purple
+White
+Yellow
+
+==============================================================================================
+
+- Roadworking 
+
+V3.0.0:
+Updated for Eco 9.4.x
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+
+==============================================================================================
+
+- Windows 
+
+V3.0.0:
+Updated for Eco 9.4.x
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+
+==============================================================================================

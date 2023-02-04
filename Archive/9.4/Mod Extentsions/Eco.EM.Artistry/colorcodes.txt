@@ -1,0 +1,11 @@
+﻿Red:     cb0606		Photoshop params only:	| Reds: -8  |  Yellows: 88  | Greens: 40 | Cyans: 60  | Blues: 54 | Magentas: 80 |
+Pink:    f502f2		Photoshop params only:	| Reds: 25  |  Yellows: 88  | Greens: 40 | Cyans: 60  | Blues: 54 | Magentas: 80 |
+Grey:    818181		Photoshop params only:	| Reds: 40  |  Yellows: 60  | Greens: 40 | Cyans: 60  | Blues: 20 | Magentas: 80 |
+Yellow:  f0ff00		Photoshop params only:	| Reds: 60  |  Yellows: 179 | Greens: 40 | Cyans: 60  | Blues: 54 | Magentas: 80 |
+Orange:  ff7e0c		Photoshop params only:	| Reds: 8   |  Yellows: 88  | Greens: 40 | Cyans: 60  | Blues: 52 | Magentas: 80 |
+Purple:  561b92		Photoshop params only:	| Reds: -8  |  Yellows: 88  | Greens: 40 | Cyans: 60  | Blues: 52 | Magentas: 80 |
+White:   ffffff		Photoshop params only:	| Reds: 194 |  Yellows: 17  | Greens: 63 | Cyans: 60  | Blues: 20 | Magentas: 80 |
+Green:   406639		Photoshop params only:	| Reds: -19 |  Yellows: 27  | Greens: 40 | Cyans: 60  | Blues: 20 | Magentas: 80 |
+Brown:   dfac89		Photoshop params only:	| Reds: -19 |  Yellows: 27  | Greens: 40 | Cyans: 60  | Blues: 20 | Magentas: 80 |
+Black:   000000		Photoshop params only:	| Reds: -19 |  Yellows: 27  | Greens: 40 | Cyans: 60  | Blues: 20 | Magentas: 80 |
+Blue:    221c9c		Photoshop params only:  | Reds: -8  |  Yellows: 88  | Greens: 40 | Cyans: 60  | Blues: 52 | Magentas: 80 |

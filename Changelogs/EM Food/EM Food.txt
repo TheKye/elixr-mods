@@ -1,0 +1,102 @@
+EM Food - Changelog
+
+==============================================================================================
+
+- Farming 
+
+V3.0.3:
+Added:
+Bacon And Eggs
+Boiled Eggs
+Charred Chicken
+Charred Chicken Drumsticks
+Charred Chicken Wings
+Chicken In Bannock
+Double Cream - Uses Cream Tag
+Low Fat Milk
+Milk
+Raw Chicken Breasts
+Raw Chicken Thighs
+Scrambled Eggs
+Wishbone
+
+Added Chicken Tag - Added to all Chicken items to use in recipes
+Added Milk Tag
+Added Cream Tag
+
+Bison Pen
+Goat Pen
+
+V3.0.2:
+Fixed Resolvers Not working properly on server reboot
+
+V3.0.1:
+Fixed Process Chicken Recipe returning cooked chicken wings/drumsticks
+Farmers Crate not having functionality,
+Farmers Stand Missing Icon
+Nerfed Chicken Coop and Beehive Passive Production Rates
+
+Updated to Use EM Framework 3.1.2 for the Food Item Resolver - All food items are now configurable,
+
+V3.0.0:
+Added BeeHive - Passive Crafting Table
+Added Beeswax
+Added Animal Trough
+Added Farmers Crate
+Added Chicken Feed
+
+Now Contains:
+Chicken Coop - Passive Crafting Table
+Chicken Carcass, Drumsticks, Wings
+Farmers Stand ( Outdoor Store)
+
+==============================================================================================
+
+- Food Smoking 
+
+V3.0.2:
+Fixed Resolvers Not working properly on server reboot
+
+V3.0.1:
+Updated to Use EM Framework 3.1.2 for the Food Item Resolver - All food items are now configurable,
+
+V3.0.0:
+Now Contains:
+Smoke House
+Smoke House Foods
+
+==============================================================================================
+
+- Zymology 
+
+V3.0.4:
+Added:
+Cream Tag to some recipes
+Changed Full Cream Milk to Powdered Milk
+Added Milk Tag
+Added Cream Tag
+
+Adjusted Powdered Milk and Cream Nutrition Values
+
+Fixed Maltose And Corn Syrup Being a higher level them making "Powdered Milk"
+
+Changed Coffee To Take Milk Tag
+
+v3.0.3:
+Fixed Resolvers Not working properly on server reboot
+
+v3.0.2:
+Fish Oil - Is Classed as a Cooking Oil - Currently Uses same icon as Urchin Oil
+Vegetable Oil - Is Classed as a Cooking Oil - Currently Uses same icon as Urchin Oil
+Fixed Caramel Popcorn recipe returning Popcorn instead of caramel popcorn
+
+Updated to Use EM Framework 3.1.2 for the Food Item Resolver - All food items are now configurable,
+
+v3.0.1:
+Fixed an issue where crafting popcorn would result in the server crashing
+
+V3.0.0:
+Now Contains:
+Everything else from EM Food - Restored to Former "Zymology" Update
+
+==============================================================================================

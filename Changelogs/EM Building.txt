@@ -1,0 +1,70 @@
+EM Building - Changelog
+
+==============================================================================================
+
+- Arches
+
+V3.0.0:
+Updated For Eco 9.4.x
+Requires EM Framework 3.1.0+
+
+- Bricks 
+
+v3.0.1:
+Fixed an Exploit where Cleaning bricks would result in more bricks then what you would have before
+
+V3.0.0:
+Added New Colored Bricks!
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+Black
+Blue
+Brown
+Green
+Grey
+Orange
+Red
+Pink
+Purple
+White
+Yellow
+
+==============================================================================================
+
+- Concrete - Currently To Large to download normally! Requires Manual Install at this time!
+
+V3.0.0: 
+Added New Colored Concrete!
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+Black
+Blue
+Brown
+Green
+Grey
+Orange
+Red
+Pink
+Purple
+White
+Yellow
+
+==============================================================================================
+
+- Roadworking 
+
+V3.0.0:
+Updated for Eco 9.4.x
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+
+==============================================================================================
+
+- Windows 
+
+V3.0.0:
+Updated for Eco 9.4.x
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+
+==============================================================================================

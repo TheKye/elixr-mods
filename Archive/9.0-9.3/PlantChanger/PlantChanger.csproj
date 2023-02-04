@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+      <Authors>Elixr Mods</Authors>
+      <Company>Elixr Solutions</Company>
+      <Product>EM CoreFileChanger</Product>
+      <Version>1.1.0</Version>
+      <Copyright>Elixr Solutions 2020</Copyright>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <PackageProjectUrl>https://elixrmods.com/</PackageProjectUrl>
+      <PackageIcon></PackageIcon>
+      <RepositoryUrl>https://git.elixr-solutions.com/elixrmods/elixr-mods</RepositoryUrl>
+      <RepositoryType>Private GitLab</RepositoryType>
+      <NeutralLanguage>en</NeutralLanguage>
+      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+      <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>

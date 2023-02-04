@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Recipe Defaults</Title>
+			<ShortCut>rvdef</ShortCut>
+        </Header>
+        <Snippet>
+			<Declarations>
+				<Literal>
+                    <ID>name</ID>
+                    <Default>name</Default>
+                </Literal>
+                <Literal default="true" Editable="false">
+                    <ID>classname</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Function>ClassName()</Function>
+                    <Default>ClassNamePlaceholder</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp">
+                <![CDATA[
+					static RecipeDefaultModel Defaults => new()
+					{
+						ModelType = typeof($classname$).Name,
+						Assembly = typeof($classname$).AssemblyQualifiedName,
+						HiddenName = "$name$",
+						LocalizableName = Localizer.DoStr("$name$"),
+						IngredientList = new()
+						{
+							new EMIngredient("REPLACEME", true, 1, true),
+						},
+						ProductList = new()
+						{
+							new EMCraftable("REPLACEME"),
+						},
+						CraftingStation = "REPLACEME",
+					};
+					
+					static $classname$() { EMRecipeResolver.AddDefaults(Defaults); }
+					
+					public $classname$()
+					{
+						CraftingComponent.AddTagProduct(EMRecipeResolver.Obj.ResolveStation(this), typeof(REPLACEME), EMRecipeResolver.Obj.ResolveRecipe(this).First());
+					}
+					]]>
+            </Code>			
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

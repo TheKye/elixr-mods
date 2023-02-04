@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Eco.Core">
+      <HintPath>..\..\dlls\Eco.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Gameplay">
+      <HintPath>..\..\dlls\Eco.Gameplay.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.ModKit">
+      <HintPath>..\..\dlls\Eco.ModKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Mods">
+      <HintPath>..\..\dlls\Eco.Mods.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Networking.ENet">
+      <HintPath>..\..\dlls\Eco.Networking.ENet.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Plugins">
+      <HintPath>..\..\dlls\Eco.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Shared">
+      <HintPath>..\..\dlls\Eco.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Simulation">
+      <HintPath>..\..\dlls\Eco.Simulation.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Stats">
+      <HintPath>..\..\dlls\Eco.Stats.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Tests">
+      <HintPath>..\..\dlls\Eco.Tests.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WebServer">
+      <HintPath>..\..\dlls\Eco.WebServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WindowsForms">
+      <HintPath>..\..\dlls\Eco.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.World">
+      <HintPath>..\..\dlls\Eco.World.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WorldGenerator">
+      <HintPath>..\..\dlls\Eco.WorldGenerator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="cd $(SolutionDir)&#xD;&#xA;cd bin&#xD;&#xA;mkdir Mods\UserCode\BigShovel&#xD;&#xA;mkdir Mods\UserCode\BigShovelLight&#xD;&#xA;mkdir Mods\UserCode\BigShovel\Assets&#xD;&#xA;mkdir Mods\UserCode\BigShovelLight\Assets&#xD;&#xA;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\9.4\Collaborations\BigShovel\BigShovel.cs&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovel&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\9.4\Collaborations\BigShovel\IronBigShovel.cs&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovel&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\9.4\Collaborations\BigShovel\WoodenBigShovel.cs&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovel&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\9.4\Collaborations\BigShovel\SteelBigShovel.cs&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovel&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\9.4\Collaborations\BigShovel\ModernBigShovel.cs&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovel&quot;&#xD;&#xA;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\Built Unity Assets\Collaborations\BigShovel\WoodenBigShovel.unity3d&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovel\Assets&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\Built Unity Assets\Collaborations\BigShovel\IronBigShovel.unity3d&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovel\Assets&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\Built Unity Assets\Collaborations\BigShovel\SteelBigShovel.unity3d&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovel\Assets&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\Built Unity Assets\Collaborations\BigShovel\ModernBigShovel.unity3d&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovel\Assets&quot;&#xD;&#xA;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\9.4\Collaborations\BigShovel\BigShovel.cs&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovelLight&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\9.4\Collaborations\BigShovel\IronBigShovel.cs&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovelLight&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\9.4\Collaborations\BigShovel\WoodenBigShovel.cs&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovelLight&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\9.4\Collaborations\BigShovel\SteelBigShovel.cs&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovelLight&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\9.4\Collaborations\BigShovel\ModernBigShovel.cs&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovelLight&quot;&#xD;&#xA;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\Built Unity Assets\Collaborations\BigShovelLight\WoodenBigShovelLight.unity3d&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovelLight\Assets&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\Built Unity Assets\Collaborations\BigShovelLight\IronBigShovelLight.unity3d&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovelLight\Assets&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\Built Unity Assets\Collaborations\BigShovelLight\SteelBigShovelLight.unity3d&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovelLight\Assets&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)\Built Unity Assets\Collaborations\BigShovelLight\ModernBigShovelLight.unity3d&quot; &quot;$(SolutionDir)\bin\Mods\UserCode\BigShovelLight\Assets&quot;&#xD;&#xA;" />
+  </Target>
+ 
+</Project>

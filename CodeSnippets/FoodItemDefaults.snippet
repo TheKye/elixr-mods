@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Food Item Defaults</Title>
+			<ShortCut>fdef</ShortCut>
+        </Header>
+        <Snippet>
+			<Declarations>
+				<Literal>
+                    <ID>name</ID>
+                    <Default>name</Default>
+                </Literal>
+                <Literal default="true" Editable="false">
+                    <ID>classname</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Function>ClassName()</Function>
+                    <Default>ClassNamePlaceholder</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp">
+                <![CDATA[
+        private static readonly FoodItemModel defaults = new(typeof($classname$), "OPTIONALDISPLAYNAME", calories: 0, carbs: 0, fat: 0, protein: 0, vitamins: 0);
+
+        public override float Calories => EMFoodItemResolver.Obj.ResolveCalories(this);
+        public override Nutrients Nutrition => n;
+        private Nutrients n => EMFoodItemResolver.Obj.ResolveNutrients(this);
+        static $classname$() => EMFoodItemResolver.AddDefaults(defaults);
+					]]>
+            </Code>			
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

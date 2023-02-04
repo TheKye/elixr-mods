@@ -1,0 +1,968 @@
+EM Building - Changelog
+
+- Arches
+
+V3.0.0
+Updated For Eco 9.4.x
+Requires EM Framework 3.1.0+
+
+- Bricks 
+
+v3.0.1:
+Fixed an Exploit where Cleaning bricks would result in more bricks then what you would have before
+
+V3.0.0:
+Added New Colored Bricks!
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+Black
+Blue
+Brown
+Green
+Grey
+Orange
+Red
+Pink
+Purple
+White
+Yellow
+
+- Concrete 
+
+V3.0.0 - Currently To Large to download normally! Requires Manual Install at this time!
+Added New Colored Concrete!
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+Black
+Blue
+Brown
+Green
+Grey
+Orange
+Red
+Pink
+Purple
+White
+Yellow
+
+- Roadworking 
+
+V3.0.0
+Updated for Eco 9.4.x
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+
+- Windows 
+V3.0.0
+Updated for Eco 9.4.x
+Uses EM Framework 3.1.0
+Uses EM Framework Recipe Resolver for customizing the Recipes!
+
+
+==============================================================================================
+
+EM Food - Changelog
+
+- Farming 
+
+V3.0.2:
+Fixed Resolvers Not working properly on server reboot
+
+V3.0.1:
+Fixed Process Chicken Recipe returning cooked chicken wings/drumsticks
+Farmers Crate not having functionality,
+Farmers Stand Missing Icon
+Nerfed Chicken Coop and Beehive Passive Production Rates
+
+Updated to Use EM Framework 3.1.2 for the Food Item Resolver - All food items are now configurable,
+
+V3.0.0:
+Added BeeHive - Passive Crafting Table
+Added Beeswax
+Added Animal Trough
+Added Farmers Crate
+Added Chicken Feed
+
+Now Contains:
+Chicken Coop - Passive Crafting Table
+Chicken Carcass, Drumsticks, Wings
+Farmers Stand ( Outdoor Store)
+
+- Food Smoking 
+
+V3.0.2:
+Fixed Resolvers Not working properly on server reboot
+
+V3.0.1:
+Updated to Use EM Framework 3.1.2 for the Food Item Resolver - All food items are now configurable,
+
+V3.0.0:
+Now Contains:
+Smoke House
+Smoke House Foods
+
+- Zymology 
+
+v3.0.3:
+Fixed Resolvers Not working properly on server reboot
+
+v3.0.2:
+Fish Oil - Is Classed as a Cooking Oil - Currently Uses same icon as Urchin Oil
+Vegetable Oil - Is Classed as a Cooking Oil - Currently Uses same icon as Urchin Oil
+Fixed Caramel Popcorn recipe returning Popcorn instead of caramel popcorn
+
+Updated to Use EM Framework 3.1.2 for the Food Item Resolver - All food items are now configurable,
+
+v3.0.1:
+Fixed an issue where crafting popcorn would result in the server crashing
+
+V3.0.0:
+Now Contains:
+Everything else from EM Food - Restored to Former "Zymology" Update
+
+==============================================================================================
+
+EM Housing - Changelog
+
+- Doors 
+
+V3.0.3:
+Fixed Resolvers preventing servers from rebooting
+Proper Housing Items Nerf
+
+V3.0.2:
+Fixed Rolling Stone Doors not sealing Rooms
+Updated to use Housing Resolvers
+Changed All Recipes to use Recipe Resolver ( Paintings was missing Configurable Recipes)
+Housing Point Nerfs
+
+V3.0.1:
+Fixed an issue With Doors Occupancy not Declaring a room properly
+
+V3.0.0:
+Updated to 9.4.x
+
+- Furniture 
+
+V3.0.3:
+Fixed Resolvers preventing servers from rebooting
+Proper Housing Items Nerf
+
+V3.0.2:
+Fixed a critical bug that prevented servers from booting with new Housing Resolver
+
+V3.0.1:
+Updated to use Housing Resolvers
+Changed All Recipes to use Recipe Resolver ( Paintings was missing Configurable Recipes)
+Housing Point Nerfs
+
+V3.0.0:
+Updated to 9.4.x
+All Furniture From EM Home Objects
+
+- Paintings  - Relys on The Artistry Mod! Version 3.1.0 will be required
+
+V3.0.3:
+Fixed Resolvers preventing servers from rebooting
+Proper Housing Items Nerf
+
+V3.0.2:
+Fixed a critical bug that prevented servers from booting with new Housing Resolver
+
+V3.0.1:
+Updated to use Housing Resolvers
+Changed All Recipes to use Recipe Resolver ( Paintings was missing Configurable Recipes)
+Housing Point Nerfs
+
+V3.0.0:
+Updated to 9.4.x
+All Paintings from EM Home Objects
+
+
+==============================================================================================
+
+EM Storage - Changelog
+
+- Shipping 
+
+V3.0.0
+Added 20ft Shipping Container
+Added 40ft Shipping Container
+Added Shipping Crate
+Removed Shipping Container
+Removed Steel Shipping Container
+
+- Stockpiling 
+V3.0.0
+Added Small Log Pile ( the working version )
+Added Medium Log Pile
+Added Large Log Pile
+Added Small Rock Pile
+Added Medium Rock Pile
+Added Large Rock Pile
+
+Storage Slots and Link Distances and Recipes for all of these can be adjusted via the server GUI or through the config file!
+
+==============================================================================================
+
+EM Artistry - Changelog
+
+V3.1.1
+Updated To Use the EM Resolvers
+
+V3.1
+Updated for EM Framework 3.1
+Changed To New Structure
+
+V3.0
+Updated To .NET 5.0
+
+==============================================================================================
+
+EM Framework - Changelog
+
+V3.1.4
+Fixed Resolvers Not working properly on server reboot
+
+v3.1.3
+Fixed a critical bug that prevented servers from booting with new Housing Resolver
+
+v3.1.2
+Added:
+Food Item Resolver - Food Items can now be configurable when using the IConfigurableFoodItem interface
+Housing Point Resolver - Housing Items can now be configurable when using the IConfigurableHousing interface
+
+Fixed:
+Fixed a bug with the Passive Crafters preventing the server from booting
+
+v3.1.1
+Important Hotfix For EM Framework - Fixed an issue where the Weight Resolver and Stack Size Changer would force its values all the time instead of being optional to have on or off
+
+V3.1
+Added:
+Storage Slot Changer for Compiled Mods
+Link Distance Changer for Compiled Mods
+The Ability To Override Other Compiled Mod Recipes that use the EM Recipe Resolver
+Item Weight Changer for all Items with [Weight()] Attribute (Seemingly All of them)
+[IgnoreStackSize] Attribute To instruct the EM Stack Size Changer to ignore this stack size
+​CustomStackLimit Restriction, Lets you change the max stack size of all items in this storage except for tools, will also not let you store garbage (garbage, tailings, wet tailings) using this restriction
+​StackAllLimitRestriction, Allows you to multiply the stack size amount, IE: 1.5x or 2x for all items stored in this storage
+
+Changed:
+Recipe Resolver to be way more functional with many more options for changing Recipes in Compiled Mods
+Moved Stack Size Changer to a single Tab in the Server GUI from all mods that use the Stack Size Changer
+Changed ChatBase.InfoPane to use an Enum for PanelType for clarity
+Changed ChatBaseExtended.CBInfoPane to use an Enum for PanelType for clarity
+
+Notes:
+- The Recipe Changer For compiled mods will work with Recipe Variants! All information will be available in the documentation.
+- Namespaces have not changed just the Assembly Name, this will break backwards compatibility
+- Using The IRecipeOverride will not crash the server if the mod it is using to override doesn't exist or the mod it is overriding doesn't exist it will just put an error in the console then finish the server boot
+
+
+V3.0.1
+Fixed An Issue where admins couldn't use admin commands even if Admin Default Behavior was set to True
+
+
+V3.0
+Moved Project To .NET 5.0 From .NET STANDARD 2.1 Be sure to make the change!
+
+Added 2 New Sensors:
+Power Sensor - Used to toggle On/Off For anything that uses Power In the same room ( In unity Use the Bool Param IsOn )
+Lights Sensor - Used to toggle On/Off All Lights in the same room ( In unity use the Bool Param IsOn )
+
+Fixed Chat Commands Not Logging Properly!
+Fixed to work with 9.4.1
+
+----------------------------------------------------------------------------------------------
+
+Change Log For EM Update 3.0 "The Reset Update" Rollout Part 1 Release
+
+EM Building:
+
+Arches Ver 3.0.0(Formerly: EM Arches):
+- Updated For Eco 9.4.x
+- Requires EM Framework 3.1.0+
+
+Bricks Ver 3.0.0:
+Added New Colored Bricks!
+- Uses EM Framework 3.1.0
+- Uses EM Framework Recipe Resolver for customizing the Recipes!
+- Black
+- Blue
+- Brown
+- Green
+- Grey
+- Orange
+- Red
+- Pink
+- Purple
+- White
+- Yellow
+
+Concrete Ver 3.0.0 - Currently To Large to download normally! Requires Manual Install at this time!
+Added New Colored Concrete!
+- Uses EM Framework 3.1.0
+- Uses EM Framework Recipe Resolver for customizing the Recipes!
+- Black
+- Blue
+- Brown
+- Green
+- Grey
+- Orange
+- Red
+- Pink
+- Purple
+- White
+- Yellow
+
+Roadworking Ver 3.0.0 (Formerly: EM Transportation)
+- Updated for Eco 9.4.x
+- Uses EM Framework 3.1.0
+- Uses EM Framework Recipe Resolver for customizing the Recipes!
+
+Windows Ver 3.0.0 (Formerly: EM Windows)
+- Updated for Eco 9.4.x
+- Uses EM Framework 3.1.0
+- Uses EM Framework Recipe Resolver for customizing the Recipes!
+
+EM Food - Requires Recipes to be updated to be editable
+
+Farming Ver 3.0.0 (Formerly: EM Food)
+- Added BeeHive - Passive Crafting Table
+- Added Beeswax
+- Added Animal Trough
+- Added Farmers Crate
+- Added Chicken Feed
+
+Now Contains:
+- Chicken Coop - Passive Crafting Table
+- Chicken Carcass, Drumsticks, Wings
+- Farmers Stand ( Outdoor Store)
+
+Food Smoking Ver 3.0.0 (Formerly: EM Food)
+Now Contains:
+- Smoke House
+- Smoke House Foods
+
+Zymology Ver 3.0.0 ( Formerly: EM Food)
+Now Contains:
+Everything else from EM Food - Restored to Former "Zymology" Update
+
+EM Housing - Requires Recipes to be updated to be editable
+
+Doors Ver 3.0.0 ( Formerly: EM Doors)
+Updated to 9.4.x
+
+Furniture Ver 3.0.0 ( Formerly: EM Home Objects )
+Updated to 9.4.x
+All Furniture From EM Home Objects
+
+Paintings Ver 3.0.0 ( Formerly: EM Home Objects ) - Relys on The Artistry Mod! Version 3.1.0 will be required
+Updated to 9.4.x
+All Paintings from EM Home Objects
+
+Shipping Ver 3.0.0 (Formerly: EM Storage)
+Added 20ft Shipping Container
+Added 40ft Shipping Container
+Added Shipping Crate
+Removed Shipping Container
+Removed Steel Shipping Container
+
+Stockpiling Ver 3.0.0 ( Formerly: EM Storage)
+Added Small Log Pile ( the working version )
+Added Medium Log Pile
+Added Large Log Pile
+Added Small Rock Pile
+Added Medium Rock Pile
+Added Large Rock Pile
+
+Storage Slots and Link Distances and Recipes for all of these can be adjusted via the server GUI or through the config file!
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Fullkit Version 2.1.1 Update
+EM Framework Version 2.2.2
+Fixed DirectionUtils GetDirectionOrLooking not having optional Direction string like it should
+Added CleanSanitize(string); Will remove all whitespaces from the string and return a lower converted string
+Added ChatEvent to Custom Command Handler
+Adding null when user is not present in the allusers list
+adding all users to the proper groups when em framework has been added to an already running server
+fixes not adding the correct user to the group
+
+Conv Pack v2.1.1
+GreenEnergy v2.0.1
+Added Missing Recipes to the Solar Panel and Battery
+
+Storage v2.1.1
+Fixed auth checker on the StorageTerminal 
+Storage terminal now gets stockpiles unclaimed as well
+Storage terminal will still work even if there is no stock
+
+
+Deco Pack v2.2.1
+EM Doors v2.1.1
+Fixed Door Auth Not working properly
+
+EM Food v2.1.1
+Added BU module to Fermenting Barrel and Smokehouse
+Changed Urchin Oil Recipe to require Urchins instead of fish
+Slight Balances to the Smokehouse foods
+
+EM Windows v2.1.1
+Fixed Window Auth Not Working properly
+
+EM HomeObjects v2.1.1
+Added Filler icons for catwalks and shelves for the time being
+
+Features Pack v2.2.1
+EM Admin v2.2.1
+Added 2 New Commands:
+/unclaim-all true/false, username - Unclaims all of the selected users property, vehichles included ( true or false to return claim papers or not)
+/dev-reclaim true/false - will reclaim all dev tools in the server, true or false to remove them from admins as well.
+
+Re-introducing: Give Search And Select,
+GSAS comes in 2 forms, a command and an item:
+Select any item from a ui, currently can not select multipe of a single item but you can select multiple items at once, this is also a single use item, once used you will need to get another one
+
+Informatics V2.1.1
+Improved the /prices command to work regardless of store status and with any item
+
+Homes v2.2.1
+Added Cooldown Config option to home teleports
+Added notification for how many teleports you have left
+Fixed issue with setting max to -1 not working as infinite
+added /homes command to see how many more times you can go home that day
+
+Warp v2.2.1
+Added notification for how many teleports you have left
+Fixed issue with setting max to -1 not working as infinite
+upped Warp Point and Warp Sign text limit to 700
+Updated look for easier way of telling which way is the front
+added /warps command to see how many more times you can warp for that day
+
+TP v2.2.1
+Added notification for how many teleports you have left
+Fixed issue with setting max to -1 not working as infinite
+added /teleports command to see how many more times you can teleport that day
+
+Daily v2.2.1
+Added Configuration to set how often players can get their daily rewards 
+Default setting is every 24 hours, Config is set to hours so if you want it to be 18 hours between rewards you can set this to 18
+New config param is timer
+/daily-config timer, int timeinhours
+
+=======================================================================================================================================================
+
+Full Kit Version 2.1.0 Update
+EM Framework Version 2.2.0
+Added New Version checker for all EM Modules - It will now print to the console the current version of your module and if there is an updated version or not
+Added Stacksize controller for Mods that are compiled and wish to allow server owners to change the stack sizes of their items in their compiled mods
+Adjusted the Sensors in helpers to now work and work in a much better way
+Added New Utils Namespace with new Utilities:
+
+Block Utils: GetBlockType(string BlockName) - This will allow you to use a string find and get the closest Block type, you can specify or hope for the closest match:
+Match Processes: 
+If BlockName = air it will return an empty block,
+if BlockName = mortared stone - it will try and match against: MortaredStoneFloorBlock - If this matches it will return that value
+if BlockName = mortared stone wall - it will try an find a match to: MortaredStoneWall* - It will check if MortaredStoneWallFloorBlock matches ( which it won't ) and if it doesnt it will move to the next one: 
+MortaredStoneWall (which is not a block type so it will fail here as well) and if that fails it will move to the last one: MortaredStoneWallBlock (which does have a match) and return that block type based off your string input.
+
+DirectionUtils - Get a players facing Direction/Looking Direction
+
+GetLookingDirection(User user) - Get Looking Direction of User, Can be Left, Right, Forward, Backward, Up, Down
+GetDirection(string Direction) - An Alternate Method of getting the looking direction with using a string, only works with: up/u, down/d, left/l, right/r, back/b, forward/facing
+GetDirectionOrLooking(User user, string Direction) - This will auto determine wether to use GetDirection or GetLookingDirection and will work accordingly
+
+SkillsUtils - Get Details about the players skills
+bool HasSkillLevel(User user, Type skillType, int level) - Return true if the user has the level of the skills, return false if the user don't have the skill
+int GetSkillLevel(User user, Type skillType) - Return the level of the skillType for the user
+
+WorldUtils: Get help with world based stuff in eco:
+GetPlantSpecies(Type pBlockType) - Gets the type of plant species
+GetTopBlocks(Vector3i pPosition, int pRange) - get the top blocks in the set range
+GetNeightbourgWorldObject<T>(Vector3i position) - Return a list of world object where position are one block away from the position given
+GetTopBlockAroundPoint<T>(User user, Vector3i position, int range) - Get a list of top Block that match the type T. Usefull for getting tree debris or plants
+GetTopBlockPositionAroundPoint<T>(User user, Vector3i position, int range) - Get a list of position of top Block that match the type T. Usefull when wanted to destroy plants or tree debris
+GetSphereBlock(Vector3i centerPosition, int radius) - Get the position of all block in a sphere radius
+
+Conv Pack V2.1.0
+EM Storage Version 2.1.0
+Now requires EM Framework
+Added Stack Size Controller Config for altering the max stack sizes in the storage mod
+Fixed a bug where Required skill wouldn't show up for some recipes
+Fixed a bug where the Steel Shipping Contatiner couldn't be crafted
+Fixed a bug where the Farmers stand flowers didn't display properly
+Removed Requires Solid Ground component from Storage Crate
+
+EM TailingsReprocessing V2.1.0
+Full Rework
+All recipes now require labor
+Removed The ability to gain Fragments
+Changed Recipes to give Concentrated Ores instead of fragments
+Added A way to dry out the Wet Tailings
+Added Labor to all the recipes
+Fixed a bug where required skill wouldn't show
+
+Note* Fragments may be getting removed from the pack at a later date, left the fragments to bar recipe in for the time being
+
+EM Green Energy V2.0.0
+Added Green Energy
+Brought back Natural Gas - Is Classed as Liquid Fuel so can be used by anything that uses Liquid Fuel
+Brought back Propane Tanks - Used to store the natural gas
+Daylight Sensors for lights
+Proximity Sensors for lights
+Motion Sensors for lights
+Added Rechargable Battery for storing and outputting power 
+Added New type of solar panel, puts out 250kw of power only works during the day
+
+Deco Pack Version 2.1.0
+EM Arches Version 2.0.1
+Fixed a few bugs with the arch displays
+Certain arch rotations now use the correct model and rotation variant of the correct model 
+
+EM Doors version 2.1.0
+Fixed an issue where the doors wouldn't save state on client restart
+Most of the Doors have been changed to act like vanilla doors, so you can now place single doors either side and they will open the same way
+Added Labor to all the recipes
+Fixed a bug where required skill wouldn't show
+Fixed an Issue where the doors wouldn't keep their persisted animated state on client restart and server reboot
+Removed:
+Great Hall Double Door - You can now use 2 single Great Hall Doors for the same effect
+Stained Glass Double Door - You can now use 2 single Stained Glass Double Doors for the same effect
+
+EM Food Version 2.1.0
+Now requires EM Framework
+Added Stack Size Controller Config for altering the max stack sizes in the food mod
+Added Labor to all the recipes
+Adjusted some text for localization
+Fixed a bug where required skill wouldn't show
+
+EM Home Objects Version 2.1.0
+Added new Blocks! Shelf Blocks and Catwalks both only in the hewn log varieties for now ( more to come later if not before i finish this change log and release)
+Shelf Blocks have 2 types, Wall and Block, Both will work seamlessly together, Wall shelfs sit perfectly against wall blocks for the best display, Block versions fit better with solid blocks for less clipping
+Added Labor to all recipes
+Fixed a bug where required skill wouldn't show
+Made it so the Lava rug can now be placed under objects, and only affects other rugs instead of decorations
+Reduced Values of the Lion Statue and other housing items as to be not so broken
+
+EM Transportation Version 2.1.0
+Fixed an issue with the metal barrier not being able to be picked up
+Added labor to required recipes
+Fixed a bug where required skill wouldn't show
+
+EM Windows Version 2.1.0
+Added Labor to all recipes
+Fixed a bug where required skill wouldn't show
+Fixed Recipes for: Long Metal Sliding Window, Tall Wood sliding Window and Long Wood Sliding Window - Now use correct items and skills to make
+Fixed an Issue where the Long and Tall Windows wouldn't keep their persisted animated state on client restart and server reboot
+
+
+Features Pack Version 2.2.0
+EM Admin Version 2.2.0
+Added World Time Changer - You can now reset the worlds time with a simple command or you can set it to the day you believe the servers progression is ie: day 5 instead of day 20
+After extensive testing we also added the ability for you to set the world time ahead of the current time and reward all players with the lost xp over that time period, ie you advance 5 days players will get that 5 days worth of xp
+
+EM Commands Version 2.2.0
+Fixed an issue with Top Richest not working 
+
+EM Homes Version 2.2.0
+Fixed an issue where Daily Resets for teleports where not happening
+Added Home Settings command to display all the settings you have, Includes groups
+
+EM Daily Version 2.2.0
+Full rework of the daily module
+Added new object: Reward Pack Creator
+Reward Pack Creator is an admin only item, meaning an admin may only get and use this item
+Added the ability to add new packs filled with items and how much of each item, skills can not be given though
+You can also set the chance of each pack, so say you want a higher chance to get the lower pack,
+This also works with groups as we added a start tier, Tiers are used to determine the value of a pack, higher tiers mean the pack is a higher value ( this is self set )
+you can set it so different groups start at a higher tier, ie Tier 2 for the VIP group, the randomizer will then only select from packs that have a tier value of 2 or higher instead of the default 0
+Daily resets should now work properly and give you an indication of how long you have to wait to be able to get the next daily pack
+Token XP can be set easily through a command "/daily-config xp, xp amount in whole numbers ( ie 10 )
+Tokens are only gainable through being admin given or added into a pack, 
+Currency rewards have been removed from the daily set but may be given through packs
+
+
+EM MOTD Version 2.2.0
+MOTD Rework
+Removed server chat messages
+Removed commands for adding in the motd for the server chat
+Added new File for the MOTD ( A txt File ) 
+The motd rework has changed from being timed messages in the chat to a popup on login, 
+The content of the popup is managed by a txt file allowing you to easily manage whats shown, 
+You may also add new messages to the message list displayed on the popup ( a new feature will be coming that will allow you to set these as a timed message meaning they will be deleted after x amount of time ) 
+new commands added:
+"/motd" re-opens the MOTD panel for any user
+"/motd-madd" Admin command to add new messages to the message list
+"/motd-reload" reloads the config file for the motd ( the txt file )
+"/motd-mrem number" Removes one of the messages in the message list, number displayed in the command there is the messages number in the list, IE: you have 3 messages in the list and you want to remove the second one, the number would be 2
+
+EM TP Version 2.2.0
+Added TP Settings command to display all the settings you have, Includes groups
+
+EM Warp Version 2.2.0
+Added Warp Settings command to display all the settings you have, Includes groups
+=======================================================================
+
+
+Full Kit Version 2.0.0 - 9.2.x Update
+
+Conv Pack V 2.0.0 - 9.2.x Update -:
+EM-Storage v 2.0.0:
+9.2.x Update
+- Added Kitchen Cabinet
+- Added Storage Crate
+- Added Farmers Stand 
+- Added Storage Terminal
+- Increased Shipping Container Link Distance to 12 from 7
+- Increased Steel Shipping Container Link Distance to 12 from 7
+
+EM-TailingsReprocessing v2.0.0:
+9.2 Update
+- Removed Slag Recipe
+- Added Gold Flakes
+- Added Gold Flakes to Gold Bar Recipe
+
+Deco Pack:
+
+EM-Arches V2.0.0:
+9.2 Update
+- Removed all Arch Doors
+- Removed all Arches
+- Added Mortared Stone Multi Arch Blockset
+- Added Mortared Stone Single Arch Blockset
+- Added Mortared SandStone Multi Arch Blockset
+- Added Mortared SandStone Single Arch Blockset
+- Added Mortared LimeStone Multi Arch Blockset
+- Added Mortared LimeStone Single Arch Blockset
+- Added Mortared Granite Multi Arch Blockset
+- Added Mortared Granite Single Arch Blockset
+- Added Mortared Basalt Multi Arch Blockset
+- Added Mortared Basalt Single Arch Blockset
+- Added Mortared Gniess Multi Arch Blockset
+- Added Mortared Gniess Single Arch Blockset
+
+
+EM-Doors V2.0.0:
+- Removed Auto Doors Component
+- Changed Double Wood door to Elegant Double Door
+- Added Wood Gate - Large, Medium and Small
+- Added Rolling Stone Door
+
+EM-Games V1.0.0:
+- Added Carving Table
+- Added Chess Pieces - Wood and Stone Variants
+
+EM-HomeObjects V2.0.0:
+- Added Paintings - 7 new Paintings
+- Added Fake Plants - Square type and Round type
+- Added Lava Rug
+- Added Mailbox
+- Added Lion Statue
+
+EM-Windows V2.0.0:
+- Added Sliding Windows - Long and Tall Variants
+
+EM-Food V2.0.0:
+- Changed from Zymology to Food!
+- Added Smokehouse
+- Added Hare Trap
+- Added Deer Trap
+- Added Jerky
+- Added Meat Pizza
+- Added Smoked Bacon
+- Added Smoked Vegetable Kabob
+- Added Smoked Fish
+- Added Smoked Hare Surprise
+- Added Smoked Turkey Surprise
+- Added Turkey Jerkey
+- Added Vegetable Pizza
+- Added Vegetable Jerky ?
+- Added Popcorn
+- Added Caramel Popcorn
+
+EM-Transportation V2.0.0:
+- Removed Road Lines - no longer needed but kept the arrows
+
+EM-Artistry V1.0.0:
+- Changed From EM-DyeKit to EM-Artistry
+- Added Painting Skill
+- Added White and Pink Dyes
+- Changed Dye recipes to use primary colors to make non primary colors
+- Added Paints - All colors in the dyes are available in the paints
+- Added Paint Base - Used to make paint with dyes
+- Added Art Station
+- Total Dye Colors: 11 - Black, Yellow, Blue, Red, White, Green, Purple, Brown, Grey, Orange
+- Total Paint Colors: 11 - Black, Yellow, Blue, Red, White, Green, Purple, Brown, Grey, Orange
+- Primary Color Recipe Varients ( now you can use different items to make the dyes ) 
+- Added Paint Brush
+- Added Paint Pallet
+
+
+
+
+
+
+V2.0 - Testing Changelog:
+
+Includes:
+Teleportation
+Warps
+Homes
+Admin
+Commands
+MOTD
+Jokes
+Daily
+
+Changes-:
+
+Changed the Autodoors Config protection level to allow others to 
+use the autodoor component in their own mods
+All Major Commands have been changed to a "Sub" Command, 
+Use "/teleportation" for the tp commands,
+Use "/home" for the home commands,
+Use "/autodoors" for the autodoor commands
+Use "/afk" for the AFK Commands
+Use "/warp" for the Warp Commands
+Use "/prices itemname| Item Name"  for store prices
+Changed tp chat command to Teleportation to combat issues, Sub Commands remain unchanged, IE: /tpr /tpa 
+Warp Command changed to "/warpto" as "/warp" now lists all warp commands
+
+
+Now introducing Groups Permissions System:
+
+While our Permissions system is still under development this is some basic documentation on what we have so far and will be updated as we add more features to it:
+Using the EM Permissions system is easy, 
+
+What the EM permissions system brings to you is the ability to be able to create new user groups and give them access to commands so long as they are in that group, 
+
+Example,
+
+Joe donated to your server, You can create the group called "VIP" and add joe to that group, 
+
+You can then assign commands to that group for joe to use:
+Say you have teleport commands on the server, you can add the teleport command to the group VIP then Joe can use the teleport command,
+
+Usage for server admins:
+
+By default there are 2 user groups, Admin and Default, These 2 groups can not be deleted
+If the user is already an admin they don't need to be added to the admin group, but if the user isn't an admin you can ad them to the admin group and assign your admins certain commands, IE: kick, mod based commands or what ever you feel like
+
+
+Here is a list of all the commands that a admin/ owner  in the server can use:
+Commands for giving groups permissions to commands
+
+"/CommandPermissions grant command, groupname " // Used to give groups permission to use a command: Eg:
+"/CommandPermissions grant fly, VIP" //this gives the group VIP access to use the /fly command
+You cannot assign shortcuts to a command, ie: ElixrMods Auto door has a shotcut command: /ad-on
+doing: "/CommandPermissions grant ad-on, VIP" will not work
+
+"/CommandPermissions revoke command, groupname" // Used to revoke a groups permission to a command: Eg:
+"/CommandPermissions revoke fly, VIP" // Will take away the ability for the VIP group to use the /fly command
+You cannot use shortcodes when revoking a command ie: 
+doing: "/CommandPermissions revoke ad-on, VIP" will not work
+
+"/CommandPermissions setbehaviour admin/user, true/false" //this is used to allow Admins or users default access to their default commands:
+ie:
+"/CommandPermissions setbehaviour admin, false" // will mean any user that was made an admin will not have access to admin commands anymore and you will need to assign then use of admin commands via a group ie: Group Admin.
+"/CommandPermissions setbehaviour user, false" // will mean any user that is not in a group or an admin will not be able to use any command without being in a group
+
+
+Shortcuts:
+"/grant-command command, groupname"
+"/revoke-command command, groupname"
+"/behaviour-command admin/user, true/false"
+
+
+The "command" In the commands is any command in the eco game, regardless if its registered by a mod or a core command!
+Creating Groups and adding users to groups commands
+
+"/groups addgroup groupname" // Used to create a new group
+"/groups deletegroup groupname" // used to delete a created group
+"/groups listgroups" // will list all groups you have on the server
+"/groups grouppermissions groupname" // Will list all the permissions the named group has 
+"/groups addusertogroup username, groupname" // will add a user to a selected group or will creat the group then add the user too it
+"/groups removeuserfromgroup username, groupname" // will remove a user from that group, if the group doesn't exist it will tell you
+"/groups forcesave" //forces the groups system to save everything just incase a save fails
+
+All commands that use a username are case sensitive so make sure your naming is correct otherwise it will say that user doesn't exist
+
+Shortcuts:
+"/grp-add groupname"
+"/grp-del groupname"
+"/grp-list"
+"/grp-perms groupname"
+"/grp-adduser username"
+"/grp-remuser username"
+"/grp-fs"
+
+
+Config File Structure - If you are not comfortable editing this file then please just use the in game commands - Located in Configs/Mods
+ElixrMods-GroupsDate.json
+{
+  "Groups": [
+    {
+      "GroupName": "groupname", // The Name of each group
+      "GroupUsers":  [
+        {
+          "Name": "Username", // The username of the person added to the group
+          "SlgID": "slgid", // their slgid if present
+          "SteamID": "steamid" // their steamid if present
+        }
+      ], // Each user in this group
+      "Permissions": [ //each command this group has access too
+        {
+          "$type": "Eco.EM.Permissions.ChatCommandAdapter, em-base", //do not edit this
+          "Identifier": "Command" //Command name
+        },
+        {
+          "$type": "Eco.EM.TP.TeleportConfig, em-tp-9", //This is a custom configuration for another mod using the groups system
+          "MaxTeleports": 30, // config setting
+          "CalorieCost": 250, //config setting
+          "CooldownSeconds": 15, // config setting
+          "Expiry": 15 //config setting
+        }
+      ]
+    }
+  ],
+  "AllUsers": [ // Each user that logs into the server
+    {
+      "Name": "UserName", // Their username
+      "SlgID": "slgid", //Their SLG Id - Can be blank if slg id not present
+      "SteamID": "steam64id" //Their Steam ID - Can be blank if steamid not present
+    }
+  ]
+}
+
+
+For Modders:
+There isn't much you need to do to be able to use our permissions system,
+To enforce the use of the permissions system you can do the following:
+
+When creating a Chat Command set the following:
+
+[ChatCommand("Description", "Shortcut", ChatAuthorizationLevel.Admin)]
+[ChatSubCommand("Command Parent", "Description", "shortcut", ChatAuthorizationLevel.Admin)]
+
+
+By setting the commands to be used by admins means server owners can assign these commands to any group and allow users in that group to use these commands regardless of them being admin level commands, this also means a user needs to be in a group to use these commands
+
+If you set them like this: 
+
+[ChatCommand("Description", "Shortcut", ChatAuthorizationLevel.User or Leave Blank)]
+[ChatSubCommand("Command Parent", "Description", "shortcut", ChatAuthorizationLevel.User or Leave Blank)]
+
+
+Any user will then be able to use the command unless the server owner turns off users being able to use user commands, However this may cause issues with users using /? command for help with a list of basic commands they would normally be able to use, 
+
+Extensibilty:
+Modders can also extend on the permissions system with their own commands for other features, This requires you to refrence our em-framework.dll and you can do some of the following with it:
+
+
+namespace Eco.EM.Groups
+
+[ChatSubCommand("CommandPermissions" //This sets your command to be a sub command of our permissions system and allows you to use: /permissions yourcommand,
+"Your Command Description", 
+"Your Command shortcut IE: Instead of using /CommandPermissions yourcommand you can use /yourcommand", 
+ChatAuthorizationLevel.Admin // this enforces it to be usable by the permissions system and prevents un-authorized users from using the command, admins by default get access to this)]
+
+Extra info
+
+This is the using hook.
+using Eco.EM.Groups;
+
+GroupsManager.API.GetGroup(string group, bool true/false); //This will get a group, if it doesn't exist specify if it will create the group or not
+GroupsManager.API.AllGroups() //This will get all of the available groups
+GroupsManager.API.UserPermitted(User user, permssion) //This will get all the groups the user is in and check if any of those groups have permission to use the commands
+
+Ease Of Use:
+public static void yourfunction(string groupName)
+{
+Group group = GroupsManager.API.GetGroup(groupName); // assign group to a var to make your life easier when looking for groups
+} 
+GroupsManager.API.SaveData(); // Used to save your group based configuration to the groups file useful if you want a group to be able to have specific settings
+
+
+
+Teleportation:
+
+Now using the groups system:
+use of the request (/tpr) command must be assigned to a group to be used, 
+/teleportation configuretp (/tp-config) uses 4 settings when setting the config: Max, cost, expiry, cooldown 
+Usage: /tp-config setting, value // all values are ints, 
+Max - Total amount of teleports per day, 
+Cost - Cost of calories per tp 0 to disable
+expiry - How long a teleport request stays active in seconds
+cooldown - how long they have to wait to use the tpr command again, in seconds
+/tpa or /teleportation accept can be used by anyone without needing to be in a group
+/teleportation groupconfiguretp groupname, setting, value
+or "/tp-grpconfig groupname, setting, value"
+Uses the same settings as the default settings for reference but sets a config per group, 
+Group max teleports can not be less then the server default unless set to 0 which is unlimited teleports for the day
+ie: /tp-grpconfig vip, max, 30 
+
+To assign the tpr command to a group:
+
+/grant-command request, groupname
+
+
+Warps:
+
+Now using the Groups System
+use of the "/warp warpto" (/warpto) command must be assigned to a group to be used, 
+/warp configurewarp (/warp-config) uses  settings when setting the config: Max, cost, cooldown
+Usage: /warp-config setting, value // all values are ints, 
+Max - Total amount of times they can go home per day, 
+Cost - Cost of calories per returning home 0 to disable
+Cooldown - Time they need to wait before being able to warp again
+/warp-list or "/warp warplist" can be used by anyone without needing to be in a group
+/warp groupconfigurewarp groupname, setting, value
+or "/warp-grpconfig groupname, setting, value"
+Uses the same settings as the default settings for reference but sets a config per group, 
+Group max warp tps can not be less then the server default unless set to 0 which is unlimited teleports for the day
+ie: /home-grpconfig vip, max, 30 
+
+To assign the WarpTo command to a group:
+
+/grant-command warpto, groupname
+
+Homes:
+
+Now using the Groups System
+use of the GoHome (/gohome) command must be assigned to a group to be used, 
+use of the AddHome (/home-add) command must be assigned to a group to be used,
+/home configurehomes (/home-config) uses 4 settings when setting the config: Max, cost, count
+Usage: /home-config setting, value // all values are ints, 
+Max - Total amount of times they can go home per day, 
+Cost - Cost of calories per returning home 0 to disable
+Count - Total amount of homes they can set
+/home-myinfo or "/home homeinfo" can be used by anyone without needing to be in a group
+/home-del or "/home removehome" can be used by anyone without needing to be in a group
+/home groupconfigurehomes groupname, setting, value
+or "/home-grpconfig groupname, setting, value"
+Uses the same settings as the default settings for reference but sets a config per group, 
+Group max home tps can not be less then the server default unless set to 0 which is unlimited teleports for the day
+ie: /home-grpconfig vip, max, 30 
+
+To assign the gohome and the home-add command to a group:
+
+/grant-command gohome, groupname
+/grant-command addhome, groupname
+
+
+added
+Daily Returns with Tokens, 
+Set xp amount for token rewards
+
+Bug fixes:
+Fixed tp requests not expiring, 
+A Player may only have 1 pending tp request at a time
+Fixed countdown on screen after each tp request was accepted
+em-Framework should now create the default groups: default (players), admin (admins)
+Fixed Autodoors Not Re-Enabling on server restart if they where enabled prior
+Fixed AFK Monitor not Re-Enabling on rever restart if it was enabled prior
+Fixed Shop Informatics Not allowing for Multipart Text like "Charred Meat" it also does not need Quote marks for multipart text
+"Prices" Command to output the text it sees when giving an error looking for the item

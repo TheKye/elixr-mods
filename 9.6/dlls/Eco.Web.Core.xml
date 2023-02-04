@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eco.Web.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Eco.Web.Core.DataTransferObjects.DataTransferObject">
+            <summary>Base class for all data transfer objects used by Eco.</summary>
+        </member>
+        <member name="M:Eco.Web.Core.DataTransferObjects.DataTransferObject.ToJson">
+            <summary>Converts this data to a JSON string that can be sent to the SignalR hub.</summary>
+        </member>
+        <member name="M:Eco.Web.Core.DataTransferObjects.DataTransferObject.FromJson``1(System.String)">
+            <summary>Constructs a new instance of the dataset from its JSON data.</summary>
+            <typeparam name="TDTO">Dataset model to construct.</typeparam>
+            <param name="json">Json data to parse.</param>
+            <returns>Populated dataset model.</returns>
+        </member>
+        <member name="M:Eco.Web.Core.DataTransferObjects.DataTransferObject.FromJson``1(Newtonsoft.Json.Linq.JToken)">
+            <inheritdoc cref="M:Eco.Web.Core.DataTransferObjects.DataTransferObject.FromJson``1(System.String)"/>
+            <param name="token"><see cref="T:Newtonsoft.Json.Linq.JToken"/> containined the JSON data.</param>
+        </member>
+        <member name="M:Eco.Web.Core.DataTransferObjects.DataTransferObject.ToString">
+            <summary>Returns the <see cref="T:Eco.Web.Core.DataTransferObjects.DataTransferObject"/> instance as a formatted Json string.</summary>
+            <returns>Dataset instance serialized to Json.</returns>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.IWebNotifiable">
+            <summary>
+            Extension interface for adding web notification payload support for packaging the DTO object into a outgoing notification over WebSocket, Twitch PubSub, ect. 
+            This interface is primaryl used by the Twitch ServerDataRegistry to inform connected Twitch Extension clients that the data has changed and they need to refresh.
+            </summary>
+            <remarks>For more information about this object works. Refer to the documentation found at "Platforms/Twitch/TwitchExtension.md"</remarks>
+        </member>
+        <member name="M:Eco.Web.Core.DataTransferObjects.IWebNotifiable.SupportsNotifications">
+            <summary>Checks if this <see cref="T:Eco.Web.Core.DataTransferObjects.IWebNotifiable"/> instance supports notifications.</summary>
+            <returns>True if the instance supports notifications.</returns>
+        </member>
+        <member name="M:Eco.Web.Core.DataTransferObjects.IWebNotifiable.GetNotificationPayload">
+            <summary>Retrieves the web notification payload in Newtonsoft <see cref="T:Newtonsoft.Json.Linq.JToken"/> form.</summary>
+            <returns><see cref="T:Newtonsoft.Json.Linq.JToken"/> containing the notification JSON payload.</returns>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.V1.CommandMessageV1">
+            <summary>Represents a chat output result from a command.</summary>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.V1.CommandResultV1">
+            <summary>Result object from a command execution</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.CommandResultV1.OriginalCommand">
+            <summary>Represents the original requested command</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.CommandResultV1.Errored">
+            <summary>Flag determining if there was an error during execution</summary>
+        </member>
+        <member name="F:Eco.Web.Core.DataTransferObjects.V1.CommandResultV1.CommandMessages">
+            <summary>Represents each returned action/message result from the command</summary>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.V1.ExecuteCommandV1">
+            <summary>Represents a command execution request for the command MVC controller</summary>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.V1.GameServerDetailsV1">
+            <summary>Represents basic detail about an Eco server.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.GameServerDetailsV1.ServerID">
+            <summary>Unique id that represents this server in the master server list.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.GameServerDetailsV1.ServerVersion">
+            <summary>Represents the version of the Eco server.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.GameServerDetailsV1.Description">
+            <summary>Short description of this eco server.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.GameServerDetailsV1.DetailedDescription">
+            <summary>Long detailed description of this game server.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.GameServerDetailsV1.QuickJoinLink">
+            <summary>Quickjoin link used to join this server from a website.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.GameServerDetailsV1.SubscriberOnlyServer">
+            <summary>Flag determining if the quick join link should only be available to Twitch subscribers.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.GameServerDetailsV1.AllowTwitchJoin">
+            <summary>Flag representing if this server can be joined by Twitch chat.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.GameServerDetailsV1.HasMeteor">
+            <summary>Flag representing if this server has a meteor.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.GameServerDetailsV1.MeteorImpactDate">
+            <summary>The current computed date and time of impact based on server time if available. Otherwise represents null</summary>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.V1.ElectionNotificationDetails">
+            <summary>Represents an <see cref="T:Eco.Web.Core.DataTransferObjects.V1.GameServerElectionV1"/> for the Elections web notification.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.ElectionNotificationDetails.Results">
+            <inheritdoc cref="P:Eco.Web.Core.DataTransferObjects.V1.GameServerElectionV1.Results"/>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.ElectionNotificationDetails.Finished">
+            <inheritdoc cref="P:Eco.Web.Core.DataTransferObjects.V1.GameServerElectionV1.Finished"/>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.V1.GameServerElectionsV1">
+            <summary>Dataset representing all active elections in an Eco game server.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.GameServerElectionsV1.Elections">
+            <summary>All currently active elections on this server.</summary>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.V1.GameServerElectionV1">
+            <summary>SimpleEntryV1 implementation for transfering data about game server elections over web services.</summary>
+            <seealso cref="T:Eco.Web.Core.DataTransferObjects.V1.SimpleEntryV1"/>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.V1.GameServerElectionV1Extensions">
+            <summary>Static extension methods for the <see cref="T:Eco.Web.Core.DataTransferObjects.V1.GameServerElectionV1"/> DTO model.</summary>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.V1.ProfilingResultV1">
+            <summary>Result object from a command execution</summary>
+        </member>
+        <member name="T:Eco.Web.Core.DataTransferObjects.V1.SimpleEntryV1">
+            <summary>A data transfer object wrapper of the Eco <see cref="T:Eco.Gameplay.Utils.SimpleEntry"/> object.</summary>
+            <seealso cref="T:Eco.Gameplay.Utils.SimpleEntry"/>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.SimpleEntryV1.Id">
+            <summary>The unique identifier of this Eco <see cref="T:Eco.Gameplay.Utils.SimpleEntry"/> object.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.SimpleEntryV1.Name">
+            <summary>Name representing this Eco <see cref="T:Eco.Gameplay.Utils.SimpleEntry"/> object.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.SimpleEntryV1.UserDescription">
+            <summary>User description of this Eco <see cref="T:Eco.Gameplay.Utils.SimpleEntry"/> object.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.SimpleEntryV1.State">
+            <summary>State of this Eco <see cref="T:Eco.Gameplay.Utils.SimpleEntry"/> object.</summary>
+        </member>
+        <member name="P:Eco.Web.Core.DataTransferObjects.V1.SimpleEntryV1.Creator">
+            <summary>Creator of this Eco <see cref="T:Eco.Gameplay.Utils.SimpleEntry"/> object.</summary>
+        </member>
+        <member name="M:Eco.Web.Core.DataTransferObjects.V1.SimpleEntryV1.#ctor(Eco.Gameplay.Utils.SimpleEntry)">
+            <summary>Converts an Eco <see cref="T:Eco.Gameplay.Utils.SimpleEntry"/> object into a DTO friendly version.</summary>
+            <param name="entry"><see cref="T:Eco.Gameplay.Utils.SimpleEntry"/> object to convert.</param>
+        </member>
+        <member name="T:Eco.Web.Core.Schema.MultidimensionalArraySchemaProvider">
+            <summary>
+            Custom <see cref="T:Newtonsoft.Json.Schema.Generation.JSchemaGenerationProvider"/> implementation for providing Schema data for Multidimensional arrays.
+            Primarly used by the Eco EBS server.
+            </summary>
+            <seealso cref="T:Newtonsoft.Json.Schema.Generation.JSchemaGenerationProvider"/>
+        </member>
+        <member name="T:Eco.Web.Core.Schema.ArrayRow`1">
+            <summary>Variation of the .NET <see cref="T:System.Collections.Generic.List`1"/> class for use in JSON schema generation. Explicitly allows null fields for Election data.</summary>
+        </member>
+        <member name="T:Eco.Web.Core.LocStringConverter">
+            <summary>Custom JsonConverter implementation for handling the serialization/deserialization of Eco localization strings.</summary>
+            <seealso cref="T:Newtonsoft.Json.JsonConverter"/>
+        </member>
+        <member name="T:Eco.Web.Core.VectorConverter">
+            <summary>Custom JsonConverter implementation for handling the serialization/deserialization of Eco Vector datatypes.</summary>
+            <seealso cref="T:Newtonsoft.Json.JsonConverter"/>
+        </member>
+        <member name="T:Eco.Web.Core.Utils.JsonSerializerSettingsExtensions">
+            <summary>Static extension methods for the Newtonsoft <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/> object.</summary>
+        </member>
+        <member name="M:Eco.Web.Core.Utils.JsonSerializerSettingsExtensions.ConfigureEcoJsonOptions(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>Configures the serialization settings of a Newtonsoft instance.</summary>
+            <param name="settings">Settings to configure</param>
+        </member>
+        <member name="T:Eco.Web.Core.Utils.StatUtils">
+            <summary>Static utility functions for serving statistics data to web services.</summary>
+        </member>
+        <member name="M:Eco.Web.Core.Utils.StatUtils.GetGraphValuesFromDayRange(System.String,System.Double,System.Double,System.Single)">
+            <summary>Retrieves statistics information by name using specified start and end real life days to limit the returning data</summary>
+            <param name="key">Name of the statistic to retrieve</param>
+            <param name="startingDay">Day to start the retrieval range at</param>
+            <param name="endingDay">Day to end the retrieval range at</param>
+            <returns>Returns the stat's info, the values for the specified range, and the interval used to clamp the data results.</returns>
+        </member>
+        <member name="M:Eco.Web.Core.Utils.StatUtils.GetGraphValuesFromDayRange(System.String,System.Double,System.Double)">
+            <inheritdoc cref="M:Eco.Web.Core.Utils.StatUtils.GetGraphValuesFromDayRange(System.String,System.Double,System.Double,System.Single)"/>
+        </member>
+        <member name="M:Eco.Web.Core.Utils.StatUtils.GetGraphValuesFromDayRange(Eco.Stats.StatInfo,System.Double,System.Double)">
+            <inheritdoc cref="M:Eco.Web.Core.Utils.StatUtils.GetGraphValuesFromDayRange(System.String,System.Double,System.Double,System.Single)"/>
+        </member>
+        <member name="M:Eco.Web.Core.Utils.StatUtils.GetBucketedStatValues(Eco.Shared.Math.Range,System.Single,Eco.Stats.StatInfo)">
+            <summary>Queries stats that are event-based, fitting them in a number of buckets and returing a time value list of the count in each bucket.</summary>
+        </member>
+        <member name="M:Eco.Web.Core.Utils.StatUtils.ReduceValuesByInterval(System.Collections.Generic.List{Eco.Stats.TimeValue},System.Int32)">
+            <summary>Go through a too-long list and reduce it by averaging adjacent values. </summary>
+        </member>
+        <member name="T:Eco.Web.Core.Utils.TimeUtils">
+            <summary>Helper classes for working with times inside the Eco web services.</summary>
+        </member>
+    </members>
+</doc>

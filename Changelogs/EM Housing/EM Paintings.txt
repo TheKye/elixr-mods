@@ -1,0 +1,36 @@
+# Basic Change Logs ! 
+# Use something nice to break up each section, and its probably best to post most recent changes at the top :)
+# Example Changelog Provided!
+# use <br> to act as a blank line
+# you can also use <hr> For Horizontal Lines
+# Please Note, this system is not perfect and doesn't support html/ Code Phrases Everything prints as plain text
+#
+# Please Don't Delete The Header here as the system also relies on it
+#
+# Version 1.0.0 - Hot Fix
+# Fixed Issue With Item 4
+# <br>
+# ===============================
+# Version 1.0.0 - First Release!!
+# Added: 
+# New Item 1
+# New Item 2
+# Fixed Item 3
+V3.0.3:
+Fixed Resolvers preventing servers from rebooting
+Proper Housing Items Nerf
+===============================
+
+V3.0.2:
+Fixed a critical bug that prevented servers from booting with new Housing Resolver
+===============================
+
+V3.0.1:
+Updated to use Housing Resolvers
+Changed All Recipes to use Recipe Resolver ( Paintings was missing Configurable Recipes)
+Housing Point Nerfs
+===============================
+
+V3.0.0:
+Updated to 9.4.x
+All Paintings from EM Home Objects

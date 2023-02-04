@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Eco.EM.Modkit</AssemblyName>
+    <Authors>Fyre</Authors>
+    <Company>Elixr Mods</Company>
+    <Product>EM ModLoader</Product>
+    <Copyright>Elixr Solutions</Copyright>
+    <PackageLicenseExpression>All Rights Reserved</PackageLicenseExpression>
+    <Description>Loads dll's into Eco from a folder called Loadable mods. The main purpose of this is to be able to flip the order of how compiled .cs files and the dll's are built on server load allowing modders to create customisable .cs scripts for others to modify/add to and those scripts can rely on non-slg dll's.
+EM's Daily add-on is an example of this process.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Eco.Core">
+      <HintPath>..\dlls\Eco.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Gameplay">
+      <HintPath>..\dlls\Eco.Gameplay.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.ModKit">
+      <HintPath>..\dlls\Eco.ModKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Mods">
+      <HintPath>..\dlls\Eco.Mods.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Networking.ENet">
+      <HintPath>..\dlls\Eco.Networking.ENet.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Networking.Lidgren">
+      <HintPath>..\dlls\Eco.Networking.Lidgren.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Plugins">
+      <HintPath>..\dlls\Eco.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Shared">
+      <HintPath>..\dlls\Eco.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Simulation">
+      <HintPath>..\dlls\Eco.Simulation.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Stats">
+      <HintPath>..\dlls\Eco.Stats.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Tests">
+      <HintPath>..\dlls\Eco.Tests.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WebServer">
+      <HintPath>..\dlls\Eco.WebServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WindowsForms">
+      <HintPath>..\dlls\Eco.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.World">
+      <HintPath>..\dlls\Eco.World.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WorldGenerator">
+      <HintPath>..\dlls\Eco.WorldGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="EcoServer">
+      <HintPath>..\dlls\EcoServer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

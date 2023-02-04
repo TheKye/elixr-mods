@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Eco.Core">
+			<HintPath>..\..\dlls\Eco.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Gameplay">
+			<HintPath>..\..\dlls\Eco.Gameplay.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.ModKit">
+			<HintPath>..\..\dlls\Eco.ModKit.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Mods">
+			<HintPath>..\..\dlls\Eco.Mods.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Networking.ENet">
+			<HintPath>..\..\dlls\Eco.Networking.ENet.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Plugins">
+			<HintPath>..\..\dlls\Eco.Plugins.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Shared">
+			<HintPath>..\..\dlls\Eco.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Simulation">
+			<HintPath>..\..\dlls\Eco.Simulation.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Stats">
+			<HintPath>..\..\dlls\Eco.Stats.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.WebServer">
+			<HintPath>..\..\dlls\Eco.WebServer.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.WindowsForms">
+			<HintPath>..\..\dlls\Eco.WindowsForms.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.World">
+			<HintPath>..\..\dlls\Eco.World.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.WorldGenerator">
+			<HintPath>..\..\dlls\Eco.WorldGenerator.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="cd $(SolutionDir)&#xD;&#xA;cd bin&#xD;&#xA;mkdir ModularTools\Mods\UserCode\ModularTools&#xD;&#xA;mkdir ModularTools\Mods\UserCode\AutoGen&#xD;&#xA;mkdir ModularTools\Mods\UserCode\Tools&#xD;&#xA;&#xD;&#xA;(robocopy &quot;$(SolutionDir)9.5\Collaborations\ModularTools\AutoGen&quot; &quot;$(SolutionDir)bin\ModularTools\Mods\UserCode\AutoGen&quot; /s)  ^&amp; IF %25ERRORLEVEL%25 LSS 8 SET ERRORLEVEL = 0&#xD;&#xA;(robocopy &quot;$(SolutionDir)9.5\Collaborations\ModularTools\ModularTools&quot; &quot;$(SolutionDir)bin\ModularTools\Mods\UserCode\ModularTools&quot; /s)  ^&amp; IF %25ERRORLEVEL%25 LSS 8 SET ERRORLEVEL = 0&#xD;&#xA;(robocopy &quot;$(SolutionDir)9.5\Collaborations\ModularTools\Tools&quot; &quot;$(SolutionDir)bin\ModularTools\Mods\UserCode\Tools&quot; /s)  ^&amp; IF %25ERRORLEVEL%25 LSS 8 SET ERRORLEVEL = 0" />
+	</Target>
+
+</Project>

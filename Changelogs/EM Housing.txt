@@ -1,0 +1,63 @@
+EM Housing - Changelog
+
+==============================================================================================
+
+- Doors 
+
+V3.0.3:
+Fixed Resolvers preventing servers from rebooting
+Proper Housing Items Nerf
+
+V3.0.2:
+Fixed Rolling Stone Doors not sealing Rooms
+Updated to use Housing Resolvers
+Changed All Recipes to use Recipe Resolver ( Paintings was missing Configurable Recipes)
+Housing Point Nerfs
+
+V3.0.1:
+Fixed an issue With Doors Occupancy not Declaring a room properly
+
+V3.0.0:
+Updated to 9.4.x
+
+==============================================================================================
+
+- Furniture 
+
+V3.0.3:
+Fixed Resolvers preventing servers from rebooting
+Proper Housing Items Nerf
+
+V3.0.2:
+Fixed a critical bug that prevented servers from booting with new Housing Resolver
+
+V3.0.1:
+Updated to use Housing Resolvers
+Changed All Recipes to use Recipe Resolver ( Paintings was missing Configurable Recipes)
+Housing Point Nerfs
+
+V3.0.0:
+Updated to 9.4.x
+All Furniture From EM Home Objects
+
+==============================================================================================
+
+- Paintings  - Relys on The Artistry Mod! Version 3.1.0 will be required
+
+V3.0.3:
+Fixed Resolvers preventing servers from rebooting
+Proper Housing Items Nerf
+
+V3.0.2:
+Fixed a critical bug that prevented servers from booting with new Housing Resolver
+
+V3.0.1:
+Updated to use Housing Resolvers
+Changed All Recipes to use Recipe Resolver ( Paintings was missing Configurable Recipes)
+Housing Point Nerfs
+
+V3.0.0:
+Updated to 9.4.x
+All Paintings from EM Home Objects
+
+==============================================================================================

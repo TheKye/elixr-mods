@@ -1,0 +1,54 @@
+Eco 9.6 Modding Changelog
+
+This is not an official Changelog, This is a changelog that has been gathered by modders through testing, porting and preping mods for 9.6, 
+
+This changelog may not be helpful or it might be, good luck!
+
+-----
+
+IChatCommandHandler Interface Was Removed -
+IChatCommandHandler has been replaced by: [ChatCommandHandler] Attribute, it acts the same as the interface inheritence, no optional parameters for this
+
+------
+
+IServerPlugin now contains a public string GetCategory() => ""; Method, This is used to categorize the Plugin in the Server UI
+
+------
+
+WorldObject.Position No longer contains definitions for Vector3i: XZi, XYi, XYZi etc
+
+Use Vector3Extensions instead:
+Example: 
+Vector3Extensions.XZi(Vector3 position) - This will give you a vector2 to use 
+
+Alternatively if you can get away with just the Vector3, then just use: WorldObject.Position
+
+------
+
+Player.Position.XZi is now a method instead of a Variable
+
+------
+
+SolidGroundComponent Removed
+
+Use SolidAttachedSurfaceRequirementComponent instead
+This new component now Supports Directional Specification: 
+This means you can specify where it should attach to (Wall, Roof, Floor)
+
+------
+
+DurabilityItems no longer have Durability Manipulation, (This is more for those mods kinda like the whetstone mod)
+
+All tools have been changed to a "RepairableItem" which has durability manipulation
+
+DurabilityItem is now a base class for building different types of durability items from it (Such as the new food spoilage system)
+
+*IDynamicValue SkillRepairCost Override is now under RepairableItem as well instead of durability item
+
+DurabilityItem Now has a GetDurability Method for durability calculations.
+
+------
+
+Base Method: OnCreate() has been removed.
+
+Use New Base Method: OnCreatePostInitialize() or OnCreatePreInitialize instead

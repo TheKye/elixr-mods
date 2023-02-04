@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eco.Twitch.Shared</name>
+    </assembly>
+    <members>
+        <member name="T:Eco.Twitch.Shared.IGameServerClientV1">
+            <summary>Base class for all clients that communicate with the Twitch EBS SignalR GameServerHub.</summary>
+        </member>
+        <member name="M:Eco.Twitch.Shared.IGameServerClientV1.ReceiveTwitchActionAsync(Eco.Twitch.Shared.Models.Actions.TwitchActionContext,System.Guid,System.String,System.String)">
+            <summary>Processes a Twitch Eco Community extension action on the Eco Server.</summary>
+            <param name="context">Context information about the request.</param>
+            <param name="requestId">Guid representing this invoke request.</param>
+            <param name="actionName">Name of the action to invoke.</param>
+            <param name="actionData">Parameters relating to this action in Json</param>
+        </member>
+        <member name="T:Eco.Twitch.Shared.IGameServerHubV1">
+            <summary>Base interface for all Signalr Hub implementations of the EBS game server protocol.</summary>
+        </member>
+        <member name="M:Eco.Twitch.Shared.IGameServerHubV1.SubscribeToTwitchChannel(Eco.Twitch.Shared.Models.Messages.SubscribeTwitchChannelPayload)">
+            <summary>Handles Twitch channel subscription requests.</summary>
+            <param name="payload">Payload containing the Twitch channel to subscribe to.</param>
+        </member>
+        <member name="M:Eco.Twitch.Shared.IGameServerHubV1.UnsubscribeFromTwitchChannel(Eco.Twitch.Shared.Models.Messages.UnsubscribeTwitchChannelPayload)">
+            <summary>Handles Twitch channel unsubscribe requests.</summary>
+            <param name="payload">Payload containing the Twitch channel to unsubscribe from.</param>
+        </member>
+        <member name="M:Eco.Twitch.Shared.IGameServerHubV1.StartDatasetUpdateRequest(Eco.Twitch.Shared.Models.Messages.UpdateDatasetPayload)">
+            <summary></summary>
+            <param name="payload">Update dataset payload.</param>
+        </member>
+        <member name="M:Eco.Twitch.Shared.IGameServerHubV1.PostDatasetUpdateRequestData(Eco.Twitch.Shared.Models.Messages.UpdateDatasetPayload)">
+            <summary>Handles dataset update requests from an Eco game server instance.</summary>
+            <param name="payload">Update dataset payload.</param>
+        </member>
+        <member name="M:Eco.Twitch.Shared.IGameServerHubV1.FinishDatasetUpdateRequest(Eco.Twitch.Shared.Models.Messages.UpdateDatasetPayload)">
+            <summary></summary>
+            <param name="payload">Update dataset payload.</param>
+        </member>
+        <member name="M:Eco.Twitch.Shared.IGameServerHubV1.TwitchActionCallbackAsync(Eco.Twitch.Shared.Models.Messages.TwitchActionResponse)">
+            <summary>Handles the result callback from Eco server with the results of a Twitch action.</summary>
+            <param name="payload">Action result payload</param>
+        </member>
+        <member name="T:Eco.Twitch.Shared.Models.Actions.TwitchActionContext">
+            <summary>Represents basic contextual details about a Twitch action request from the Eco community extension.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Actions.TwitchActionContext.InvokerId">
+            <summary>Id of the Twitch user that invoked this request.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Actions.TwitchActionContext.OriginChannelId">
+            <summary>Origin channel id this request came from.</summary>
+        </member>
+        <member name="T:Eco.Twitch.Shared.Models.Actions.V1.PingActionRequestV1">
+            <summary>Action request model for the Ping Twitch EBS Action.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Actions.V1.PingActionRequestV1.Message">
+            <summary>Message sent to Eco Server.</summary>
+        </member>
+        <member name="T:Eco.Twitch.Shared.Models.Actions.V1.PingActionResponseV1">
+            <summary>Action response model for the Ping Twitch EBS Action.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Actions.V1.PingActionResponseV1.Message">
+            <summary>Message returned from Eco Server.</summary>
+        </member>
+        <member name="T:Eco.Twitch.Shared.Models.Actions.V1.SubmitChatVotesRequestV1">
+            <summary>Action request model for votes submittion Twitch EBS Action. Contains data about the Twitch chat user submitted civics votes</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Actions.V1.SubmitChatVotesRequestV1.ElectionId">
+            <summary>The Election this vote is for</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Actions.V1.SubmitChatVotesRequestV1.TwitchVoterId">
+            <summary>The Twitch user voting</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Actions.V1.SubmitChatVotesRequestV1.RankedVotes">
+            <summary>List of userids in ranked order</summary>
+        </member>
+        <member name="T:Eco.Twitch.Shared.Models.Actions.V1.SubmitChatVotesResponseV1">
+            <summary>Action response model for votes submittion Twitch EBS Action. Contains data about the Twitch chat user submitted civics votes</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Actions.V1.SubmitChatVotesResponseV1.Success">
+            <summary>Flag determining if the vote request was completed succesfully.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Actions.V1.SubmitChatVotesResponseV1.Message">
+            <summary>A message containing details about the vote request results</summary>
+        </member>
+        <member name="T:Eco.Twitch.Shared.Models.Messages.ISignalRPayload">
+            <summary>Base class for all SignalR messages sent from Eco Server.</summary>
+        </member>
+        <member name="T:Eco.Twitch.Shared.Models.Messages.SubscribeTwitchChannelPayload">
+            <summary><see cref="T:Eco.Twitch.Shared.Models.Messages.ISignalRPayload"/> implementation for the SubscribeToTwitchChannelAsync hub method.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Messages.SubscribeTwitchChannelPayload.ChannelId">
+            <summary>Twitch channel id to subscribe to.</summary>
+        </member>
+        <member name="T:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse">
+            <summary>Protocol response model for receiving results from an Eco server regarding a Twitch action</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse.RequestId">
+            <summary>Unique identifier associated with this response.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse.Success">
+            <summary>Flag determining if this response was succesful or not.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse.ErrorMessage">
+            <summary>Error message associated with this response if any.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse.ResponsePayload">
+            <summary>Response Json payload if available. Otherwise null.</summary>
+        </member>
+        <member name="M:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse.FromException(System.Guid,System.Exception)">
+            <summary>Creates a new <see cref="T:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse"/> from an exception.</summary>
+            <param name="requestId">Id associated with this request.</param>
+            <param name="ex">The <see cref="T:System.Exception"/> to create the instance from.</param>
+            <returns>The newly created <see cref="T:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse"/> instance.</returns>
+        </member>
+        <member name="M:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse.Error(System.Guid,System.String)">
+            <summary>Creates a new <see cref="T:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse"/> from an error message.</summary>
+            <param name="requestId">Id associated with this request.</param>
+            <param name="message">Error message to associate with this response</param>
+            <returns>The newly created <see cref="T:Eco.Twitch.Shared.Models.Messages.TwitchActionResponse"/> instance.</returns>
+        </member>
+        <member name="T:Eco.Twitch.Shared.Models.Messages.UnsubscribeTwitchChannelPayload">
+            <summary><see cref="T:Eco.Twitch.Shared.Models.Messages.ISignalRPayload"/> implementation for the UnsubscribeToTwitchChannelAsync hub method.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Messages.UnsubscribeTwitchChannelPayload.ChannelId">
+            <summary>Twitch channel id to unsubscribe from.</summary>
+        </member>
+        <member name="T:Eco.Twitch.Shared.Models.Messages.UpdateDatasetPayload">
+            <summary>Payload message for updating a dataset with the SignalR hub</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Messages.UpdateDatasetPayload.DatasetName">
+            <summary>Name of the dataset to update.</summary>
+        </member>
+        <member name="P:Eco.Twitch.Shared.Models.Messages.UpdateDatasetPayload.DatasetData">
+            <summary>JSON string of the data to update.</summary>
+        </member>
+    </members>
+</doc>

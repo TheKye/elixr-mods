@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ECO Object, Item, Recipe</Title>
+			<ShortCut>ecoobj</ShortCut>
+        </Header>
+        <Snippet>
+			<Declarations>
+				<Literal>
+                    <ID>displayname</ID>
+                    <Default>name</Default>
+                </Literal>
+				<Literal>
+                    <ID>description</ID>
+                    <Default>description</Default>
+                </Literal>
+				<Literal>
+                    <ID>recipeskill</ID>
+                    <Default>Carpentry</Default>
+                </Literal>
+				<Literal>
+                    <ID>station</ID>
+                    <Default>WorkBench</Default>
+                </Literal>
+				<Literal>
+                    <ID>setname</ID>
+                    <ToolTip>Object,Item,Recipe Name</ToolTip>
+                    <Default>MyNew</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp">
+                <![CDATA[[Serialized]
+					// Components
+					public partial class $setname$Object : WorldObject, IRepresentsItem
+					{
+						public override LocString DisplayName => Localizer.DoStr("$displayname$");
+						public virtual Type RepresentedItemType => typeof($setname$Item);
+						public override TableTextureMode TableTexture => TableTextureMode.Stone;
+						
+						static $setname$Object() 
+						{ 
+							// Occupancy
+						}
+
+						protected override void Initialize() { }						
+						protected override void PostInitialize() { }
+
+						public override void Destroy() => base.Destroy();
+					}
+					
+					[Serialized, Weight(50), MaxStackSize(100)]
+					[LocDisplayName("$displayname$")]
+					public partial class $setname$Item : WorldObjectItem<$setname$Object>
+					{
+						public override LocString DisplayDescription => Localizer.DoStr("$description$");						
+						static $setname$Item() { }
+					}
+					
+					// Skill requirements
+					[RequiresSkill(typeof($recipeskill$Skill), 0)]
+					public partial class $setname$Recipe : RecipeFamily, IConfigurableRecipe
+					{
+						static RecipeDefaultModel Defaults => new()
+						{
+							ModelType = typeof($setname$Recipe).Name,
+							Assembly = typeof($setname$Recipe).AssemblyQualifiedName,
+							HiddenName = "$displayname$",
+							LocalizableName = Localizer.DoStr("$displayname$"),
+							IngredientList = new()
+							{
+								// Ingredients (eming)
+							},
+							ProductList = new()
+							{
+								// Products (empro)
+							},
+							BaseExperienceOnCraft = 1,
+							BaseLabor = 50,
+							LaborIsStatic = false,
+							BaseCraftTime = 1,
+							CraftTimeIsStatic = false,
+							CraftingStation = "$station$Item",
+							RequiredSkillType = typeof($recipeskill$Skill),
+							RequiredSkillLevel = 0,
+							IngredientImprovementTalents = typeof($recipeskill$LavishResourcesTalent),
+							SpeedImprovementTalents = new Type[] { typeof($recipeskill$FocusedSpeedTalent), typeof($recipeskill$ParallelSpeedTalent)} ,
+						};
+						
+						static $setname$Recipe () { EMRecipeResolver.AddDefaults(Defaults); }
+						
+						public $setname$Recipe()
+						{
+							this.Recipes = EMRecipeResolver.Obj.ResolveRecipe(this);
+							this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
+							this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
+							this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
+							this.Initialize(Defaults.LocalizableName, GetType());
+							CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
+						}
+					}
+					]]>
+            </Code>
+			<Imports>
+				<Import>
+					<Namespace>Eco.EM.Framework</Namespace>					
+				</Import>
+				<Import>
+					<Namespace>Eco.EM.Framework.Resolvers</Namespace>				
+				</Import>
+				<Import>
+					<Namespace>Eco.Gameplay.Components</Namespace>				
+				</Import>
+				<Import>
+					<Namespace>Eco.Gameplay.Items</Namespace>				
+				</Import>
+				<Import>
+					<Namespace>Eco.Gameplay.Skills</Namespace>				
+				</Import>				
+				<Import>
+					<Namespace>Eco.Gameplay.Objects</Namespace>				
+				</Import>
+				<Import>
+					<Namespace>Eco.Mods.TechTree;</Namespace>				
+				</Import>
+				<Import>
+					<Namespace>Eco.Shared.Localization</Namespace>	
+				</Import>
+				<Import>
+					<Namespace>Eco.Shared.Serialization</Namespace>				
+				</Import>
+				<Import>
+					<Namespace>Eco.Shared.Items</Namespace>	
+				</Import>				
+			  </Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

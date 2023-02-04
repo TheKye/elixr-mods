@@ -3,16 +3,23 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Folders
+Old
+bin/Obsolete
+EMWebReleases
+Built Unity Assets
+
 # User-specific files
 *.rsuser
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
+EcoDLLExtractor.bat
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+CompileReleaseFolder.bat
 # Mono auto generated files
 mono_crash.*
 
@@ -348,3 +355,11 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+em-framework/PreInit/PropertyFieldInfo.cs
+em-framework/PreInit/PreInit.cs
+em-framework/PreInit/Attributes.cs
+em-framework/ModRegistration/ModReg.cs
+/.editorconfig
+/EM Framework
+/dlls*
+EcoDLLExtractor9.7.bat

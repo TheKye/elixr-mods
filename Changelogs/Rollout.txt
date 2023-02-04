@@ -1,0 +1,114 @@
+Elixr Mods 3.0 Update: Rollout PT 1
+
+Removed Deco and Conv Packs! 
+
+Added New "Bundles" Instead
+
+Former Mods have been broken up into Multiple Modules now to give you more choice over what you Install! 
+
+---------------------------------------------------------------
+EM Building:
+
+Arches Ver 3.0.0(Formerly: EM Arches):
+- Updated For Eco 9.4.x
+- Requires EM Framework 3.1.0+
+
+Bricks Ver 3.0.0:
+Added New Colored Bricks!
+- Uses EM Framework 3.1.0
+- Uses EM Framework Recipe Resolver for customizing the Recipes!
+- Black
+- Blue
+- Brown
+- Green
+- Grey
+- Orange
+- Red
+- Pink
+- Purple
+- White
+- Yellow
+
+Concrete Ver 3.0.0 - Currently To Large to download normally! Requires Manual Install at this time!
+Added New Colored Concrete!
+- Uses EM Framework 3.1.0
+- Uses EM Framework Recipe Resolver for customizing the Recipes!
+- Black
+- Blue
+- Brown
+- Green
+- Grey
+- Orange
+- Red
+- Pink
+- Purple
+- White
+- Yellow
+
+Roadworking Ver 3.0.0 (Formerly: EM Transportation
+- Updated for Eco 9.4.x
+- Uses EM Framework 3.1.0
+- Uses EM Framework Recipe Resolver for customizing the Recipes!
+
+Windows Ver 3.0.0 (Formerly: EM Windows)
+- Updated for Eco 9.4.x
+- Uses EM Framework 3.1.0
+- Uses EM Framework Recipe Resolver for customizing the Recipes!
+
+---------------------------------------------------------------
+
+EM Food
+
+Farming Ver 3.0.0 (Formerly: EM Food)
+- Added BeeHive 
+- Added Beeswax
+- Added Animal Trough
+- Added Farmers Crate
+- Added Chicken Feed
+
+Now Contains:
+- Chicken Coop
+- Chicken Carcass, Drumsticks, Wings
+- Farmers Stand ( Outdoor Store)
+
+Food Smoking Ver 3.0.0 (Formerly: EM Food)
+Now Contains:
+- Smoke House
+- Smoke House Foods
+
+Zymology Ver 3.0.0 ( Formerly: EM Food)
+Now Contains:
+Everything else from EM Food - Restored to Former "Zymology" Update
+
+---------------------------------------------------------------
+
+EM Housing
+
+Doors Ver 3.0.0 ( Formerly: EM Doors)
+Updated to 9.4.x
+
+Furniture Ver 3.0.0 ( Formerly: EM Home Objects )
+Updated to 9.4.x
+All Furniture From EM Home Objects
+
+Paintings Ver 3.0.0 ( Formerly: EM Home Objects ) 
+Updated to 9.4.x
+All Paintings from EM Home Objects
+
+---------------------------------------------------------------
+
+EM Storage
+
+Shipping Ver 3.0.0 (Formerly: EM Storage)
+Added 20ft Shipping Container
+Added 40ft Shipping Container
+Added Shipping Crate
+Removed Shipping Container
+Removed Steel Shipping Container
+
+Stockpiling Ver 3.0.0 ( Formerly: EM Storage)
+Added Small Log Pile ( the working version )
+Added Medium Log Pile
+Added Rock Pile
+Storage Slots and Link Distances and Recipes for all of these can be adjusted via the server GUI or through the config file!
+--------------------------------------------------------------

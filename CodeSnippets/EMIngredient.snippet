@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>EM Ingedient</Title>
+			<ShortCut>eming</ShortCut>
+        </Header>
+        <Snippet>
+			<Declarations>
+				<Literal>
+                    <ID>name</ID>
+                    <Default>LogItem</Default>
+                </Literal>
+				<Literal>
+                    <ID>istag</ID>
+                    <Default>false</Default>
+                </Literal>
+				<Literal>
+                    <ID>amount</ID>
+                    <Default>1</Default>
+                </Literal>
+				<Literal>
+                    <ID>isstatic</ID>
+                    <Default>false</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp">
+                <![CDATA[new EMIngredient(item:"$name$", isTag:$istag$, amount:$amount$, isStatic:$isstatic$),]]>
+            </Code>			
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

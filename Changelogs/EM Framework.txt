@@ -1,0 +1,68 @@
+EM Framework - Changelog
+
+V3.1.5:
+Added:
+Added Vehicle Resolver
+Added Default Logging to PrintConsole Methods with the ability to turn off the file logging through optional parameter
+Added /gen-emcon command to generate the EMConfigure.eco file if it doesn't autogenerate
+
+Fixes:
+Fixed an Issue with the server always loading config overrides regardless of them being the same as default
+Fixed a bug where using the PrintConsoleMultiColored from the GUI Thread causing a softlock
+Strings Fixed for Localization
+
+Changes:
+EMConfigure.eco should now autogenerate on server boot
+
+V3.1.4:
+Fixed Resolvers Not working properly on server reboot
+
+v3.1.3:
+Fixed a critical bug that prevented servers from booting with new Housing Resolver
+
+v3.1.2:
+Added:
+Food Item Resolver - Food Items can now be configurable when using the IConfigurableFoodItem interface
+Housing Point Resolver - Housing Items can now be configurable when using the IConfigurableHousing interface
+
+Fixed:
+Fixed a bug with the Passive Crafters preventing the server from booting
+
+v3.1.1:
+Important Hotfix For EM Framework - Fixed an issue where the Weight Resolver and Stack Size Changer would force its values all the time instead of being optional to have on or off
+
+V3.1.0:
+Added:
+Storage Slot Changer for Compiled Mods
+Link Distance Changer for Compiled Mods
+The Ability To Override Other Compiled Mod Recipes that use the EM Recipe Resolver
+Item Weight Changer for all Items with [Weight()] Attribute (Seemingly All of them)
+[IgnoreStackSize] Attribute To instruct the EM Stack Size Changer to ignore this stack size
+​CustomStackLimit Restriction, Lets you change the max stack size of all items in this storage except for tools, will also not let you store garbage (garbage, tailings, wet tailings) using this restriction
+​StackAllLimitRestriction, Allows you to multiply the stack size amount, IE: 1.5x or 2x for all items stored in this storage
+
+Changed:
+Recipe Resolver to be way more functional with many more options for changing Recipes in Compiled Mods
+Moved Stack Size Changer to a single Tab in the Server GUI from all mods that use the Stack Size Changer
+Changed ChatBase.InfoPane to use an Enum for PanelType for clarity
+Changed ChatBaseExtended.CBInfoPane to use an Enum for PanelType for clarity
+
+Notes:
+- The Recipe Changer For compiled mods will work with Recipe Variants! All information will be available in the documentation.
+- Namespaces have not changed just the Assembly Name, this will break backwards compatibility
+- Using The IRecipeOverride will not crash the server if the mod it is using to override doesn't exist or the mod it is overriding doesn't exist it will just put an error in the console then finish the server boot
+
+
+V3.0.1:
+Fixed An Issue where admins couldn't use admin commands even if Admin Default Behavior was set to True
+
+
+V3.0.0:
+Moved Project To .NET 5.0 From .NET STANDARD 2.1 Be sure to make the change!
+
+Added 2 New Sensors:
+Power Sensor - Used to toggle On/Off For anything that uses Power In the same room ( In unity Use the Bool Param IsOn )
+Lights Sensor - Used to toggle On/Off All Lights in the same room ( In unity use the Bool Param IsOn )
+
+Fixed Chat Commands Not Logging Properly!
+Fixed to work with 9.4.1
