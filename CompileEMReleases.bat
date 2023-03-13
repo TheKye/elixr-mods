@@ -136,14 +136,14 @@ set blocksAssets=%unitydir%\EM Building\Assets\EM-Blocks
 ::set sensorsAssets=%unitydir%\EM Energy\Assets\EM-Sensors.unity3d
 
 :: EM Food
-set farming=%path%\EM Food\net7.0\Eco.EM.Food.Farming.dll
-set farmingAssets=%unitydir%\EM Food\Assets\EM-Farming.unity3d
-set foodsmoking=%path%\EM Food\net7.0\Eco.EM.Food.FoodSmoking.dll
-set foodsmokingAssets=%unitydir%\EM Food\Assets\EM-Foodsmoking.unity3d
+::set farming=%path%\EM Food\net7.0\Eco.EM.Food.Farming.dll
+::set farmingAssets=%unitydir%\EM Food\Assets\EM-Farming.unity3d
+::set foodsmoking=%path%\EM Food\net7.0\Eco.EM.Food.FoodSmoking.dll
+::set foodsmokingAssets=%unitydir%\EM Food\Assets\EM-Foodsmoking.unity3d
 ::set hunting=%path%\EM Food\net7.0\Eco.EM.Food.Hunting.dll
 ::set huntingAssets=%unitydir%\EM Food\Assets\EM-Hunting.unity3d
-set zymology=%path%\EM Food\net7.0\Eco.EM.Food.Zymology.dll
-set zymologyAssets=%unitydir%\EM Food\Assets\EM-Zymology.unity3d
+::set zymology=%path%\EM Food\net7.0\Eco.EM.Food.Zymology.dll
+::set zymologyAssets=%unitydir%\EM Food\Assets\EM-Zymology.unity3d
 ::set cafe=%path%\EM Food\net7.0\Eco.EM.Food.Cafe.dll
 ::set cafeAssets=%unitydir%\EM Food\Assets\EM-Cafe.unity3d
 ::set cuisine=%path%\EM Food\net7.0\Eco.EM.Food.Cuisine.dll
@@ -164,8 +164,8 @@ set furniture=%path%\EM Housing\net7.0\Eco.EM.Housing.Furniture.dll
 set furnitureAssets=%unitydir%\EM Housing\Assets\EM-Furniture.unity3d
 set doors=%path%\EM Housing\net7.0\Eco.EM.Housing.Doors.dll
 set doorsAssets=%unitydir%\EM Housing\Assets\EM-Doors.unity3d
-set paintings=%path%\EM Housing\net7.0\Eco.EM.Housing.Paintings.dll
-set paintingsAssets=%unitydir%\EM Housing\Assets\EM-Paintings.unity3d
+::set paintings=%path%\EM Housing\net7.0\Eco.EM.Housing.Paintings.dll
+::set paintingsAssets=%unitydir%\EM Housing\Assets\EM-Paintings.unity3d
 
 :: EM Machines
 ::set conveyors=%path%\EM Machines\net7.0\Eco.EM.Machines.Conveyors.dll
@@ -197,7 +197,7 @@ set changelog=%dir%\ChangeLog.txt
 ::Make the Output directories For Individual Modules
 ::Features Pack | Make Directories
 mkdir "%dest%\Admin\Mods\Elixr Mods\Features Pack"
-mkdir "%dest%\APS\Mods\Elixr Mods\Features Pack"
+::mkdir "%dest%\APS\Mods\Elixr Mods\Features Pack"
 mkdir "%dest%\Commands\Mods\Elixr Mods\Features Pack"
 mkdir "%dest%\Daily\Mods\Elixr Mods\Features Pack"
 mkdir "%dest%\Daily\Mods\Elixr Mods\Features Pack\Assets"
@@ -212,7 +212,7 @@ mkdir "%dest%\AutoDoors\Mods\Elixr Mods\Features Pack\Assets"
 
 :: Define Destination
 set admindest=%dest%\Admin\Mods\Elixr Mods\Features Pack
-set apsdest=%dest%\APS\Mods\Elixr Mods\Features Pack
+::set apsdest=%dest%\APS\Mods\Elixr Mods\Features Pack
 set commandsdest=%dest%\Commands\Mods\Elixr Mods\Features Pack
 set dailydest=%dest%\Daily\Mods\Elixr Mods\Features Pack
 set dailyassetdest=%dest%\Daily\Mods\Elixr Mods\Features Pack\Assets
@@ -360,16 +360,12 @@ mkdir "%dest%\Doors\Mods\Elixr Mods\EM Housing"
 mkdir "%dest%\Doors\Mods\Elixr Mods\EM Housing\Assets"
 mkdir "%dest%\Furniture\Mods\Elixr Mods\EM Housing"
 mkdir "%dest%\Furniture\Mods\Elixr Mods\EM Housing\Assets"
-mkdir "%dest%\Paintings\Mods\Elixr Mods\EM Housing"
-mkdir "%dest%\Paintings\Mods\Elixr Mods\EM Housing\Assets"
 
 :: Define Destination
 set doorsdest=%dest%\Doors\Mods\Elixr Mods\EM Housing
 set doorsassetdest=%dest%\Doors\Mods\Elixr Mods\EM Housing\Assets
 set furnituredest=%dest%\Furniture\Mods\Elixr Mods\EM Housing
 set furnitureassetdest=%dest%\Furniture\Mods\Elixr Mods\EM Housing\Assets
-set paintingsdest=%dest%\Paintings\Mods\Elixr Mods\EM Housing
-set paintingsassetdest=%dest%\Paintings\Mods\Elixr Mods\EM Housing\Assets
 
 :: EM Machines | Make Directories
 ::mkdir "%dest%\Automation\Mods\Elixr Mods\EM Machines"
@@ -492,8 +488,6 @@ copy "%doors%" "%doorsdest%" /y
 copy "%doorsAssets%" "%doorsassetdest%" /y
 copy "%furniture%" "%furnituredest%" /y
 copy "%furnitureAssets%" "%furnitureassetdest%" /y
-copy "%paintings%" "%paintingsdest%" /y
-copy "%paintingsAssets%" "%paintingsassetdest%" /y
 
 :: Machines
 ::copy "%automation%" "%automationdest%" /y
@@ -598,8 +592,6 @@ copy "%doors%" "%emhousing%" /y
 copy "%doorsAssets%" "%emhousingassets%" /y
 copy "%furniture%" "%emhousing%" /y
 copy "%furnitureAssets%" "%emhousingassets%" /y
-copy "%paintings%" "%emhousing%" /y
-copy "%paintingsAssets%" "%emhousingassets%" /y
 
 :: Machines
 ::copy "%automation%" "%emmachines%" /y
@@ -647,7 +639,7 @@ set fullpack=%dest%\EM FullPack\Mods\Elixr Mods
 ::"C:\Windows\System32\robocopy.exe" "%dest%\EM Clothing\Mods\Elixr Mods" "%fullpack%" /s /e
 ::"C:\Windows\System32\robocopy.exe" "%dest%\EM Energy\Mods\Elixr Mods" "%fullpack%" /s /e
 "C:\Windows\System32\robocopy.exe" "%dest%\EM Flags\Mods\Elixr Mods" "%fullpack%" /s /e
-"C:\Windows\System32\robocopy.exe" "%dest%\EM Food\Mods\Elixr Mods" "%fullpack%" /s /e
+::"C:\Windows\System32\robocopy.exe" "%dest%\EM Food\Mods\Elixr Mods" "%fullpack%" /s /e
 "C:\Windows\System32\robocopy.exe" "%dest%\EM Games\Mods\Elixr Mods" "%fullpack%" /s /e
 "C:\Windows\System32\robocopy.exe" "%dest%\EM Housing\Mods\Elixr Mods" "%fullpack%" /s /e
 "C:\Windows\System32\robocopy.exe" "%dest%\EM Machines\Mods\Elixr Mods" "%fullpack%" /s /e
@@ -734,7 +726,6 @@ set output=%dir%\bin\Release
 :: Individual
 "C:\Program Files\7-Zip\7z.exe" a -tzip "%output%\EM-Doors.zip" "%dest%\Doors\Mods\"
 "C:\Program Files\7-Zip\7z.exe" a -tzip "%output%\EM-Furniture.zip" "%dest%\Furniture\Mods\"
-"C:\Program Files\7-Zip\7z.exe" a -tzip "%output%\EM-Paintings.zip" "%dest%\Paintings\Mods\"
 
 :: Bundles
 "C:\Program Files\7-Zip\7z.exe" a -tzip "%output%\EM-Housing.zip" "%dest%\EM Housing\Mods\"

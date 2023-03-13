@@ -98,7 +98,7 @@ namespace Eco.EM.Warp
             var pointName = StringUtils.Sanitize(this.GivenName);
             WarpManager.Data.RemovePoint(pointName);
             WarpManager.SaveData();
-            base.Destroy();
+            base.OnDestroy();
         }
     }
 
@@ -107,7 +107,7 @@ namespace Eco.EM.Warp
     [MaxStackSize(100)]
     public partial class WarpPointItem : WorldObjectItem<WarpPointObject>
     {
-        public override LocString DisplayDescription { get { return Localizer.DoStr("A Community Warp Point!"); } }
+        public override LocString DisplayDescription => Localizer.DoStr("A Community Warp Point!");
 
         static WarpPointItem() { }
 

@@ -16,7 +16,7 @@ namespace Eco.EM.Daily
         private const string _dataFile = "DailyData";
         private const string _packsFile = "DailyPacks";
         internal const string ID = "EM_DailyRewards_Config";
-        private const string _subPath = "/EM/DailyRewards";
+        private const string _subPath = "\\EM\\DailyRewards";
 
         public static DailyConfig Config { get; private set; }
         public static DailyData Data { get; private set; }

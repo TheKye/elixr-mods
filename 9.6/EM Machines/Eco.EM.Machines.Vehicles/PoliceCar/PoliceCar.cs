@@ -112,14 +112,6 @@ namespace Eco.EM.Machines.Vehicles
             seats: 1
         );
 
-        public override InteractResult OnActLeft(InteractionContext context)
-        {
-            lights = !lights;
-            this.SetAnimatedState("LightsOn", lights);
-
-            return base.OnActLeft(context);
-        }
-        
         static PoliceCarObject()
         {
             WorldObject.AddOccupancy<PoliceCarObject>(new List<BlockOccupancy>(0));

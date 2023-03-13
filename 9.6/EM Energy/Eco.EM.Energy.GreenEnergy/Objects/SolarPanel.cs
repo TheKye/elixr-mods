@@ -17,6 +17,7 @@ using Eco.Shared.Math;
 using Eco.EM.Framework.Helpers;
 using Eco.Gameplay.Housing.PropertyValues;
 using Eco.Gameplay.Systems.Messaging.Chat.Commands;
+using System;
 
 namespace Eco.EM.Energy.GreenEnergy
 {

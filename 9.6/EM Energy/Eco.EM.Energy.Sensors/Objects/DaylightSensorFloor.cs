@@ -1,4 +1,5 @@
 ﻿using Eco.EM.Energy.Sensors.Components;
+using Eco.EM.Framework.Helpers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
 using Eco.Gameplay.Items;
@@ -30,7 +31,13 @@ namespace Eco.EM.Energy.Sensors
         public override void Tick()
         {
             Framework.Helpers.Sensors.DaylightSensor(this, Range);
-            Helpers.toggleDaylight(this);
+
+            var daylight = DaylightSensorHelper.IsDayLight();
+            if (GetComponent<OnOffComponent>().On)
+            {
+                SetAnimatedState("IsDaytime", daylight);
+                return;
+            }
         }
     }
 

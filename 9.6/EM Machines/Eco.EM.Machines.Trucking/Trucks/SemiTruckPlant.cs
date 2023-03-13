@@ -123,7 +123,7 @@ namespace Eco.EM.Machines.Trucking.Trucks
 
     public class VehicleItemsStackRestriction : InventoryRestriction
     {
-        private readonly HashSet<Type> allowedItemTypes = new(new Type[] { typeof(SkidSteerItem), typeof(ExcavatorItem), typeof(SteamTruckItem), typeof(SteamTractorItem), typeof(TruckItem) });
+        private readonly HashSet<Type> allowedItemTypes = new(new Type[] {typeof(PhysicsWorldObject) });
         public VehicleItemsStackRestriction() { }
 
         public override LocString Message => Localizer.DoStr("Plant Trailer can only Store Small Vehicles");
