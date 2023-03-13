@@ -26,7 +26,7 @@ namespace Eco.EM.Artistry
         private static readonly HousingModel defaults = new(
         typeof(SantasWheelHouseCanvasItem),
         "Santa's Wheelhouse",
-        "Kitchen",
+        RoomCategory.Kitchen.Name,
         skillValue: 5,
         typeForRoomLimit: "Wall Painting",
         diminishingReturn: 0.1f);

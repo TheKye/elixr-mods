@@ -29,7 +29,7 @@ namespace Eco.EM.Artistry
         private static readonly HousingModel defaults = new(
         typeof(DevilCanvasItem),
         "Devil Canvas",
-        "Bedroom",
+        RoomCategory.Bedroom.Name,
         skillValue: 9,
         typeForRoomLimit: "Wall Painting",
         diminishingReturn: 0.0f);

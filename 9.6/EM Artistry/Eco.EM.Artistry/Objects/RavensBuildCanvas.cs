@@ -27,7 +27,7 @@ namespace Eco.EM.Artistry
         private static readonly HousingModel defaults = new(
         typeof(RavensChurchCanvasItem),
         "Ravens Church Canvas",
-        "Bathroom",
+        RoomCategory.Bathroom.Name,
         skillValue: 5,
         typeForRoomLimit: "Wall Painting",
         diminishingReturn: 0.1f);

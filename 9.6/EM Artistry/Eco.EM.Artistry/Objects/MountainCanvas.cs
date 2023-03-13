@@ -28,7 +28,7 @@ namespace Eco.EM.Artistry
         private static readonly HousingModel defaults = new(
         typeof(MountainCanvasItem),
         "Mountain Canvas",
-"Decoration",
+        "Decoration",
         skillValue: 3,
         typeForRoomLimit: "Wall Painting",
         diminishingReturn: 0.3f);

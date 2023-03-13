@@ -1,0 +1,2 @@
+steps:
+  script: dotnet build

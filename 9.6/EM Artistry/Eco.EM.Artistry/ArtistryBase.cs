@@ -15,9 +15,6 @@ namespace Eco.EM.Artistry
 {
     class ArtistryBase : IInitializablePlugin, IModKitPlugin
     {
-        public const string version = "2.0.0";
-        public const string packName = "Artistry Pack Version:";
-        public const string application = "[Elixr Mods]:";
 
         public string GetStatus()
         {
@@ -45,6 +42,6 @@ namespace Eco.EM.Artistry
             EcopediaGenerator.GenerateEcopediaPageFromFile("ModDocumentation;EM Artistry;Painting.xml", "Eco.EM.Artistry.Ecopedia", "Elixr Mods");
         }
 
-        public string GetCategory() => "Mod";
+        public string GetCategory() => "Elixr Mods";
     }
 }
