@@ -7,7 +7,7 @@
 		<PackageReference Include="Eco.ReferenceAssemblies" Version="0.9.7.7-beta-release-431" />
 	</ItemGroup>
 
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
 	  <Exec Command="cd $(SolutionDir)&#xD;&#xA;cd bin&#xD;&#xA;mkdir ModularTools\Mods\UserCode\ModularTools&#xD;&#xA;mkdir ModularTools\Mods\UserCode\AutoGen&#xD;&#xA;mkdir ModularTools\Mods\UserCode\Tools&#xD;&#xA;&#xD;&#xA;(robocopy &quot;$(SolutionDir)9.6\Collaborations\ModularTools\AutoGen&quot; &quot;$(SolutionDir)bin\ModularTools\Mods\UserCode\AutoGen&quot; /s)  ^&amp; IF %25ERRORLEVEL%25 LSS 8 SET ERRORLEVEL = 0&#xD;&#xA;(robocopy &quot;$(SolutionDir)9.6\Collaborations\ModularTools\ModularTools&quot; &quot;$(SolutionDir)bin\ModularTools\Mods\UserCode\ModularTools&quot; /s)  ^&amp; IF %25ERRORLEVEL%25 LSS 8 SET ERRORLEVEL = 0&#xD;&#xA;(robocopy &quot;$(SolutionDir)9.6\Collaborations\ModularTools\Tools&quot; &quot;$(SolutionDir)bin\ModularTools\Mods\UserCode\Tools&quot; /s)  ^&amp; IF %25ERRORLEVEL%25 LSS 8 SET ERRORLEVEL = 0" />
 	</Target>
 
