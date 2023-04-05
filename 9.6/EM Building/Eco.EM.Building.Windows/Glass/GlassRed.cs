@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Eco.Core.Items;
+using Eco.EM.Framework.Extentsions;
+using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Blocks;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Economy;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
+using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using Eco.World.Blocks;
-using Eco.Mods.TechTree;
-using Eco.EM.Framework.Resolvers;
-using Eco.EM.Framework;
+using System;
 using System.Linq;
-using Eco.EM.Framework.Extentsions;
 
 namespace Eco.EM.Building.Windows
 {
@@ -93,6 +92,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [MaxStackSize(20)]
     [Currency]
+    [Tag("Coloured Glass")]
     [Weight(10000)]
     [LocDisplayName("Red Glass")]
     public partial class RedGlassItem : BlockItem<RedGlassBlock>
