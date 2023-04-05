@@ -92,7 +92,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [MaxStackSize(20)]
     [Currency]
-    [Tag("Coloured Glass")]
+    [Tag("Colored Glass")]
     [Weight(10000)]
     [LocDisplayName("Purple Glass")]
     public partial class PurpleGlassItem : BlockItem<PurpleGlassBlock>

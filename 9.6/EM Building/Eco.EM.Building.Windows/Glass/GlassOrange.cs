@@ -93,7 +93,7 @@ namespace Eco.EM.Building.Windows
     [MaxStackSize(20)]
     [Currency]
     [Weight(10000)]
-    [Tag("Coloured Glass")]
+    [Tag("Colored Glass")]
     [LocDisplayName("Orange Glass")]
     public partial class OrangeGlassItem : BlockItem<OrangeGlassBlock>
     {
