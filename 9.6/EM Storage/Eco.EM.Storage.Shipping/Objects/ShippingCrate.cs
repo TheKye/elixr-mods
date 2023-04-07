@@ -31,7 +31,7 @@ namespace Eco.EM.Storage.Shipping
         public override TableTextureMode TableTexture => TableTextureMode.Stone;
 
         private static readonly LinkModel LinkDefaults = new(typeof(ShippingCrateObject)) { LinkRadius = 7, };
-        private static readonly StorageSlotModel SlotDefaults = new(typeof(ShippingCrateObject)) { StorageSlots = 36, StackMultiplier = 1f};
+        private static readonly StorageSlotModel SlotDefaults = new(typeof(ShippingCrateObject), 36, 1f);
 
         static ShippingCrateObject()
         {

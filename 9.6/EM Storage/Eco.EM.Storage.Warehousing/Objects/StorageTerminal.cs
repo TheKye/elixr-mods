@@ -93,8 +93,34 @@ namespace Eco.EM.Storage.Warehousing
     [Serialized, AutogenClass, LocDisplayName("Storage Terminal")]
     public partial class StorageTerminalComponent : WorldObjectComponent
     {
-        [SyncToView, Autogen, AutoRPC, Serialized] public float Radius { get; set; } = 10;
-        [Eco] public OrderBy OrderBy { get; set; } = OrderBy.SellingAlphabetical;
+        private float radius;
+
+        [SyncToView, Autogen, AutoRPC, Serialized]
+        public float Radius
+        {
+            get => radius;
+            set
+            {
+                if (value == radius) return;
+                radius = value;
+                this.Changed(nameof(Radius));
+            }
+        }
+
+        private OrderBy orderBy;
+
+        [Eco]
+        public OrderBy OrderBy
+        {
+            get => orderBy;
+            set
+            {
+                if (value == orderBy) return;
+                orderBy = value;
+                this.Changed(nameof(OrderBy));
+            }
+        }
+
 
         private List<PublicStorageComponent> inventories;
         private List<StoreComponent> stores;
@@ -287,8 +313,8 @@ namespace Eco.EM.Storage.Warehousing
         }
 
         static string WhiteText(string s) => $"<color=#ffffff>{s}</color>";
-        static string RedText(string s) => $"<color=#ff0000>{s}</color>"; 
+        static string RedText(string s) => $"<color=#ff0000>{s}</color>";
         static string OrangeText(string s) => $"<color=#ffa31a>{s}</color>";
-        static string GreenText(string s) => $"<color=#66ff33>{s}</color>"; 
+        static string GreenText(string s) => $"<color=#66ff33>{s}</color>";
     }
 }

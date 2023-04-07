@@ -40,7 +40,7 @@
     <None Include="Objects\MTWheatFarm.cs" />
   </ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.4.2" />
+		<PackageReference Include="ElixrMods.Framework" Version="3.4.6" />
 	</ItemGroup>
   <ItemGroup>
     <Reference Include="Eco.Core">

@@ -38,8 +38,8 @@
 	<EmbeddedResource Include="Ecopedia\ModDocumentation%3bEM Building%3bGreenhousing.xml" />
   </ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Eco.ReferenceAssemblies" Version="0.9.7.7-beta-release-431" />
-		<PackageReference Include="ElixrMods.Framework" Version="3.4.2" />
+		<PackageReference Include="Eco.ReferenceAssemblies" Version="0.9.7.10-beta-release-474" />
+		<PackageReference Include="ElixrMods.Framework" Version="3.4.6" />
 		<PackageReference Include="NetFabric.Hyperlinq" Version="3.0.0-beta48" />
 	</ItemGroup>
 

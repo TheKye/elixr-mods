@@ -29,7 +29,7 @@ namespace Eco.EM.Storage.Stockpiling
         public virtual Type RepresentedItemType => typeof(RockPileSmallItem);
 
         private static readonly LinkModel LinkDefaults = new(typeof(RockPileSmallObject)) { LinkRadius = 7, };
-        private static readonly StorageSlotModel SlotDefaults = new(typeof(RockPileSmallObject)) { StorageSlots = 10, StackMultiplier = 1 };
+        private static readonly StorageSlotModel SlotDefaults = new(typeof(RockPileSmallObject), 10, 1);
 
         static RockPileSmallObject() 
         {

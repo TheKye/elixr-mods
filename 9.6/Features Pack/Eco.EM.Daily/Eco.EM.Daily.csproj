@@ -29,10 +29,10 @@
 		<Content Include="FodyWeavers.xml" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Eco.ReferenceAssemblies" Version="0.9.7.7-beta-release-431" />
+		<PackageReference Include="Eco.ReferenceAssemblies" Version="0.9.7.10-beta-release-474" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.4.2" />
+		<PackageReference Include="ElixrMods.Framework" Version="3.4.6" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="Eco.Core">

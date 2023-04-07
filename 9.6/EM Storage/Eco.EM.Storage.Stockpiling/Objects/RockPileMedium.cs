@@ -30,7 +30,7 @@ namespace Eco.EM.Storage.Stockpiling
         public virtual Type RepresentedItemType => typeof(RockPileMediumItem);
         public override TableTextureMode TableTexture => TableTextureMode.Stone;
 
-        private static readonly StorageSlotModel SlotDefaults = new(typeof(RockPileMediumObject)) { StorageSlots = 16, StackMultiplier = 1 };
+        private static readonly StorageSlotModel SlotDefaults = new(typeof(RockPileMediumObject), 16, 1);
         private static readonly LinkModel LinkDefaults = new(typeof(RockPileMediumObject)) { LinkRadius = 12 };
 
         static RockPileMediumObject()

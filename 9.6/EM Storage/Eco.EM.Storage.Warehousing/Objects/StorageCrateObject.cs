@@ -26,7 +26,7 @@ namespace Eco.EM.Storage.Warehousing
         public virtual Type RepresentedItemType => typeof(StorageCrateItem);
 
         private static readonly LinkModel LinkDefaults = new(typeof(StorageCrateObject)) { LinkRadius = 12, };
-        private static readonly StorageSlotModel SlotDefaults = new(typeof(StorageCrateObject)) { StorageSlots = 38, };
+        private static readonly StorageSlotModel SlotDefaults = new(typeof(StorageCrateObject), 38, 1);
 
         static StorageCrateObject()
         {

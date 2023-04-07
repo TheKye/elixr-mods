@@ -34,7 +34,7 @@ namespace Eco.EM.Storage.Shipping
         public Type RepresentedItemType => typeof(ShippingContainer40Item);
 
         private static readonly LinkModel LinkDefaults = new(typeof(ShippingContainer40Object)) { LinkRadius = 12, };
-        private static readonly StorageSlotModel SlotDefaults = new(typeof(ShippingContainer40Object)) { StorageSlots = 128, StackMultiplier = 1.5f };
+        private static readonly StorageSlotModel SlotDefaults = new(typeof(ShippingContainer40Object), 128, 1.5f);
 
         public ShippingContainer40Object() { }
 

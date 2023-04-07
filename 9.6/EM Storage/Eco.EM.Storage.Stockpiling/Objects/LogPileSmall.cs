@@ -28,7 +28,7 @@ namespace Eco.EM.Storage.Stockpiling
         public override TableTextureMode TableTexture => TableTextureMode.Wood;
         public virtual Type RepresentedItemType => typeof(LogPileSmallItem);
 
-        private static readonly StorageSlotModel SlotDefaults = new(typeof(LogPileSmallObject)) { StorageSlots = 8, StackMultiplier = 1 };
+        private static readonly StorageSlotModel SlotDefaults = new(typeof(LogPileSmallObject), 8, 1 );
         private static readonly LinkModel LinkDefaults = new(typeof(LogPileSmallObject)) { LinkRadius = 7 };
 
         static LogPileSmallObject()

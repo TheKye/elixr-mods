@@ -30,7 +30,7 @@ namespace Eco.EM.Storage.Stockpiling
         public virtual Type RepresentedItemType => typeof(RockPileLargeItem);
         public override TableTextureMode TableTexture => TableTextureMode.Stone;
 
-        private static readonly StorageSlotModel SlotDefaults = new(typeof(RockPileLargeObject)) { StorageSlots = 28, StackMultiplier = 1 };
+        private static readonly StorageSlotModel SlotDefaults = new(typeof(RockPileLargeObject), 28, 1);
         private static readonly LinkModel LinkDefaults = new(typeof(RockPileLargeObject)) { LinkRadius = 16 };
 
         static RockPileLargeObject()
@@ -47,8 +47,6 @@ namespace Eco.EM.Storage.Stockpiling
 
             AddOccupancy<RockPileLargeObject>(BlockOccupancyList);
         }
-
-        Type[] Items = { typeof(CrushedIronOreItem), typeof(CrushedGoldOreItem) };
 
         protected override void Initialize() { }
         protected override void PostInitialize()
