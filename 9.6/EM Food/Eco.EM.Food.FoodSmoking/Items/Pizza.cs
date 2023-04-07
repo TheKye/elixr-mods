@@ -33,7 +33,7 @@ namespace Eco.PlanetChefMod
         public override float Calories => 250;
         public override Nutrients Nutrition => new Nutrients() { Carbs = 20, Fat = 10, Protein = 10, Vitamins = 0 };
 
-        protected override int BaseShelfLife => throw new NotImplementedException();
+        protected override float BaseShelfLife => throw new NotImplementedException();
     }
 
     [RequiresSkill(typeof(CookingSkill), 1)]

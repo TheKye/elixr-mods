@@ -33,7 +33,7 @@ namespace Eco.EM.Food.Cuisine
         public override float Calories => 120;
         public override Nutrients Nutrition => new() { Carbs = 2.1f, Fat = 1, Protein = 2.5f, Vitamins = 1 };
 
-        protected override int BaseShelfLife => throw new NotImplementedException();
+        protected override float BaseShelfLife => throw new NotImplementedException();
     }
 
     [RequiresSkill(typeof(CookingSkill), 1)]

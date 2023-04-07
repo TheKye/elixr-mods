@@ -20,7 +20,7 @@ namespace Eco.EM.Food.Cafe
 
         private static readonly FoodItemModel defaults = new(typeof(TurkeyEggItem), "Turkey Eggs", calories: 60, carbs: 4, fat: 5, protein: 7, vitamins: 1, shelflife: 96);
 
-        protected override int BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
+        protected override float BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
         public override float Calories => EMFoodItemResolver.Obj.ResolveCalories(this);
         public override Nutrients Nutrition => EMFoodItemResolver.Obj.ResolveNutrients(this);
         static TurkeyEggItem() => EMFoodItemResolver.AddDefaults(defaults);

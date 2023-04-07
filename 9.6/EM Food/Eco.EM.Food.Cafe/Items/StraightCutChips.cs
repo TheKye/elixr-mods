@@ -23,7 +23,7 @@ namespace Eco.EM.Food.Cafe
 
         private static readonly FoodItemModel defaults = new(typeof(StraightCutChipsItem), "Straight Cut Chips", calories: 420, carbs: 8, fat: 0, protein: 2, vitamins: 2, shelflife: 12);
 
-        protected override int BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
+        protected override float BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
         public override float Calories                 => EMFoodItemResolver.Obj.ResolveCalories(this);
         public override Nutrients Nutrition            => EMFoodItemResolver.Obj.ResolveNutrients(this);
         static StraightCutChipsItem()                  => EMFoodItemResolver.AddDefaults(defaults);

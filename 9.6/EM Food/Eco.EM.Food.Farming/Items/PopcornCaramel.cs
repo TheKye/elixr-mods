@@ -26,7 +26,7 @@ namespace Eco.EM.Food.Zymology
 		public override Nutrients Nutrition            => n;
 		private Nutrients n                            => EMFoodItemResolver.Obj.ResolveNutrients(this);
 
-		protected override int BaseShelfLife => throw new NotImplementedException();
+		protected override float BaseShelfLife => throw new NotImplementedException();
 
 		static CaramelPopcornItem()                    => EMFoodItemResolver.AddDefaults(defaults);
 	}

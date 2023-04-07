@@ -35,7 +35,7 @@ namespace Eco.EM.Food.Zymology
         public override float Calories                 => EMFoodItemResolver.Obj.ResolveCalories(this);
         public override Nutrients Nutrition            => EMFoodItemResolver.Obj.ResolveNutrients(this);
 
-        protected override int BaseShelfLife => throw new NotImplementedException();
+        protected override float BaseShelfLife => throw new NotImplementedException();
 
         static LightMilkItem()                         => EMFoodItemResolver.AddDefaults(defaults);
     }

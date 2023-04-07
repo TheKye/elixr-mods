@@ -27,7 +27,7 @@ namespace Eco.EM.Food.Cuisine
         public override float Calories                 => EMFoodItemResolver.Obj.ResolveCalories(this);
         public override Nutrients Nutrition            => EMFoodItemResolver.Obj.ResolveNutrients(this);
 
-        protected override int BaseShelfLife => throw new NotImplementedException();
+        protected override float BaseShelfLife => throw new NotImplementedException();
 
         static BriocheItem()                           => EMFoodItemResolver.AddDefaults(defaults);
     }

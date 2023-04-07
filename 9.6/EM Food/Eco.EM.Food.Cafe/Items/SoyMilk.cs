@@ -24,7 +24,7 @@ namespace Eco.EM.Food.Cafe
 
         private static readonly FoodItemModel defaults = new(typeof(SoyMilkItem), "Soy Milk", calories: 55, carbs: 4, fat: 4, protein: 5, vitamins: 2, shelflife: 72);
 
-        protected override int BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
+        protected override float BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
         public override float Calories                 => EMFoodItemResolver.Obj.ResolveCalories(this);
         public override Nutrients Nutrition            => EMFoodItemResolver.Obj.ResolveNutrients(this);
         static SoyMilkItem()                           => EMFoodItemResolver.AddDefaults(defaults);

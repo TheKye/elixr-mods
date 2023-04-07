@@ -30,7 +30,7 @@ namespace Eco.EM.Food.Cafe
         public override LocString DisplayDescription => Localizer.DoStr("A Refreshing Burst of vitamins.");
         private static readonly FoodItemModel defaults = new(typeof(PineappleJuiceItem), "Mayonaise", calories: 100, carbs: 0, fat: 0, protein: 0, vitamins: 10, shelflife: 72);
 
-        protected override int BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
+        protected override float BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
         public override float Calories => EMFoodItemResolver.Obj.ResolveCalories(this);
         public override Nutrients Nutrition => EMFoodItemResolver.Obj.ResolveNutrients(this);
         static PineappleJuiceItem() => EMFoodItemResolver.AddDefaults(defaults);

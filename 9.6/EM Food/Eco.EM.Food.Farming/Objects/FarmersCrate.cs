@@ -30,7 +30,7 @@ namespace Eco.EM.Food.Farming
         public override TableTextureMode TableTexture => TableTextureMode.Stone;
 
         private static readonly LinkModel LinkDefaults = new(typeof(FarmersCrateObject)) { LinkRadius = 7, };
-        private static readonly StorageSlotModel SlotDefaults = new(typeof(FarmersCrateObject)) { StorageSlots = 20, };
+        private static readonly StorageSlotModel SlotDefaults = new(typeof(FarmersCrateObject), 20, 1f);
 
         static FarmersCrateObject()
         {

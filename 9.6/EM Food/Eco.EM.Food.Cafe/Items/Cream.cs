@@ -20,7 +20,7 @@ namespace Eco.EM.Food.Cafe
         private static readonly FoodItemModel defaults = new(typeof(CreamItem), "Cream", calories: 400, carbs: 1, fat: 6, protein: 1, shelflife: 12, vitamins: 4);
 
         public override float Calories => EMFoodItemResolver.Obj.ResolveCalories(this);
-        protected override int BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
+        protected override float BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
         public override Nutrients Nutrition => EMFoodItemResolver.Obj.ResolveNutrients(this);
         static CreamItem() => EMFoodItemResolver.AddDefaults(defaults);
     }

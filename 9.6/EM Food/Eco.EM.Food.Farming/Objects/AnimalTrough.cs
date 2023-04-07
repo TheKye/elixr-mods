@@ -24,7 +24,7 @@ namespace Eco.EM.Food.Farming
         public virtual Type RepresentedItemType               => typeof(AnimalTroughItem);
 
         private static readonly LinkModel LinkDefaults        = new(typeof(AnimalTroughObject)) { LinkRadius   = 12, };
-        private static readonly StorageSlotModel SlotDefaults = new(typeof(AnimalTroughObject)) { StorageSlots = 4, };
+        private static readonly StorageSlotModel SlotDefaults = new(typeof(AnimalTroughObject), 4, 1f);
 
         static AnimalTroughObject() 
         {

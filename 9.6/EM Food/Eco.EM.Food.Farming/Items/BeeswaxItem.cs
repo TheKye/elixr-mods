@@ -28,7 +28,7 @@ namespace Eco.EM.Food.Farming
         public override float Calories                 => EMFoodItemResolver.Obj.ResolveCalories(this);
         public override Nutrients Nutrition            => EMFoodItemResolver.Obj.ResolveNutrients(this);
 
-        protected override int BaseShelfLife => throw new System.NotImplementedException();
+        protected override float BaseShelfLife => throw new System.NotImplementedException();
 
         static BeeswaxItem()                           => EMFoodItemResolver.AddDefaults(defaults);
     }

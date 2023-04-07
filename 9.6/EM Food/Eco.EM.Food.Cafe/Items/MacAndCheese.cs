@@ -18,7 +18,7 @@ namespace Eco.EM.Food.Cafe
     {
         public override LocString DisplayNamePlural => Localizer.DoStr("Mac And Cheese");
         public override LocString DisplayDescription => Localizer.DoStr("Electronic computer baked in cheese.");
-        protected override int BaseShelfLife => 12;
+        protected override float BaseShelfLife => 12;
 
         public override float Calories => 350;
         public override Nutrients Nutrition => new Nutrients() { Carbs = 55, Fat = 10, Protein = 15, Vitamins = 0 };

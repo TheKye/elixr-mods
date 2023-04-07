@@ -29,7 +29,7 @@ namespace Eco.EM.Food.Cafe
         public override LocString DisplayNamePlural => Localizer.DoStr("Mayonaise");
         public override LocString DisplayDescription => Localizer.DoStr("Blended egg and oil.");
         private static readonly FoodItemModel defaults = new(typeof(MayonaiseItem), "Mayonaise", calories: 70, carbs: 1, fat: 7, protein: 1, shelflife:12, vitamins: 0);
-        protected override int BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
+        protected override float BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
         public override float Calories => EMFoodItemResolver.Obj.ResolveCalories(this);
         public override Nutrients Nutrition => EMFoodItemResolver.Obj.ResolveNutrients(this);
         static MayonaiseItem() => EMFoodItemResolver.AddDefaults(defaults);

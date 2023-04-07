@@ -23,7 +23,7 @@ namespace Eco.EM.Food.Cafe
 
         public override float Calories => EMFoodItemResolver.Obj.ResolveCalories(this);
         public override Nutrients Nutrition => EMFoodItemResolver.Obj.ResolveNutrients(this);
-        protected override int BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
+        protected override float BaseShelfLife => EMFoodItemResolver.Obj.ResolveShelfLife(this);
         static FizzyPineappleItem() => EMFoodItemResolver.AddDefaults(defaults);
     }
 

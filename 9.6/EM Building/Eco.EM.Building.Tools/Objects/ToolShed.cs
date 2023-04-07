@@ -27,7 +27,7 @@ namespace Eco.EM.Building.Tools
         public override TableTextureMode TableTexture => TableTextureMode.Stone;
 
         private static readonly LinkModel LinkDefaults = new(typeof(ToolShedObject)) { LinkRadius = 7, };
-        private static readonly StorageSlotModel SlotDefaults = new(typeof(ToolShedObject)) { StorageSlots = 24, };
+        private static readonly StorageSlotModel SlotDefaults = new(typeof(ToolShedObject), 24, 1f);
 
         static ToolShedObject()
         {

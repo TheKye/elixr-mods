@@ -33,7 +33,7 @@ namespace Eco.EM.Food.Farming
         public override float Calories => 196;
         public override Nutrients Nutrition => new Nutrients() { Carbs = 0.8f, Fat = 1.0f, Protein = 1.3f, Vitamins = 0.2f };
 
-        protected override int BaseShelfLife => throw new NotImplementedException();
+        protected override float BaseShelfLife => throw new NotImplementedException();
     }
 
     [RequiresSkill(typeof(CampfireCookingSkill), 1)]
