@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>Eco.EM.Storage.Shipping</RootNamespace>
-    <Version>3.4.0</Version>
+    <Version>3.4.2</Version>
     <Authors>Elixr Mods</Authors>
     <Company>Elixr Solutions</Company>
     <Product>EM Shipping</Product>
