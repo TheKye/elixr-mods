@@ -23,21 +23,18 @@ namespace EM.ECO.MOTD
 
         public void DisplayMOTD(User user)
         {
-            Task.Delay(MOTDManager.Obj.Config.TimeDelayOnLogin * 1000);
-            if (MOTDManager.Obj.Config.ShowOnLogin)
-            {
-                user.Player.LargeInfoBox(ReplaceEMTags(_title, user), ReplaceEMTags(_body, user));
-
-                if (user.EnteredWorld)
-                    user.OnEnterWorld.Remove(MOTDManager.Data.OnEnterMOTD(user));
-            }
-            if (MOTDManager.Obj.Config.PostToChat) 
-            {
-                user.Player.MsgLocStr($"{ReplaceEMTags(_title, user)} \n{ReplaceEMTags(_body, user)}");
-            }
+            Task.Delay(MOTDManager.Obj.Config.TimeDelayOnLogin * 5000);
+            Task.Run(() => {
+                if (MOTDManager.Obj.Config.ShowOnLogin)
+                {
+                    user.Player.LargeInfoBox(ReplaceEMTags(_title, user), ReplaceEMTags(_body, user));
+                }
+                if (MOTDManager.Obj.Config.PostToChat)
+                {
+                    user.Player.MsgLocStr($"{ReplaceEMTags(_title, user)} \n{ReplaceEMTags(_body, user)}");
+                }
+            });
         }
-
-        public Action<User> OnEnterMOTD(User u) => (u) => MOTDManager.Data.DisplayMOTD(u);        
 
         private string ReplaceEMTags(string s, User user)
         {

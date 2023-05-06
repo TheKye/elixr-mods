@@ -48,7 +48,7 @@ namespace EM.ECO.MOTD
         {            
             UserManager.OnUserLoggedIn.Add(u =>
             {
-                u.OnEnterWorld.Add(Data.OnEnterMOTD(u));
+                Data.DisplayMOTD(u);
             });
         }
 

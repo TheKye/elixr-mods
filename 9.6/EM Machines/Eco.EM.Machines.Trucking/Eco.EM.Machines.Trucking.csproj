@@ -22,7 +22,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<OutputPath>..\..\..\bin\9.6\EM Machines</OutputPath>
+		<OutputPath>..\..\..\bin\10.0\EM Machines</OutputPath>
 	</PropertyGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
@@ -37,8 +37,57 @@
 	  <None Include="Trucks\Bus.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Eco.ReferenceAssemblies" Version="0.9.7.10-beta-release-474" />
 		<PackageReference Include="ElixrMods.Framework" Version="3.4.6" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<Reference Include="Eco.Core">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Gameplay">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.Gameplay.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.ModKit">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.ModKit.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Mods">
+			<HintPath>..\..\..\..\Eco.Develop\Server\Eco.Mods\bin\Release\net7.0-windows\Eco.Mods.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Networking.ENet">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.Networking.ENet.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Plugins">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.Plugins.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Shared">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Simulation">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.Simulation.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Stats">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.Stats.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Twitch.Shared">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.Twitch.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.Web.Core">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.Web.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.WebServer">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.WebServer.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.WindowsForms">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.WindowsForms.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.World">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.World.dll</HintPath>
+		</Reference>
+		<Reference Include="Eco.WorldGenerator">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\Eco.WorldGenerator.dll</HintPath>
+		</Reference>
+		<Reference Include="EcoServer">
+			<HintPath>..\..\..\..\Eco.Develop\Server\bin\Release\net7.0-windows\EcoServer.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>
