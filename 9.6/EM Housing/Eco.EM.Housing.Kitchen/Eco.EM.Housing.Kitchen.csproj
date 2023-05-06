@@ -21,7 +21,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<OutputPath>..\..\..\bin\9.6\EM Housing</OutputPath>
+		<OutputPath>..\..\..\bin\9.7.12\EM Housing</OutputPath>
 	</PropertyGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">

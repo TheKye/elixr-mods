@@ -22,7 +22,7 @@
   </Target>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	<OutputPath>..\..\..\bin\9.6\Flags</OutputPath>
+	<OutputPath>..\..\..\bin\9.7.12\Flags</OutputPath>
   </PropertyGroup>
 
 
