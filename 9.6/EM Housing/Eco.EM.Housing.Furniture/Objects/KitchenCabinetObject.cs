@@ -30,6 +30,8 @@ namespace Eco.EM.Housing.Furniture
 
         public virtual Type RepresentedItemType => typeof(KitchenCabinetItem);
 
+        
+
         static KitchenCabinetObject()
         {
             WorldObject.AddOccupancy<KitchenCabinetObject>(new List<BlockOccupancy>()
@@ -50,6 +52,7 @@ namespace Eco.EM.Housing.Furniture
             storage.Storage.AddInvRestriction(new NotCarriedRestriction()); // can't store block or large items
             this.GetComponent<HousingComponent>().HomeValue = KitchenCabinetItem.HousingVal;
             this.GetComponent<LinkComponent>().Initialize(9);
+            storage.ShelfLifeMultiplier = 1.25f;
 
             base.PostInitialize();
         }
