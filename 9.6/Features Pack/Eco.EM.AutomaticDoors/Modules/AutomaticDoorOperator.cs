@@ -4,6 +4,7 @@ using Eco.Gameplay.Components.Auth;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Modules;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using System;
@@ -13,9 +14,10 @@ namespace Eco.EM.Housing.Doors.Modules
 {
     [Serialized]
     [LocDisplayName("Automatic Door Operator - Ceiling")]
+    [LocDescription("A Door Operator for Operating Doors Automatically, Sits on the Ceiling")]
     public partial class AutomaticDoorOperatorCeilingItem : WorldObjectItem<AutomaticDoorOperatorCeilingObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Door Operator for Operating Doors Automatically, Sits on the Ceiling");
+        
     }
 
     [Serialized]
@@ -41,9 +43,10 @@ namespace Eco.EM.Housing.Doors.Modules
 
     [Serialized]
     [LocDisplayName("Automatic Door Operator - Floor")]
+    [LocDescription("A Door Operator for Operating Doors Automatically - Sits on the floor")]
     public partial class AutomaticDoorOperatorFloorItem : WorldObjectItem<AutomaticDoorOperatorFloorObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Door Operator for Operating Doors Automatically - Sits on the floor");
+        
     }
 
     [Serialized]

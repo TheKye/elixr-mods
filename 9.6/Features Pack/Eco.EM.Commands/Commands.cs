@@ -22,6 +22,7 @@
     using NLog.Targets;
     using Eco.Shared.Items;
     using Eco.Gameplay.DynamicValues;
+    using Eco.Gameplay.Items.Recipes;
 
     [ChatCommandHandler]
     class Commands
@@ -72,13 +73,10 @@
             if (target.IsOnline)
                 PlayerStats.Append(Text.Positive(Localizer.DoStr("Online")) + "\n");
 
-            string gender = string.Format(Localizer.DoStr("Character Gender: {0}"), target.Avatar.Sex);
+            string gender = string.Format(Localizer.DoStr("Character Gender: {0}"), target.Avatar.Gender);
             gender = gender[0].ToString().ToUpper() + gender.Remove(0, 1);
 
-            string skilltitle = string.Format(Localizer.DoStr($"Skill Title: {target.Titles().NotTranslated}"));
-            _ = skilltitle[0].ToString().ToUpper() + skilltitle.Remove(0, 1);
-
-            PlayerStats.Append($"{gender} {target.Titles}\n");
+            PlayerStats.Append($"{gender}\n");
             PlayerStats.Append(string.Format(Localizer.DoStr("Online Time (Total): {0}"), TimeFormatter.FormatSpan(target.TotalPlayTime)) + "\n");
 
             if (user.LoggedIn)
@@ -137,14 +135,14 @@
         [ChatCommand("Gets the Crafting Materials required to craft the specified item", "craft-cost")]
         public static void RecipeCraft(User user, string itemName)
         {
-            var item = CommandsUtil.ClosestMatchingEntity(user, itemName, Item.AllItems, x => x.GetType().Name, x => x.DisplayName);
+            var item = CommandsUtil.ClosestMatchingEntity(user, itemName, Item.AllItemsExceptHidden, x => x.GetType().Name, x => x.DisplayName);
             if (item is null)
             {
                 user.Player.ErrorLocStr($"Could not find {itemName}");
                 return;
             }
             List<Item> items = new();
-            var recipe = RecipeFamily.GetRecipesForItem(item.GetType());
+            var recipe = RecipeManager.GetRecipeFamiliesForItem(item.GetType());
             if (recipe.Any())
             {
                 StringBuilder sb = new();
@@ -267,7 +265,7 @@
 
             Users.ForEach(user =>
             {
-                userlines.Add($"{user.Name} - Reputation: {user.Reputation} - Skill Title: {user.Titles().NotTranslated}");
+                userlines.Add($"{user.Name} - Reputation: {user.Reputation}");
             });
 
             return string.Join("\n", userlines);
@@ -278,7 +276,7 @@
             List<Item> nextItems = new();
             foreach (var item in items)
             {
-                var recipe = RecipeFamily.GetRecipesForItem(item.GetType());
+                var recipe = RecipeManager.GetRecipeFamiliesForItem(item.GetType());
                 if (recipe.Any())
                 {
                     StringBuilder sb = new();

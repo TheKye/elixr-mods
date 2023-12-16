@@ -1,6 +1,6 @@
 @echo off
 ::Set Path and Directory
-set path=%cd%\bin\9.6
+set path=%cd%\bin\10.0
 set dir=%cd%
 
 ::Output Destination

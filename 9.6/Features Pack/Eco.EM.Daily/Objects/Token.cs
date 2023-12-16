@@ -2,7 +2,6 @@ using Eco.Core.Utils;
 using Eco.EM.Daily;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Players;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using System;
@@ -15,11 +14,10 @@ namespace Eco.EM.Mods.TechTree
     [LocDisplayName("Token")]
     [MaxStackSize(100)]
     [Priority(PriorityAttribute.High)]
+    [LocDescription("A token that can be exchanged into experience points")]
     public class TokenItem : Item
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A token that can be exchanged into experience points.");
 
-        [Tooltip(500, typeof(Controls))]
         public string ControlsTooltip => Style(Styles.Controls, Localizer.Do($"[Right-click to consume]"));
 
         public bool Consume(Player player)

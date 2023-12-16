@@ -5,8 +5,11 @@ using Eco.EM.Framework.Resolvers;
 using Eco.EM.Framework.Utils;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Players;
 using Eco.Shared.Items;
 using Eco.Shared.Localization;
@@ -18,7 +21,6 @@ namespace Eco.EM.Storage.Stockpiling
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(LinkComponent))]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     [RequireComponent(typeof(PublicStorageComponent))]
     [RequireComponent(typeof(ModularStockpileComponent))]
     public partial class RockPileSmallObject : WorldObject, IRepresentsItem, ILinkRadiusObject, IStorageSlotObject
@@ -69,13 +71,10 @@ namespace Eco.EM.Storage.Stockpiling
     [Serialized]
     [LocDisplayName("Small Rock Pile")]
     [Ecopedia("Crafted Objects", "Storage", createAsSubPage: true)]
+    [LocDescription("Designates a 4x2x4 area as storage for Rocks and Ores.")]
     public partial class RockPileSmallItem : WorldObjectItem<RockPileSmallObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Designates a 4x2x4 area as storage for Rocks and Ores.");
-
         static RockPileSmallItem() { }
-
-        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
     }
 
     public partial class RockPileSmallRecipe : RecipeFamily, IConfigurableRecipe
@@ -109,7 +108,7 @@ namespace Eco.EM.Storage.Stockpiling
             this.Recipes = EMRecipeResolver.Obj.ResolveRecipe(this);
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

@@ -12,21 +12,23 @@ using Eco.Shared.Serialization;
 using Eco.Mods.TechTree;
 using Eco.Gameplay.Skills;
 using Eco.Core.Controller;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Gameplay.Systems.NewTooltip;
 using Eco.Shared.Items;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Components.Storage;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Machines.Vehicles
 {
     [Serialized]
-    [LocDisplayName("Big Car")]
+    [LocDisplayName("4x4")]
     [Weight(25000)]
     [AirPollution(0.5f)]
+    [LocDescription("A Modern 4x4 That is usually used for offroad")]
     [Ecopedia("Crafted Objects", "Vehicles", createAsSubPage: true)]
     public partial class BigCarItem : WorldObjectItem<BigCarObject>, IPersistentData
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Modern Big Car");
-        [Serialized, SyncToView, TooltipChildren, NewTooltipChildren(CacheAs.Instance)] public object PersistentData { get; set; }
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
 
@@ -37,8 +39,8 @@ namespace Eco.EM.Machines.Vehicles
         {
             ModelType = typeof(BigCarRecipe).Name,
             Assembly = typeof(BigCarRecipe).AssemblyQualifiedName,
-            HiddenName = "Big Car",
-            LocalizableName = Localizer.DoStr("Big Car"),
+            HiddenName = "4x4",
+            LocalizableName = Localizer.DoStr("4x4"),
             IngredientList = new()
             {
                 new EMIngredient("GearboxItem", false, 4),
@@ -72,7 +74,7 @@ namespace Eco.EM.Machines.Vehicles
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

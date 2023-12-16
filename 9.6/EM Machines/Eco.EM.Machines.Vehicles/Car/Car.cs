@@ -12,21 +12,23 @@ using Eco.Shared.Serialization;
 using Eco.Mods.TechTree;
 using Eco.Gameplay.Skills;
 using Eco.Gameplay.Systems.NewTooltip;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Core.Controller;
 using Eco.Shared.Items;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Components.Storage;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Machines.Vehicles
 {
     [Serialized]
-    [LocDisplayName("Car")]
+    [LocDisplayName("Modern Car")]
     [Weight(25000)]
     [AirPollution(0.5f)]
+    [LocDescription("A Modern style car, Which has a few colors!")]
     [Ecopedia("Crafted Objects", "Vehicles", createAsSubPage: true)]
     public partial class CarItem : WorldObjectItem<CarObject>, IPersistentData
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Modern Car");
-        [Serialized, SyncToView, TooltipChildren, NewTooltipChildren(CacheAs.Instance)] public object PersistentData { get; set; }
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
     [RequiresSkill(typeof(IndustrySkill), 2)]
@@ -71,7 +73,7 @@ namespace Eco.EM.Machines.Vehicles
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

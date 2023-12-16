@@ -2,7 +2,6 @@
 using Eco.Gameplay.Players;
 using Eco.Gameplay.Systems.NewTooltip;
 using Eco.Gameplay.Systems.TextLinks;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Gameplay.Utils;
 using Eco.Shared.Localization;
 using Eco.Shared.Networking;
@@ -14,7 +13,7 @@ namespace Eco.EM.Admin.AdminExtentsions
 {
     static class ToolTipExtentsions
     {
-        [Tooltip(99), NewTooltip(Shared.Items.CacheAs.User, 99)]
+        [NewTooltip(Shared.Items.CacheAs.User, 99)]
         public static LocString UsersTooltipExtension(this User user, User viewer)
         {
             if (!viewer.IsAdmin || !AdminPlugin.Obj.Config.EnableExtraAdminInfo)

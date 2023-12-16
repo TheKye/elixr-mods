@@ -2,10 +2,13 @@
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
 using Eco.Gameplay.Interactions;
+using Eco.Gameplay.Interactions.Interactors;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Players;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
+using Eco.Shared.SharedTypes;
 
 namespace Eco.EM.Warp
 {
@@ -23,27 +26,29 @@ namespace Eco.EM.Warp
             GetComponent<CustomTextComponent>().Initialize(700);
         }
 
-        public override InteractResult OnActLeft(InteractionContext context)
+        public void OnActLeft(Player context)
         {
-            if (!context.Player.User.IsAdmin)
+            if (!context.User.IsAdmin)
             {
-                context.Player.ErrorLocStr("Only an admin may remove this object");
-                return InteractResult.Fail;
+                context.ErrorLocStr("Only an admin may remove this object");
+                return;
             }
-            return base.OnActLeft(context);
+            
         }
 
-        public override InteractResult OnActInteract(InteractionContext context)
+        public override void Use(Player player, InteractionTarget target, InteractionTriggerInfo triggerInfo, string ui = "WorldObjectUI")
         {
-            if (!context.Player.User.IsAdmin)
+            if (!player.User.IsAdmin)
             {
-                context.Player.ErrorLocStr("Only an admin may change the content on this object.");
-                return InteractResult.Fail;
+                player.ErrorLocStr("Only an admin may change the content on this object.");
+                return;
             }
-            return base.OnActInteract(context);
+
+            base.Use(player, target, triggerInfo, ui);
         }
 
-        public override InteractResult OnActRight(InteractionContext context)
+        [Interaction(InteractionTrigger.RightClick, "Warp")]
+        public void Warp(Player context, InteractionTarget target, InteractionTriggerInfo triggerInfo)
         {
             var text = GetComponent<CustomTextComponent>().TextData.Text;
 
@@ -53,35 +58,30 @@ namespace Eco.EM.Warp
                 var ltrimd = text.Remove(0, text.IndexOf("warp to ") + 8);
 
                 if (string.IsNullOrWhiteSpace(ltrimd))
-                    return base.OnActRight(context);
+                    return;
 
                 var rtrimd = text.Remove(text.IndexOf(" "));
 
                 if (string.IsNullOrWhiteSpace(rtrimd))
-                    return base.OnActRight(context);
+                    return;
                 if (ltrimd.EndsWith(",") || ltrimd.EndsWith("."))
                     ltrimd.Remove(ltrimd.Length - 1);
 
-                WarpCommands.SignWarpto(context.Player.User, ltrimd);
+                WarpCommands.SignWarpto(context.User, ltrimd);
             }
-            return base.OnActRight(context);
-
         }
     }
 
     [Serialized]
     [LocDisplayName("Warp Sign")]
     [MaxStackSize(100)]
+    [LocDescription("A large sign For Warp Points!")]
     public partial class WarpSignItem :
     WorldObjectItem<WarpSignObject>
     {
-        public override LocString DisplayDescription { get { return Localizer.DoStr("A large sign For Warp Points!"); } }
-
         static WarpSignItem()
         {
 
         }
-
-
     }
 }

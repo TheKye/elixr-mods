@@ -5,8 +5,11 @@ using Eco.EM.Framework.Resolvers;
 using Eco.EM.Framework.Utils;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Players;
 using Eco.Shared.Items;
 using Eco.Shared.Localization;
@@ -18,7 +21,6 @@ namespace Eco.EM.Storage.Stockpiling
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(LinkComponent))]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     [RequireComponent(typeof(PublicStorageComponent))]
     [RequireComponent(typeof(ModularStockpileComponent))]
     public partial class LogPileSmallObject : WorldObject, IRepresentsItem, ILinkRadiusObject, IStorageSlotObject
@@ -57,7 +59,7 @@ namespace Eco.EM.Storage.Stockpiling
             base.PostInitialize();
             var storage = this.GetComponent<PublicStorageComponent>();
             storage.Initialize(EMStorageSlotResolver.Obj.ResolveSlots(this));
-            storage.Storage.AddInvRestriction(new TagRestriction(Tag.Wood.Name));
+            storage.Storage.AddInvRestriction(new TagRestriction("Wood", "HewnLog"));
             storage.Inventory.AddInvRestriction(new StackAllLimitRestriction(EMStorageSlotResolver.Obj.ResolveStackMultiplier(this)));
             GetComponent<StockpileComponent>().Initialize(DefaultDim);
             GetComponent<LinkComponent>().Initialize(EMLinkRadiusResolver.Obj.ResolveLinkRadius(this));
@@ -67,12 +69,10 @@ namespace Eco.EM.Storage.Stockpiling
     [Serialized]
     [LocDisplayName("Small Log Pile")]
     [Ecopedia("Crafted Objects", "Storage", createAsSubPage: true)]
+    [LocDescription("A small storage space for storing logs")]
     public partial class LogPileSmallItem : WorldObjectItem<LogPileSmallObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Designates a 2x2x4 area as storage for logs.");
-
-        static LogPileSmallItem() { }
-        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
+       static LogPileSmallItem() { }
     }
 
     public partial class LogPileSmallRecipe : RecipeFamily, IConfigurableRecipe
@@ -107,7 +107,7 @@ namespace Eco.EM.Storage.Stockpiling
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ModsPreInitialize();
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             this.ModsPostInitialize();
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }

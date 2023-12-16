@@ -1,6 +1,6 @@
 ﻿using Eco.Gameplay.Items;
 using Eco.Gameplay.Players;
-using Eco.Gameplay.Systems.Tooltip;
+using Eco.Gameplay.Systems.NewTooltip;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using System;
@@ -14,9 +14,7 @@ namespace Eco.EM.Daily
     [MaxStackSize(100)]
     public partial class DailyRewardItem : Item
     {     
-        public override LocString DisplayDescription => Localizer.DoStr("Open to reveal a surprise!"); 
 
-        [Tooltip(500, typeof(Controls))]
         public string ControlsTooltip => Shared.Utils.Text.Style(Shared.Utils.Text.Styles.Controls, Localizer.Do($"[Right-click to open]"));
 
         protected bool Open(Player player, out string message)

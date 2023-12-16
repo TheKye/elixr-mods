@@ -5,15 +5,22 @@ using Eco.EM.Framework.Resolvers;
 using Eco.EM.Framework.Utils;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Interactions;
+using Eco.Gameplay.Interactions.Interactors;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Placement;
+using Eco.Gameplay.Players;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.Shared.Items;
 using Eco.Shared.Localization;
 using Eco.Shared.Math;
 using Eco.Shared.Serialization;
+using Eco.Shared.SharedTypes;
 
 namespace Eco.EM.Storage.Shipping
 {
@@ -61,22 +68,22 @@ namespace Eco.EM.Storage.Shipping
         }
         protected override void PostInitialize() { }
 
-        public override InteractResult OnActRight(InteractionContext context)
+        [Interaction(InteractionTrigger.RightClick)]
+        public void OnActRight(Player context, InteractionTriggerInfo interactionTriggerInfo, InteractionTarget interactionTarget)
         {
-            if (context.SelectedItem != null && context.SelectedItem.Type == typeof(ShippingCrateItem))
+
+            if (context.User.Inventory.Toolbar.SelectedItem != null && context.User.Inventory.Toolbar.SelectedItem.Type == typeof(ShippingContainer40Item))
             {
                 Vector3i abovePos = Position3i;
-                Quaternion playerFace = context.Player.User.FacingDir.Rotate180().ToQuat();
+                Eco.Shared.Math.Quaternion playerFace = context.User.FacingDir.Rotate180().ToQuat();
                 do
                 {
                     abovePos.Y += 1;
                 }
                 while (WorldUtils.WorldObjectsAtPos(abovePos) != null);
-                WorldObjectManager.TryPlaceWorldObject(context.Player, (WorldObjectItem)context.SelectedItem, abovePos, playerFace);
-                return InteractResult.Success;
+                WorldObjectPlacementUtils.TryPlaceWorldObject(null, context, (WorldObjectItem)context.User.Inventory.Toolbar.SelectedItem, context.User.Inventory.Toolbar.SelectedStack, pos: abovePos, rot: playerFace);
+                return;
             }
-
-            return base.OnActRight(context);
         }
 
         public override void Tick()
@@ -90,9 +97,9 @@ namespace Eco.EM.Storage.Shipping
 
     [Serialized, Weight(5000), MaxStackSize(10)]
     [LocDisplayName("Shipping Crate")]
+    [LocDescription("A simple shipping crate")]
     public partial class ShippingCrateItem : WorldObjectItem<ShippingCrateObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A simple shipping crate");
         static ShippingCrateItem() { }
     }
 
@@ -133,7 +140,7 @@ namespace Eco.EM.Storage.Shipping
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

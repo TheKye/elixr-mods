@@ -17,6 +17,11 @@ using Eco.EM.Framework.Utils;
 using System.Numerics;
 using Eco.Shared.Utils;
 using System.ComponentModel;
+using Eco.Core.Properties;
+using Eco.Gameplay.Occupancy;
+using static Eco.Gameplay.Civics.IfThenBlock;
+using static System.Net.Mime.MediaTypeNames;
+using System.Threading.Tasks;
 
 namespace Eco.EM.Warp
 {
@@ -36,7 +41,7 @@ namespace Eco.EM.Warp
             SetName(NameRollback);
 
             // watch for changes to the point name
-            this.WatchProp(nameof(Name), (_) =>
+            this.WatchPropAndCall(this, nameof(Name), () =>
             {
                 var pointName = StringUtils.Sanitize(Name);
                 switch (WarpManager.Data.GetPoint(pointName))
@@ -64,24 +69,22 @@ namespace Eco.EM.Warp
             });
         }
 
-        public override InteractResult OnActLeft(InteractionContext context)
+        public void OnActLeft(Player context)
         {
-            if (!context.Player.User.IsAdmin)
+            if (!context.User.IsAdmin)
             {
-                context.Player.ErrorLocStr("Only an admin may remove this object");
-                return InteractResult.Fail;
+                context.ErrorLocStr("Only an admin may remove this object");
+                return;
             }
-            return base.OnActLeft(context);
         }
 
-        public override InteractResult OnActInteract(InteractionContext context)
+        public void OnActInteract(Player context)
         {
-            if (!context.Player.User.IsAdmin)
+            if (!context.User.IsAdmin)
             {
-                context.Player.ErrorLocStr("Only an admin may change the content on this object.");
-                return InteractResult.Fail;
+                context.ErrorLocStr("Only an admin may change the content on this object.");
+                return;
             }
-            return base.OnActInteract(context);
         }
 
         static WarpPointObject()
@@ -105,31 +108,30 @@ namespace Eco.EM.Warp
     [Serialized]
     [LocDisplayName("Warp Point")]
     [MaxStackSize(100)]
+    [LocDescription("A Community Warp Point!")]
     public partial class WarpPointItem : WorldObjectItem<WarpPointObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Community Warp Point!");
-
         static WarpPointItem() { }
 
-        public override bool TryPlaceObject(Player player, Vector3i position, Eco.Shared.Math.Quaternion rotation)
+
+        public override Task<bool> CanPlaceObject(Player player, Vector3i position, Eco.Shared.Math.Quaternion rotation)
         {
             var text = "new point";
 
-            if (!WarpManager.Data.AddPoint(text,(Vector3)position,rotation))
+            if (!WarpManager.Data.AddPoint(text, (Vector3)position, rotation))
             {
                 ChatBaseExtended.CBError(Defaults.appName + $"A warp point already exists that has not had it's name set, please set or remove that point first", player.User);
-                return false;
+                return Task.FromResult(false);
             }
 
-            if (!base.TryPlaceObject(player, position, rotation))
+            if (!base.CanPlaceObject(player, position, rotation).Result)
             {
                 WarpManager.Data.RemovePoint(text);
-                return false;
+                return Task.FromResult(false);
             }
 
             WarpManager.SaveData();
-
-            return true;
+            return Task.FromResult(true);
         }
     }
 }

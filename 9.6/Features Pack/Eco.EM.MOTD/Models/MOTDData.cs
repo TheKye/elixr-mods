@@ -1,7 +1,6 @@
 ﻿using Eco.EM.Framework;
 using Eco.Gameplay.Players;
 using Eco.Gameplay.Systems.TextLinks;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Plugins.Networking;
 using Eco.Shared.Localization;
 using Eco.Shared.Utils;
@@ -36,11 +35,11 @@ namespace EM.ECO.MOTD
             });
         }
 
-        private string ReplaceEMTags(string s, User user)
+        private LocString ReplaceEMTags(string s, User user)
         {
             MatchEvaluator evaluator = new MatchEvaluator(match => TagEvaluater(match, user));
 
-            return Regex.Replace(s, @"\{{2}([A-Z]+)\}{2}", evaluator);
+            return Localizer.DoStr(Regex.Replace(s, @"\{{2}([A-Z]+)\}{2}", evaluator));
         }
 
         private string TagEvaluater(Match match, User user)

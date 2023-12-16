@@ -1,20 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using Eco.Core.Controller;
 using Eco.EM.Framework.Resolvers;
 using Eco.EM.Framework.Utils;
 using Eco.Gameplay.Auth;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Interactions;
+using Eco.Gameplay.Interactions.Interactors;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Placement;
+using Eco.Gameplay.Players;
 using Eco.Gameplay.Skills;
+using Eco.Gameplay.Systems.NewTooltip;
 using Eco.Mods.TechTree;
 using Eco.Shared.IoC;
 using Eco.Shared.Items;
 using Eco.Shared.Localization;
 using Eco.Shared.Math;
+using Eco.Shared.Networking;
 using Eco.Shared.Serialization;
+using Eco.Shared.SharedTypes;
+using Eco.Shared.Utils;
 
 namespace Eco.EM.Storage.Shipping
 {
@@ -51,37 +62,37 @@ namespace Eco.EM.Storage.Shipping
             EMStorageSlotResolver.AddDefaults(SlotDefaults);
         }
 
-        public override InteractResult OnActRight(InteractionContext context)
+        [Interaction(InteractionTrigger.RightClick, "Open", animationDriven: true, requiredEnvVars:new string[] { nameof(OpenDoors) })]
+        [Interaction(InteractionTrigger.RightClick, "Close", animationDriven: true, requiredEnvVars: new string[] { nameof(OpenDoors) })]
+        public void OpenDoor(Player context, InteractionTriggerInfo interactionTriggerInfo, InteractionTarget interactionTarget)
         {
+            Log.WriteErrorLineLocStr("Is a shipping container and event has triggered");
 
-            if (context.SelectedItem != null && context.SelectedItem.Type == typeof(ShippingContainer20Item))
+            if (context.User.Inventory.Toolbar.SelectedItem != null && context.User.Inventory.Toolbar.SelectedItem.GetType() == typeof(ShippingContainer20Item))
             {
+
                 Vector3i abovePos = Position3i;
-                Quaternion playerFace = context.Player.User.FacingDir.Rotate180().ToQuat();
+                Eco.Shared.Math.Quaternion playerFace = context.User.FacingDir.Rotate180().ToQuat();
                 do
                 {
                     abovePos.Y += 1;
                 }
                 while (WorldUtils.WorldObjectsAtPos(abovePos) != null);
-                WorldObjectManager.TryPlaceWorldObject(context.Player, (WorldObjectItem)context.SelectedItem, abovePos, playerFace);
-                return InteractResult.Success;
+                WorldObjectPlacementUtils.TryPlaceWorldObject(null, context, (WorldObjectItem)context.User.Inventory.Toolbar.SelectedItem, context.User.Inventory.Toolbar.SelectedStack, pos: abovePos, rot: playerFace);
+                return;
             }
-            var isAuthorized = ServiceHolder<IAuthManager>.Obj.IsAuthorized(context);
-            if (context.Parameters != null && context.Parameters.ContainsKey("OpenDoors"))
-            {
-                if (isAuthorized)
-                {
-                    OpenDoors = !OpenDoors;
-                    return InteractResult.Success;
-                }
-                else
-                {
-                    context.Player.ErrorLocStr("You Are Not Authorized To Do That");
-                    return InteractResult.Fail;
-                }
-            }
+            var isAuthorized = ServiceHolder<IAuthManager>.Obj.IsAuthorized(obj: this, alias: context.User);
 
-            return base.OnActRight(context);
+
+            if (isAuthorized)
+            {
+                OpenDoors = !OpenDoors;
+            }
+            else
+            {
+                context.ErrorLocStr("You Are Not Authorized To Do That");
+                return;
+            }
         }
 
         protected override void Initialize()
@@ -110,9 +121,10 @@ namespace Eco.EM.Storage.Shipping
     [LocDisplayName("20ft Shipping Container")]
     [Weight(20000)]
     [MaxStackSize(10)]
-    public partial class ShippingContainer20Item : WorldObjectItem<ShippingContainer20Object>
+    [LocDescription("A Large Shipping Container For Storage. I Can hold alot of items.")]
+    public partial class ShippingContainer20Item : WorldObjectItem<ShippingContainer20Object>, IPersistentData
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Large Shipping Container For Storage. I Can hold alot of items.");
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Global, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
     [RequiresSkill(typeof(MechanicsSkill), 3)]
@@ -152,7 +164,7 @@ namespace Eco.EM.Storage.Shipping
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ModsPreInitialize();
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             this.ModsPostInitialize();
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }

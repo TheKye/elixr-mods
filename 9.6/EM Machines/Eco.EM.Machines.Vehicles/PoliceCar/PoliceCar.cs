@@ -15,9 +15,11 @@ using Eco.Gameplay.Interactions;
 using Eco.Stats;
 using Eco.Shared.Items;
 using Eco.Core.Controller;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Gameplay.Systems.NewTooltip;
 using Eco.Shared.Utils;
+using Eco.Gameplay.Components.Storage;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Machines.Vehicles
 {
@@ -25,11 +27,11 @@ namespace Eco.EM.Machines.Vehicles
     [LocDisplayName("Police Car")]
     [Weight(25000)]
     [AirPollution(0.5f)]
+    [LocDescription("Police car go wee woo wee woo, just ask Mishka")]
     [Ecopedia("Crafted Objects", "Vehicles", createAsSubPage: true)]
     public partial class PoliceCarItem : WorldObjectItem<PoliceCarObject>, IPersistentData
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Modern Police Car");
-        [Serialized, SyncToView, TooltipChildren, NewTooltipChildren(CacheAs.Instance)] public object PersistentData { get; set; }
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
 
@@ -75,7 +77,7 @@ namespace Eco.EM.Machines.Vehicles
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

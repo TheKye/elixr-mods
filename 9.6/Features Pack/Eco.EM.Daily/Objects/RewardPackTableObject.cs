@@ -17,14 +17,16 @@ using System.Text;
 using System.Linq;
 using Eco.Gameplay.Civics.GameValues;
 using System.ComponentModel;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Interactions.Interactors;
 
 namespace Eco.EM.Daily
 {
     [Serialized, Weight(1000), MaxStackSize(1), LocDisplayName("Reward Pack Table")]
     [ItemGroup("Hidden")]
+    [LocDescription("ADMIN ONLY: Use this to assist in creating daily reward packs for the EM daily plugin.")]
     public partial class RewardPackTableItem : WorldObjectItem<RewardPackTableObject>, INotifyPropertyChanged
     {
-        public override LocString DisplayDescription => Localizer.DoStr("ADMIN ONLY: Use this to assist in creating daily reward packs for the EM daily plugin.");
     }
 
     [Serialized]
@@ -46,24 +48,25 @@ namespace Eco.EM.Daily
               });
         }
 
-        public override InteractResult OnActLeft(InteractionContext context)
+        [Interaction(Shared.SharedTypes.InteractionTrigger.LeftClick)]
+        public void OnActLeft(Player context)
         {
-            if (!context.Player.User.IsAdmin)
+            if (!context.User.IsAdmin)
             {
-                context.Player.ErrorLocStr("Only an admin may remove this object");
-                return InteractResult.Fail;
+                context.ErrorLocStr("Only an admin may remove this object");
+
             }
-            return base.OnActLeft(context);
+
         }
 
-        public override InteractResult OnActInteract(InteractionContext context)
+        [Interaction(Shared.SharedTypes.InteractionTrigger.InteractKey)]
+        public void OnActInteract(Player context)
         {
-            if (!context.Player.User.IsAdmin)
+            if (!context.User.IsAdmin)
             {
-                context.Player.ErrorLocStr("Only an admin may use this object.");
-                return InteractResult.Fail;
+                context.ErrorLocStr("Only an admin may use this object.");
+                
             }
-            return base.OnActInteract(context);
         }
 
 

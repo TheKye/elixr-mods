@@ -3,8 +3,11 @@ using Eco.EM.Framework.Resolvers;
 using Eco.EM.Framework.Utils;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.Shared.Items;
@@ -19,7 +22,6 @@ namespace Eco.EM.Storage.Stockpiling
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(LinkComponent))]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     [RequireComponent(typeof(PublicStorageComponent))]
     [RequireComponent(typeof(ModularStockpileComponent))]
     public partial class RockPileMediumObject : WorldObject, IRepresentsItem, ILinkRadiusObject, IStorageSlotObject
@@ -65,10 +67,9 @@ namespace Eco.EM.Storage.Stockpiling
 
     [Serialized, Weight(50), MaxStackSize(100)]
     [LocDisplayName("Medium Rock Pile")]
+    [LocDescription("A Medium sized storage object for storing rocks, ore and other kinds of mineables")]
     public partial class RockPileMediumItem : WorldObjectItem<RockPileMediumObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A medium pile for rocks.");
-        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         static RockPileMediumItem() { }
     }
 
@@ -111,7 +112,7 @@ namespace Eco.EM.Storage.Stockpiling
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

@@ -3,8 +3,11 @@ using Eco.EM.Framework.Resolvers;
 using Eco.EM.Framework.Utils;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.Shared.Items;
@@ -17,7 +20,6 @@ using System.Collections.Generic;
 namespace Eco.EM.Storage.Stockpiling
 {
     [Serialized]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(PublicStorageComponent))]
     [RequireComponent(typeof(LinkComponent))]
@@ -54,7 +56,7 @@ namespace Eco.EM.Storage.Stockpiling
             base.PostInitialize();
             var storage = this.GetComponent<PublicStorageComponent>();
             storage.Initialize(EMStorageSlotResolver.Obj.ResolveSlots(this));
-            storage.Storage.AddInvRestriction(new TagRestriction(Tag.Wood.Name));
+            storage.Storage.AddInvRestriction(new TagRestriction("Wood"));
             storage.Inventory.AddInvRestriction(new StackAllLimitRestriction(EMStorageSlotResolver.Obj.ResolveStackMultiplier(this)));
             GetComponent<StockpileComponent>().Initialize(DefaultDim);
             GetComponent<LinkComponent>().Initialize(EMLinkRadiusResolver.Obj.ResolveLinkRadius(this));
@@ -65,10 +67,9 @@ namespace Eco.EM.Storage.Stockpiling
 
     [Serialized, Weight(50), MaxStackSize(100)]
     [LocDisplayName("Medium Log Pile")]
+    [LocDescription("A Storage Object for storing more logs")]
     public partial class LogPileMediumItem : WorldObjectItem<LogPileMediumObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A medium pile for logs");
-        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
         static LogPileMediumItem() { }
     }
 
@@ -111,7 +112,7 @@ namespace Eco.EM.Storage.Stockpiling
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

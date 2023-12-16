@@ -12,21 +12,23 @@ using Eco.Shared.Serialization;
 using Eco.Mods.TechTree;
 using Eco.Gameplay.Skills;
 using Eco.Gameplay.Systems.NewTooltip;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Core.Controller;
 using Eco.Shared.Items;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Components.Storage;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Machines.Vehicles
 {
     [Serialized]
-    [LocDisplayName("Super Car")]
+    [LocDisplayName("Sports Car")]
     [Weight(25000)]
     [AirPollution(0.5f)]
     [Ecopedia("Crafted Objects", "Vehicles", createAsSubPage: true)]
+    [LocDescription("A Modern Sports car designed for those who like to race or just go fast! Be careful, may exceed the speed limit!")]
     public partial class SuperCarItem : WorldObjectItem<SuperCarObject>, IPersistentData
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Modern Super Car");
-        [Serialized, SyncToView, TooltipChildren, NewTooltipChildren(CacheAs.Instance)] public object PersistentData { get; set; }
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
     [RequiresSkill(typeof(IndustrySkill), 4)]
@@ -36,8 +38,8 @@ namespace Eco.EM.Machines.Vehicles
         {
             ModelType = typeof(SuperCarRecipe).Name,
             Assembly = typeof(SuperCarRecipe).AssemblyQualifiedName,
-            HiddenName = "Super Car",
-            LocalizableName = Localizer.DoStr("Super Car"),
+            HiddenName = "SportsCar",
+            LocalizableName = Localizer.DoStr("I have too much money.."),
             IngredientList = new()
             {
                 new EMIngredient("GearboxItem", false, 6),
@@ -72,7 +74,7 @@ namespace Eco.EM.Machines.Vehicles
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }
@@ -92,12 +94,12 @@ namespace Eco.EM.Machines.Vehicles
     [RequireComponent(typeof(MinimapComponent))]
     public partial class SuperCarObject : PhysicsWorldObject, IRepresentsItem, IConfigurableVehicle
     {
-        public override LocString DisplayName => Localizer.DoStr("SuperCar");
+        public override LocString DisplayName => Localizer.DoStr("Sports Car");
         public Type RepresentedItemType => typeof(SuperCarItem);
 
         private readonly static VehicleModel defaults = new(
             typeof(SuperCarObject),
-            displayName: "Super Car",
+            displayName: "Sports Car",
             fuelTagList: fuelTagList,
             fuelSlots: 2,
             fuelConsumption: 25,

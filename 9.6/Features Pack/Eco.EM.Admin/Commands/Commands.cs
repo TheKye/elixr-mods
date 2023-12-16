@@ -18,6 +18,7 @@ using Eco.EM.Framework.Utils;
 using Eco.Gameplay.Economy;
 using Eco.Gameplay.Systems.NewTooltip.TooltipLibraryFiles;
 using Eco.Mods.TechTree;
+using Eco.Gameplay.Components.Storage;
 
 namespace Eco.EM.Admin
 {
@@ -106,7 +107,7 @@ namespace Eco.EM.Admin
                     }
                     if (!returnClaims)
                     {
-                        tgtUser.Inventory.ToolbarBackpack.RemoveItems<PropertyClaimItem>(count);
+                        tgtUser.Inventory.ToolbarBackpack.RemoveItems<ClaimPaperItem>(count);
                     }
                     ChatBaseExtended.CBInfoBox(String.Format(Localizer.DoStr("{0}'s Property has been unclaimed, Removed {1} Claim Plots, And {2}"), tgtUser, count, returnClaimText), user);
                     return;
@@ -221,7 +222,7 @@ namespace Eco.EM.Admin
 
             for (int i = 0; i <= Users.Count; i++)
             {
-                userlines[i] += $"{Users[i].Name} - {Users[i].Reputation} - {Users[i].Titles}";
+                userlines[i] += $"{Users[i].Name} - {Users[i].Reputation}";
             }
 
             return string.Join("\n", userlines);

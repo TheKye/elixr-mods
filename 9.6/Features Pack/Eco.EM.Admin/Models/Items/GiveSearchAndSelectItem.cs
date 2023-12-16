@@ -24,10 +24,10 @@ namespace Eco.EM.Admin
     [MaxStackSize(1)]
     [LocDisplayName("Search And Select")]
     [Category("Hidden")]
+    [LocDescription("This tool.. is super powerful.. you have been warned.")]
     public partial class GiveSearchAndSelectItem :
             Item
     {
-        public override LocString DisplayDescription => Localizer.DoStr("this tool is super powerful.. be careful!");
         public override string OnUsed(Player player, ItemStack itemStack)
         {
             string message = "";

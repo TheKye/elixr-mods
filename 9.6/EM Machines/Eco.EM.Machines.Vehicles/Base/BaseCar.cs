@@ -4,7 +4,6 @@ using Eco.Gameplay.Items;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Players;
 using Eco.Gameplay.Systems.NewTooltip;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Shared.Items;
 using Eco.Shared.Localization;
 using Eco.Shared.Networking;
@@ -50,14 +49,16 @@ namespace Eco.EM.Machines.Vehicles
     }
 
     [Serialized, AutogenClass, LocDisplayName("Car Color Picker")]
+    [NoIcon]
     public partial class CarColorPickerComponent : WorldObjectComponent, INotifyPropertyChanged, IPersistentData
     {
+        public override bool Enabled => true;
         public CarColorData carColor { get; set; }
 
         private CarColor ocarColor { get; set; }
 
         [Eco, ClientInterfaceProperty, GuestHidden]
-        [Serialized, SyncToView, TooltipChildren, NewTooltipChildren(CacheAs.Global)]
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Global, flags: TTFlags.AllowNonControllerTypeForChildren)]
         public CarColor CarColor 
         {
             get => ocarColor;

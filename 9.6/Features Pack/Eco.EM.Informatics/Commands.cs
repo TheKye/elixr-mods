@@ -34,14 +34,14 @@
             try
             {
                 tag = TagManager.GetTagOrFail(itemType);
-                tagItem = Item.AllItems.Where(x => x.Tags().Contains(tag)).ToList();
+                tagItem = Item.AllItemsExceptHidden.Where(x => x.Tags().Contains(tag)).ToList();
             }
             catch (ArgumentException)
             {
                 tag = null;
             }
             if (tag == null)
-                item = CommandsUtil.ClosestMatchingEntity(user, itemType, Item.AllItems, x => x.GetType().Name, x => x.DisplayName);
+                item = CommandsUtil.ClosestMatchingEntity(user, itemType, Item.AllItemsExceptHidden, x => x.GetType().Name, x => x.DisplayName);
 
             if (item == null && tag == null)
             {

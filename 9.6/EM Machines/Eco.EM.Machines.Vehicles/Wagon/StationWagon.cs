@@ -12,22 +12,23 @@ using Eco.Shared.Serialization;
 using Eco.Mods.TechTree;
 using Eco.Gameplay.Skills;
 using Eco.Core.Controller;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Gameplay.Systems.NewTooltip;
 using Eco.Shared.Items;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Components.Storage;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Machines.Vehicles
 {
     [Serialized]
-    [LocDisplayName("Wagon")]
+    [LocDisplayName("Station Wagon")]
     [Weight(25000)]
     [AirPollution(0.5f)]
     [Ecopedia("Crafted Objects", "Vehicles", createAsSubPage: true)]
+    [LocDescription("A Modern Station Wagon, Designed for family's or basic cargo transportation")]
     public partial class WagonItem : WorldObjectItem<WagonObject>, IPersistentData
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Modern Wagon");
-
-        [Serialized, SyncToView, TooltipChildren, NewTooltipChildren(CacheAs.Instance)] public object PersistentData { get; set; }
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
     [RequiresSkill(typeof(IndustrySkill), 2)]
@@ -37,8 +38,8 @@ namespace Eco.EM.Machines.Vehicles
         {
             ModelType = typeof(WagonRecipe).Name,
             Assembly = typeof(WagonRecipe).AssemblyQualifiedName,
-            HiddenName = "Wagon",
-            LocalizableName = Localizer.DoStr("Wagon"),
+            HiddenName = "Station Wagon",
+            LocalizableName = Localizer.DoStr("Station Wagon"),
             IngredientList = new()
             {
                 new EMIngredient("GearboxItem", false, 3),
@@ -72,7 +73,7 @@ namespace Eco.EM.Machines.Vehicles
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }
@@ -92,12 +93,12 @@ namespace Eco.EM.Machines.Vehicles
     [RequireComponent(typeof(MinimapComponent))]
     public partial class WagonObject : PhysicsWorldObject, IRepresentsItem, IConfigurableVehicle
     {
-        public override LocString DisplayName => Localizer.DoStr("Wagon");
+        public override LocString DisplayName => Localizer.DoStr("Station Wagon");
         public Type RepresentedItemType => typeof(WagonItem);
 
         private readonly static VehicleModel defaults = new(
             typeof(WagonObject),
-            displayName: "Wagon",
+            displayName: "Station Wagon",
             fuelTagList: fuelTagList,
             fuelSlots: 2,
             fuelConsumption: 18,
