@@ -2,7 +2,9 @@
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
@@ -46,9 +48,10 @@ namespace Eco.EM.Building.Greenhousing
     }
 
     [Serialized, LocDisplayName("Small Heat Lamp")]
+    [LocDescription("Small Heat Lamp, required for a greenhouse to work. Provides Heat for plants to grow")]
     public class SmallHeatLampItem : WorldObjectItem<SmallHeatLampObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Small Heat Lamp");
+        
     }
 
     //todo Add Recipe
@@ -90,7 +93,7 @@ namespace Eco.EM.Building.Greenhousing
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

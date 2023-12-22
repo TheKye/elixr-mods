@@ -10,14 +10,16 @@ using Eco.Shared.Localization;
 using Eco.Shared.Math;
 using Eco.Shared.Serialization;
 using Eco.EM.Framework.Resolvers;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Machines.Trucking
 {
     [Serialized, Weight(200), MaxStackSize(50), LocDisplayName("Logistics Trailer")]
+    [LocDescription("Logistics Transport Trailer")]
     public partial class SemiTrailerItem : WorldObjectItem<SemiTrailerObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Logistics Trailer");
-        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
+        
     }
 
     [RequiresSkill(typeof(IndustrySkill), 7)]
@@ -60,7 +62,7 @@ namespace Eco.EM.Machines.Trucking
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }
@@ -68,7 +70,6 @@ namespace Eco.EM.Machines.Trucking
     [Serialized]
     [RequireComponent(typeof(AttachmentComponent))]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
     public partial class SemiTrailerObject : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Logistics Trailer");

@@ -8,7 +8,6 @@ using System;
 using Eco.Gameplay.Systems.Messaging.Chat.Commands;
 using Eco.Core.Utils;
 using Eco.Gameplay.Items;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Gameplay.Systems.NewTooltip;
 
 namespace Eco.EM.Flags
@@ -73,7 +72,7 @@ namespace Eco.EM.Flags
         public new object PersistentData { get => prideFlagData; set => prideFlagData = value as PrideFlagData ?? new PrideFlagData(); }
 
         [Eco, ClientInterfaceProperty, GuestHidden]
-        [Serialized, SyncToView, TooltipChildren]
+        [Serialized, SyncToView]
         public PrideFlag FlagOption { get; set; }
 
         [RPC, Autogen("Set Flag")]

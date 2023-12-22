@@ -11,14 +11,17 @@ using Eco.Shared.Math;
 using Eco.Shared.Serialization;
 using Eco.EM.Framework.Resolvers;
 using System.Linq;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Machines.Trucking
 {
     [Serialized, Weight(200), MaxStackSize(50), LocDisplayName("Logging Trailer")]
+    [LocDescription("Logging Trailer")]
     public partial class LoggingTrailerItem : WorldObjectItem<LoggingTrailerObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Logging Trailer");
-        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
+        
+        
     }
 
     [RequiresSkill(typeof(IndustrySkill), 7)]
@@ -59,7 +62,7 @@ namespace Eco.EM.Machines.Trucking
     [Serialized]
     [RequireComponent(typeof(AttachmentComponent))]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
+
     public partial class LoggingTrailerObject : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Logging Trailer");

@@ -16,7 +16,7 @@ namespace Eco.EM.Homes
     public class HomeCommands
     {
         [ChatCommand("Elixr Mods Home's Plugin.")]
-        public static void Home() { }
+        public static void EMHomes() { }
 
         [ChatCommand("Lets you know how many Homes you have left for the day")]
         public static void Homes(User user)
@@ -32,7 +32,7 @@ namespace Eco.EM.Homes
                 ChatBaseExtended.CBInfoBox(string.Format(Localizer.DoStr("You have {0} Homes left today, you can return home a total amount of: {1} times Per Day"), total, HomeManager.Data.GetMaxTeleports(user)), user);
         }
 
-        [ChatSubCommand("Home", "Configures the setting for the server homes config.", "home-config", ChatAuthorizationLevel.Admin)]
+        [ChatSubCommand("EMHomes", "Configures the setting for the server homes config.", "home-config", ChatAuthorizationLevel.Admin)]
         public static void ConfigureHomes(User user, string setting, int value)
         {
             setting = StringUtils.Sanitize(setting);
@@ -65,7 +65,7 @@ namespace Eco.EM.Homes
             HomeManager.SaveConfig();
         }
 
-        [ChatSubCommand("Home", "Configures a setting for a groups home config. Settings: max, count, cost, cooldown.", "home-grpconfig", ChatAuthorizationLevel.Admin)]
+        [ChatSubCommand("EMHomes", "Configures a setting for a groups home config. Settings: max, count, cost, cooldown.", "home-grpconfig", ChatAuthorizationLevel.Admin)]
         public static void GroupConfigureHomes(User user, string groupName, string setting, int value)
         {
             setting = StringUtils.Sanitize(setting);
@@ -118,7 +118,7 @@ namespace Eco.EM.Homes
             GroupsManager.API.SaveData();
         }
 
-        [ChatSubCommand("Home", "Go to one of your saved homes.", "gohome", ChatAuthorizationLevel.User)]
+        [ChatSubCommand("EMHomes", "Go to one of your saved homes.", "gohome", ChatAuthorizationLevel.User)]
         public static void GoHome(User user, string homeName)
         {
             DateTime check = DateTime.Now;
@@ -180,7 +180,7 @@ namespace Eco.EM.Homes
             HomeManager.SaveData();
         }
 
-        [ChatSubCommand("Home", "List all saved homes, name and location", "home-myinfo", ChatAuthorizationLevel.User)]
+        [ChatSubCommand("EMHomes", "List all saved homes, name and location", "home-myinfo", ChatAuthorizationLevel.User)]
         public static void HomeInfo(User user)
         {
             var homes = HomeManager.Data.ListHomes(user);
@@ -201,7 +201,7 @@ namespace Eco.EM.Homes
             ChatBaseExtended.CBInfoPane($"{user.Name}'s Homes", Defaults.appName + text, "EMHomes", user);
         }
 
-        [ChatSubCommand("Home", "Add current position to your homes list.", "home-add", ChatAuthorizationLevel.User)]
+        [ChatSubCommand("EMHomes", "Add current position to your homes list.", "home-add", ChatAuthorizationLevel.User)]
         public static void AddHome(User user, string homeName)
         {
             var plot = PropertyManager.GetPlotFromWorldPos(user.Position.XZi());
@@ -232,7 +232,7 @@ namespace Eco.EM.Homes
             HomeManager.SaveData();
         }
 
-        [ChatSubCommand("Home", "Remove a home from your saved list of homes", "home-del", ChatAuthorizationLevel.User)]
+        [ChatSubCommand("EMHomes", "Remove a home from your saved list of homes", "home-del", ChatAuthorizationLevel.User)]
         public static void RemoveHome(User user, string homeName)
         {
             var userData = HomeManager.Data.GetHomeUserData(user.Name);
@@ -247,7 +247,7 @@ namespace Eco.EM.Homes
             HomeManager.SaveData();
         }
 
-        [ChatSubCommand("Home", "This will clear your list of homes completely", "home-clear", ChatAuthorizationLevel.User)]
+        [ChatSubCommand("EMHomes", "This will clear your list of homes completely", "home-clear", ChatAuthorizationLevel.User)]
         public static void ClearHomes(User user)
         {
             var userData = HomeManager.Data.GetHomeUserData(user.Name);
@@ -257,14 +257,14 @@ namespace Eco.EM.Homes
             HomeManager.SaveData();
         }
 
-        [ChatSubCommand("Home", "Reloads the Homes Config if you edit the files directly", "home-reload", ChatAuthorizationLevel.Admin)]
+        [ChatSubCommand("EMHomes", "Reloads the Homes Config if you edit the files directly", "home-reload", ChatAuthorizationLevel.Admin)]
         public static void homeReload(User user)
         {
             HomeManager.Config = HomeManager.LoadConfig();
             ChatBaseExtended.CBInfoBox(Defaults.appName + Localizer.DoStr("Home Config Reloaded, use /home-settings to see if the reload worked."), user);
         }
 
-        [ChatSubCommand("Home", "Check The Current Settings of your homes configuration", "home-settings", ChatAuthorizationLevel.Admin)]
+        [ChatSubCommand("EMHomes", "Check The Current Settings of your homes configuration", "home-settings", ChatAuthorizationLevel.Admin)]
         public static void HomeSettings(User user)
         {
             string _message = "";

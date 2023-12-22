@@ -16,7 +16,7 @@ using Eco.Gameplay.Players;
 namespace Eco.EM.Flags
 {
     [Serialized]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
+
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(FlagComponent))]
     public partial class EcoManiacsFlagObject : WorldObject, IRepresentsItem
@@ -74,7 +74,7 @@ namespace Eco.EM.Flags
 
     // Included so the base objects do not need to be distributed separately
     [Serialized]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
+
     [RequireComponent(typeof(PropertyAuthComponent))]
     public abstract class BaseFlagObject : WorldObject
     {

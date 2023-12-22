@@ -12,6 +12,7 @@ using Eco.Shared.Serialization;
 using Eco.Mods.TechTree;
 using Eco.Gameplay.Skills;
 using System.Linq;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Machines.Trucking
 {
@@ -49,7 +50,7 @@ namespace Eco.EM.Machines.Trucking
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

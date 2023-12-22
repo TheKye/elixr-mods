@@ -3,7 +3,7 @@
   <PropertyGroup>
 	<TargetFramework>net7.0</TargetFramework>
 	<RootNamespace>Eco.EM.Storage.Stockpiling</RootNamespace>
-	<Version>3.4.2</Version>
+	<Version>3.5.0</Version>
 	<Authors>Elixr Mods</Authors>
 	<Company>Elixr Solutions</Company>
 	<Product>EM Stockpiling</Product>
@@ -41,12 +41,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Eco.ReferenceAssemblies" Version="0.10.0-beta-release-532" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Eco.EM.Framework">
-      <HintPath>..\..\..\..\EM Framework\bin\10\Framework\net7.0\Eco.EM.Framework.dll</HintPath>
-    </Reference>
+    <PackageReference Include="ElixrMods.Framework" Version="3.5.0" />
   </ItemGroup>
 </Project>

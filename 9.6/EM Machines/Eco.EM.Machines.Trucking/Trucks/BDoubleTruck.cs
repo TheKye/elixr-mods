@@ -13,11 +13,13 @@ using Eco.Mods.TechTree;
 using Eco.Gameplay.Skills;
 using System.Linq;
 using Eco.Core.Controller;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Gameplay.Systems.NewTooltip;
 using Eco.Shared.Items;
 using Eco.Gameplay.Interactions;
 using System.Numerics;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Components.Storage;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Machines.Trucking.Trucks
 {
@@ -26,10 +28,10 @@ namespace Eco.EM.Machines.Trucking.Trucks
     [Weight(25000)]
     [AirPollution(0.9f)]
     [Ecopedia("Crafted Objects", "Vehicles", createAsSubPage: true)]
+    [LocDescription("Modern Truck With a B-Double Trailer attached for Big Logistics transporting also known as an \"18 Wheeler\"")]
     public partial class BDoubleTruckItem : WorldObjectItem<BDoubleTruckObject>, IPersistentData
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Modern Truck With a B-Double Trailer attached for Big Logistics transporting also known as an \"18 Wheeler\"");
-        [Serialized, SyncToView, TooltipChildren, NewTooltipChildren(CacheAs.Instance)] public object PersistentData { get; set; }
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
     public class BDoubleTruckRecipe : Recipe, IConfigurableRecipe
@@ -73,7 +75,7 @@ namespace Eco.EM.Machines.Trucking.Trucks
     [RequireComponent(typeof(ModularStockpileComponent))]
     [RequireComponent(typeof(TailingsReportComponent))]
     [RequireComponent(typeof(MinimapComponent))]
-    public partial class BDoubleTruckObject : PhysicsWorldObject, IRepresentsItem, IConfigurableVehicle, IInteractable
+    public partial class BDoubleTruckObject : PhysicsWorldObject, IRepresentsItem, IConfigurableVehicle
     {
         public override LocString DisplayName => Localizer.DoStr("BDoubleTruck");
         public Type RepresentedItemType => typeof(BDoubleTruckItem);

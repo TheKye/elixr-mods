@@ -1,8 +1,10 @@
 ﻿using Eco.Core.Systems;
 using Eco.Gameplay.Players;
+using Eco.Gameplay.Players.UserHelpers;
 using Eco.Gameplay.Systems.NewTooltip;
 using Eco.Gameplay.Systems.TextLinks;
 using Eco.Gameplay.Utils;
+using Eco.Shared.Items;
 using Eco.Shared.Localization;
 using Eco.Shared.Networking;
 using Eco.Shared.Serialization;
@@ -11,18 +13,18 @@ using System.Linq;
 
 namespace Eco.EM.Admin.AdminExtentsions
 {
-    static class ToolTipExtentsions
+    public static class ToolTipExtentsions
     {
-        [NewTooltip(Shared.Items.CacheAs.User, 99)]
-        public static LocString UsersTooltipExtension(this User user, User viewer)
+        [NewTooltip(Shared.Items.CacheAs.Disabled, 99, TTCat.Details)]
+        public static LocString UsersTooltipExtension(this UserTooltipDetails userDetails, User viewer)
         {
-            if (!viewer.IsAdmin || !AdminPlugin.Obj.Config.EnableExtraAdminInfo)
+            if (!viewer.IsAdmin && !AdminPlugin.Config.EnableExtraAdminInfo || !viewer.IsAdmin && AdminPlugin.Config.EnableExtraAdminInfo)
                 return Localizer.DoStr("");
             var sb = new LocStringBuilder();
             //var entryLink = TextLinkManager.GetLinkId(Registrars.Get<OpenAdminUI>().FirstOrDefault(entry => entry.RelatedUser == viewer));
 
             sb.Append(TextLoc.HeaderLoc($"User Information \n"));
-            sb.Append(TextLoc.SubtextLoc($"{AdminControlUI.DisplayUserAdminInformation(user)}"));
+            sb.Append(TextLoc.SubtextLoc($"{AdminControlUI.DisplayUserAdminInformation(userDetails.User)}"));
 
             //sb.Append(TextLoc.RPCButtonLocStr($"\nActions", entryLink, nameof(OpenAdminUI.OpenAdminUtils), Color.PaperGreen, 40, viewer.Id.ToString()));
 

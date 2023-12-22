@@ -3,6 +3,7 @@ using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Blocks;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
@@ -33,12 +34,12 @@ namespace Eco.EM.Building.Greenhousing
     [Weight(10000)]
     [Ecopedia("Blocks", "Building Materials", createAsSubPage: true)]
     [Currency][Tag("Currency")]
-    [Tag("Constructable", 1)]
+    [LocDescription("A special treated glass just for building Greenhouses")]
+    [Tag("Constructable")]
     [Tier(3)]
     public partial class GreenhouseGlassItem : BlockItem<GreenhouseGlassBlock>
     {
         public override LocString DisplayNamePlural => Localizer.DoStr("Greenhouse Glass");
-        public override LocString DisplayDescription => Localizer.DoStr("A special treated glass just for building Greenhouses, ");
 
         public override bool CanStickToWalls => false;
 
@@ -89,7 +90,7 @@ namespace Eco.EM.Building.Greenhousing
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

@@ -141,6 +141,7 @@ namespace Eco.EM.Admin.ReportsSystem
         {
             var settings = setting.Trim().ToLower();
             var values = value.Trim();
+            var admincon = AdminPlugin.Config;
             var admin = AdminPlugin.Obj;
 
             switch (settings)
@@ -149,12 +150,12 @@ namespace Eco.EM.Admin.ReportsSystem
                     switch (values.ToLower())
                     {
                         case "true":
-                            admin.Config.EnableReports = true;
+                            admincon.EnableReports = true;
                             admin.SaveConfig();
                             chatClient.MsgLocStr($"Report System has been: {"Enabled".Green()}, If you haven't be sure to set the WebhookURL");
                             return;
                         case "false":
-                            admin.Config.EnableReports = false;
+                            admincon.EnableReports = false;
                             admin.SaveConfig();
                             chatClient.MsgLocStr($"Report System has been: {"Disabled".Red()}");
                             return;
@@ -166,12 +167,12 @@ namespace Eco.EM.Admin.ReportsSystem
                     switch (values.ToLower())
                     {
                         case "true":
-                            admin.Config.EnableHelpRequests = true;
+                            admincon.EnableHelpRequests = true;
                             admin.SaveConfig();
                             chatClient.MsgLocStr($"Help System has been: {"Enabled".Green()}, If you haven't be sure to set the WebhookURL");
                             return;
                         case "false":
-                            admin.Config.EnableHelpRequests = false;
+                            admincon.EnableHelpRequests = false;
                             admin.SaveConfig();
                             chatClient.MsgLocStr($"Help System has been: {"Disabled".Red()}");
                             return;
@@ -180,7 +181,7 @@ namespace Eco.EM.Admin.ReportsSystem
                             return;
                     }
                 case "adminrole":
-                    admin.Config.AdminRoleID = ulong.Parse(values);
+                    admincon.AdminRoleID = ulong.Parse(values);
                     admin.SaveConfig();
                     chatClient.MsgLocStr($"Admin Role to notify has been set to: {values.Green()}, Please ensure this is correct.");
                     return;
@@ -188,12 +189,12 @@ namespace Eco.EM.Admin.ReportsSystem
                     switch (values.ToLower())
                     {
                         case "true":
-                            admin.Config.NotifyAdmin = true;
+                            admincon.NotifyAdmin = true;
                             admin.SaveConfig();
                             chatClient.MsgLocStr($"Admin Notifications has been: {"Enabled".Green()}, If you haven't be sure to set the WebhookURL");
                             return;
                         case "false":
-                            admin.Config.NotifyAdmin = false;
+                            admincon.NotifyAdmin = false;
                             admin.SaveConfig();
                             chatClient.MsgLocStr($"Admin Notifications has been: {"Disabled".Red()}");
                             return;
@@ -202,12 +203,12 @@ namespace Eco.EM.Admin.ReportsSystem
                             return;
                     }
                 case "webhookurl":
-                    admin.Config.Webhook = values;
+                    admincon.Webhook = values;
                     admin.SaveConfig();
                     chatClient.MsgLocStr($"Discord Webhook URL has been set to: {"Enabled".Green()}, Please ensure this is correct.");
                     return;
                 case "servername":
-                    admin.Config.MultiServerReportName = values;
+                    admincon.MultiServerReportName = values;
                     admin.SaveConfig();
                     chatClient.MsgLocStr($"Multi Server Report Name has been set to: {values.Green()}, Please ensure this is correct.");
                     return;

@@ -9,7 +9,6 @@ using System.ComponentModel;
 using Eco.Shared.Utils;
 using Eco.EM.Framework.Helpers;
 using Eco.Core.Utils;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Gameplay.Systems.NewTooltip;
 using PropertyChanged;
 
@@ -59,7 +58,7 @@ namespace Eco.EM.Flags
         public object PersistentData { get => flagPoleData; set => flagPoleData = value as FlagPoleData ?? new FlagPoleData(); }
 
         [Eco, ClientInterfaceProperty, GuestHidden]
-        [Serialized, SyncToView, TooltipChildren]
+        [Serialized, SyncToView]
         public FlagPoleMaterial MaterialOption { get; set; }
 
         [RPC, Autogen]

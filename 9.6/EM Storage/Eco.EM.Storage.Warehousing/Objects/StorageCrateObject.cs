@@ -17,7 +17,7 @@ namespace Eco.EM.Storage.Warehousing
     [Serialized]
     [RequireComponent(typeof(LinkComponent))]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
+
     [RequireComponent(typeof(PublicStorageComponent))]
     public partial class StorageCrateObject : WorldObject, IRepresentsItem, ILinkRadiusObject, IStorageSlotObject
     {
@@ -126,7 +126,7 @@ namespace Eco.EM.Storage.Warehousing
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ModsPreInitialize();
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             this.ModsPostInitialize();
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }

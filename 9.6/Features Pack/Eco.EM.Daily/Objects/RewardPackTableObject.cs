@@ -19,6 +19,11 @@ using Eco.Gameplay.Civics.GameValues;
 using System.ComponentModel;
 using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Interactions.Interactors;
+using Eco.Shared.SharedTypes;
+using NLog.Targets;
+using Eco.Mods.TechTree;
+using System.Threading.Tasks;
+using Eco.Shared.Items;
 
 namespace Eco.EM.Daily
 {
@@ -32,7 +37,7 @@ namespace Eco.EM.Daily
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(RewardPackCreatorComponent))]
-    public partial class RewardPackTableObject : WorldObject, IRepresentsItem
+    public partial class RewardPackTableObject : WorldObject, IRepresentsItem, IHasInteractions
     {
         public override LocString DisplayName => Localizer.DoStr("Reward pack table");
 
@@ -48,31 +53,34 @@ namespace Eco.EM.Daily
               });
         }
 
-        [Interaction(Shared.SharedTypes.InteractionTrigger.LeftClick)]
-        public void OnActLeft(Player context)
+        [Interaction(InteractionTrigger.LeftClick, "Pickup", flags: InteractionFlags.BlocksOtherInteraction)]
+        public void Collect(Player context, InteractionTriggerInfo triggerInfo, InteractionTarget target)
         {
+            var hammer = Item.Get<HammerItem>();
             if (!context.User.IsAdmin)
             {
                 context.ErrorLocStr("Only an admin may remove this object");
-
+                return;
             }
-
+            if (context.User.Inventory.Toolbar.SelectedItem == hammer)
+                    hammer.PickupWorldObject(context, this);
         }
 
-        [Interaction(Shared.SharedTypes.InteractionTrigger.InteractKey)]
-        public void OnActInteract(Player context)
+        [Interaction(InteractionTrigger.InteractKey, "Use", flags: InteractionFlags.BlocksOtherInteraction)]
+        public void Used(Player context, InteractionTriggerInfo triggerInfo, InteractionTarget target)
         {
             if (!context.User.IsAdmin)
             {
                 context.ErrorLocStr("Only an admin may use this object.");
-                
+                return;
             }
+            base.Use(context, target, triggerInfo);
         }
 
 
     }
 
-    [Serialized, AutogenClass, LocDisplayName("Reward pack creator")]
+    [Serialized, AutogenClass, LocDisplayName("Reward pack creator"), NoIcon]
     public partial class RewardPackCreatorComponent : WorldObjectComponent, IHasClientControlledContainers
     {
         public RewardPackCreatorComponent()

@@ -12,9 +12,11 @@ using Eco.Shared.Serialization;
 using Eco.Mods.TechTree;
 using Eco.Gameplay.Skills;
 using Eco.Core.Controller;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Gameplay.Systems.NewTooltip;
 using Eco.Shared.Items;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Components.Storage;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Machines.Trucking.Trucks
 {
@@ -23,10 +25,10 @@ namespace Eco.EM.Machines.Trucking.Trucks
     [Weight(25000)]
     [AirPollution(0.9f)]
     [Ecopedia("Crafted Objects", "Vehicles", createAsSubPage: true)]
+    [LocDescription("Modern Prime Mover, Can be driven as is or combined with a trailer?")]
     public partial class PrimeMoverItem : WorldObjectItem<PrimeMoverObject>, IPersistentData
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Modern Prime Mover, Can be driven as is or combined with a trailer?");
-        [Serialized, SyncToView, TooltipChildren, NewTooltipChildren(CacheAs.Instance)] public object PersistentData { get; set; }
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
     [RequiresSkill(typeof(IndustrySkill), 7)]
@@ -72,7 +74,7 @@ namespace Eco.EM.Machines.Trucking.Trucks
             LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            Initialize(Defaults.LocalizableName, GetType());
+            Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

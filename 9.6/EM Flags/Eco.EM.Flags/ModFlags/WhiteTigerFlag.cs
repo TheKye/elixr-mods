@@ -21,7 +21,7 @@ using Eco.Gameplay.Players;
 namespace Eco.EM.CustomFlags
 {
     [Serialized]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
+
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(WhiteTigerFlagComponent))]
     public partial class WhiteTigerFlagObject : CustomBaseFlagObject, IRepresentsItem
@@ -84,7 +84,7 @@ namespace Eco.EM.CustomFlags
 
     // Included so the base objects do not need to be distributed separately
     [Serialized]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
+
     [RequireComponent(typeof(PropertyAuthComponent))]
     public abstract class CustomBaseFlagObject : WorldObject
     {

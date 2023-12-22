@@ -2,7 +2,9 @@
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Pipes.LiquidComponents;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
@@ -42,7 +44,7 @@ namespace Eco.EM.Building.Greenhousing
 
         protected override void PostInitialize()
         {
-            this.GetComponent<LiquidConsumerComponent>().Setup(typeof(WaterItem), 0.3f, this.GetOccupancyType(BlockOccupancyType.WaterInputPort), 0.3f);
+            this.GetComponent<LiquidConsumerComponent>().Setup(typeof(WaterItem), 0.3f, BlockOccupancyType.WaterInputPort, 0.3f);
             base.PostInitialize();
         }
 
@@ -54,9 +56,10 @@ namespace Eco.EM.Building.Greenhousing
     }
 
     [Serialized, LocDisplayName("Small Sprinkler")]
+    [LocDescription("Small Sprinkler, Required for a greenhouse to work. Provides necessary water for plants")]
     public partial class SmallSprinklerItem : WorldObjectItem<SmallSprinklerObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Small Sprinkler");
+        
     }
 
     [RequiresSkill(typeof(BasicEngineeringSkill), 1)]
@@ -97,7 +100,7 @@ namespace Eco.EM.Building.Greenhousing
             this.LaborInCalories = EMRecipeResolver.Obj.ResolveLabor(this);
             this.CraftMinutes = EMRecipeResolver.Obj.ResolveCraftMinutes(this);
             this.ExperienceOnCraft = EMRecipeResolver.Obj.ResolveExperience(this);
-            this.Initialize(Defaults.LocalizableName, GetType());
+            this.Initialize(EMRecipeResolver.Obj.ResolveRecipeName(this), GetType());
             CraftingComponent.AddRecipe(EMRecipeResolver.Obj.ResolveStation(this), this);
         }
     }

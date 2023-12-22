@@ -24,7 +24,7 @@ namespace Eco.EM.Admin.ReportsSystem
                 return;
             }
 
-            if (!AdminPlugin.Obj.Config.EnableReports)
+            if (!AdminPlugin.Config.EnableReports)
             {
                 ChatBaseExtended.CBError("The Report system has not been enabled by the Admins, Please talk to them to have the report system enabled", user);
                 return;
@@ -42,7 +42,7 @@ namespace Eco.EM.Admin.ReportsSystem
             }
             else
             {
-                reportEnableTimes[user] = TimeUtil.Seconds + AdminPlugin.Obj.Config.ReportCoolDown;
+                reportEnableTimes[user] = TimeUtil.Seconds + AdminPlugin.Config.ReportCoolDown;
 
                 var response = MessageUtils.ConfigureDiscordMessageReport(user, userToReport.Name, message);
                 string generatedMessage = $"[{DateTime.Now:hh:mm:ss}] - {user.Name} Reported: {userToReport.Name}, Reason: {message}";
@@ -55,7 +55,7 @@ namespace Eco.EM.Admin.ReportsSystem
         public static void RequestHelp(User user, string message)
         {
 
-            if (!AdminPlugin.Obj.Config.EnableHelpRequests)
+            if (!AdminPlugin.Config.EnableHelpRequests)
             {
                 ChatBaseExtended.CBError("The Help system has not been enabled by the Admins, Please talk to them to have the report system enabled", user);
                 return;
@@ -67,7 +67,7 @@ namespace Eco.EM.Admin.ReportsSystem
             }
             else
             {
-                helpEnableTimes[user] = TimeUtil.Seconds + AdminPlugin.Obj.Config.HelpCoolDown;
+                helpEnableTimes[user] = TimeUtil.Seconds + AdminPlugin.Config.HelpCoolDown;
                 
                 var response = MessageUtils.ConfigureDiscordMessageHelp(user, message);
                 ChatBaseExtended.CBOkBox(response, user);

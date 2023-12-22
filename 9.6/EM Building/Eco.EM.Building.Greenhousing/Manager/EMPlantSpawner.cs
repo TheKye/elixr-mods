@@ -359,7 +359,7 @@ namespace Eco.Simulation.WorldLayers.Pushers
                     // Spawn the next layer in line.
                     spawned++;
 
-                    var spawnedPlant = EcoSim.PlantSim.SpawnPlant(plantSpecies, space + Vector3i.Up, false);
+                    var spawnedPlant = EcoSim.PlantSim.SpawnPlant(plantSpecies, space.WorldPosition3iOrInvalid(), false);
                     if (spawnedPlant is Tree tree) existingTrees.Add(tree);
                     Interlocked.Increment(ref layer.AddedOrganismsToWorld);
                 }

@@ -14,7 +14,7 @@ namespace Eco.EM.Admin
     {
         internal static string ConfigureDiscordMessageReport(User user, string targetUser, string messageToSend)
         {
-            var adminc = AdminPlugin.Obj.Config;
+            var adminc = AdminPlugin.Config;
 
             var url = adminc.MultiChannelSystem ? adminc.ReportChannelWebhook : adminc.Webhook;
             if (string.IsNullOrWhiteSpace(url))
@@ -55,7 +55,7 @@ namespace Eco.EM.Admin
 
         internal static string ConfigureDiscordMessageWarn(IChatClient chatClient, string targetUser, string messageToSend)
         {
-            var adminc = AdminPlugin.Obj.Config;
+            var adminc = AdminPlugin.Config;
             var url = adminc.MultiChannelSystem ? adminc.WarningLogsWebhook : adminc.Webhook;
             if (string.IsNullOrWhiteSpace(url))
                 return "Web HookURL is not configured. This needs to be enabled for Discord Logging. But this warning has still been logged to the Warnings Log File.";
@@ -93,7 +93,7 @@ namespace Eco.EM.Admin
 
         internal static string ConfigureDiscordMessageHelp(User user, string messageToSend)
         {
-            var adminc = AdminPlugin.Obj.Config;
+            var adminc = AdminPlugin.Config;
 
             var url = adminc.MultiChannelSystem ? adminc.HelpChannelWebhook : adminc.Webhook;
             if (string.IsNullOrWhiteSpace(url))

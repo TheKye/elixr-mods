@@ -20,7 +20,7 @@ namespace Eco.EM.Admin.AdminExtentsions
         public static LocString DisplayUserAdminInformation(User user)
         {
             var statsDisplay = new LocStringBuilder();
-            var ip = user.Client.Connection.GetPropertyValueByName<IPEndPoint>("RemoteEndPoint").Address.ToString();
+            string ip = user.Client?.Connection?.GetPropertyValueByName<IPEndPoint>("RemoteEndPoint").Address.ToString() ?? "";
 
             var calc = TimeFormatter.FormatSpan(WorldTime.Seconds - user.LoginTime);
 

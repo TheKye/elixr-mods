@@ -37,7 +37,7 @@ namespace Eco.EM.Storage.Shipping
     [RequireComponent(typeof(ModularStockpileComponent))]
     [RequireComponent(typeof(CustomTextComponent))]
     [RequireComponent(typeof(TailingsReportComponent))]
-    public partial class ShippingContainer20Object : WorldObject, IRepresentsItem, ILinkRadiusObject, IStorageSlotObject
+    public partial class ShippingContainer20Object : WorldObject, IRepresentsItem, ILinkRadiusObject, IStorageSlotObject, IHasInteractions
     {
         [Serialized] public bool OpenDoors { get; set; }
         public override LocString DisplayName => Localizer.DoStr("20ft Shipping Container");
@@ -62,15 +62,11 @@ namespace Eco.EM.Storage.Shipping
             EMStorageSlotResolver.AddDefaults(SlotDefaults);
         }
 
-        [Interaction(InteractionTrigger.RightClick, "Open", animationDriven: true, requiredEnvVars:new string[] { nameof(OpenDoors) })]
-        [Interaction(InteractionTrigger.RightClick, "Close", animationDriven: true, requiredEnvVars: new string[] { nameof(OpenDoors) })]
-        public void OpenDoor(Player context, InteractionTriggerInfo interactionTriggerInfo, InteractionTarget interactionTarget)
+        [Interaction(InteractionTrigger.RightClick, "Place", InteractionModifier.Shift)]
+        public void PlaceContainer(Player context, InteractionTriggerInfo triggerInfo, InteractionTarget interactionTarget)
         {
-            Log.WriteErrorLineLocStr("Is a shipping container and event has triggered");
-
-            if (context.User.Inventory.Toolbar.SelectedItem != null && context.User.Inventory.Toolbar.SelectedItem.GetType() == typeof(ShippingContainer20Item))
+            if (context.User.Inventory.Toolbar.SelectedItem != null && context.User.Inventory.Toolbar.SelectedItem.Type == typeof(ShippingContainer20Item))
             {
-
                 Vector3i abovePos = Position3i;
                 Eco.Shared.Math.Quaternion playerFace = context.User.FacingDir.Rotate180().ToQuat();
                 do
@@ -78,11 +74,15 @@ namespace Eco.EM.Storage.Shipping
                     abovePos.Y += 1;
                 }
                 while (WorldUtils.WorldObjectsAtPos(abovePos) != null);
-                WorldObjectPlacementUtils.TryPlaceWorldObject(null, context, (WorldObjectItem)context.User.Inventory.Toolbar.SelectedItem, context.User.Inventory.Toolbar.SelectedStack, pos: abovePos, rot: playerFace);
+                WorldObjectPlacementUtils.TryPlaceWorldObjectNow(context, (WorldObjectItem)context.User.Inventory.Toolbar.SelectedItem, context.User.Inventory.Toolbar.SelectedStack, pos: abovePos, rot: playerFace);
                 return;
             }
-            var isAuthorized = ServiceHolder<IAuthManager>.Obj.IsAuthorized(obj: this, alias: context.User);
+        }
 
+        [Interaction(InteractionTrigger.RightClick, "Open Doors", InteractionModifier.Ctrl)]
+        public void OnActRight(Player context, InteractionTriggerInfo interactionTriggerInfo, InteractionTarget interactionTarget)
+        {
+            var isAuthorized = ServiceHolder<IAuthManager>.Obj.IsAuthorized(this, context.User);
 
             if (isAuthorized)
             {
@@ -112,7 +112,7 @@ namespace Eco.EM.Storage.Shipping
         public override void Tick()
         {
             base.Tick();
-            SetAnimatedState("Doors", OpenDoors);
+            SetAnimatedState("OpenDoor", OpenDoors);
         }
     }
 

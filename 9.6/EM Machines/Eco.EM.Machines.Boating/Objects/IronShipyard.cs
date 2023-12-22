@@ -25,7 +25,7 @@ namespace Eco.EM.Machines.Boating
     public partial class IronShipyardItem : WorldObjectItem<IronShipyardObject>
     {
         public override LocString DisplayDescription => Localizer.DoStr("A place to build boats.");
-        public override DirectionAxisFlags RequiresSurfaceOnSides { get; } = 0 | DirectionAxisFlags.Down;
+        
         [TooltipChildren] public static HomeFurnishingValue HousingTooltip => HomeValue;
         public static new readonly HomeFurnishingValue HomeValue = new()
         {
@@ -42,7 +42,7 @@ namespace Eco.EM.Machines.Boating
     [RequireComponent(typeof(MinimapComponent))]
     [RequireComponent(typeof(LinkComponent))]
     [RequireComponent(typeof(CraftingComponent))]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
+
     [RequireComponent(typeof(PluginModulesComponent))]
     public partial class IronShipyardObject : PhysicsWorldObject, IRepresentsItem
     {

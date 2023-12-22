@@ -6,7 +6,6 @@ using Eco.Shared.Serialization;
 using System.ComponentModel;
 using Eco.Gameplay.Items;
 using Eco.Core.Utils;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Gameplay.Systems.NewTooltip;
 
 namespace Eco.EM.Flags
@@ -90,7 +89,7 @@ namespace Eco.EM.Flags
         public new object PersistentData { get => natFlagData; set => natFlagData = value as NatFlagData ?? new NatFlagData(); }
 
         [Eco, ClientInterfaceProperty, GuestHidden]
-        [Serialized, SyncToView, TooltipChildren]
+        [Serialized, SyncToView]
         public NationalFlag FlagOption { get; set; }
 
         [RPC, Autogen("Set Flag")]

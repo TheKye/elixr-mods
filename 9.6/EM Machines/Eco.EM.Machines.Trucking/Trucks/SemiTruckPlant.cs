@@ -13,9 +13,11 @@ using Eco.Mods.TechTree;
 using Eco.Gameplay.Skills;
 using System.Linq;
 using Eco.Core.Controller;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Gameplay.Systems.NewTooltip;
 using Eco.Shared.Items;
+using Eco.Gameplay.Components.Storage;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Machines.Trucking.Trucks
 {
@@ -24,10 +26,10 @@ namespace Eco.EM.Machines.Trucking.Trucks
     [Weight(25000)]
     [AirPollution(0.5f)]
     [Ecopedia("Crafted Objects", "Vehicles", createAsSubPage: true)]
+    [LocDescription("Modern Truck With a Semi Trailer attached for transporting Vehicles")]
     public partial class SemiTruckPlantItem : WorldObjectItem<SemiTruckPlantObject>, IPersistentData
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Modern Truck With a Semi Trailer attached for transporting Vehicles");
-        [Serialized, SyncToView, TooltipChildren, NewTooltipChildren(CacheAs.Instance)] public object PersistentData { get; set; }
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
     public class SemiTruckPlantRecipe : Recipe, IConfigurableRecipe

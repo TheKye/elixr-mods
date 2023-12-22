@@ -23,17 +23,17 @@ namespace Eco.EM.Admin
     public class AdminPlugin : Singleton<AdminPlugin>, IConfigurablePlugin, IModKitPlugin, IInitializablePlugin
     {
         public Timer Timer;
-        public PluginConfig<AdminConfig> config;
+        private static PluginConfig<AdminConfig> config;
         public AdminPlugin()
         {
-            this.config = new PluginConfig<AdminConfig>("EMAdmin");
+            config = new PluginConfig<AdminConfig>("EMAdmin");
         }
 
         public IPluginConfig PluginConfig => config;
-        public AdminConfig Config => this.config.Config;
+        public static AdminConfig Config => config.Config;
         public ThreadSafeAction<object, string> ParamChanged { get; set; } = new ThreadSafeAction<object, string>();
 
-        public object GetEditObject() => this.config.Config;
+        public object GetEditObject() => config.Config;
 
         public string GetStatus() => config.Config.EnableReports ? "Reports Enabled" : "Report System Disabled";
 

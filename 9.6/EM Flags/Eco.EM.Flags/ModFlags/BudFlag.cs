@@ -16,7 +16,7 @@ using Eco.Gameplay.Players;
 namespace Eco.EM.Flags.ModFlags
 {
     [Serialized]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
+
     [RequireComponent(typeof(PropertyAuthComponent))]
     public partial class BudFlagObject : WorldObject, IRepresentsItem
     {
@@ -72,7 +72,7 @@ namespace Eco.EM.Flags.ModFlags
     }
 
     [Serialized]
-    [RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
+
     [RequireComponent(typeof(PropertyAuthComponent))]
     public partial class BudRWFlagObject : WorldObject, IRepresentsItem
     {

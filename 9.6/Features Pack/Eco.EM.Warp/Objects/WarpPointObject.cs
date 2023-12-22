@@ -22,13 +22,19 @@ using Eco.Gameplay.Occupancy;
 using static Eco.Gameplay.Civics.IfThenBlock;
 using static System.Net.Mime.MediaTypeNames;
 using System.Threading.Tasks;
+using Eco.Gameplay.Interactions.Interactors;
+using Eco.Mods.TechTree;
+using Eco.Shared.Items;
+using Eco.Shared.SharedTypes;
+using Eco.Shared.Networking;
+using Eco.Gameplay.Civics.Demographics;
 
 namespace Eco.EM.Warp
 {
     [Serialized]
     [RequireComponent(typeof(CustomTextComponent))]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    public partial class WarpPointObject : WorldObject, IRepresentsItem, IPlayerUseTracking, INotifyPropertyChanged
+    public partial class WarpPointObject : WorldObject, IRepresentsItem, IPlayerUseTracking, INotifyPropertyChanged, IHasInteractions
     {
         public override LocString DisplayName => Localizer.DoStr("Community Warp Point");
         public virtual Type RepresentedItemType => typeof(WarpPointItem);
@@ -38,6 +44,7 @@ namespace Eco.EM.Warp
         protected override void Initialize()
         {
             GetComponent<CustomTextComponent>().Initialize(700);
+
             SetName(NameRollback);
 
             // watch for changes to the point name
@@ -69,22 +76,15 @@ namespace Eco.EM.Warp
             });
         }
 
-        public void OnActLeft(Player context)
+        [Interaction(InteractionTrigger.InteractKey,"Use", flags: InteractionFlags.BlocksOtherInteraction)]
+        public void Used(Player player, InteractionTriggerInfo triggerInfo, InteractionTarget target)
         {
-            if (!context.User.IsAdmin)
+            if (!player.User.IsAdmin)
             {
-                context.ErrorLocStr("Only an admin may remove this object");
+                player.ErrorLocStr("Only an admin may change the content on this object.");
                 return;
             }
-        }
-
-        public void OnActInteract(Player context)
-        {
-            if (!context.User.IsAdmin)
-            {
-                context.ErrorLocStr("Only an admin may change the content on this object.");
-                return;
-            }
+            base.Use(player, target, triggerInfo);
         }
 
         static WarpPointObject()

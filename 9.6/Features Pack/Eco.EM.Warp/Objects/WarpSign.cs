@@ -1,12 +1,21 @@
 ﻿using System;
+using System.Linq;
+using Eco.Core.Systems.Registrar;
+using Eco.Core.Utils;
+using Eco.Gameplay.Civics.Demographics;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.GameActions;
 using Eco.Gameplay.Interactions;
 using Eco.Gameplay.Interactions.Interactors;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Players;
+using Eco.Gameplay.Utils;
+using Eco.Mods.TechTree;
+using Eco.Shared.Items;
 using Eco.Shared.Localization;
+using Eco.Shared.Networking;
 using Eco.Shared.Serialization;
 using Eco.Shared.SharedTypes;
 
@@ -15,40 +24,20 @@ namespace Eco.EM.Warp
     [Serialized]
     [RequireComponent(typeof(CustomTextComponent))]
     [RequireComponent(typeof(PropertyAuthComponent))]
-    public partial class WarpSignObject : WorldObject,
-        IRepresentsItem
+    public partial class WarpSignObject : WorldObject, IRepresentsItem, IHasInteractions
     {
-        public override LocString DisplayName { get { return Localizer.DoStr("Warp Sign"); } }
-        public virtual Type RepresentedItemType { get { return typeof(WarpSignItem); } }
+        public override LocString DisplayName => Localizer.DoStr("Warp Sign");
+        public virtual Type RepresentedItemType => typeof(WarpSignItem);
 
         protected override void Initialize()
         {
             GetComponent<CustomTextComponent>().Initialize(700);
+            GetComponent<AuthComponent>().Owners.
+
         }
 
-        public void OnActLeft(Player context)
-        {
-            if (!context.User.IsAdmin)
-            {
-                context.ErrorLocStr("Only an admin may remove this object");
-                return;
-            }
-            
-        }
-
-        public override void Use(Player player, InteractionTarget target, InteractionTriggerInfo triggerInfo, string ui = "WorldObjectUI")
-        {
-            if (!player.User.IsAdmin)
-            {
-                player.ErrorLocStr("Only an admin may change the content on this object.");
-                return;
-            }
-
-            base.Use(player, target, triggerInfo, ui);
-        }
-
-        [Interaction(InteractionTrigger.RightClick, "Warp")]
-        public void Warp(Player context, InteractionTarget target, InteractionTriggerInfo triggerInfo)
+        [Interaction(InteractionTrigger.RightClick, "Warp", flags: InteractionFlags.BlocksOtherInteraction)]
+        public void Warp(Player context, InteractionTriggerInfo triggerInfo, InteractionTarget target)
         {
             var text = GetComponent<CustomTextComponent>().TextData.Text;
 
@@ -69,6 +58,20 @@ namespace Eco.EM.Warp
 
                 WarpCommands.SignWarpto(context.User, ltrimd);
             }
+            else
+                context.ErrorLocStr("No Warp point has been connected to this warp sign..");
+        }
+
+
+        [Interaction(InteractionTrigger.InteractKey, "Use", flags: InteractionFlags.BlocksOtherInteraction)]
+        public void Used(Player player, InteractionTriggerInfo triggerInfo, InteractionTarget target)
+        {
+            if (!player.User.IsAdmin)
+            {
+                player.ErrorLocStr("Only an admin may change the content on this object.");
+                return;
+            }
+            base.Use(player, target, triggerInfo);
         }
     }
 
@@ -79,9 +82,6 @@ namespace Eco.EM.Warp
     public partial class WarpSignItem :
     WorldObjectItem<WarpSignObject>
     {
-        static WarpSignItem()
-        {
-
-        }
+        static WarpSignItem() { }
     }
 }

@@ -58,7 +58,7 @@ namespace Eco.EM.Machines.Vehicles
         private CarColor ocarColor { get; set; }
 
         [Eco, ClientInterfaceProperty, GuestHidden]
-        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Global, flags: TTFlags.AllowNonControllerTypeForChildren)]
+        [Serialized, SyncToView]
         public CarColor CarColor 
         {
             get => ocarColor;
@@ -69,7 +69,8 @@ namespace Eco.EM.Machines.Vehicles
                 this.Changed(nameof(CarColor));
             }
         }
-        
+
+        [Serialized, SyncToView, NewTooltipChildren(CacheAs.Global, flags: TTFlags.AllowNonControllerTypeForChildren)]
         public object PersistentData { get => carColor; set => carColor = value as CarColorData ?? new CarColorData(); }
 
         [RPC, Autogen, GuestHidden]
