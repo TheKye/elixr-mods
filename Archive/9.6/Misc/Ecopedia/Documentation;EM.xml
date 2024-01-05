@@ -1,0 +1,40 @@
+﻿<ecopedia icon="paintingskill" priority="1">
+  <section type="header">Painting</section>
+	<section>
+The Painting System Added by EM Adds in a new Tool and some new things!
+
+	- Paint Brush
+	- Paint Buckets
+	</section>
+
+	<section type="header">Paint Brush</section>
+	<section>
+		The Paint brushes are a tool made by a Painting Specialist. 
+		
+		The Tool allows you to paint certain blocks different Colors!
+		
+		Blocks that Support this system:
+		- Concrete
+		- Bricks
+		- Glass
+		
+		All 3 of these have a colored version as per the EM Building Bundle, by using the Paint Brush and Paint Buckets you can paint these blocks different colors!
+		
+		To select the color of the paintbrush:
+		
+		Simply Right Click the paint brush in your toolbar and it will open a UI allowing you to select the color brush you use to paint the blocks
+		
+		Each colored brush requires its corresponding paint bucket to be able to paint blocks.
+	</section>
+
+	<section type="header">Paint Bucket</section>
+	<section>
+		The Paint Buckets have many different colors, but also have durability. 
+		
+		Each Paint Bucket has enough paint in it to paint 100 blocks before it becomes an Empty Paint Bucket, which is then reused to make more paint buckets!
+		
+		There is a small bug where the paint brush can be tempermental about the paint bucket.
+		
+		It needs to be in your toolbar to be used, sometimes it may need to be infront or behind the paintbrush to work. not sure why! Sorry!
+	</section>
+</ecopedia>

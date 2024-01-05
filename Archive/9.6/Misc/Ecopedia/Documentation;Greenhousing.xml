@@ -1,0 +1,37 @@
+﻿<ecopedia icon="Work Party" priority="4">
+  <section type="header">Greenhouses</section>
+	<section>
+		Here we have a player written Guide on how to use the greenhouses! We also have a wiki page for that! https://wiki.elixrmods.com/Wiki/EM-Greenhousing
+
+		Here is the Guide!
+
+		What does the greenhouse do? 
+		The greenhouse allows you to ignore the temperature and moisture requirements of crops inside it, meaning you can grow any crop anywhere. This also means you can grow crops from different biomes in the same greenhouse, despite them having different temperature and moisture requirements. A pineapple (rainforest) and a fireweed (boreal forest) can be grown right next to each other in a greenhouse. Crops still need their proper neutrients inside the greenhouse.
+
+
+		How to create a greenhouse 
+		The conditions that need to be met to form a greenhouse are: A room that is tier 1.7 or higher, made of at least 75% glass blocks, of which the floor is covered by both a heat lamp and a sprinkler. Any floor tile not covered by these is considered not in a greenhouse, making the normal biome requirements apply.
+
+
+		Any glass can be used in your greenhouse. You do not need to use the greenhouse glass that comes with the mod specifically, but it is preferable to normal glass to achieve the required 1.7 tier requirement for the greenhouse room, as the dirt floor will subtract a substantial amount of points from your room tier. Framed glass (tier 4) is of course your best option, as it gives you more space to use low tier materials, but since you still need to reach 75% glass despite the dirt floor, it might be a waste.
+
+
+		A dirt tile does not need a glass block directly above it to be counted as a greenhouse room tile, as long as the other requirements are met.
+
+
+		Heat lamps and sprinklers As said before, each dirt tile needs to be covered by a heat lamp and a sprinkler to be counted as a greenhouse tile. Heat lamps require 200w of electrical power each. Sprinklers require a supply of 0,1 water, pumped to them by a pipe that attaches at their top.
+
+
+		Heat lamps and sprinklers have a certain range, that changes depending on how close they are to the floor. Both have the same range parameters. If there are 5 blocks between the floor and the lamp/sprinkler, it will simply not work. If there are 4 blocks between the floor and the lamp/sprinkler, it will have a 5x5 range. If there are 3 blocks between the floor and the lamp/sprinkler, it will have a 7x7 range with one block on each corner cut off. If there are 2 blocks between the floor and the lamp/sprinkler, it will have a 9x9 range, with three blocks on each corner cut off.
+
+
+		It's preferable for the lamps/sprinklers to hang as low as possible for range efficiency. However, note that a tractor requires a hight of three blocks to move through, so if you wish to use a tractor inside your greenhouse, you will need to put your lamps/sprinklers at at least three high, losing some range. This means you will need more lamps and sprinklers, and thus more power/water.
+
+
+		Providing the electrical power for the heat lamps is expensive (especially in the mechanics era) but easy enough. It's better for your greehouse to be off the grid with its own power source, as extended power outages will kill your out-of-biome crops. The sprinklers need an elaborate pipe network, which requires some effort. In my experience, it's better to put this pipe network outside the greenhouse (on its roof), having the pipes come through the roof to reach the sprinklers, as trying to keep the network inside the greenhouse means it needs to be one block higher, because the pipes need to attach to the top of each sprinkler.
+
+
+		This guide was written by Rune on 7-7-2022.
+
+	</section>
+</ecopedia>

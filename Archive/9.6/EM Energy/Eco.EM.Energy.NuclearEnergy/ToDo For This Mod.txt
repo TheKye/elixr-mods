@@ -1,0 +1,40 @@
+﻿The EM Nuclear Energy Mod is a Multi Block Mod:
+
+Requires Blocks like:
+
+Reactor Block, 
+Reactor Glass, 
+Cooling Rods
+Nuclear Rods
+Input Valve - For Water for cooling
+Output Valve - For Hot water/steam/waste
+
+Requires a single world object:
+Reactor Controller:
+
+The reactor controller would have a full detailed display of the reactors function:
+Power output, 
+Water Input,
+Cooling Rate,
+Current Temp,
+
+The Reactor controller would detect the outer blocks via a connection system to allow for multi size building, (Detects blocks and connected blocks)
+
+If valid allow operation
+
+On Off component allows the control of the reactor
+
+Special Second World object would be an Emergency Shutoff Controller - 
+If Temp > Max Safe Temp, Shut reactor down
+
+The reactor should be able to operate with any flow rate, no minimum required, but flow rate affects temp: Lower flow rate = higher temp
+
+When the reactor hits too high of a temp it should Explode, dealing block damage (Destroying blocks) in x radius, and adding a whole bunch of pollution
+
+Require Reactor Maintenance - 
+Damaged Cooling Rods, Over time replace Cooling rod with slightly damaged cooling rod, then dammaged then highly damaged then gone (Should delete itself after x time)
+
+Add a maintenance hatch to be able to enter the reactor (If open, reactor should be shut down) and replace broken parts
+
+
+If Adding Steam, Should add a way to convert steam to power (Another Reactor mod already does this so it will need to be done with consideration)

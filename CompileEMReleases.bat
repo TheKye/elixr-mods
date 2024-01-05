@@ -2,7 +2,7 @@
 echo "This will compile the release Ready modules and output them into bin/9.6/releases. Please ignore the BuildOutput folder. you can safely delete that after running this batch script. If you did not mean to run this then exit now. Files not ready for release have been commented out and will not be included in the release batcher."
 pause
 ::Set Default Paths
-set path=%cd%\bin\9.6
+set path=%cd%\bin\10.0
 set dir=%cd%
 set unitydir=%dir%\Built Unity Assets\9.6
 
