@@ -10,6 +10,8 @@ using Eco.Shared.Localization;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -35,11 +37,9 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(600), LocDisplayName("Ahead Sign"), MaxStackSize(100)]
+    [LocDescription("Sign For Something Ahead.")]
     public partial class AheadSignItem : WorldObjectItem<AheadSignObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Sign For Something Ahead.");
-        
-
         static AheadSignItem() { }
     }
 

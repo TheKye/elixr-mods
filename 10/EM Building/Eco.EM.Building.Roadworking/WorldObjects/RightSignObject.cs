@@ -11,6 +11,8 @@ using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
 using System.Linq;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -39,11 +41,9 @@ namespace Eco.EM.Building.Roadworking
     [Weight(600)]
     [LocDisplayName("Keep Right Sign")]
     [MaxStackSize(100)]
+    [LocDescription("A Keep right sign")]
     public partial class RightSignItem : WorldObjectItem<RightSignObject>
-    {
-        public override LocString DisplayDescription => Localizer.DoStr("A Keep right Sight");
-        
-
+    {   
         static RightSignItem() { }
     }
 

@@ -17,6 +17,8 @@ using Eco.Gameplay.Components.Auth;
 using Eco.Gameplay.Items;
 using Eco.Shared.IoC;
 using Eco.Gameplay.Auth;
+using Eco.Gameplay.Interactions.Interactors;
+using Eco.Shared.SharedTypes;
 
 /// <summary>
 /// This is out basic component to add to all our windows for their functionality, This is just so 
@@ -27,7 +29,7 @@ namespace Eco.EM.Building.Windows
 {
     [Serialized]
     [RequireComponent(typeof(StatusComponent), null)]
-    public abstract class WindowObject : WorldObject
+    public abstract class WindowObject : WorldObject, IHasInteractions
     {
 
         [Serialized] public bool OpensOut { get; set; }
@@ -35,29 +37,30 @@ namespace Eco.EM.Building.Windows
         [Serialized] public bool HasModule { get; set; }
         [Serialized] public float Range { get; set; }
 
-        public override InteractResult OnActRight(InteractionContext context)
+        [Interaction(InteractionTrigger.RightClick, "Open")]
+        public void OnActRight(Player context, InteractionTriggerInfo triggerInfo, InteractionTarget interactionTarget)
         {
             if (context != null)
             {
-                var isAuthorized = ServiceHolder<IAuthManager>.Obj.IsAuthorized(context);
+                var isAuthorized = ServiceHolder<IAuthManager>.Obj.IsAuthorized(context, interactionTarget);
                 if (isAuthorized)
                 {
                     if (!HasModule)
                     {
                         ToggleOpen();
-                        return InteractResult.NoOp;
+                        return;
                     }
                     else
-                        return InteractResult.Success;
+                        return;
                 }
                 else
                 {
-                    context.Player.ErrorLocStr("You Are Not Authorized To Do That");
-                    return InteractResult.Fail;
+                    context.ErrorLocStr("You Are Not Authorized To Do That");
+                    return;
                 }
             }
             else
-                return InteractResult.Success;
+                return;
         }
 
         protected override void Initialize()

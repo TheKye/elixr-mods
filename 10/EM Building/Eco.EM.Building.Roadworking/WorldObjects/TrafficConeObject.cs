@@ -10,6 +10,8 @@ using Eco.Shared.Localization;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -33,9 +35,9 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(600), LocDisplayName("Traffic Cone"), MaxStackSize(100)]
+    [LocDescription("A Traffic Cone.")]
     public partial class TrafficConeItem : WorldObjectItem<TrafficConeObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Traffic Cone.");
         
         static TrafficConeItem() { }
     }

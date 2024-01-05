@@ -10,6 +10,8 @@ using Eco.Shared.Localization;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -36,10 +38,9 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(5000), MaxStackSize(20), LocDisplayName("Road Barricade")]
+    [LocDescription("A Barricade for blocking off roads.")]
     public partial class RoadBarricadeItem : WorldObjectItem<RoadBarricadeObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Barricade for blocking off roads.");
-        
         static RoadBarricadeItem() { }
     }
 

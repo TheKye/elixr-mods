@@ -5,6 +5,7 @@ using Eco.Gameplay.Blocks;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Economy;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
@@ -95,9 +96,9 @@ namespace Eco.EM.Building.Windows
     [Tag("Colored Glass")]
     [Weight(10000)]
     [LocDisplayName("Pink Glass")]
+    [LocDescription("A Pink Glass used for building windows.")]
     public partial class PinkGlassItem : BlockItem<PinkGlassBlock>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Pink Glass used for building windows.");
 
         private static Type[] blockTypes = new Type[] {
             typeof(PinkGlassStacked1Block),

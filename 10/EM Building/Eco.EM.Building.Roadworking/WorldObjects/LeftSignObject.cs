@@ -11,6 +11,8 @@ using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
 using System.Linq;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -36,9 +38,9 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(600), LocDisplayName("Keep Left Sign"), MaxStackSize(100)]
-    public partial class LeftSignItem :  WorldObjectItem<LeftSignObject>
+    [LocDescription("A Keep Left Sign.")]
+    public partial class LeftSignItem : WorldObjectItem<LeftSignObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Keep Left Sign.");
         
         static LeftSignItem() { }
     }

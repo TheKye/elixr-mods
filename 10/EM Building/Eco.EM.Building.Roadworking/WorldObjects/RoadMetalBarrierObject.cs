@@ -10,6 +10,8 @@ using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
 using Eco.Shared.Math;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -35,11 +37,9 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(600), LocDisplayName("Metal Barrier"), MaxStackSize(100)]
+    [LocDescription("A Metal Barrier To Work as A Boundry.")]
     public partial class RoadMetalBarrierItem : WorldObjectItem<RoadMetalBarrierObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Metal Barrier To Work as A Boundry.");
-        
-
         static RoadMetalBarrierItem() { }
     }
 

@@ -11,6 +11,8 @@ using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
 using System.Linq;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -36,9 +38,9 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(600), LocDisplayName("No Entry Sign"), MaxStackSize(100)]
+    [LocDescription("Sign For No Entry.")]
     public partial class NoEntrySignItem : WorldObjectItem<NoEntrySignObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Sign For No Entry.");
         
 
         static NoEntrySignItem() { }

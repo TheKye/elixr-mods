@@ -29,12 +29,12 @@ namespace Eco.EM.Building.Concrete
     [Weight(10000)]
     [Ecopedia("Blocks", "Building Materials", createAsSubPage: true)]
     [Currency]
-    [Tag("Currency"), Tag("Concrete", 1), Tag("Colored Concrete", 1), Tag("Constructable", 1)]
+    [Tag("Currency"), Tag("Concrete"), Tag("Colored Concrete"), Tag("Constructable")]
+    [LocDescription("A study construction material poured around a latice of rebar. And Its Red!")]
     [Tier(3)]
     public partial class RedReinforcedConcreteItem : BlockItem<RedReinforcedConcreteBlock>
     {
         public override LocString DisplayNamePlural => Localizer.DoStr("Red Reinforced Concrete");
-        public override LocString DisplayDescription => Localizer.DoStr("A study construction material poured around a latice of rebar. And Its Red!");
 
         public override bool CanStickToWalls => false;
 

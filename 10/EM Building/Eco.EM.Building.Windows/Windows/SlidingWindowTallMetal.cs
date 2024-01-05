@@ -11,6 +11,8 @@ using Eco.Shared.Serialization;
 using Eco.World.Blocks;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Building.Windows
 {
@@ -44,10 +46,9 @@ namespace Eco.EM.Building.Windows
     [Weight(600)]
     [LocDisplayName("Tall Metal Sliding Window")]
     [Wall, Solid]
+    [LocDescription("A vertical sliding window made out of metal and glass.")]
     public partial class SlidingWindowTallMetalItem : WorldObjectItem<SlidingWindowTallMetalObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A vertical sliding window made out of metal and glass.");
-
         static SlidingWindowTallMetalItem() { }
     }
 

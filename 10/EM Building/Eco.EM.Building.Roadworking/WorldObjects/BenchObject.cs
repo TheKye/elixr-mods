@@ -10,6 +10,8 @@ using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
 using Eco.Shared.Math;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -38,10 +40,9 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(6000), LocDisplayName("Park Bench"), MaxStackSize(100)]
+    [LocDescription("A Beautiful Parck Bench.")]
     public partial class BenchItem : WorldObjectItem<BenchObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Beautiful Parck Bench.");
-        
         static BenchItem() { }
     }
 

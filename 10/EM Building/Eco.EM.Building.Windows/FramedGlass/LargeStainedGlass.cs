@@ -11,6 +11,8 @@ using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
 using System;
 using System.Linq;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Building.Windows
 {
@@ -38,10 +40,10 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large Grey Stained Glass")]
+    [LocDescription("Decorative 2x2 Grey Stained Glass Window.")]
     public partial class LargeGreyStainedGlassItem : WorldObjectItem<LargeGreyStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 Grey Stained Glass Window.");
-
+        
         static LargeGreyStainedGlassItem() { }
     }
 
@@ -114,9 +116,9 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large Blue Stained Glass")]
+    [LocDescription("Decorative 2x2 Large Blue Stained Glass Window.")]
     public partial class LargeBlueStainedGlassItem : WorldObjectItem<LargeBlueStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 Large Blue Stained Glass Window.");
 
         static LargeBlueStainedGlassItem() { }
     }
@@ -178,9 +180,9 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large Black Stained Glass")]
+    [LocDescription("Decorative 2x2 Black Stained Glass Window.")]
     public partial class LargeBlackStainedGlassItem : WorldObjectItem<LargeBlackStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 Black Stained Glass Window.");
 
         static LargeBlackStainedGlassItem() { }
     }
@@ -243,9 +245,9 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large Brown Stained Glass")]
+    [LocDescription("Decorative 2x2 Brown Stained Glass Window.")]
     public partial class LargeBrownStainedGlassItem : WorldObjectItem<LargeBrownStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 Brown Stained Glass Window.");
 
         static LargeBrownStainedGlassItem() { }
     }
@@ -307,9 +309,9 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large Green Stained Glass")]
+    [LocDescription("Decorative 2x2 Green Stained Glass Window.")]
     public partial class LargeGreenStainedGlassItem : WorldObjectItem<LargeGreenStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 Green Stained Glass Window.");
 
         static LargeGreenStainedGlassItem() { }
     }
@@ -373,9 +375,9 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large Orange Stained Glass")]
+    [LocDescription("Decorative 2x2 Orange Stained Glass Window.")]
     public partial class LargeOrangeStainedGlassItem : WorldObjectItem<LargeOrangeStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 Orange Stained Glass Window.");
 
         static LargeOrangeStainedGlassItem() { }
     }
@@ -438,9 +440,9 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large Pink Stained Glass")]
+    [LocDescription("Decorative 2x2 Pink Stained Glass Window.")]
     public partial class LargePinkStainedGlassItem : WorldObjectItem<LargePinkStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 Pink Stained Glass Window.");
 
         static LargePinkStainedGlassItem() { }
     }
@@ -502,9 +504,9 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large Purple Stained Glass")]
+    [LocDescription("Decorative 2x2 Purple Stained Glass Window.")]
     public partial class LargePurpleStainedGlassItem : WorldObjectItem<LargePurpleStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 Purple Stained Glass Window.");
 
         static LargePurpleStainedGlassItem() { }
     }
@@ -566,9 +568,9 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large Red Stained Glass")]
+    [LocDescription("Decorative 2x2 Red Stained Glass Window.")]
     public partial class LargeRedStainedGlassItem : WorldObjectItem<LargeRedStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 Red Stained Glass Window.");
 
         static LargeRedStainedGlassItem() { }
     }
@@ -630,9 +632,9 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large White Stained Glass")]
+    [LocDescription("Decorative 2x2 White Stained Glass Window.")]
     public partial class LargeWhiteStainedGlassItem : WorldObjectItem<LargeWhiteStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 White Stained Glass Window.");
 
         static LargeWhiteStainedGlassItem() { }
     }
@@ -695,9 +697,9 @@ namespace Eco.EM.Building.Windows
     }
 
     [Serialized, Tier(3), Weight(600), MaxStackSize(10), LocDisplayName("Large Yellow Stained Glass")]
+    [LocDescription("Decorative 2x2 Yellow Stained Glass Window.")]
     public partial class LargeYellowStainedGlassItem : WorldObjectItem<LargeYellowStainedGlassObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Decorative 2x2 Yellow Stained Glass Window.");
 
         static LargeYellowStainedGlassItem() { }
     }

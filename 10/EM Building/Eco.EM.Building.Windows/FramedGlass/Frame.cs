@@ -9,15 +9,16 @@ using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
 using System;
 using System.Linq;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Building.Windows
 {
     #region Frame 1x1
     [Serialized, Weight(10), MaxStackSize(500), LocDisplayName("Frame"), Currency]
+    [LocDescription("A Small Frame For Stained Glass.")]
     public partial class FrameItem : Item
     {
         public override LocString DisplayNamePlural => Localizer.DoStr("Frames");
-        public override LocString DisplayDescription => Localizer.DoStr("A Small Frame For Stained Glass.");
     }
 
     [RequiresSkill(typeof(SmeltingSkill), 3)]
@@ -64,10 +65,10 @@ namespace Eco.EM.Building.Windows
     #endregion
     #region Frame Long 1x2
     [Serialized, Weight(10), MaxStackSize(500), LocDisplayName("Long Frame"), Currency]
+    [LocDescription("A Wide Frame For Stained Glass")]
     public partial class LongFrameItem : Item
     {
         public override LocString DisplayNamePlural => Localizer.DoStr("Long Frames");
-        public override LocString DisplayDescription => Localizer.DoStr("A Wide Frame For Stained Glass");
     }
 
     [RequiresSkill(typeof(SmeltingSkill), 4)]
@@ -104,10 +105,10 @@ namespace Eco.EM.Building.Windows
     #endregion
     #region Frame Large 2x2
     [Serialized, Weight(10), MaxStackSize(500), LocDisplayName("Large Frame"), Currency]
+    [LocDescription("A Large Frame For Stained Glass.")]
     public partial class LargeFrameItem : Item
     {
         public override LocString DisplayNamePlural => Localizer.DoStr("Large Frames");
-        public override LocString DisplayDescription => Localizer.DoStr("A Large Frame For Stained Glass.");
     }
 
     [RequiresSkill(typeof(SmeltingSkill), 5)]
@@ -144,10 +145,10 @@ namespace Eco.EM.Building.Windows
     #endregion
     #region Frame Tall 2x1
     [Serialized, Weight(10), MaxStackSize(500), LocDisplayName("Tall Frame"), Currency]
+    [LocDescription("A Tall Frame For Stained Glass.")]
     public partial class TallFrameItem : Item
     {
         public override LocString DisplayNamePlural => Localizer.DoStr("Tall Frames");
-        public override LocString DisplayDescription => Localizer.DoStr("A Tall Frame For Stained Glass.");
     }
 
     [RequiresSkill(typeof(SmeltingSkill), 4)]

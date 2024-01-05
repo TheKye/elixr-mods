@@ -10,6 +10,8 @@ using Eco.Shared.Localization;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -34,9 +36,9 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(600), LocDisplayName("White Water Tank Barrier"), MaxStackSize(100)]
+    [LocDescription("A White Water Tank Type Barrier.")]
     public partial class WaterTankWhiteBarrierItem : WorldObjectItem<WaterTankWhiteBarrierObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A White Water Tank Type Barrier.");
         
         static WaterTankWhiteBarrierItem() { }
     }

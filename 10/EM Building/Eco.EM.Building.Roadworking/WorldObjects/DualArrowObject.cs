@@ -10,6 +10,7 @@ using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
 using Eco.Shared.Math;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -27,10 +28,10 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(10), MaxStackSize(500), LocDisplayName("Dual Arrow")]
+    [LocDescription("An arrow for directing traffic")]
     public partial class DualArrowItem : WorldObjectItem<DualArrowObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("An arrow for directing traffic.");
-        
+               
         static DualArrowItem() { }
     }
 

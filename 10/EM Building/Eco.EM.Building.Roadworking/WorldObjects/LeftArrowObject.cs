@@ -10,6 +10,7 @@ using Eco.Mods.TechTree;
 using Eco.EM.Framework.Resolvers;
 using System.Linq;
 using Eco.Shared.Math;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -27,9 +28,9 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(10), MaxStackSize(500), LocDisplayName("Left Arrow")]
+    [LocDescription("An arrow for directing traffic.")]
     public partial class LeftArrowItem : WorldObjectItem<LeftArrowObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("An arrow for directing traffic.");
         
         static LeftArrowItem() { }
     }

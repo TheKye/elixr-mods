@@ -11,6 +11,8 @@ using Eco.EM.Framework.Resolvers;
 using System.Linq;
 using Eco.Shared.Math;
 using System.Collections.Generic;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Building.Roadworking
 {
@@ -37,9 +39,9 @@ namespace Eco.EM.Building.Roadworking
     }
 
     [Serialized, Weight(600), LocDisplayName("Customer Parking Sign"), MaxStackSize(100)]
+    [LocDescription("A Customer Parking Sign.")]
     public partial class CustomerParkingSignItem : WorldObjectItem<CustomerParkingSignObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Customer Parking Sign.");
         
         static CustomerParkingSignItem() { }
     }
