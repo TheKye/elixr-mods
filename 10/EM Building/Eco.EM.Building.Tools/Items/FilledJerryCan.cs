@@ -4,6 +4,7 @@ using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.DynamicValues;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Players;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
@@ -19,10 +20,10 @@ namespace Eco.EM.Building.Tools
     [MaxStackSize(1)]
     [Weight(5000)]
     [IgnoreStackSize]
+    [LocDescription("A Jerry-can with fuel in it for on the move Refueling of your gasoline powered Tools.")]
     [Ecopedia("Items", "Tools", createAsSubPage: true)]
     public partial class FilledJerryCanItem : RepairableItem
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Jerry-can with fuel in it for on the move Refueling of your gasoline powered Tools.");
 
         public override IDynamicValue SkilledRepairCost => new ConstantValue(1);
         public override string OnUsed(Player player, ItemStack itemStack)

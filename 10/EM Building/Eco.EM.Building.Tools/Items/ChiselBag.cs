@@ -2,6 +2,7 @@
 using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
@@ -13,10 +14,10 @@ namespace Eco.EM.Building.Tools
     [Serialized, Weight(50), MaxStackSize(100)]
     [LocDisplayName("Chisel Bag")]
     [Currency, Tag("Currency")]
+    [LocDescription("A bag to keep your chiseled bits in, Combine with the Chisel to improve the Chisels Storage capacity.")]
     [Ecopedia("Items", "Products", createAsSubPage: true)]
     public partial class ChiselBagItem : Item
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A bag to keep your chiseled bits in, Combine with the Chisel to improve the Chisels Storage capacity.");
         static ChiselBagItem() { }
     }
 

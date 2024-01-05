@@ -2,7 +2,9 @@
 using Eco.EM.Framework.Utils;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
@@ -49,9 +51,9 @@ namespace Eco.EM.Building.Tools
 
     [Serialized, Weight(50), MaxStackSize(100)]
     [LocDisplayName("Tool Rack")]
+    [LocDescription("A nice tool rack for some of your tools")]
     public partial class ToolRackItem : WorldObjectItem<ToolRackObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A nice tool rack for some of your tools");
         static ToolRackItem() { }
     }
 

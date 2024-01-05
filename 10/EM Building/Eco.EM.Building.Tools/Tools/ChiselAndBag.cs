@@ -8,6 +8,7 @@ using Eco.Gameplay.DynamicValues;
 using Eco.Gameplay.GameActions;
 using Eco.Gameplay.Interactions;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Rooms;
 using Eco.Mods.TechTree;
@@ -29,7 +30,7 @@ namespace Eco.EM.Building.Tools
     [LocDisplayName("Chisel And Bag")]
     [Currency, Tag("Currency")]
     [Tier(4), Weight(500), Category("Tool")]
-    [Tag("Tool", 1), MaxStackSize(1)]
+    [Tag("Tool"), MaxStackSize(1)]
     [Ecopedia("Items", "Tools", createAsSubPage: true)]
     public partial class ChiselAndBagItem : HammerItem
     {

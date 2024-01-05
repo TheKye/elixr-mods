@@ -2,6 +2,7 @@
 using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
@@ -14,9 +15,10 @@ namespace Eco.EM.Building.Tools
     [LocDisplayName("Empty Jerry Can")]
     [Weight(500)]
     [Ecopedia("Items", "Products", createAsSubPage: true)]
+    [LocDescription("An Empty Jerry-can, Can store Gasoline in it, holds roughly 10 Liters")]
     public partial class EmptyJerryCanItem : Item
     {
-        public override LocString DisplayDescription => Localizer.DoStr("An Empty Jerry-can, Can store Gasoline in it, holds roughly 10 Liters");
+        
     }
 
     [RequiresSkill(typeof(OilDrillingSkill), 1)]

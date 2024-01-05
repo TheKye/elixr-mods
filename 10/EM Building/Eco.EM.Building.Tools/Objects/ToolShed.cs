@@ -2,8 +2,11 @@
 using Eco.EM.Framework.Utils;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.Shared.Items;
@@ -84,10 +87,9 @@ namespace Eco.EM.Building.Tools
 
     [Serialized, Weight(50), MaxStackSize(100)]
     [LocDisplayName("Tool Shed")]
+    [LocDescription("A shed for your tools")]
     public partial class ToolShedItem : WorldObjectItem<ToolShedObject>
-    {
-        public override LocString DisplayDescription => Localizer.DoStr("A shed for your tools");
-        
+    {        
         static ToolShedItem() { }
     }
 

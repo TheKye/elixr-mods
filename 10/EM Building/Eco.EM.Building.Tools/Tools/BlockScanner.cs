@@ -15,6 +15,11 @@ using Eco.World.Blocks;
 using Eco.EM.Framework.Resolvers;
 using System;
 using Eco.Core.Items;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Interactions.Interactors;
+using Eco.Gameplay.Players;
+using Eco.Shared.SharedTypes;
+using NLog.Targets;
 
 namespace Eco.EM.Building.Tools
 {
@@ -23,6 +28,7 @@ namespace Eco.EM.Building.Tools
     [LocDisplayName("Block Scanner")]
     [MaxStackSize(1)]
     [Currency, Tag("Currency")]
+    [LocDescription("Scanning device for identifying blocks underground.")]
     [Ecopedia("Items", "Tools", createAsSubPage: true)]
     public class BlockScannerItem : ToolItem
     {
@@ -33,48 +39,47 @@ namespace Eco.EM.Building.Tools
 
         private static readonly SkillModifiedValue skilledRepairCost = new(1, BasicEngineeringSkill.MultiplicativeStrategy, typeof(BasicEngineeringSkill), Localizer.DoStr("repair cost"), DynamicValueType.Efficiency);
         
-        public override LocString LeftActionDescription     => Localizer.DoStr("Scan");
-        public override LocString DisplayDescription        => Localizer.DoStr("Scanning device for identifying blocks underground.");
         public override IDynamicValue SkilledRepairCost     => skilledRepairCost;
         public override float DurabilityRate                => DurabilityMax / 500f;
         public override Item RepairItem                     => Item.Get<IronBarItem>();
         public override int FullRepairAmount                => 8;
 
-        public override InteractResult OnActRight(InteractionContext context)
+        [Interaction(Shared.SharedTypes.InteractionTrigger.RightClick)]
+        public void OnActRight(Player context, InteractionTriggerInfo triggerInfo, InteractionTarget inttarget)
         {
             if (scanDir == ScanSetting.Horizontal)
             {
                 scanDir = ScanSetting.Vertical;
                 scanReport = Localizer.Do($"Depth Scan");
-                context.Player.MsgLocStr(scanReport, NotificationStyle.Info);
-                return InteractResult.Success;
+                context.MsgLocStr(scanReport, NotificationStyle.Info);
+                return;
             }
             else if (scanDir == ScanSetting.Vertical)
             {
                 scanDir = ScanSetting.Horizontal;
                 scanReport = Localizer.Do($"Horizontal Scan");
-                context.Player.MsgLocStr(scanReport, NotificationStyle.Info);
-                return InteractResult.Success;
+                context.MsgLocStr(scanReport, NotificationStyle.Info);
+                return;
             }
             else
             {
-                return InteractResult.NoOp;
+                return;
             }
         }
 
-        public override InteractResult OnActLeft(InteractionContext context)
+        [Interaction(Shared.SharedTypes.InteractionTrigger.LeftClick, "Scan")]
+        public void OnActLeft(Player context, InteractionTriggerInfo triggerInfo, InteractionTarget inttarget)
         {
-            if (!context.HasBlock)
-                return InteractResult.NoOp;
+            if (!inttarget.IsBlock) return;
 
-            Direction facingDir = context.Player.User.FacingDir;
+            Direction facingDir = context.User.FacingDir;
             Dictionary<string, int> blockCount = new();
-            Vector3i target = context.BlockPosition.Value;
+            Vector3i target = inttarget.BlockPosition.Value;
             Vector3i blockPos = target;
             StringBuilder title = new();
             StringBuilder text = new();
-            this.BurnCaloriesNow(context.Player);
-            this.UseDurability(DurabilityRate, context.Player);
+            this.BurnCaloriesNow(context);
+            this.UseDurability(DurabilityRate, context);
             for (int scans = 30; scans > 0; scans--)
             {
 
@@ -129,10 +134,10 @@ namespace Eco.EM.Building.Tools
             {
                 text.Append(b.Key + ": " + b.Value + "\n");
             }
-            context.Player.OpenInfoPanel(title.ToString(), text.ToString(), "ScanReport");
+            context.OpenInfoPanel(title.ToString(), text.ToString(), "ScanReport");
 
-            BurnCaloriesNow(context.Player);
-            return InteractResult.Success;
+            BurnCaloriesNow(context);
+            return;
         }
     }
 
