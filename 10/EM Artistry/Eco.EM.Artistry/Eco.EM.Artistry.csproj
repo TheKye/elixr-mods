@@ -164,6 +164,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Eco.ReferenceAssemblies" Version="0.10.0-beta-release-532" />
+	  <PackageReference Include="ElixrMods.Framework" Version="3.5.1" />
 	</ItemGroup>
 </Project>
