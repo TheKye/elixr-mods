@@ -1,7 +1,7 @@
 @echo off
 ::Where you have the eco client project installed
 set installfolder="..\EM Unity\Built Unity Assets"
-set emframework="..\EM Framework\bin\9.6\Framework\net7.0"
+set emframework="..\EM Framework\bin\10\Framework\net7.0"
 @echo on
 rmdir "Built Unity Assets"
 rmdir "EM Framework"
