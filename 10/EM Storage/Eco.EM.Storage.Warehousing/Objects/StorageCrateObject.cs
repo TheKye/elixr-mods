@@ -2,8 +2,10 @@ using System;
 using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Interactions;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
@@ -87,9 +89,9 @@ namespace Eco.EM.Storage.Warehousing
     [MaxStackSize(10)]
     [Weight(600)]
     [LocDisplayName("Storage Crate")]
+    [LocDescription("A General Storage Crate for storing small items.. But has limited link range")]
     public partial class StorageCrateItem : WorldObjectItem<StorageCrateObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A General Storage Crate for storing small items.. But has limited link range");
     }
 
     [RequiresSkill(typeof(LoggingSkill), 2)]
