@@ -6,12 +6,14 @@ using Eco.World.Blocks;
 using Eco.Mods.TechTree;
 using Eco.EM.Building.Bricks;
 using Eco.EM.Framework.Extentsions;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Blocks
 {
     [RotatedVariants(typeof(GreenBrickWall45Block), typeof(GreenBrickWall4590Block), typeof(GreenBrickWall45180Block), typeof(GreenBrickWall45270Block))]
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(2)]
     [IsForm(typeof(FFDegreeWallFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickWall45Block : NBlock, IRepresentsItem
@@ -23,6 +25,7 @@ namespace Eco.EM.Building.Blocks
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(2)]
     public partial class GreenBrickWall4590Block : NBlock
     {
@@ -31,6 +34,7 @@ namespace Eco.EM.Building.Blocks
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(2)]
     public partial class GreenBrickWall45180Block : NBlock
     {
@@ -39,6 +43,7 @@ namespace Eco.EM.Building.Blocks
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(2)]
     public partial class GreenBrickWall45270Block : NBlock
     {

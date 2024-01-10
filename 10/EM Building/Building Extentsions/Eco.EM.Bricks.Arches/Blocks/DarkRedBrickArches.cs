@@ -6,6 +6,7 @@ using Eco.World.Blocks;
 using Eco.Mods.TechTree;
 using Eco.EM.Building.Bricks;
 using Eco.EM.Building.Arches;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Bricks.Arches
 {
@@ -15,6 +16,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(SingleArchBaseFormType), typeof(DarkRedBrickItem))]
     public partial class SingleArchBaseDarkRedBrickBlock :
         Block, IRepresentsItem
@@ -24,6 +26,7 @@ namespace Eco.EM.Building.Bricks.Arches
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(2)]
     public partial class SingleArchBaseDarkRedBrick90Block : Block
     { }
@@ -31,12 +34,14 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseDarkRedBrick270Block : Block
     { }
 
@@ -46,6 +51,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(SingleArchMidFormType), typeof(DarkRedBrickItem))]
     public partial class SingleArchMidDarkRedBrickBlock :
     Block, IRepresentsItem
@@ -55,12 +61,14 @@ namespace Eco.EM.Building.Bricks.Arches
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(2)]
     public partial class SingleArchMidDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(2)]
     public partial class SingleArchMidDarkRedBrick180Block : Block
     { }
@@ -68,6 +76,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SingleArchMidDarkRedBrick270Block : Block
     { }
     #endregion
@@ -76,6 +85,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(SingleArchTopFormType), typeof(DarkRedBrickItem))]
     public partial class SingleArchTopDarkRedBrickBlock :
     Block, IRepresentsItem
@@ -86,18 +96,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SingleArchTopDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SingleArchTopDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SingleArchTopDarkRedBrick270Block : Block
     { }
     #endregion
@@ -107,6 +120,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(SingleArchRoofFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class SingleArchRoofDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -116,18 +130,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofDarkRedBrick270Block : Block
     { }
     #endregion
@@ -139,6 +156,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(BaseLeftFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class BaseLeftDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -148,18 +166,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class BaseLeftDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class BaseLeftDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class BaseLeftDarkRedBrick270Block : Block
     { }
     #endregion
@@ -168,6 +189,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(BaseRightFormType), typeof(DarkRedBrickItem))]
     public partial class BaseRightDarkRedBrickBlock :
     Block, IRepresentsItem
@@ -178,18 +200,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class BaseRightDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class BaseRightDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class BaseRightDarkRedBrick270Block : Block
     { }
 
@@ -200,6 +225,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(BaseMidFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class BaseMidDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -209,18 +235,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class BaseMidDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class BaseMidDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class BaseMidDarkRedBrick270Block : Block
     { }
     #endregion
@@ -230,6 +259,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(MidMidFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class MidMidDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -239,18 +269,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class MidMidDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class MidMidDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class MidMidDarkRedBrick270Block : Block
     { }
     #endregion
@@ -260,6 +293,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(MidLeftFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class MidLeftDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -269,18 +303,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class MidLeftDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class MidLeftDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class MidLeftDarkRedBrick270Block : Block
     { }
     #endregion
@@ -289,6 +326,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(MidRightFormType), typeof(DarkRedBrickItem))]
     public partial class MidRightDarkRedBrickBlock :
     Block, IRepresentsItem
@@ -299,18 +337,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class MidRightDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class MidRightDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class MidRightDarkRedBrick270Block : Block
     { }
     #endregion
@@ -319,6 +360,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(TopMidFormType), typeof(DarkRedBrickItem))]
     public partial class TopMidDarkRedBrickBlock :
     Block, IRepresentsItem
@@ -329,18 +371,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class TopMidDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class TopMidDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class TopMidDarkRedBrick270Block : Block
     { }
     #endregion
@@ -350,6 +395,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(TopLeftFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class TopLeftDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -359,18 +405,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class TopLeftDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class TopLeftDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class TopLeftDarkRedBrick270Block : Block
     { }
     #endregion
@@ -380,6 +429,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(TopRightFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class TopRightDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -389,18 +439,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class TopRightDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class TopRightDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class TopRightDarkRedBrick270Block : Block
     { }
     #endregion
@@ -410,6 +463,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(RoofLeftFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class RoofLeftDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -419,18 +473,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class RoofLeftDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class RoofLeftDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class RoofLeftDarkRedBrick270Block : Block
     { }
     #endregion
@@ -440,6 +497,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(RoofRightFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class RoofRightDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -449,18 +507,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class RoofRightDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class RoofRightDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class RoofRightDarkRedBrick270Block : Block
     { }
     #endregion
@@ -470,6 +531,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(RoofMidFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class RoofMidDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -479,18 +541,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class RoofMidDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class RoofMidDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class RoofMidDarkRedBrick270Block : Block
     { }
     #endregion
@@ -500,6 +565,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(InnerCornerBaseFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -509,18 +575,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseDarkRedBrick270Block : Block
     { }
     #endregion
@@ -530,6 +599,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(InnerCornerMidFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class InnerCornerMidDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -539,18 +609,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidDarkRedBrick270Block : Block
     { }
     #endregion
@@ -560,6 +633,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(InnerCornerTopFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class InnerCornerTopDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -569,18 +643,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopDarkRedBrick270Block : Block
     { }
     #endregion
@@ -590,6 +667,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
     [IsForm(typeof(OutterCornerBaseFormType), typeof(DarkRedBrickItem))]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseDarkRedBrickBlock :
     Block, IRepresentsItem
     {
@@ -599,18 +677,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseDarkRedBrick270Block : Block
     { }
     #endregion
@@ -619,6 +700,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(OutterCornerMidFormType), typeof(DarkRedBrickItem))]
     public partial class OutterCornerMidDarkRedBrickBlock :
     Block, IRepresentsItem
@@ -629,18 +711,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidDarkRedBrick270Block : Block
     { }
     #endregion
@@ -649,6 +734,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(OutterCornerTopFormType), typeof(DarkRedBrickItem))]
     public partial class OutterCornerTopDarkRedBrickBlock :
     Block, IRepresentsItem
@@ -659,18 +745,21 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopDarkRedBrick90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopDarkRedBrick180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopDarkRedBrick270Block : Block
     { }
     #endregion

@@ -6,6 +6,7 @@ using Eco.World.Blocks;
 using Eco.Mods.TechTree;
 using Eco.EM.Building.Bricks;
 using Eco.EM.Framework.Extentsions;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Blocks
 {
@@ -13,6 +14,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(OrangeBrickItem))]
     public partial class OrangeBrickWall45Block : NBlock, IRepresentsItem
     {
@@ -24,6 +26,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OrangeBrickWall4590Block : NBlock
     {
         public override Type BaseType => typeof(BrickWall4590Block);
@@ -32,6 +35,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OrangeBrickWall45180Block : NBlock
     {
         public override Type BaseType => typeof(BrickWall45180Block);
@@ -40,6 +44,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class OrangeBrickWall45270Block : NBlock
     {
         public override Type BaseType => typeof(BrickWall45270Block);

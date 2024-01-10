@@ -6,6 +6,7 @@ using Eco.World.Blocks;
 using Eco.Mods.TechTree;
 using Eco.EM.Building.Bricks;
 using Eco.EM.Framework.Extentsions;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Blocks
 {
@@ -13,6 +14,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(RedBrickItem))]
     public partial class RedBrickWall45Block : NBlock, IRepresentsItem
     {
@@ -23,6 +25,7 @@ namespace Eco.EM.Building.Blocks
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(2)]
     public partial class RedBrickWall4590Block : NBlock
     {
@@ -31,6 +34,7 @@ namespace Eco.EM.Building.Blocks
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(2)]
     public partial class RedBrickWall45180Block : NBlock
     {
@@ -39,6 +43,7 @@ namespace Eco.EM.Building.Blocks
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(2)]
     public partial class RedBrickWall45270Block : NBlock
     {
