@@ -19,6 +19,13 @@ using Eco.Gameplay.Economy;
 using Eco.Gameplay.Systems.NewTooltip.TooltipLibraryFiles;
 using Eco.Mods.TechTree;
 using Eco.Gameplay.Components.Storage;
+using Eco.Gameplay.Civics;
+using Eco.Gameplay.Settlements;
+using Eco.Gameplay.Minimap;
+using Eco.Simulation.WorldLayers;
+using Eco.Gameplay.Items.InventoryRelated;
+using Eco.Gameplay.Systems;
+using Eco.Shared.Math;
 
 namespace Eco.EM.Admin
 {
@@ -40,7 +47,7 @@ namespace Eco.EM.Admin
 
             //Put the rest in the toolbar.
             int index = 1;
-            foreach (var stack in player.User.Inventory.Toolbar.Stacks.Where(x => !(x.Item is ToolItem)))
+            foreach (var stack in player.User.Inventory.Toolbar.Stacks.Where(x => x.Item is not ToolItem))
             {
                 if (index >= result.Count) break;
                 var entry = result[index++];
@@ -99,7 +106,8 @@ namespace Eco.EM.Admin
                 if (PropertyManager.PropertyForAlias(tgtUser).Any())
                 {
                     foreach (var p in prop)
-                    {   if (p == null) continue;
+                    {
+                        if (p == null) continue;
                         int numPlots = p.PlotCount;
                         p.Destroy();
                         p.DeleteDeed(tgtUser.Player);
@@ -117,6 +125,31 @@ namespace Eco.EM.Admin
             }
             ChatBaseExtended.CBError(string.Format(Localizer.DoStr("Could not find anyone with the username {0}."), targetUser), user);
             return;
+        }
+
+        [ChatCommand("Remove a bugged draft town that has no foundation", ChatAuthorizationLevel.Admin)]
+        public static void RemovedDraftTown(User user, Settlement settlement)
+        {
+            if (settlement != null && !settlement.HasValidConstitution)
+            {
+                settlement.Destroyed();
+                user.Player.MsgLocStr($"{settlement.Name} has been removed from the world.");
+                WorldLayerManager.Obj.RemoveLayer(settlement.Name);
+                SettlementManager.Obj.ForceUpdateAllSettlements();
+            }
+            else
+                user.Player.ErrorLocStr($"{settlement.Name} has a valid consitution and can not be removed this way");
+        }
+
+        [ChatCommand("Destroys a made town", ChatAuthorizationLevel.Admin)]
+        public static void RemoveTown(User user, Settlement settlement)
+        {
+            if (settlement != null)
+            {
+                settlement.Destroyed();
+                user.Player.MsgLocStr($"{settlement.Name} has been removed from the world.");
+                SettlementManager.Obj.ForceUpdateAllSettlements();
+            }
         }
 
         /*public static void BanErase(User user, string targetUser, string reason = "")
@@ -181,7 +214,7 @@ namespace Eco.EM.Admin
             });
             foreach (var usr in UserManager.Users)
             {
-                foreach(var stack in usr.Inventory.AllInventories.AllStacks())
+                foreach (var stack in usr.Inventory.AllInventories.AllStacks())
                 {
                     int qty = usr.Inventory.TotalNumberOfItems(typeof(DevtoolItem));
                     if (all && qty > 0)
@@ -207,13 +240,53 @@ namespace Eco.EM.Admin
                 ChatBaseExtended.CBError("Currency Not Found", user);
                 return;
             }
-            
+
             foreach (var usr in UserManager.Users)
             {
                 usr.BankAccount.AddCurrency(curreny, amount);
                 usr.BankAccount.BalanceChanged.Invoke(curreny);
             }
             ChatBaseExtended.CBInfoBox(string.Format(Localizer.DoStr("All Players have been paid {0} {1}"), amount, curreny), user);
+        }
+
+        [ChatCommand("Grant All players a specific item and the amount of that item", "grant-all", ChatAuthorizationLevel.Admin)]
+        public static void GiveAllPlayers(User user, string item, int amount = 1, bool includeOffline = false)
+        {
+            var itemToGive = Item.Get(item);
+
+
+            if (itemToGive == null)
+            {
+                user.Player.ErrorLocStr($"{item} Is not a valid item, did you type the name correctly?");
+                return;
+            }
+            
+            //fallback incase of requiring void storage access
+            List<ItemStack> stacks = null;
+            stacks.Add(new ItemStack(itemToGive, amount));
+            switch (includeOffline)
+            {
+                case true:
+                    foreach (var u in UserManager.Users)
+                    {
+                        var succeed = u.Inventory.TryAddItems(itemToGive.GetType(), amount);
+                        if (!succeed)
+                            GameData.Obj.VoidStorageManager.FillNewVoidStorage(stacks, Localizer.DoStr("Granted Items"), u, Vector3i.NegOne, "");
+                        u.Mail(Localizer.DoStr($"The Admin of this server has granted you {amount} {(amount > 1 ? (string.IsNullOrWhiteSpace(itemToGive.DisplayNamePlural) ? itemToGive.DisplayName : itemToGive.DisplayNamePlural ): itemToGive.DisplayName)}, If the item is not in your inventory, check your void storage"), Shared.Services.NotificationCategory.Notifications);
+                    }
+                    user.Player.MsgLocStr($"All Players have been given {itemToGive.DisplayName}");
+                    break;
+                case false:
+                    foreach (var u in UserManager.OnlineUsers)
+                    {
+                        var succeed = u.Inventory.TryAddItems(itemToGive.GetType(), amount);
+                        if (!succeed)
+                            GameData.Obj.VoidStorageManager.FillNewVoidStorage(stacks, Localizer.DoStr("Granted Items"), u, Vector3i.NegOne, "");
+                        u.Mail(Localizer.DoStr($"The Admin of this server has granted you {amount} {(amount > 1 ? (string.IsNullOrWhiteSpace(itemToGive.DisplayNamePlural) ? itemToGive.DisplayName : itemToGive.DisplayNamePlural ): itemToGive.DisplayName)}, If the item is not in your inventory, check your void storage"), Shared.Services.NotificationCategory.Notifications);
+                    }
+                    user.Player.MsgLocStr($"All Online Players have been given {itemToGive.DisplayName}");
+                    break;
+            }
         }
 
         public static string ListToString(List<User> Users)

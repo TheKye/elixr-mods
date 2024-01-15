@@ -38,7 +38,7 @@ namespace Eco.EM.Admin
             }
 
             Load();
-            Timer = new(Timer_tick, null, 15000, 15000);
+            Timer = new(Timer_tick, null, 10000, 10000);
         }
 
         public AFKPlugin()
@@ -106,6 +106,11 @@ namespace Eco.EM.Admin
             });
         }
 
+        // Write an AFK Detection system for User class with a warning message if they are close to the afk time
+        
+        
+        
+        
         static bool IsAfk(User user)
         {
             if (!UserHistory.Any(uh => uh.UserId == user.Id))
@@ -122,7 +127,7 @@ namespace Eco.EM.Admin
 
             var first = history.FirstOrDefault();
 
-            bool PossiblyAfk = !history.Any(h => user.Position.XYZi() != first.Position.XYZi() && user.Rotation.Conjugate != first.Rotation.Conjugate && user.FacingDir != first.Facing);
+            bool PossiblyAfk = !history.Any(h => user.Position.XYZi() != first.Position.XYZi() && user.Rotation != first.Rotation && user.FacingDir != first.Facing);
             if (!PossiblyAfk)
                 return false;
 
@@ -130,8 +135,7 @@ namespace Eco.EM.Admin
             var difference = new TimeSpan(last.Timestamp).TotalSeconds - new TimeSpan(first.Timestamp).TotalSeconds;
             if (difference >= (config.Interval * 60))
                 return true;
-
-            if (difference >= (config.Interval * 60) / 1.1)
+            if (difference >= (config.Interval * 60) / 1.09)
                 ChatBaseExtended.CBInfoPane(Localizer.DoStr("AFK Warning"), Localizer.DoStr("If you continue to AFK, you will be automatically kicked from the server."), "AFK", user, ChatBase.PanelType.InfoPanel);
 
             return false;
