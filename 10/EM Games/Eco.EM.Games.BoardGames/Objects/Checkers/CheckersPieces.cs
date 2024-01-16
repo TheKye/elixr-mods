@@ -8,6 +8,7 @@ using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
@@ -20,9 +21,9 @@ namespace Eco.EM.Games.BoardGames
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
+    [LocDisplayName("Red Checker Piece")]
     public partial class RedCheckerPieceObject : WorldObject, IRepresentsItem
     {
-        public override LocString DisplayName => Localizer.DoStr("Red Checker Piece");
         public virtual Type RepresentedItemType => typeof(RedCheckerPieceItem);
         public override TableTextureMode TableTexture => TableTextureMode.Stone;
 
@@ -38,9 +39,9 @@ namespace Eco.EM.Games.BoardGames
 
     [Serialized, Weight(50), MaxStackSize(100)]
     [LocDisplayName("Red Checker Piece")]
+    [LocDescription("A Basic Piece for Playing Checkers")]
     public partial class RedCheckerPieceItem : WorldObjectItem<RedCheckerPieceObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Basic Piece for Playing Checkers");
         static RedCheckerPieceItem() { }
     }
 
@@ -109,9 +110,9 @@ namespace Eco.EM.Games.BoardGames
 
     [Serialized, Weight(50), MaxStackSize(100)]
     [LocDisplayName("Red Checker King")]
+    [LocDescription("The King Piece used in playing Checkers")]
     public partial class RedCheckerKingItem : WorldObjectItem<RedCheckerKingObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("The King Piece used in playing Checkers");
         static RedCheckerKingItem() { }
     }
 
@@ -179,9 +180,9 @@ namespace Eco.EM.Games.BoardGames
 
     [Serialized, Weight(50), MaxStackSize(100)]
     [LocDisplayName("Black Checker Piece")]
+    [LocDescription("A Basic Piece for Playing Checkers")]
     public partial class BlackCheckerPieceItem : WorldObjectItem<BlackCheckerPieceObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Basic Piece for Playing Checkers");
         static BlackCheckerPieceItem() { }
     }
 
@@ -250,9 +251,9 @@ namespace Eco.EM.Games.BoardGames
 
     [Serialized, Weight(50), MaxStackSize(100)]
     [LocDisplayName("Black Checker King")]
+    [LocDescription("The King Piece used in playing Checkers")]
     public partial class BlackCheckerKingItem : WorldObjectItem<BlackCheckerKingObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("The King Piece used in playing Checkers");
         static BlackCheckerKingItem() { }
     }
 

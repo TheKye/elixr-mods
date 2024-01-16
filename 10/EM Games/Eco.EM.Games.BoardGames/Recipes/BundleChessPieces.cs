@@ -1,6 +1,7 @@
 ﻿using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Shared.Localization;
 using System;
 using System.Collections.Generic;

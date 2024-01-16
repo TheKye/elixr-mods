@@ -11,6 +11,8 @@ using Eco.Shared.Math;
 using Eco.Shared.Serialization;
 using Eco.EM.Framework.Resolvers;
 using System.Linq;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Games.BoardGames
 {
@@ -220,97 +222,98 @@ namespace Eco.EM.Games.BoardGames
 	[Serialized]
 	[LocDisplayName("Stone King")]
 	[MaxStackSize(100)]
+	[LocDescription("Stone Chess Piece")]
 	public class StoneKingItem : WorldObjectItem<StoneKingObject>
 	{
-		public override LocString DisplayDescription => Localizer.Do($"Stone Chess Piece"); 
 		
 	}
 	[Serialized]
 	[LocDisplayName("Stone Queen")]
 	[MaxStackSize(100)]
+	[LocDescription("Stone Chess Piece")]
 	public class StoneQueenItem : WorldObjectItem<StoneQueenObject>
 	{
-		public override LocString DisplayDescription => Localizer.Do($"Stone Chess Piece"); 
 		
 	}
 	[Serialized]
 	[LocDisplayName("Stone Bishop")]
 	[MaxStackSize(100)]
-	public class StoneBishopItem : WorldObjectItem<StoneBishopObject>
-	{
-		public override LocString DisplayDescription => Localizer.Do($"Stone Chess Piece"); 
+	[LocDescription("Stone Chess Piece")]
+    public class StoneBishopItem : WorldObjectItem<StoneBishopObject>
+    { 
 		
 	}
 	[Serialized]
 	[LocDisplayName("Stone Knight")]
 	[MaxStackSize(100)]
-	public class StoneKnightItem : WorldObjectItem<StoneKnightObject>
-	{
-		public override LocString DisplayDescription => Localizer.Do($"Stone Chess Piece"); 
+	[LocDescription("Stone Chess Piece")]
+    public class StoneKnightItem : WorldObjectItem<StoneKnightObject>
+    { 
 		
 	}
 	[Serialized]
 	[LocDisplayName("Stone Rook")]
 	[MaxStackSize(100)]
-	public class StoneRookItem : WorldObjectItem<StoneRookObject>
-	{
-		public override LocString DisplayDescription => Localizer.Do($"Stone Chess Piece");
+	[LocDescription("Stone Chess Piece")]
+    public class StoneRookItem : WorldObjectItem<StoneRookObject>
+    {
 		
 	}	
 	[Serialized]
 	[LocDisplayName("Stone Pawn")]
 	[MaxStackSize(100)]
-	public class StonePawnItem : WorldObjectItem<StonePawnObject>
-	{
-		public override LocString DisplayDescription => Localizer.Do($"Stone Chess Piece");
+	[LocDescription("Stone Chess Piece")]
+    public class StonePawnItem : WorldObjectItem<StonePawnObject>
+    {
 		
 	}
 	[Serialized]
 	[LocDisplayName("Wood King")]
 	[MaxStackSize(100)]
-	public class WoodKingItem : WorldObjectItem<WoodKingObject> 
-	{
-		public override LocString DisplayDescription => Localizer.Do($"Wood Chess Piece");
+	[LocDescription("Wood Chess Piece")]
+	public class WoodKingItem : WorldObjectItem<WoodKingObject>
+    {
 		
 	}
+
 	[Serialized]
 	[LocDisplayName("Wood Queen")]
 	[MaxStackSize(100)]
+	[LocDescription("Wood Chess Piece")]
 	public class WoodQueenItem : WorldObjectItem<WoodQueenObject>
 	{
-		public override LocString DisplayDescription => Localizer.Do($"Wood Chess Piece"); 
 		
 	}
 	[Serialized]
 	[LocDisplayName("Wood Bishop")]
 	[MaxStackSize(100)]
-	public class WoodBishopItem : WorldObjectItem<WoodBishopObject> 
-	{
-		public override LocString DisplayDescription => Localizer.Do($"Wood Chess Piece"); 
+	[LocDescription("Wood Chess Piece")]
+    public class WoodBishopItem : WorldObjectItem<WoodBishopObject>
+    { 
 		
 	}
 	[Serialized]
 	[LocDisplayName("Wood Knight")]
 	[MaxStackSize(100)]
-	public class WoodKnightItem : WorldObjectItem<WoodKnightObject> 
-	{
-		public override LocString DisplayDescription => Localizer.Do($"Wood Chess Piece");
+	[LocDescription("Wood Chess Piece")]
+    public class WoodKnightItem : WorldObjectItem<WoodKnightObject>
+    {
 		
 	}
 	[Serialized]
 	[LocDisplayName("Wood Rook")]
 	[MaxStackSize(100)]
-	public class WoodRookItem : WorldObjectItem<WoodRookObject> 
-	{
-		public override LocString DisplayDescription => Localizer.Do($"Wood Chess Piece");
+	[LocDescription("Wood Chess Piece")]
+    public class WoodRookItem : WorldObjectItem<WoodRookObject>
+    {
 		
 	}
 	[Serialized]
 	[LocDisplayName("Wood Pawn")]
 	[MaxStackSize(100)]
-	public class WoodPawnItem : WorldObjectItem<WoodPawnObject> 
-	{
-		public override LocString DisplayDescription => Localizer.Do($"Wood Chess Piece");
+	[LocDescription("Wood Chess Piece")]
+    public class WoodPawnItem : WorldObjectItem<WoodPawnObject>
+    {
 		
 	}
 	#endregion

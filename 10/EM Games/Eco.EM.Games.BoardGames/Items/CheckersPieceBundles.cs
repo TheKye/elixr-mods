@@ -2,8 +2,11 @@
 using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Interactions;
+using Eco.Gameplay.Interactions.Interactors;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Players;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.Shared.Items;
@@ -19,34 +22,28 @@ namespace Eco.EM.Games.BoardGames
 {
     [Serialized, Weight(50), MaxStackSize(10)]
     [LocDisplayName("Checkers Piece Bundle - Red")]
+    [LocDescription("A Bundle Containing all the Checkers Pieces for the Red Checkers Pieces")]
     public partial class CheckersPieceBundleItem : Item
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Bundle Containing all the Checkers Pieces for the Red Checkers Pieces");
         static CheckersPieceBundleItem() { }
 
-        public override InteractResult OnActRight(InteractionContext context)
+        public override string OnUsed(Player player, ItemStack itemStack)
         {
-            var inventory = context.Player.User.Inventory.ToolbarBackpack;
+            var inventory = player.User.Inventory.ToolbarBackpack;
 
             var success1 = inventory.TryAddItems(typeof(RedCheckerPieceItem), 12);
             var success2 = inventory.TryAddItems(typeof(RedCheckerKingItem), 6);
-            if(success1.Success && success2.Success)
+            if (success1.Success && success2.Success)
             {
                 inventory.TryRemoveItem(typeof(CheckersPieceBundleItem));
-                return InteractResult.Success;
             }
             else
             {
                 inventory.TryRemoveItems(typeof(RedCheckerPieceItem), 12);
                 inventory.TryRemoveItems(typeof(RedCheckerKingItem), 6);
-
-                return InteractResult.Fail;
             }
-        }
 
-        public override InteractResult OnActInteract(InteractionContext context)
-        {
-            return OnActRight(context);
+            return base.OnUsed(player, itemStack);
         }
     }
 
@@ -97,14 +94,19 @@ namespace Eco.EM.Games.BoardGames
 
     [Serialized, Weight(50), MaxStackSize(10)]
     [LocDisplayName("Checkers Piece Bundle - Black")]
-    public partial class CheckersPieceBundle2Item : Item
+    [LocDescription("A Bundle Containing all the Checkers Pieces for the Black Checkers Pieces")]
+    public partial class CheckersPieceBundle2Item : Item, IHasInteractions
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Bundle Containing all the Checkers Pieces for the Black Checkers Pieces");
         static CheckersPieceBundle2Item() { }
 
-        public override InteractResult OnActRight(InteractionContext context)
+        public override void OnLeftClicked(Player player, ItemStack itemStack)
         {
-            var inventory = context.Player.User.Inventory.ToolbarBackpack;
+            base.OnLeftClicked(player, itemStack);
+        }
+
+        public override string OnUsed(Player player, ItemStack itemStack)
+        {
+            var inventory = player.User.Inventory.ToolbarBackpack;
 
             var success1 = inventory.TryAddItems(typeof(BlackCheckerPieceItem), 12);
             var success2 = inventory.TryAddItems(typeof(BlackCheckerKingItem), 6);
@@ -112,21 +114,16 @@ namespace Eco.EM.Games.BoardGames
             if (success1.Success && success2.Success)
             {
                 inventory.TryRemoveItem(typeof(CheckersPieceBundle2Item));
-                return InteractResult.Success;
             }
             else
             {
                 inventory.TryRemoveItems(typeof(BlackCheckerPieceItem), 12);
                 inventory.TryRemoveItems(typeof(BlackCheckerKingItem), 6);
 
-                return InteractResult.Fail;
             }
+            return base.OnUsed(player, itemStack);
         }
-
-        public override InteractResult OnActInteract(InteractionContext context)
-        {
-            return OnActRight(context);
-        }
+        
     }
 
     // Skill requirements

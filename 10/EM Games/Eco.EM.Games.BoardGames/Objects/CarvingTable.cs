@@ -2,7 +2,9 @@ using System.Collections.Generic;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Property;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
@@ -18,7 +20,6 @@ namespace Eco.EM.Games.BoardGames
 	[RequireComponent(typeof(MinimapComponent))]                
 	[RequireComponent(typeof(LinkComponent))]                   
 	[RequireComponent(typeof(CraftingComponent))]
-	[RequireComponent(typeof(SolidAttachedSurfaceRequirementComponent))]
 	[RequireComponent(typeof(RoomRequirementsComponent))]
 	[RequireRoomContainment]
 	[RequireRoomVolume(25)]                              
@@ -47,9 +48,9 @@ namespace Eco.EM.Games.BoardGames
 	[Serialized]
 	[LocDisplayName("Carving Table")]
 	[MaxStackSize(100)]
+	[LocDescription("A table for carving both stone and wood.")]
 	public partial class CarvingTableItem : WorldObjectItem<CarvingTableObject>
 	{
-		public override LocString DisplayDescription => Localizer.Do($"A table for carving both stone and wood.");
 		
 		static CarvingTableItem() {} 
 	}

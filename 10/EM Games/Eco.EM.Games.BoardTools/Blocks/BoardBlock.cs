@@ -1,6 +1,7 @@
 ﻿using Eco.Core.Items;
 using Eco.Gameplay.Blocks;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
@@ -27,12 +28,12 @@ namespace Eco.EM.Games.BoardTools
     [Ecopedia("Blocks", "Building Materials", createAsSubPage: true)]
     [Currency]
     [Tag("Currency")]
-    [Tag("Constructable", 1)]
+    [Tag("Constructable")]
     [Tier(2)]
+    [LocDescription("A Block That is used to place down game boards!")]
     public partial class GameBoardItem : BlockItem<GameBoardBlock>
     {
         public override LocString DisplayNamePlural => Localizer.DoStr("Game Boards");
-        public override LocString DisplayDescription => Localizer.DoStr("A Block That is used to place down game boards!");
 
         public override bool CanStickToWalls => false;
 

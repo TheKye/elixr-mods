@@ -3,7 +3,9 @@ using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Interactions;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Players;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.Shared.Items;
@@ -19,14 +21,14 @@ namespace Eco.EM.Games.BoardGames
 {
     [Serialized, Weight(50), MaxStackSize(10)]
     [LocDisplayName("Chess Piece Bundle - Stone")]
+    [LocDescription("A Bundle Containing all the Chess Pieces for the White Chess Pieces")]
     public partial class ChessPieceBundleItem : Item
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Bundle Containing all the Chess Pieces for the White Chess Pieces");
         static ChessPieceBundleItem() { }
 
-        public override InteractResult OnActRight(InteractionContext context)
+        public override string OnUsed(Player player, ItemStack itemStack)
         {
-            var inventory = context.Player.User.Inventory.ToolbarBackpack;
+            var inventory = player.User.Inventory.ToolbarBackpack;
 
             var success1 = inventory.TryAddItems(typeof(StonePawnItem), 8);
             var success2 = inventory.TryAddItems(typeof(StoneQueenItem), 1);
@@ -38,7 +40,6 @@ namespace Eco.EM.Games.BoardGames
             if (success1.Success && success2.Success && success3.Success && success4.Success && success5.Success && success6.Success)
             {
                 inventory.TryRemoveItem(typeof(ChessPieceBundleItem));
-                return InteractResult.Success;
             }
             else
             {
@@ -48,13 +49,10 @@ namespace Eco.EM.Games.BoardGames
                 inventory.TryRemoveItems(typeof(StoneBishopItem), 2);
                 inventory.TryRemoveItems(typeof(StoneRookItem), 2);
                 inventory.TryRemoveItems(typeof(StoneKingItem), 1);
-
-                return InteractResult.Fail;
+                
             }
-        }
-        public override InteractResult OnActInteract(InteractionContext context)
-        {
-            return OnActRight(context);
+
+            return base.OnUsed(player, itemStack);
         }
     }
 
@@ -105,14 +103,14 @@ namespace Eco.EM.Games.BoardGames
 
     [Serialized, Weight(50), MaxStackSize(10)]
     [LocDisplayName("Chess Piece Bundle - Wood")]
+    [LocDescription("A Bundle Containing all the Chess Pieces for the Black Chess Pieces")]
     public partial class ChessPieceBundle2Item : Item
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Bundle Containing all the Chess Pieces for the Black Chess Pieces");
         static ChessPieceBundle2Item() { }
 
-        public override InteractResult OnActRight(InteractionContext context)
+        public override string OnUsed(Player player, ItemStack itemStack)
         {
-            var inventory = context.Player.User.Inventory.ToolbarBackpack;
+            var inventory = player.User.Inventory.ToolbarBackpack;
 
             var success1 = inventory.TryAddItems(typeof(WoodPawnItem), 8);
             var success2 = inventory.TryAddItems(typeof(WoodQueenItem), 1);
@@ -124,7 +122,6 @@ namespace Eco.EM.Games.BoardGames
             if (success1.Success && success2.Success && success3.Success && success4.Success && success5.Success && success6.Success)
             {
                 inventory.TryRemoveItem(typeof(ChessPieceBundle2Item));
-                return InteractResult.Success;
             }
             else
             {
@@ -134,13 +131,9 @@ namespace Eco.EM.Games.BoardGames
                 inventory.TryRemoveItems(typeof(WoodBishopItem), 2);
                 inventory.TryRemoveItems(typeof(WoodRookItem), 2);
                 inventory.TryRemoveItems(typeof(WoodKingItem), 1);
-
-                return InteractResult.Fail;
             }
-        }
-        public override InteractResult OnActInteract(InteractionContext context)
-        {
-            return OnActRight(context);
+
+            return base.OnUsed(player, itemStack);
         }
     }
 

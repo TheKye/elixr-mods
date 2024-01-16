@@ -1,6 +1,8 @@
 ﻿using Eco.Gameplay.Components.Auth;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Shared.Localization;
 using Eco.Shared.Math;
 using Eco.Shared.Serialization;
@@ -12,9 +14,9 @@ namespace Eco.EM.Games.BoardGames
     [Serialized]
     [LocDisplayName("Battleship")]
     [MaxStackSize(100)]
+    [LocDescription("The Battle Ship for playing Battleship")]
     public partial class BattleshipItem : WorldObjectItem<BattleshipObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("The Battle Ship for playing Battleship");
     }
 
     [Serialized]
