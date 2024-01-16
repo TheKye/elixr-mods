@@ -95,14 +95,19 @@ namespace Eco.EM.Building.Greenhousing
         }
     }
 
+    [Tag("Constructable")]
     [Serialized, Solid] public class GreenhouseGlassStacked1Block : PickupableBlock { }
+    [Tag("Constructable")]
     [Serialized, Solid] public class GreenhouseGlassStacked2Block : PickupableBlock { }
+    [Tag("Constructable")]
     [Serialized, Solid] public class GreenhouseGlassStacked3Block : PickupableBlock { }
+    [Tag("Constructable")]
     [Serialized, Solid, Wall] public class GreenhouseGlassStacked4Block : PickupableBlock { } //Only a wall if it's all 4 GreenhouseGlass
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(FloorFormType), typeof(GreenhouseGlassItem))]
     public partial class GreenhouseGlassFloorBlock : Block, IRepresentsItem
     {
@@ -111,6 +116,7 @@ namespace Eco.EM.Building.Greenhousing
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(3)]
     [IsForm(typeof(WindowFormType), typeof(GreenhouseGlassItem))]
     public partial class GreenhouseGlassWallBlock : Block, IRepresentsItem
@@ -120,6 +126,7 @@ namespace Eco.EM.Building.Greenhousing
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(3)]
     [IsForm(typeof(RoofFormType), typeof(GreenhouseGlassItem))]
     public partial class GreenhouseGlassRoofBlock : Block, IRepresentsItem
@@ -129,6 +136,7 @@ namespace Eco.EM.Building.Greenhousing
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
+    [Tag("Constructable")]
     [BlockTier(3)]
     [IsForm(typeof(WallCornerFormType), typeof(GreenhouseGlassItem))]
     public partial class GreenhouseGlassWallCornersBlock : Block, IRepresentsItem
