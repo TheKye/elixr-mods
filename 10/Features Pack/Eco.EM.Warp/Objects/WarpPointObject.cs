@@ -28,12 +28,14 @@ using Eco.Shared.Items;
 using Eco.Shared.SharedTypes;
 using Eco.Shared.Networking;
 using Eco.Gameplay.Civics.Demographics;
+using Eco.EM.Warp.Objects;
 
 namespace Eco.EM.Warp
 {
     [Serialized]
     [RequireComponent(typeof(CustomTextComponent))]
     [RequireComponent(typeof(PropertyAuthComponent))]
+    [RequireComponent(typeof(WarpComponent))]
     public partial class WarpPointObject : WorldObject, IRepresentsItem, IPlayerUseTracking, INotifyPropertyChanged, IHasInteractions
     {
         public override LocString DisplayName => Localizer.DoStr("Community Warp Point");
@@ -129,7 +131,7 @@ namespace Eco.EM.Warp
                 WarpManager.Data.RemovePoint(text);
                 return Task.FromResult(false);
             }
-
+            
             WarpManager.SaveData();
             return Task.FromResult(true);
         }

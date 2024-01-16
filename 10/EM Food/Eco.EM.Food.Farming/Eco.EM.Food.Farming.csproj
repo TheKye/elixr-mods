@@ -27,6 +27,96 @@
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
     <Exec Command="cd $(TargetDir)&#xD;&#xA;del *.config&#xD;&#xA;del *.json&#xD;&#xA;del A*&#xD;&#xA;del B*&#xD;&#xA;del C*&#xD;&#xA;del D*&#xD;&#xA;del F*&#xD;&#xA;del G*&#xD;&#xA;del H*&#xD;&#xA;del I*&#xD;&#xA;del J*&#xD;&#xA;del K*&#xD;&#xA;del L*&#xD;&#xA;del M*&#xD;&#xA;del N*&#xD;&#xA;del O*&#xD;&#xA;del P*&#xD;&#xA;del Q*&#xD;&#xA;del R*&#xD;&#xA;del S*&#xD;&#xA;del T*&#xD;&#xA;del U*&#xD;&#xA;del V*&#xD;&#xA;del W*&#xD;&#xA;del X*&#xD;&#xA;del Y*&#xD;&#xA;del Z*&#xD;&#xA;del Eco.Core.dll&#xD;&#xA;del Eco.Gameplay.dll&#xD;&#xA;del Eco.Modkit.dll&#xD;&#xA;del Eco.Mods.dll&#xD;&#xA;del Eco.Networking.ENet.dll&#xD;&#xA;del Eco.Plugins.dll&#xD;&#xA;del Eco.Shared.dll&#xD;&#xA;del Eco.Simulation.dll&#xD;&#xA;del Eco.Stats.dll&#xD;&#xA;del Eco.Tests.dll&#xD;&#xA;del Eco.WebServer.dll&#xD;&#xA;del Eco.WindowsForms.dll&#xD;&#xA;del Eco.World.dll&#xD;&#xA;del Eco.WorldGenerator.dll&#xD;&#xA;del Eco.EM.Framework*&#xD;&#xA;del Eco.EM.Artistry*" />
   </Target>
+
+  <ItemGroup>
+    <Compile Remove="FarmingBasePlugin.cs" />
+    <Compile Remove="Items\Baby Turkey.cs" />
+    <Compile Remove="Items\BabyBison.cs" />
+    <Compile Remove="Items\BabyMountainGoat.cs" />
+    <Compile Remove="Items\BaconAndEggs.cs" />
+    <Compile Remove="Items\BeeswaxItem.cs" />
+    <Compile Remove="Items\BigHornBabySheep.cs" />
+    <Compile Remove="Items\BoiledEgg.cs" />
+    <Compile Remove="Items\CharredChicken.cs" />
+    <Compile Remove="Items\CharredChickenDrumsticks.cs" />
+    <Compile Remove="Items\CharredChickenWings.cs" />
+    <Compile Remove="Items\ChickenDrumsticks.cs" />
+    <Compile Remove="Items\ChickenFeed.cs" />
+    <Compile Remove="Items\ChickenInBannok.cs" />
+    <Compile Remove="Items\ChickenWings.cs" />
+    <Compile Remove="Items\DoubleCream.cs" />
+    <Compile Remove="Items\Egg.cs" />
+    <Compile Remove="Items\EggCaserole.cs" />
+    <Compile Remove="Items\FriedEgg.cs" />
+    <Compile Remove="Items\Honey.cs" />
+    <Compile Remove="Items\LowFatMilk.cs" />
+    <Compile Remove="Items\Milk.cs" />
+    <Compile Remove="Items\Popcorn.cs" />
+    <Compile Remove="Items\PopcornCaramel.cs" />
+    <Compile Remove="Items\RawChicken.cs" />
+    <Compile Remove="Items\RawChickenBreasts.cs" />
+    <Compile Remove="Items\RawChickenDrumsticks.cs" />
+    <Compile Remove="Items\RawChickenThigh.cs" />
+    <Compile Remove="Items\RawChickenWings.cs" />
+    <Compile Remove="Items\RoastChicken.cs" />
+    <Compile Remove="Items\ScrambledEggs.cs" />
+    <Compile Remove="Items\WishBone.cs" />
+    <Compile Remove="Items\Yoghurt.cs" />
+    <Compile Remove="Objects\AnimalTrough.cs" />
+    <Compile Remove="Objects\BeeHive.cs" />
+    <Compile Remove="Objects\BigHornPen.cs" />
+    <Compile Remove="Objects\BirdCoop.cs" />
+    <Compile Remove="Objects\BisonPen.cs" />
+    <Compile Remove="Objects\Composter.cs" />
+    <Compile Remove="Objects\FarmersCrate.cs" />
+    <Compile Remove="Objects\FarmersStand.cs" />
+    <Compile Remove="Objects\GoatPen.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="FarmingBasePlugin.cs" />
+    <None Include="Items\Baby Turkey.cs" />
+    <None Include="Items\BabyBison.cs" />
+    <None Include="Items\BabyMountainGoat.cs" />
+    <None Include="Items\BaconAndEggs.cs" />
+    <None Include="Items\BeeswaxItem.cs" />
+    <None Include="Items\BigHornBabySheep.cs" />
+    <None Include="Items\BoiledEgg.cs" />
+    <None Include="Items\CharredChicken.cs" />
+    <None Include="Items\CharredChickenDrumsticks.cs" />
+    <None Include="Items\CharredChickenWings.cs" />
+    <None Include="Items\ChickenDrumsticks.cs" />
+    <None Include="Items\ChickenFeed.cs" />
+    <None Include="Items\ChickenInBannok.cs" />
+    <None Include="Items\ChickenWings.cs" />
+    <None Include="Items\DoubleCream.cs" />
+    <None Include="Items\Egg.cs" />
+    <None Include="Items\EggCaserole.cs" />
+    <None Include="Items\FriedEgg.cs" />
+    <None Include="Items\Honey.cs" />
+    <None Include="Items\LowFatMilk.cs" />
+    <None Include="Items\Milk.cs" />
+    <None Include="Items\Popcorn.cs" />
+    <None Include="Items\PopcornCaramel.cs" />
+    <None Include="Items\RawChicken.cs" />
+    <None Include="Items\RawChickenBreasts.cs" />
+    <None Include="Items\RawChickenDrumsticks.cs" />
+    <None Include="Items\RawChickenThigh.cs" />
+    <None Include="Items\RawChickenWings.cs" />
+    <None Include="Items\RoastChicken.cs" />
+    <None Include="Items\ScrambledEggs.cs" />
+    <None Include="Items\WishBone.cs" />
+    <None Include="Items\Yoghurt.cs" />
+    <None Include="Objects\AnimalTrough.cs" />
+    <None Include="Objects\BeeHive.cs" />
+    <None Include="Objects\BigHornPen.cs" />
+    <None Include="Objects\BirdCoop.cs" />
+    <None Include="Objects\BisonPen.cs" />
+    <None Include="Objects\Composter.cs" />
+    <None Include="Objects\FarmersCrate.cs" />
+    <None Include="Objects\FarmersStand.cs" />
+    <None Include="Objects\GoatPen.cs" />
+  </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="ElixrMods.Framework" Version="3.5.1" />
 	</ItemGroup>

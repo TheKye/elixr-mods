@@ -32,7 +32,6 @@ namespace Eco.EM.Warp
         protected override void Initialize()
         {
             GetComponent<CustomTextComponent>().Initialize(700);
-            GetComponent<AuthComponent>().Owners.
 
         }
 

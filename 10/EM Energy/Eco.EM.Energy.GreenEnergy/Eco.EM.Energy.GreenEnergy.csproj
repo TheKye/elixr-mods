@@ -29,11 +29,44 @@
   </Target>
 
   <ItemGroup>
+    <Compile Remove="BlockItems\NaturalGasTank120.cs" />
+    <Compile Remove="BlockItems\NaturalGasTank15.cs" />
+    <Compile Remove="BlockItems\NaturalGasTank30.cs" />
+    <Compile Remove="BlockItems\NaturalGasTank60.cs" />
+    <Compile Remove="BlockItems\PropaneTank120.cs" />
+    <Compile Remove="BlockItems\PropaneTank15.cs" />
+    <Compile Remove="BlockItems\PropaneTank30.cs" />
+    <Compile Remove="BlockItems\PropaneTank60.cs" />
+    <Compile Remove="Components\Components.cs" />
+    <Compile Remove="Components\NaturalGasWorldGeneration.cs" />
+    <Compile Remove="Items\NaturalGasItem.cs" />
+    <Compile Remove="Objects\AdvancedHydroGenerator.cs" />
+    <Compile Remove="Objects\ElectricPowerConverter.cs" />
+    <Compile Remove="Objects\GasPump.cs" />
+    <Compile Remove="Objects\LargeSolarPanel.cs" />
+    <Compile Remove="Objects\MechanicalPowerConverter.cs" />
+    <Compile Remove="Objects\SolarPanel.cs" />
     <Compile Remove="PowerConverter.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="BlockItems\NaturalGasTank120.cs" />
+    <None Include="BlockItems\NaturalGasTank15.cs" />
+    <None Include="BlockItems\NaturalGasTank30.cs" />
+    <None Include="BlockItems\NaturalGasTank60.cs" />
+    <None Include="BlockItems\PropaneTank120.cs" />
+    <None Include="BlockItems\PropaneTank15.cs" />
+    <None Include="BlockItems\PropaneTank30.cs" />
+    <None Include="BlockItems\PropaneTank60.cs" />
+    <None Include="Components\Components.cs" />
+    <None Include="Components\NaturalGasWorldGeneration.cs" />
+    <None Include="Items\NaturalGasItem.cs" />
+    <None Include="Objects\AdvancedHydroGenerator.cs" />
+    <None Include="Objects\ElectricPowerConverter.cs" />
+    <None Include="Objects\GasPump.cs" />
+    <None Include="Objects\LargeSolarPanel.cs" />
     <None Include="Objects\MechanicalPowerConverter.cs" />
+    <None Include="Objects\SolarPanel.cs" />
   </ItemGroup>
 
 	<ItemGroup>

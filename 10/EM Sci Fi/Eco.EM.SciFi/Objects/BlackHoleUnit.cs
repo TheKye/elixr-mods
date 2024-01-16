@@ -19,6 +19,7 @@ using System.Linq;
 using Eco.Gameplay.Players;
 using Eco.Mods.TechTree;
 using Eco.EM.Framework.Utils;
+using Eco.Gameplay.Components.Storage;
 
 namespace Eco.EM.SciFi
 {

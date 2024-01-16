@@ -1,9 +1,14 @@
-﻿using Eco.Shared.Math;
+﻿using Eco.Core.Controller;
+using Eco.Shared.Math;
+using Eco.Shared.Networking;
+using Eco.Shared.Serialization;
 
 namespace Eco.EM.Warp
 {
+    [Serialized]
     public class WarpPoint
     {
+        [Eco, ClientInterfaceProperty]
         public string PointName { get; set; }
         public System.Numerics.Vector3 Location { get; set; }
         public Quaternion Rotation { get; set; }

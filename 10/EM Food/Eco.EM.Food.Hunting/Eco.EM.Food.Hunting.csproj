@@ -29,6 +29,11 @@
   </Target>
 
   <ItemGroup>
+    <Compile Remove="Objects\DeerTrap.cs" />
+    <Compile Remove="Objects\FoxTrap.cs" />
+    <Compile Remove="Objects\FreshWaterFishingNet.cs" />
+    <Compile Remove="Objects\HareTrap.cs" />
+    <Compile Remove="Objects\SaltWaterFishingNet.cs" />
     <Compile Remove="Weapons\Bullet.cs" />
     <Compile Remove="Weapons\HuntingRifle.cs" />
   </ItemGroup>
@@ -38,6 +43,11 @@
   </ItemGroup>
   
   <ItemGroup>
+    <None Include="Objects\DeerTrap.cs" />
+    <None Include="Objects\FoxTrap.cs" />
+    <None Include="Objects\FreshWaterFishingNet.cs" />
+    <None Include="Objects\HareTrap.cs" />
+    <None Include="Objects\SaltWaterFishingNet.cs" />
     <None Include="Weapons\Bullet.cs" />
     <None Include="Weapons\HuntingRifle.cs" />
   </ItemGroup>

@@ -4,7 +4,6 @@ using Eco.Gameplay.Housing;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using Eco.Shared.Utils;
@@ -12,7 +11,8 @@ using Eco.Mods.TechTree;
 using Eco.Core.Controller;
 using System.Collections.Generic;
 using Eco.Gameplay.Housing.PropertyValues;
-using Eco.EM.Energy.GreenEnergy.Components;
+using Eco.Gameplay.Systems.NewTooltip;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Energy.GreenEnergy
 {
@@ -38,15 +38,15 @@ namespace Eco.EM.Energy.GreenEnergy
     }
 
     [Serialized]
+    [LocDescription("Converts Mechanical Power to Electric Power.")]
     [LocDisplayName("Mechanical Power Converter")]
     public partial class PowerConverterItem :WorldObjectItem<PowerConverterObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Converts Mechanical Power to Electric Power.");
 
         static PowerConverterItem() {}
 
-        [TooltipChildren] public HomeFurnishingValue HousingTooltip => HousingVal;
-        [TooltipChildren] public static HomeFurnishingValue HousingVal => new() { Category = RoomCategory.Industrial, TypeForRoomLimit = Localizer.DoStr("")};
+        [NewTooltipChildren] public HomeFurnishingValue HousingTooltip => HousingVal;
+        [NewTooltipChildren] public static HomeFurnishingValue HousingVal => new() { Category = RoomCategory.Industrial, TypeForRoomLimit = Localizer.DoStr("")};
     }
 
     [RequiresSkill(typeof(MechanicsSkill), 3)]

@@ -29,13 +29,29 @@
   </Target>
 
   <ItemGroup>
+    <Compile Remove="Items\ChiselBag.cs" />
+    <Compile Remove="Items\FilledJerryCan.cs" />
+    <Compile Remove="Items\JerryCan.cs" />
+    <Compile Remove="Objects\ToolRack.cs" />
+    <Compile Remove="Objects\ToolShed.cs" />
     <Compile Remove="Tools\Auger.cs" />
+    <Compile Remove="Tools\BlockScanner.cs" />
+    <Compile Remove="Tools\ChiselAndBag.cs" />
     <Compile Remove="Tools\JackHammer.cs" />
+    <Compile Remove="Tools\MaterialChisel.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Items\ChiselBag.cs" />
+    <None Include="Items\FilledJerryCan.cs" />
+    <None Include="Items\JerryCan.cs" />
+    <None Include="Objects\ToolRack.cs" />
+    <None Include="Objects\ToolShed.cs" />
     <None Include="Tools\Auger.cs" />
+    <None Include="Tools\BlockScanner.cs" />
+    <None Include="Tools\ChiselAndBag.cs" />
     <None Include="Tools\JackHammer.cs" />
+    <None Include="Tools\MaterialChisel.cs" />
   </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="ElixrMods.Framework" Version="3.5.1" />

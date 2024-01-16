@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Eco.ReferenceAssemblies" Version="0.9.7.10-beta-release-474" />
+    <PackageReference Include="Eco.ReferenceAssemblies" Version="0.10.0.4-beta-release-557" />
   </ItemGroup>
 
 </Project>

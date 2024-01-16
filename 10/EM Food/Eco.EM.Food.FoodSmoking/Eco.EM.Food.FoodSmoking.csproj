@@ -27,6 +27,42 @@
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
     <Exec Command="cd $(TargetDir)&#xD;&#xA;del *.config&#xD;&#xA;del *.json&#xD;&#xA;del A*&#xD;&#xA;del B*&#xD;&#xA;del C*&#xD;&#xA;del D*&#xD;&#xA;del F*&#xD;&#xA;del G*&#xD;&#xA;del H*&#xD;&#xA;del I*&#xD;&#xA;del J*&#xD;&#xA;del K*&#xD;&#xA;del L*&#xD;&#xA;del M*&#xD;&#xA;del N*&#xD;&#xA;del O*&#xD;&#xA;del P*&#xD;&#xA;del Q*&#xD;&#xA;del R*&#xD;&#xA;del S*&#xD;&#xA;del T*&#xD;&#xA;del U*&#xD;&#xA;del V*&#xD;&#xA;del W*&#xD;&#xA;del X*&#xD;&#xA;del Y*&#xD;&#xA;del Z*&#xD;&#xA;del Eco.Core.dll&#xD;&#xA;del Eco.Gameplay.dll&#xD;&#xA;del Eco.Modkit.dll&#xD;&#xA;del Eco.Mods.dll&#xD;&#xA;del Eco.Networking.ENet.dll&#xD;&#xA;del Eco.Plugins.dll&#xD;&#xA;del Eco.Shared.dll&#xD;&#xA;del Eco.Simulation.dll&#xD;&#xA;del Eco.Stats.dll&#xD;&#xA;del Eco.Tests.dll&#xD;&#xA;del Eco.WebServer.dll&#xD;&#xA;del Eco.WindowsForms.dll&#xD;&#xA;del Eco.World.dll&#xD;&#xA;del Eco.WorldGenerator.dll&#xD;&#xA;del Eco.EM.Framework*&#xD;&#xA;del Eco.EM.Artistry*" />
   </Target>
+
+  <ItemGroup>
+    <Compile Remove="Items\ControvesialPizza.cs" />
+    <Compile Remove="Items\Jerky.cs" />
+    <Compile Remove="Items\MeatFiredPizza.cs" />
+    <Compile Remove="Items\PepperoniPizza.cs" />
+    <Compile Remove="Items\Pizza.cs" />
+    <Compile Remove="Items\SmokedBacon.cs" />
+    <Compile Remove="Items\SmokedFish.cs" />
+    <Compile Remove="Items\SmokedHareSurprise.cs" />
+    <Compile Remove="Items\SmokedTurkeySurprise.cs" />
+    <Compile Remove="Items\SmokedVegetableKabob.cs" />
+    <Compile Remove="Items\TomatoSauce.cs" />
+    <Compile Remove="Items\TurkeyJerky.cs" />
+    <Compile Remove="Items\VegetableFiredPizza.cs" />
+    <Compile Remove="Items\VegetableJerky.cs" />
+    <Compile Remove="Objects\SmokeHouse.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Items\ControvesialPizza.cs" />
+    <None Include="Items\Jerky.cs" />
+    <None Include="Items\MeatFiredPizza.cs" />
+    <None Include="Items\PepperoniPizza.cs" />
+    <None Include="Items\Pizza.cs" />
+    <None Include="Items\SmokedBacon.cs" />
+    <None Include="Items\SmokedFish.cs" />
+    <None Include="Items\SmokedHareSurprise.cs" />
+    <None Include="Items\SmokedTurkeySurprise.cs" />
+    <None Include="Items\SmokedVegetableKabob.cs" />
+    <None Include="Items\TomatoSauce.cs" />
+    <None Include="Items\TurkeyJerky.cs" />
+    <None Include="Items\VegetableFiredPizza.cs" />
+    <None Include="Items\VegetableJerky.cs" />
+    <None Include="Objects\SmokeHouse.cs" />
+  </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="ElixrMods.Framework" Version="3.5.1" />
 	</ItemGroup>

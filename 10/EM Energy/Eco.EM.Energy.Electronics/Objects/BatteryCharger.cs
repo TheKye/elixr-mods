@@ -12,6 +12,8 @@ using Eco.Gameplay.Skills;
 using Eco.Gameplay.Components;
 using Eco.Shared.Math;
 using Eco.EM.Energy.Electronics.Components;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 // This mod is created by Elixr Mods for Eco under the SLG TOS. 
 // Please feel free to join our community Discord which aims to brings together modders of Eco to share knowledge, 
@@ -47,9 +49,9 @@ namespace Eco.EM.Energy.Electronics
     [Serialized, Weight(10000)]
     [LocDisplayName("Battery Pack")]
     [Ecopedia("Crafted Objects", "Power Cells", createAsSubPage: true)]
+    [LocDescription("A standing, energy storage cell")]
     public partial class RechargeableBatteryItem : WorldObjectItem<RechargeableBatteryObject>, IPersistentData
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A standing, energy storage cell");
 
         [Serialized] public object PersistentData { get; set; }
     }

@@ -32,12 +32,10 @@
     <Compile Remove="MicroTownHub.cs" />
     <Compile Remove="MTSmallHouse.cs" />
     <Compile Remove="MTWheatFarm.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Objects\MicroTownHub.cs" />
-    <None Include="Objects\MTSmallHouse.cs" />
-    <None Include="Objects\MTWheatFarm.cs" />
+    <Compile Remove="Objects\BlackHoleUnit.cs" />
+    <Compile Remove="Objects\MicroTownHub.cs" />
+    <Compile Remove="Objects\MTSmallHouse.cs" />
+    <Compile Remove="Objects\MTWheatFarm.cs" />
   </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="ElixrMods.Framework" Version="3.5.1" />
@@ -45,6 +43,13 @@
 
   <ItemGroup>
     <Folder Include="Items\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Objects\BlackHoleUnit.cs" />
+    <None Include="Objects\MicroTownHub.cs" />
+    <None Include="Objects\MTSmallHouse.cs" />
+    <None Include="Objects\MTWheatFarm.cs" />
   </ItemGroup>
 
 </Project>
