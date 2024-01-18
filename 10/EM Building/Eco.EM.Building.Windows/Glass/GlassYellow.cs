@@ -95,6 +95,7 @@ namespace Eco.EM.Building.Windows
     [Currency]
     [Weight(10000)]
     [Tag("Colored Glass")]
+    [Tag("Constructable")]
     [LocDisplayName("Yellow Glass")]
     [LocDescription("A Yellow Glass used for building windows.")]
     public partial class YellowGlassItem : BlockItem<YellowGlassBlock>
@@ -113,6 +114,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Solid, Wall, Constructed, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [DoesntEncase]
     [RequiresSkill(typeof(GlassworkingSkill), 1)]
     public partial class YellowGlassBlock : NBlock, IRepresentsItem
@@ -125,6 +127,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(WindowFormType), typeof(YellowGlassItem))]
     public partial class YellowGlassWindowBlock : NBlock, IRepresentsItem
     {
@@ -135,6 +138,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(CubeFormType), typeof(YellowGlassItem))]
     public partial class YellowGlassCubeBlock : NBlock, IRepresentsItem
     {
@@ -145,6 +149,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FlatRoofFormType), typeof(YellowGlassItem))]
     public partial class YellowGlassFlatRoofBlock : NBlock, IRepresentsItem
     {
@@ -155,6 +160,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(ThinFloorTopFormType), typeof(YellowGlassItem))]
     public partial class YellowGlassThinFloorTopBlock : NBlock, IRepresentsItem
     {
@@ -165,6 +171,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(ThinFloorBottomFormType), typeof(YellowGlassItem))]
     public partial class YellowGlassThinFloorBottomBlock : NBlock, IRepresentsItem
     {
@@ -176,6 +183,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(ThinWallStraightFormType), typeof(YellowGlassItem))]
     public partial class YellowGlassThinWallStraightBlock : NBlock
     {
@@ -185,6 +193,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassThinWallStraight90Block : NBlock
     {
         public override Type BaseType => typeof(GlassThinWallStraight90Block);
@@ -193,6 +202,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassThinWallStraight180Block : NBlock
     {
         public override Type BaseType => typeof(GlassThinWallStraight180Block);
@@ -201,6 +211,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassThinWallStraight270Block : NBlock
     {
         public override Type BaseType => typeof(GlassThinWallStraight270Block);
@@ -210,6 +221,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(ThinWallCornerFormType), typeof(YellowGlassItem))]
     public partial class YellowGlassThinWallCornerBlock : NBlock
     {
@@ -219,6 +231,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassThinWallCorner90Block : NBlock
     {
         public override Type BaseType => typeof(GlassThinWallCorner90Block);
@@ -227,6 +240,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassThinWallCorner180Block : NBlock
     {
         public override Type BaseType => typeof(GlassThinWallCorner180Block);
@@ -235,6 +249,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassThinWallCorner270Block : NBlock
     {
         public override Type BaseType => typeof(GlassThinWallCorner270Block);
@@ -244,6 +259,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(EdgeWallFormType), typeof(YellowGlassItem))]
     public partial class YellowGlassEdgeWallBlock : NBlock
     {
@@ -253,6 +269,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassEdgeWall90Block : NBlock
     {
         public override Type BaseType => typeof(GlassEdgeWall90Block);
@@ -261,6 +278,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassEdgeWall180Block : NBlock
     {
         public override Type BaseType => typeof(GlassEdgeWall180Block);
@@ -269,6 +287,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassEdgeWall270Block : NBlock
     {
         public override Type BaseType => typeof(GlassEdgeWall270Block);
@@ -278,6 +297,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(EdgeWallTurnFormType), typeof(YellowGlassItem))]
     public partial class YellowGlassEdgeWallTurnBlock : NBlock
     {
@@ -287,6 +307,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassEdgeWallTurn90Block : NBlock
     {
         public override Type BaseType => typeof(GlassEdgeWallTurn90Block);
@@ -295,6 +316,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassEdgeWallTurn180Block : NBlock
     {
         public override Type BaseType => typeof(GlassEdgeWallTurn180Block);
@@ -303,6 +325,7 @@ namespace Eco.EM.Building.Windows
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class YellowGlassEdgeWallTurn270Block : NBlock
     {
         public override Type BaseType => typeof(GlassEdgeWallTurn270Block);

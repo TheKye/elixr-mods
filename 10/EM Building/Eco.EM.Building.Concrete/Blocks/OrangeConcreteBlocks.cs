@@ -16,6 +16,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Solid, Wall, Constructed, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [RequiresSkill(typeof(MasonrySkill), 1)]
     public partial class OrangeReinforcedConcreteBlock : NBlock, IRepresentsItem
     {
@@ -35,6 +36,7 @@ namespace Eco.EM.Building.Concrete
     public partial class OrangeReinforcedConcreteItem : BlockItem<OrangeReinforcedConcreteBlock>
     {
         public override LocString DisplayNamePlural => Localizer.DoStr("Orange Reinforced Concrete");
+
         public override bool CanStickToWalls => false;
 
         private static Type[] blockTypes = new Type[] {
@@ -54,6 +56,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(FloorFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteFloorBlock : NBlock, IRepresentsItem
     {
@@ -64,6 +67,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(WallFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteWallBlock : NBlock, IRepresentsItem
     {
@@ -74,6 +78,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(CubeFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteCubeBlock : NBlock, IRepresentsItem
     {
@@ -84,6 +89,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteRoofBlock : NBlock, IRepresentsItem
     {
@@ -94,6 +100,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(ColumnFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteColumnBlock : NBlock, IRepresentsItem
     {
@@ -104,6 +111,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(WindowFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteWindowBlock : NBlock, IRepresentsItem
     {
@@ -114,6 +122,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofPeakSetFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteRoofPeakSetBlock : NBlock, IRepresentsItem
     {
@@ -124,6 +133,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofCubeFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteRoofCubeBlock : NBlock, IRepresentsItem
     {
@@ -134,6 +144,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(ThinColumnFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteThinColumnBlock : NBlock, IRepresentsItem
     {
@@ -144,6 +155,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(DoubleWindowFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteDoubleWindowBlock : NBlock, IRepresentsItem
     {
@@ -154,6 +166,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderPeakSetFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteUnderPeakSetBlock : NBlock, IRepresentsItem
     {
@@ -164,6 +177,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(PeakSetFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcretePeakSetBlock : NBlock, IRepresentsItem
     {
@@ -174,6 +188,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoadBarrierFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteRoadBarrierBlock : NBlock, IRepresentsItem
     {
@@ -184,6 +199,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(FlatRoofFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteFlatRoofBlock : NBlock, IRepresentsItem
     {
@@ -194,6 +210,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(FenceFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteFenceBlock : NBlock, IRepresentsItem
     {
@@ -205,6 +222,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(LadderFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteLadderBlock : NBlock
     {
@@ -214,6 +232,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteLadder90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteLadder90Block);
@@ -222,6 +241,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteLadder180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteLadder180Block);
@@ -230,6 +250,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteLadder270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteLadder270Block);
@@ -240,6 +261,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(StairsFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteStairsBlock : NBlock
     {
@@ -249,6 +271,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteStairs90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteStairs90Block);
@@ -257,6 +280,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteStairs180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteStairs180Block);
@@ -265,6 +289,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteStairs270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteStairs270Block);
@@ -275,6 +300,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderStairsFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteUnderStairsBlock : NBlock
     {
@@ -284,6 +310,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderStairs90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderStairs90Block);
@@ -292,6 +319,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderStairs180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderStairs180Block);
@@ -300,6 +328,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderStairs270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderStairs270Block);
@@ -310,6 +339,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(BasicSlopeSideFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteBasicSlopeSideBlock : NBlock
     {
@@ -319,6 +349,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopeSide90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopeSide90Block);
@@ -327,6 +358,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopeSide180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopeSide180Block);
@@ -335,6 +367,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopeSide270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopeSide270Block);
@@ -345,6 +378,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(BasicSlopeCornerFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteBasicSlopeCornerBlock : NBlock
     {
@@ -354,6 +388,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopeCorner90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopeCorner90Block);
@@ -362,6 +397,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopeCorner180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopeCorner180Block);
@@ -370,6 +406,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopeCorner270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopeCorner270Block);
@@ -380,6 +417,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(BasicSlopeTurnFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteBasicSlopeTurnBlock : NBlock
     {
@@ -389,6 +427,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopeTurn90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopeTurn90Block);
@@ -397,6 +436,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopeTurn180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopeTurn180Block);
@@ -405,6 +445,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopeTurn270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopeTurn270Block);
@@ -415,6 +456,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(BasicSlopePointFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteBasicSlopePointBlock : NBlock
     {
@@ -424,6 +466,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopePoint90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopePoint90Block);
@@ -432,6 +475,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopePoint180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopePoint180Block);
@@ -440,6 +484,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteBasicSlopePoint270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteBasicSlopePoint270Block);
@@ -450,6 +495,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(StairsCornerFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteStairsCornerBlock : NBlock
     {
@@ -459,6 +505,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteStairsCorner90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteStairsCorner90Block);
@@ -467,6 +514,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteStairsCorner180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteStairsCorner180Block);
@@ -475,6 +523,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteStairsCorner270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteStairsCorner270Block);
@@ -485,6 +534,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(StairsTurnFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteStairsTurnBlock : NBlock
     {
@@ -494,6 +544,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteStairsTurn90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteStairsTurn90Block);
@@ -502,6 +553,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteStairsTurn180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteStairsTurn180Block);
@@ -510,6 +562,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteStairsTurn270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteStairsTurn270Block);
@@ -520,6 +573,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderSlopeSideFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteUnderSlopeSideBlock : NBlock
     {
@@ -529,6 +583,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopeSide90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopeSide90Block);
@@ -537,6 +592,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopeSide180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteLadderBlock);
@@ -545,6 +601,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopeSide270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopeSide270Block);
@@ -555,6 +612,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderSlopeCornerFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteUnderSlopeCornerBlock : NBlock
     {
@@ -564,6 +622,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopeCorner90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopeCorner90Block);
@@ -572,6 +631,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopeCorner180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopeCorner180Block);
@@ -580,6 +640,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopeCorner270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopeCorner270Block);
@@ -590,6 +651,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderSlopeTurnFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteUnderSlopeTurnBlock : NBlock
     {
@@ -599,6 +661,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopeTurn90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopeTurn90Block);
@@ -607,6 +670,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopeTurn180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopeTurn180Block);
@@ -615,6 +679,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopeTurn270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopeTurn270Block);
@@ -625,6 +690,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderSlopePeakFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteUnderSlopePeakBlock : NBlock
     {
@@ -634,6 +700,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopePeak90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopePeak90Block);
@@ -642,6 +709,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopePeak180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopePeak180Block);
@@ -650,6 +718,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderSlopePeak270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderSlopePeak270Block);
@@ -660,6 +729,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofSideFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteRoofSideBlock : NBlock
     {
@@ -669,6 +739,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofSide90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofSide90Block);
@@ -677,6 +748,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofSide180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofSide180Block);
@@ -685,6 +757,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofSide270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofSide270Block);
@@ -695,6 +768,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofTurnFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteRoofTurnBlock : NBlock
     {
@@ -704,6 +778,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofTurn90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofTurn90Block);
@@ -712,6 +787,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofTurn180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofTurn180Block);
@@ -720,6 +796,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofTurn270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofTurn270Block);
@@ -730,6 +807,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofCornerFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteRoofCornerBlock : NBlock
     {
@@ -739,6 +817,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofCorner90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofCorner90Block);
@@ -747,6 +826,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofCorner180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofCorner180Block);
@@ -755,6 +835,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofCorner270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofCorner270Block);
@@ -765,6 +846,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofPeakFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteRoofPeakBlock : NBlock
     {
@@ -774,6 +856,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofPeak90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofPeak90Block);
@@ -782,6 +865,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofPeak180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofPeak180Block);
@@ -790,6 +874,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteRoofPeak270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteRoofPeak270Block);
@@ -800,6 +885,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderInnerPeakFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteUnderInnerPeakBlock : NBlock
     {
@@ -809,6 +895,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderInnerPeak90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderInnerPeak90Block);
@@ -817,6 +904,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderInnerPeak180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderInnerPeak180Block);
@@ -825,6 +913,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteUnderInnerPeak270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteUnderInnerPeak270Block);
@@ -835,6 +924,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(HalfSlopeAFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteHalfSlopeABlock : NBlock
     {
@@ -844,6 +934,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteHalfSlopeA90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteHalfSlopeA90Block);
@@ -852,6 +943,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteHalfSlopeA180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteHalfSlopeA180Block);
@@ -860,6 +952,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteHalfSlopeA270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteHalfSlopeA270Block);
@@ -870,6 +963,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     [IsForm(typeof(HalfSlopeBFormType), typeof(OrangeReinforcedConcreteItem))]
     public partial class OrangeReinforcedConcreteHalfSlopeBBlock : NBlock
     {
@@ -879,6 +973,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteHalfSlopeB90Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteHalfSlopeB90Block);
@@ -887,6 +982,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteHalfSlopeB180Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteHalfSlopeB180Block);
@@ -895,6 +991,7 @@ namespace Eco.EM.Building.Concrete
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(3)]
+    [Tag("Constructable")]
     public partial class OrangeReinforcedConcreteHalfSlopeB270Block : NBlock
     {
         public override Type BaseType => typeof(ReinforcedConcreteHalfSlopeB270Block);
