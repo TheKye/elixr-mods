@@ -4,6 +4,7 @@ using Eco.Gameplay.Items;
 using Eco.Shared.Serialization;
 using Eco.World.Blocks;
 using Eco.Mods.TechTree;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Arches
 {
@@ -13,6 +14,7 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     [IsForm(typeof(SingleArchBaseFormType), typeof(MortaredGraniteItem))]
     public partial class SingleArchBaseMortaredGraniteBlock :
         Block, IRepresentsItem
@@ -23,18 +25,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseMortaredGranite270Block : Block
     { }
 
@@ -54,18 +59,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredGranite270Block : Block
     { }
     #endregion
@@ -84,18 +92,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredGranite270Block : Block
     { }
     #endregion
@@ -114,18 +125,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredGranite270Block : Block
     { }
     #endregion
@@ -146,18 +160,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredGranite270Block : Block
     { }
     #endregion
@@ -176,18 +193,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredGranite270Block : Block
     { }
 
@@ -207,18 +227,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredGranite270Block : Block
     { }
     #endregion
@@ -237,18 +260,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidMidMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidMidMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidMidMortaredGranite270Block : Block
     { }
     #endregion
@@ -267,18 +293,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredGranite270Block : Block
     { }
     #endregion
@@ -297,18 +326,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidRightMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidRightMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidRightMortaredGranite270Block : Block
     { }
     #endregion
@@ -327,18 +359,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopMidMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopMidMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopMidMortaredGranite270Block : Block
     { }
     #endregion
@@ -357,18 +392,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredGranite270Block : Block
     { }
     #endregion
@@ -387,18 +425,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopRightMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopRightMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopRightMortaredGranite270Block : Block
     { }
     #endregion
@@ -417,18 +458,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredGranite270Block : Block
     { }
     #endregion
@@ -447,18 +491,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredGranite270Block : Block
     { }
     #endregion
@@ -477,18 +524,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredGranite270Block : Block
     { }
     #endregion
@@ -507,18 +557,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredGranite270Block : Block
     { }
     #endregion
@@ -537,18 +590,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredGranite270Block : Block
     { }
     #endregion
@@ -567,18 +623,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredGranite270Block : Block
     { }
     #endregion
@@ -597,18 +656,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredGranite270Block : Block
     { }
     #endregion
@@ -627,18 +689,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredGranite270Block : Block
     { }
     #endregion
@@ -657,18 +722,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredGranite90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredGranite180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredGranite270Block : Block
     { }
     #endregion

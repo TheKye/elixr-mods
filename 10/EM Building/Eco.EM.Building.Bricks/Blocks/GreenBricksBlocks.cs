@@ -15,6 +15,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Solid, Wall, Constructed, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [RequiresSkill(typeof(PotterySkill), 1)]
     public partial class GreenBrickBlock :
         NBlock
@@ -59,6 +60,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FloorFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickFloorBlock :
         NBlock, IRepresentsItem
@@ -69,6 +71,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(WallFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickWallBlock :
         NBlock, IRepresentsItem
@@ -79,6 +82,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(CubeFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickCubeBlock :
         NBlock, IRepresentsItem
@@ -89,6 +93,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickRoofBlock :
         NBlock, IRepresentsItem
@@ -99,6 +104,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(ColumnFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickColumnBlock :
         NBlock, IRepresentsItem
@@ -110,6 +116,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(AqueductFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickAqueductBlock :
         NBlock, IRepresentsItem
@@ -120,6 +127,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofPeakSetFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickRoofPeakSetBlock :
         NBlock, IRepresentsItem
@@ -130,6 +138,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofCubeFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickRoofCubeBlock :
         NBlock, IRepresentsItem
@@ -142,6 +151,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(StairsFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickStairsBlock : NBlock
     { public override Type BaseType => typeof(BrickStairsBlock); }
@@ -149,18 +159,21 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickStairs90Block : NBlock
     { public override Type BaseType => typeof(BrickStairs90Block); }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickStairs180Block : NBlock
     { public override Type BaseType => typeof(BrickStairs180Block); }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickStairs270Block : NBlock
     { public override Type BaseType => typeof(BrickStairs270Block); }
 
@@ -168,6 +181,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofSideFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickRoofSideBlock : NBlock
     { public override Type BaseType => typeof(BrickRoofSideBlock); }
@@ -175,24 +189,28 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofSide90Block : NBlock
     { public override Type BaseType => typeof(BrickRoofSide90Block); }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofSide180Block : NBlock
     { public override Type BaseType => typeof(BrickRoofSide180Block); }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofSide270Block : NBlock
     { public override Type BaseType => typeof(BrickRoofSide270Block); }
     [RotatedVariants(typeof(GreenBrickRoofTurnBlock), typeof(GreenBrickRoofTurn90Block), typeof(GreenBrickRoofTurn180Block), typeof(GreenBrickRoofTurn270Block))]
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofTurnFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickRoofTurnBlock : NBlock
     { public override Type BaseType => typeof(BrickRoofTurnBlock); }
@@ -200,18 +218,21 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofTurn90Block : NBlock
     { public override Type BaseType => typeof(BrickRoofTurn90Block); }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofTurn180Block : NBlock
     { public override Type BaseType => typeof(BrickRoofTurn180Block); }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofTurn270Block : NBlock
     {
         public override Type BaseType => typeof(BrickRoofTurn270Block);
@@ -220,6 +241,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofCornerFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickRoofCornerBlock : NBlock
     {
@@ -229,6 +251,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofCorner90Block : NBlock
     {
         public override Type BaseType => typeof(BrickRoofCorner90Block);
@@ -237,6 +260,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofCorner180Block : NBlock
     {
         public override Type BaseType => typeof(BrickRoofCorner180Block);
@@ -245,6 +269,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofCorner270Block : NBlock
     {
         public override Type BaseType => typeof(BrickRoofCorner270Block);
@@ -253,6 +278,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(RoofPeakFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickRoofPeakBlock : NBlock
     {
@@ -262,6 +288,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofPeak90Block : NBlock
     {
         public override Type BaseType => typeof(BrickRoofPeak90Block);
@@ -270,6 +297,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofPeak180Block : NBlock
     {
         public override Type BaseType => typeof(BrickRoofPeak180Block);
@@ -278,6 +306,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickRoofPeak270Block : NBlock
     {
         public override Type BaseType => typeof(BrickRoofPeak270Block);
@@ -286,6 +315,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(BasicSlopeSideFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickBasicSlopeSideBlock : NBlock
     {
@@ -295,6 +325,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBasicSlopeSide90Block : NBlock
     {
         public override Type BaseType => typeof(BrickBasicSlopeSide90Block);
@@ -303,6 +334,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBasicSlopeSide180Block : NBlock
     {
         public override Type BaseType => typeof(BrickBasicSlopeSide180Block);
@@ -311,6 +343,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBasicSlopeSide270Block : NBlock
     {
         public override Type BaseType => typeof(BrickBasicSlopeSide270Block);
@@ -319,6 +352,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(BasicSlopePointFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickBasicSlopePointBlock : NBlock
     {
@@ -328,6 +362,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBasicSlopePoint90Block : NBlock
     {
         public override Type BaseType => typeof(BrickBasicSlopePoint90Block);
@@ -336,6 +371,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBasicSlopePoint180Block : NBlock
     {
         public override Type BaseType => typeof(BrickBasicSlopePoint180Block);
@@ -344,6 +380,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBasicSlopePoint270Block : NBlock
     {
         public override Type BaseType => typeof(BrickBasicSlopePoint270Block);
@@ -352,6 +389,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderSlopeSideFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickUnderSlopeSideBlock : NBlock
     {
@@ -361,6 +399,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderSlopeSide90Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderSlopeSide90Block);
@@ -369,6 +408,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderSlopeSide180Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderSlopeSide180Block);
@@ -377,6 +417,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderSlopeSide270Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderSlopeSide270Block);
@@ -385,6 +426,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderSlopePeakFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickUnderSlopePeakBlock : NBlock
     {
@@ -394,6 +436,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderSlopePeak90Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderSlopePeak90Block);
@@ -402,6 +445,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderSlopePeak180Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderSlopePeak180Block);
@@ -410,6 +454,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderSlopePeak270Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderSlopePeak270Block);
@@ -418,6 +463,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(ThinFloorBottomFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickThinFloorBottomBlock :
     NBlock, IRepresentsItem
@@ -428,6 +474,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(ThinFloorTopFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickThinFloorTopBlock :
         NBlock, IRepresentsItem
@@ -440,6 +487,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(BraceFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickBraceBlock : NBlock
     { public override Type BaseType => typeof(BrickBraceBlock); }
@@ -447,6 +495,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBrace90Block : NBlock
     {
         public override Type BaseType => typeof(BrickBrace90Block);
@@ -455,6 +504,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBrace180Block : NBlock
     {
         public override Type BaseType => typeof(BrickBrace180Block);
@@ -463,6 +513,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBrace270Block : NBlock
     {
         public override Type BaseType => typeof(BrickBrace270Block);
@@ -471,6 +522,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(BraceCornerFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickBraceCornerBlock : NBlock
     { public override Type BaseType => typeof(BrickBraceCornerBlock); }
@@ -478,6 +530,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBraceCorner90Block : NBlock
     {
         public override Type BaseType => typeof(BrickBraceCorner90Block);
@@ -486,6 +539,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBraceCorner180Block : NBlock
     {
         public override Type BaseType => typeof(BrickBraceCorner180Block);
@@ -494,6 +548,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBraceCorner270Block : NBlock
     {
         public override Type BaseType => typeof(BrickBraceCorner270Block);
@@ -502,6 +557,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(BraceTurnFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickBraceTurnBlock : NBlock
     {
@@ -511,6 +567,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBraceTurn90Block : NBlock
     {
         public override Type BaseType => typeof(BrickBraceTurn90Block);
@@ -519,6 +576,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBraceTurn180Block : NBlock
     {
         public override Type BaseType => typeof(BrickBraceTurn180Block);
@@ -527,6 +585,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickBraceTurn270Block : NBlock
     {
         public override Type BaseType => typeof(BrickBraceTurn270Block);
@@ -535,6 +594,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(SideBraceFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickSideBraceBlock : NBlock
     {
@@ -544,6 +604,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickSideBrace90Block : NBlock
     {
         public override Type BaseType => typeof(BrickSideBrace90Block);
@@ -552,6 +613,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickSideBrace180Block : NBlock
     {
         public override Type BaseType => typeof(BrickSideBrace180Block);
@@ -560,6 +622,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickSideBrace270Block : NBlock
     {
         public override Type BaseType => typeof(BrickSideBrace270Block);
@@ -568,6 +631,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(SmallCornerBraceFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickSmallCornerBraceBlock : NBlock
     {
@@ -577,6 +641,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickSmallCornerBrace90Block : NBlock
     {
         public override Type BaseType => typeof(BrickSmallCornerBrace90Block);
@@ -585,6 +650,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickSmallCornerBrace180Block : NBlock
     {
         public override Type BaseType => typeof(BrickSmallCornerBrace180Block);
@@ -593,6 +659,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickSmallCornerBrace270Block : NBlock
     {
         public override Type BaseType => typeof(BrickSmallCornerBrace270Block);
@@ -601,6 +668,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(ThinWallEdgeFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickThinWallEdgeBlock : NBlock
     {
@@ -610,6 +678,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickThinWallEdge90Block : NBlock
     {
         public override Type BaseType => typeof(BrickThinWallEdge90Block);
@@ -618,6 +687,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickThinWallEdge180Block : NBlock
     {
         public override Type BaseType => typeof(BrickThinWallEdge180Block);
@@ -626,6 +696,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickThinWallEdge270Block : NBlock
     {
         public override Type BaseType => typeof(BrickThinWallEdge270Block);
@@ -634,6 +705,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderBraceFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickUnderBraceBlock : NBlock
     {
@@ -643,6 +715,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderBrace90Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderBrace90Block);
@@ -651,6 +724,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderBrace180Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderBrace180Block);
@@ -659,6 +733,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderBrace270Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderBrace270Block);
@@ -667,6 +742,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderBraceCornerFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickUnderBraceCornerBlock : NBlock
     {
@@ -676,6 +752,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderBraceCorner90Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderBraceCorner90Block);
@@ -684,6 +761,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderBraceCorner180Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderBraceCorner180Block);
@@ -692,6 +770,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderBraceCorner270Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderBraceCorner270Block);
@@ -700,6 +779,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(UnderBraceTurnFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickUnderBraceTurnBlock : NBlock
     {
@@ -709,6 +789,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderBraceTurn90Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderBraceTurn90Block);
@@ -717,6 +798,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderBraceTurn180Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderBraceTurn180Block);
@@ -725,6 +807,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickUnderBraceTurn270Block : NBlock
     {
         public override Type BaseType => typeof(BrickUnderBraceTurn270Block);
@@ -733,6 +816,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(WindowFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickWindowBlock : NBlock
     {
@@ -742,6 +826,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindow90Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindow90Block);
@@ -750,6 +835,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindow180Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindow180Block);
@@ -758,6 +844,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindow270Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindow270Block);
@@ -766,6 +853,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(WindowEdgeFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickWindowEdgeBlock : NBlock
     {
@@ -775,6 +863,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindowEdge90Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindowEdge90Block);
@@ -783,6 +872,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindowEdge180Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindowEdge180Block);
@@ -791,6 +881,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindowEdge270Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindowEdge270Block);
@@ -799,6 +890,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(WindowGrillesFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickWindowGrillesBlock : NBlock
     {
@@ -808,6 +900,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindowGrilles90Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindowGrilles90Block);
@@ -816,6 +909,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindowGrilles180Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindowGrilles180Block);
@@ -824,6 +918,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindowGrilles270Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindowGrilles270Block);
@@ -832,6 +927,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(WindowGrillesEdgeFormType), typeof(GreenBrickItem))]
     public partial class GreenBrickWindowGrillesEdgeBlock : NBlock
     {
@@ -841,6 +937,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindowGrillesEdge90Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindowGrillesEdge90Block);
@@ -849,6 +946,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindowGrillesEdge180Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindowGrillesEdge180Block);
@@ -857,6 +955,7 @@ namespace Eco.EM.Building.Bricks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class GreenBrickWindowGrillesEdge270Block : NBlock
     {
         public override Type BaseType => typeof(BrickWindowGrillesEdge270Block);

@@ -4,6 +4,7 @@ using Eco.Gameplay.Items;
 using Eco.Shared.Serialization;
 using Eco.World.Blocks;
 using Eco.Mods.TechTree;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Arches
 {
@@ -13,6 +14,7 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     [IsForm(typeof(SingleArchBaseFormType), typeof(MortaredLimestoneItem))]
     public partial class SingleArchBaseMortaredLimestoneBlock :
         Block, IRepresentsItem
@@ -23,18 +25,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseMortaredLimestone270Block : Block
     { }
 
@@ -54,18 +59,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredLimestone270Block : Block
     { }
     #endregion
@@ -84,18 +92,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredLimestone270Block : Block
     { }
     #endregion
@@ -114,18 +125,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredLimestone270Block : Block
     { }
     #endregion
@@ -146,18 +160,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredLimestone270Block : Block
     { }
     #endregion
@@ -176,18 +193,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredLimestone270Block : Block
     { }
 
@@ -207,18 +227,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredLimestone270Block : Block
     { }
     #endregion
@@ -237,18 +260,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidMidMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidMidMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidMidMortaredLimestone270Block : Block
     { }
     #endregion
@@ -267,18 +293,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredLimestone270Block : Block
     { }
     #endregion
@@ -297,18 +326,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidRightMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidRightMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidRightMortaredLimestone270Block : Block
     { }
     #endregion
@@ -327,18 +359,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopMidMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopMidMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopMidMortaredLimestone270Block : Block
     { }
     #endregion
@@ -357,18 +392,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredLimestone270Block : Block
     { }
     #endregion
@@ -387,18 +425,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopRightMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopRightMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopRightMortaredLimestone270Block : Block
     { }
     #endregion
@@ -417,18 +458,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredLimestone270Block : Block
     { }
     #endregion
@@ -447,18 +491,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredLimestone270Block : Block
     { }
     #endregion
@@ -477,18 +524,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredLimestone270Block : Block
     { }
     #endregion
@@ -507,18 +557,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredLimestone270Block : Block
     { }
     #endregion
@@ -537,18 +590,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredLimestone270Block : Block
     { }
     #endregion
@@ -567,18 +623,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredLimestone270Block : Block
     { }
     #endregion
@@ -597,18 +656,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredLimestone270Block : Block
     { }
     #endregion
@@ -627,18 +689,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredLimestone270Block : Block
     { }
     #endregion
@@ -657,18 +722,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredLimestone90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredLimestone180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredLimestone270Block : Block
     { }
     #endregion

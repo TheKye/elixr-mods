@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Eco.Core.Items;
 using Eco.Gameplay.Blocks;
 using Eco.Gameplay.Items;
+using Eco.Mods.TechTree;
 using Eco.Shared.Serialization;
 using Eco.World.Blocks;
-using Eco.Mods.TechTree;
+using System;
 
 namespace Eco.EM.Building.Arches
 {
@@ -13,6 +14,7 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     [IsForm(typeof(SingleArchBaseFormType), typeof(MortaredBasaltItem))]
     public partial class SingleArchBaseMortaredBasaltBlock :
         Block, IRepresentsItem
@@ -23,18 +25,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchBaseMortaredBasalt270Block : Block
     { }
 
@@ -54,18 +59,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredBasalt270Block : Block
     { }
     #endregion
@@ -84,18 +92,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredBasalt270Block : Block
     { }
     #endregion
@@ -114,18 +125,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredBasalt270Block : Block
     { }
     #endregion
@@ -146,18 +160,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredBasalt270Block : Block
     { }
     #endregion
@@ -176,18 +193,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredBasalt270Block : Block
     { }
 
@@ -207,18 +227,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredBasalt270Block : Block
     { }
     #endregion
@@ -237,18 +260,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidMidMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidMidMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidMidMortaredBasalt270Block : Block
     { }
     #endregion
@@ -267,18 +293,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredBasalt270Block : Block
     { }
     #endregion
@@ -297,18 +326,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidRightMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidRightMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MidRightMortaredBasalt270Block : Block
     { }
     #endregion
@@ -327,18 +359,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopMidMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopMidMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopMidMortaredBasalt270Block : Block
     { }
     #endregion
@@ -357,18 +392,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredBasalt270Block : Block
     { }
     #endregion
@@ -387,18 +425,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopRightMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopRightMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class TopRightMortaredBasalt270Block : Block
     { }
     #endregion
@@ -417,18 +458,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredBasalt270Block : Block
     { }
     #endregion
@@ -447,18 +491,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredBasalt270Block : Block
     { }
     #endregion
@@ -477,18 +524,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredBasalt270Block : Block
     { }
     #endregion
@@ -507,18 +557,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredBasalt270Block : Block
     { }
     #endregion
@@ -537,18 +590,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredBasalt270Block : Block
     { }
     #endregion
@@ -567,18 +623,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredBasalt270Block : Block
     { }
     #endregion
@@ -597,18 +656,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredBasalt270Block : Block
     { }
     #endregion
@@ -627,18 +689,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredBasalt270Block : Block
     { }
     #endregion
@@ -657,18 +722,21 @@ namespace Eco.EM.Building.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredBasalt90Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredBasalt180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredBasalt270Block : Block
     { }
     #endregion
