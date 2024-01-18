@@ -4,6 +4,7 @@ using Eco.Gameplay.Items;
 using Eco.Shared.Serialization;
 using Eco.World.Blocks;
 using Eco.Mods.TechTree;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Blocks
 {
@@ -11,6 +12,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(HewnLogItem))]
     public partial class HewnLogWall45Block :
         Block, IRepresentsItem
@@ -21,18 +23,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class HewnLogWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class HewnLogWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class HewnLogWall45270Block : Block
     { }
 
@@ -40,6 +45,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(HardwoodHewnLogItem))]
     public partial class HardwoodHewnLogWall45Block :
     Block, IRepresentsItem
@@ -50,18 +56,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class HardwoodHewnLogWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class HardwoodHewnLogWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class HardwoodHewnLogWall45270Block : Block
     { }
 
@@ -69,6 +78,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(SoftwoodHewnLogItem))]
     public partial class SoftwoodHewnLogWall45Block :
     Block, IRepresentsItem
@@ -79,18 +89,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SoftwoodHewnLogWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SoftwoodHewnLogWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class SoftwoodHewnLogWall45270Block : Block
     { }
 

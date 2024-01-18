@@ -4,6 +4,7 @@ using Eco.Gameplay.Items;
 using Eco.Shared.Serialization;
 using Eco.World.Blocks;
 using Eco.Mods.TechTree;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Blocks
 {
@@ -11,6 +12,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(AshlarShaleItem))]
     public partial class AshlarShaleWall45Block :
         Block, IRepresentsItem
@@ -21,18 +23,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarShaleWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarShaleWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarShaleWall45270Block : Block
     { }
 
@@ -40,6 +45,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(AshlarGneissItem))]
     public partial class AshlarGneissWall45Block :
     Block, IRepresentsItem
@@ -50,18 +56,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarGneissWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarGneissWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarGneissWall45270Block : Block
     { }
 
@@ -69,6 +78,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(AshlarLimestoneItem))]
     public partial class AshlarLimestoneWall45Block :
     Block, IRepresentsItem
@@ -79,18 +89,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarLimestoneWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarLimestoneWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarLimestoneWall45270Block : Block
     { }
 
@@ -98,6 +111,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(AshlarSandstoneItem))]
     public partial class AshlarSandstoneWall45Block :
     Block, IRepresentsItem
@@ -108,18 +122,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarSandstoneWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarSandstoneWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarSandstoneWall45270Block : Block
     { }
 
@@ -127,6 +144,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(AshlarBasaltItem))]
     public partial class AshlarBasaltWall45Block :
     Block, IRepresentsItem
@@ -137,18 +155,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarBasaltWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarBasaltWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarBasaltWall45270Block : Block
     { }
 
@@ -156,6 +177,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(AshlarGraniteItem))]
     public partial class AshlarGraniteWall45Block :
 Block, IRepresentsItem
@@ -166,18 +188,21 @@ Block, IRepresentsItem
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarGraniteWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarGraniteWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(4)]
+    [Tag("Constructable")]
     public partial class AshlarGraniteWall45270Block : Block
     { }
 

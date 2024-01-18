@@ -4,6 +4,7 @@ using Eco.Gameplay.Items;
 using Eco.Shared.Serialization;
 using Eco.World.Blocks;
 using Eco.Mods.TechTree;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Blocks
 {
@@ -11,6 +12,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(MortaredStoneItem))]
     public partial class MortaredStoneWall45Block :
         Block, IRepresentsItem
@@ -21,18 +23,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredStoneWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredStoneWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredStoneWall45270Block : Block
     { }
 
@@ -40,6 +45,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(MortaredSandstoneItem))]
     public partial class MortaredSandstoneWall45Block :
     Block, IRepresentsItem
@@ -50,18 +56,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredSandstoneWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredSandstoneWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredSandstoneWall45270Block : Block
     { }
 
@@ -69,6 +78,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(MortaredLimestoneItem))]
     public partial class MortaredLimestoneWall45Block :
     Block, IRepresentsItem
@@ -79,18 +89,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredLimestoneWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredLimestoneWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredLimestoneWall45270Block : Block
     { }
 
@@ -98,6 +111,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(MortaredGraniteItem))]
     public partial class MortaredGraniteWall45Block :
     Block, IRepresentsItem
@@ -108,18 +122,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredGraniteWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredGraniteWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
+    [Tag("Constructable")]
     public partial class MortaredGraniteWall45270Block : Block
     { }
 }

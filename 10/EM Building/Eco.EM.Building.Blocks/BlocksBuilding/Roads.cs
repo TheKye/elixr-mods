@@ -4,6 +4,7 @@ using Eco.Gameplay.Items;
 using Eco.Shared.Serialization;
 using Eco.World.Blocks;
 using Eco.Mods.TechTree;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Blocks
 {
@@ -11,6 +12,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeRoadFormType), typeof(AsphaltConcreteItem))]
     public partial class AsphaltConcreteRoad45Block :
         Block, IRepresentsItem
@@ -21,18 +23,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class AsphaltConcreteRoad4590Block : Block
     { }
 
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class AsphaltConcreteRoad45180Block : Block
     { }
 
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class AsphaltConcreteRoad45270Block : Block
     { }
 
@@ -40,6 +45,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeRoadMiddleLineFormType), typeof(AsphaltConcreteItem))]
     public partial class AsphaltConcreteRoadLineMid45Block :
     Block, IRepresentsItem
@@ -50,18 +56,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class AsphaltConcreteRoadLineMid4590Block : Block
     { }
 
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class AsphaltConcreteRoadLineMid45180Block : Block
     { }
 
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class AsphaltConcreteRoadLineMid45270Block : Block
     { }
 
@@ -70,6 +79,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeRoadLineGapFormType), typeof(AsphaltConcreteItem))]
     public partial class AsphaltConcreteRoadLineGap45Block :
 Block, IRepresentsItem
@@ -80,18 +90,21 @@ Block, IRepresentsItem
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class AsphaltConcreteRoadLineGap4590Block : Block
     { }
 
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class     AsphaltConcreteRoadLineGap45180Block : Block
     { }
 
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class     AsphaltConcreteRoadLineGap45270Block : Block
     { }
 
@@ -99,6 +112,7 @@ Block, IRepresentsItem
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeRoadLineFormType), typeof(AsphaltConcreteItem))]
     public partial class AsphaltConcreteRoadLine45Block :
 Block, IRepresentsItem
@@ -109,18 +123,21 @@ Block, IRepresentsItem
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class AsphaltConcreteRoadLine4590Block : Block
     { }
 
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class AsphaltConcreteRoadLine45180Block : Block
     { }
 
     [Serialized]
     [Road(1.4f, typeof(AsphaltConcreteItem)), Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class AsphaltConcreteRoadLine45270Block : Block
     { }
 }

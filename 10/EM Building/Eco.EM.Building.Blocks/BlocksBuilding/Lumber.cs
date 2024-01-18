@@ -4,6 +4,7 @@ using Eco.Gameplay.Items;
 using Eco.Shared.Serialization;
 using Eco.World.Blocks;
 using Eco.Mods.TechTree;
+using Eco.Core.Items;
 
 namespace Eco.EM.Building.Blocks
 {
@@ -11,6 +12,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(LumberItem))]
     public partial class LumberWall45Block :
         Block, IRepresentsItem
@@ -21,18 +23,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class LumberWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class LumberWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class LumberWall45270Block : Block
     { }
 
@@ -40,6 +45,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(HardwoodLumberItem))]
     public partial class HardwoodLumberWall45Block :
     Block, IRepresentsItem
@@ -50,18 +56,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class HardwoodLumberWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class HardwoodLumberWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class HardwoodLumberWall45270Block : Block
     { }
 
@@ -69,6 +78,7 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     [IsForm(typeof(FFDegreeWallFormType), typeof(SoftwoodLumberItem))]
     public partial class SoftwoodLumberWall45Block :
     Block, IRepresentsItem
@@ -79,18 +89,21 @@ namespace Eco.EM.Building.Blocks
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SoftwoodLumberWall4590Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SoftwoodLumberWall45180Block : Block
     { }
 
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
+    [Tag("Constructable")]
     public partial class SoftwoodLumberWall45270Block : Block
     { }
 
