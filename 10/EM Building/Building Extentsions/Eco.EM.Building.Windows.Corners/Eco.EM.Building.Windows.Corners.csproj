@@ -33,6 +33,6 @@
 	  <ProjectReference Include="..\..\Eco.EM.Building.Windows\Eco.EM.Building.Windows.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.1" />
+		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
 	</ItemGroup>
 </Project>

@@ -40,6 +40,6 @@
     <None Include="Windows\ShutterWindow1x1.cs" />
   </ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.1" />
+		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
 	</ItemGroup>
 </Project>

@@ -249,7 +249,7 @@ namespace Eco.EM.Admin
             ChatBaseExtended.CBInfoBox(string.Format(Localizer.DoStr("All Players have been paid {0} {1}"), amount, curreny), user);
         }
 
-        [ChatCommand("Grant All players a specific item and the amount of that item", "grant-all", ChatAuthorizationLevel.Admin)]
+        [ChatCommand("Grant All players a specific item and the amount of that item", "grant-allplayers", ChatAuthorizationLevel.Admin)]
         public static void GiveAllPlayers(User user, string item, int amount = 1, bool includeOffline = false)
         {
             var itemToGive = Item.Get(item);

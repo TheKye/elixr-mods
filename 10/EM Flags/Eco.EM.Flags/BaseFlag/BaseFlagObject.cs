@@ -36,7 +36,6 @@ namespace Eco.EM.Flags
             base.Initialize();
             CheckRoom();
         }
-
         protected override void PostInitialize()
         {
             base.PostInitialize();

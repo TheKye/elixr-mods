@@ -32,6 +32,6 @@
     <Compile Remove="PowerConverter.cs" />
   </ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.1" />
+		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
 	</ItemGroup>
 </Project>
