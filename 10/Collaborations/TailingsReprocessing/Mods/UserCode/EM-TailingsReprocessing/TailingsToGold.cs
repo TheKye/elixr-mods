@@ -3,16 +3,17 @@ using Eco.Gameplay.Components;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Skills;
+using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
 
-namespace Eco.Mods.TechTree
+namespace Eco.EM.TailingsReprocessing.Mods.UserCode.Recipes
 {
     [RequiresSkill(typeof(AdvancedSmeltingSkill), 7)]
     public partial class RecycleForGoldRecipe : RecipeFamily
     {
         public RecycleForGoldRecipe()
         {
-            this.Recipes = new List<Recipe>
+            Recipes = new List<Recipe>
             {
                 new Recipe(
                     "Recycled Tailings: Gold",
@@ -25,12 +26,12 @@ namespace Eco.Mods.TechTree
                     new CraftingElement<WetTailingsItem>(4)
                     )
             };
-            this.ExperienceOnCraft = 2;
-            this.LaborInCalories = CreateLaborInCaloriesValue(100, typeof(AdvancedSmeltingSkill));
-            this.CraftMinutes = CreateCraftTimeValue(typeof(RecycleForGoldRecipe), 40, typeof(AdvancedSmeltingSkill), typeof(AdvancedSmeltingFocusedSpeedTalent), typeof(AdvancedSmeltingParallelSpeedTalent));
-            this.ModsPreInitialize();
-            this.Initialize(Localizer.DoStr("Recycled Tailings: Gold"), typeof(RecycleForGoldRecipe));
-            this.ModsPostInitialize();
+            ExperienceOnCraft = 2;
+            LaborInCalories = CreateLaborInCaloriesValue(100, typeof(AdvancedSmeltingSkill));
+            CraftMinutes = CreateCraftTimeValue(typeof(RecycleForGoldRecipe), 40, typeof(AdvancedSmeltingSkill), typeof(AdvancedSmeltingFocusedSpeedTalent), typeof(AdvancedSmeltingParallelSpeedTalent));
+            ModsPreInitialize();
+            Initialize(Localizer.DoStr("Recycled Tailings: Gold"), typeof(RecycleForGoldRecipe));
+            ModsPostInitialize();
             CraftingComponent.AddRecipe(typeof(BlastFurnaceObject), this);
         }
 

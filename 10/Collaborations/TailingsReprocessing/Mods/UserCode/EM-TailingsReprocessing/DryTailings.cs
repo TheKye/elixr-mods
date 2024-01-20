@@ -3,16 +3,17 @@ using Eco.Gameplay.Components;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Skills;
+using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
 
-namespace Eco.Mods.TechTree
+namespace Eco.EM.TailingsReprocessing.Mods.UserCode.Recipes
 {
     [RequiresSkill(typeof(AdvancedSmeltingSkill), 7)]
     public partial class DryTailingsRecipe : RecipeFamily
     {
         public DryTailingsRecipe()
         {
-            this.Recipes = new List<Recipe>
+            Recipes = new List<Recipe>
             {
                 new Recipe(
                     "Dry Out Tailings",
@@ -25,12 +26,12 @@ namespace Eco.Mods.TechTree
                     new CraftingElement<TailingsItem>(20)
                     )
             };
-            this.ExperienceOnCraft = 2;
-            this.LaborInCalories = CreateLaborInCaloriesValue(100, typeof(AdvancedSmeltingSkill));
-            this.CraftMinutes = CreateCraftTimeValue(typeof(DryTailingsRecipe), 12.5f, typeof(AdvancedSmeltingSkill), typeof(AdvancedSmeltingFocusedSpeedTalent), typeof(AdvancedSmeltingParallelSpeedTalent));
-            this.ModsPreInitialize();
-            this.Initialize(Localizer.DoStr("Dry Out Tailings"), typeof(DryTailingsRecipe));
-            this.ModsPostInitialize();
+            ExperienceOnCraft = 2;
+            LaborInCalories = CreateLaborInCaloriesValue(100, typeof(AdvancedSmeltingSkill));
+            CraftMinutes = CreateCraftTimeValue(typeof(DryTailingsRecipe), 12.5f, typeof(AdvancedSmeltingSkill), typeof(AdvancedSmeltingFocusedSpeedTalent), typeof(AdvancedSmeltingParallelSpeedTalent));
+            ModsPreInitialize();
+            Initialize(Localizer.DoStr("Dry Out Tailings"), typeof(DryTailingsRecipe));
+            ModsPostInitialize();
             CraftingComponent.AddRecipe(typeof(BlastFurnaceObject), this);
         }
 
