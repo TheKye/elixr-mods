@@ -24,11 +24,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 	<OutputPath>..\..\..\bin\10.0\Flags</OutputPath>
   </PropertyGroup>
-
-
-	<ItemGroup>
-		<Content Include="FodyWeavers.xml" />
-	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Fody" Version="6.8.0">
 			<PrivateAssets>all</PrivateAssets>

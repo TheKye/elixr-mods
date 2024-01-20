@@ -82,7 +82,7 @@ namespace Eco.EM.Storage.Shipping
 
         [Interaction(InteractionTrigger.RightClick, "Open Doors", InteractionModifier.Ctrl)]
 
-        public void OnActRight(Player context, InteractionTriggerInfo interactionTriggerInfo, InteractionTarget interactionTarget)
+        public void OpenDoor(Player context, InteractionTriggerInfo interactionTriggerInfo, InteractionTarget interactionTarget)
         {
 
             var isAuthorized = ServiceHolder<IAuthManager>.Obj.IsAuthorized(this, context.User);

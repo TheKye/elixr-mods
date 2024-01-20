@@ -31,6 +31,7 @@
 	</Target>
 
 	<ItemGroup>
+	  <Compile Remove="Base\RailBlocks.cs" />
 	  <Compile Remove="ModularTruck\BoxTruckItem.cs" />
 	  <Compile Remove="ModularTruck\GarbageTruckItem.cs" />
 	  <Compile Remove="ModularTruck\MiningTruckItem.cs" />
@@ -41,6 +42,7 @@
 		<Content Include="FodyWeavers.xml" />
 	</ItemGroup>
 	<ItemGroup>
+	  <None Include="Base\RailBlocks.cs" />
 	  <None Include="ModularTruck\BoxTruckItem.cs" />
 	  <None Include="ModularTruck\GarbageTruckItem.cs" />
 	  <None Include="ModularTruck\MiningTruckItem.cs" />
