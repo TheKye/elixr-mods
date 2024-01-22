@@ -26,6 +26,7 @@ using Eco.Simulation.WorldLayers;
 using Eco.Gameplay.Items.InventoryRelated;
 using Eco.Gameplay.Systems;
 using Eco.Shared.Math;
+using Eco.Gameplay.Skills;
 
 namespace Eco.EM.Admin
 {
@@ -47,7 +48,7 @@ namespace Eco.EM.Admin
 
             //Put the rest in the toolbar.
             int index = 1;
-            foreach (var stack in player.User.Inventory.Toolbar.Stacks.Where(x => x.Item is not ToolItem))
+            foreach (var stack in player.User.Inventory.Toolbar.Stacks.Where(x => x.Item is not ToolItem && x.Item is not Skill))
             {
                 if (index >= result.Count) break;
                 var entry = result[index++];
@@ -250,14 +251,14 @@ namespace Eco.EM.Admin
         }
 
         [ChatCommand("Grant All players a specific item and the amount of that item", "grant-allplayers", ChatAuthorizationLevel.Admin)]
-        public static void GiveAllPlayers(User user, string item, int amount = 1, bool includeOffline = false)
+        public static void GiveAllPlayers(IChatClient user, string item, int amount = 1, bool includeOffline = false)
         {
             var itemToGive = Item.Get(item);
 
 
             if (itemToGive == null)
             {
-                user.Player.ErrorLocStr($"{item} Is not a valid item, did you type the name correctly?");
+                user.ErrorLocStr($"{item} Is not a valid item, did you type the name correctly?");
                 return;
             }
             
@@ -274,7 +275,7 @@ namespace Eco.EM.Admin
                             GameData.Obj.VoidStorageManager.FillNewVoidStorage(stacks, Localizer.DoStr("Granted Items"), u, Vector3i.NegOne, "");
                         u.Mail(Localizer.DoStr($"The Admin of this server has granted you {amount} {(amount > 1 ? (string.IsNullOrWhiteSpace(itemToGive.DisplayNamePlural) ? itemToGive.DisplayName : itemToGive.DisplayNamePlural ): itemToGive.DisplayName)}, If the item is not in your inventory, check your void storage"), Shared.Services.NotificationCategory.Notifications);
                     }
-                    user.Player.MsgLocStr($"All Players have been given {itemToGive.DisplayName}");
+                    user.MsgLocStr($"All Players have been given {itemToGive.DisplayName}");
                     break;
                 case false:
                     foreach (var u in UserManager.OnlineUsers)
@@ -284,7 +285,7 @@ namespace Eco.EM.Admin
                             GameData.Obj.VoidStorageManager.FillNewVoidStorage(stacks, Localizer.DoStr("Granted Items"), u, Vector3i.NegOne, "");
                         u.Mail(Localizer.DoStr($"The Admin of this server has granted you {amount} {(amount > 1 ? (string.IsNullOrWhiteSpace(itemToGive.DisplayNamePlural) ? itemToGive.DisplayName : itemToGive.DisplayNamePlural ): itemToGive.DisplayName)}, If the item is not in your inventory, check your void storage"), Shared.Services.NotificationCategory.Notifications);
                     }
-                    user.Player.MsgLocStr($"All Online Players have been given {itemToGive.DisplayName}");
+                    user.MsgLocStr($"All Online Players have been given {itemToGive.DisplayName}");
                     break;
             }
         }
