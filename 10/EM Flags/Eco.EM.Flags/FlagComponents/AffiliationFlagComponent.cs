@@ -37,23 +37,25 @@ namespace Eco.EM.Flags
            UnitedFederationOfPlanets
     }
 
-    [Serialized, AutogenClass, LocDisplayName("Affiliates Flag Selection")]
+    [Serialized, AutogenClass, LocDisplayName("Affiliates Flag Selection"), NoIcon]
     public partial class AffiliationFlagComponent : FlagComponent, IPersistentData
     {
 
         public AffilFlagData affilFlagData { get; set; }
 
         public new object PersistentData { get => affilFlagData; set => affilFlagData = value as AffilFlagData ?? new AffilFlagData(); }
+        private AffiliationFlag flagOption {get; set;}
 
         [Eco, ClientInterfaceProperty, GuestHidden]
         [Serialized, SyncToView]
-        public AffiliationFlag FlagOption { get; set; }
+        public AffiliationFlag FlagOption { get => flagOption; set { flagOption = value; this.Changed(nameof(FlagOption)); } }
 
         [RPC, Autogen("Set Flag")]
         public void SetFlag(Player player)
         {
             affilFlagData.FlagOption = FlagOption;
             Parent.SetAnimatedState("FlagChange", affilFlagData.FlagOption.GetName());
+            this.Changed(nameof(FlagOption));
         }
 
         public override void Initialize()
@@ -62,6 +64,7 @@ namespace Eco.EM.Flags
             this.affilFlagData ??= new AffilFlagData();
             this.FlagOption = affilFlagData.FlagOption;
             Parent.SetAnimatedState("FlagChange", affilFlagData.FlagOption.GetName());
+            this.Changed(nameof(FlagOption));
         }
     }
 }

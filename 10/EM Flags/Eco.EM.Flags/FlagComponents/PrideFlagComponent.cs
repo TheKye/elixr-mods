@@ -64,16 +64,18 @@ namespace Eco.EM.Flags
         TwoSpiritPride           ,
     }
 
-    [Serialized, AutogenClass, LocDisplayName("Pride Flag Selection")]
-    public partial class PrideFlagComponent : FlagComponent, IPersistentData
+    [Serialized, AutogenClass, LocDisplayName("Pride Flag Selection"), NoIcon]
+    public partial class PrideFlagComponent : FlagComponent, IPersistentData, INotifyPropertyChanged
     {
         public PrideFlagData prideFlagData { get; set; }
+
+        private PrideFlag prideFlag { get; set; }
 
         public new object PersistentData { get => prideFlagData; set => prideFlagData = value as PrideFlagData ?? new PrideFlagData(); }
 
         [Eco, ClientInterfaceProperty, GuestHidden]
         [Serialized, SyncToView]
-        public PrideFlag FlagOption { get; set; }
+        public PrideFlag FlagOption { get => prideFlag; set { prideFlag = value;  this.Changed(nameof(FlagOption)); } }
 
         [RPC, Autogen("Set Flag")]
         public void SetFlag(Player player)

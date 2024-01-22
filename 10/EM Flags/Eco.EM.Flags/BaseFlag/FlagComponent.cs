@@ -48,7 +48,7 @@ namespace Eco.EM.Flags
 
     // The base component for all flags, implements the selector for the flag pole material so it doesn't need to be implemented on all flags individually.
     [Serialized]
-    [DoNotNotify]
+    [DoNotNotify, NoIcon]
     public abstract class FlagComponent : WorldObjectComponent, INotifyPropertyChanged, IPersistentData
     {
         public FlagComponent() { }
@@ -57,9 +57,11 @@ namespace Eco.EM.Flags
 
         public object PersistentData { get => flagPoleData; set => flagPoleData = value as FlagPoleData ?? new FlagPoleData(); }
 
+        private FlagPoleMaterial flagOption { get; set; }
+
         [Eco, ClientInterfaceProperty, GuestHidden]
         [Serialized, SyncToView]
-        public FlagPoleMaterial MaterialOption { get; set; }
+        public FlagPoleMaterial MaterialOption { get => flagOption; set { flagOption = value; this.Changed(nameof(MaterialOption)); } }
 
         [RPC, Autogen]
         public void SetFlagPole(Player player)
@@ -73,7 +75,6 @@ namespace Eco.EM.Flags
             base.Initialize();
             this.flagPoleData ??= new FlagPoleData();
             this.MaterialOption = flagPoleData.MaterialOption;
-            Parent.SetAnimatedState("PoleChange", flagPoleData.MaterialOption.GetName());
         }
     }
 }

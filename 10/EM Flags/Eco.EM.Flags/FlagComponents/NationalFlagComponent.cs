@@ -81,16 +81,18 @@ namespace Eco.EM.Flags
         Wales                 ,
     }
 
-    [Serialized, AutogenClass, LocDisplayName("National Flag Selection")]
+    [Serialized, AutogenClass, LocDisplayName("National Flag Selection"), NoIcon]
     public partial class NationalFlagComponent : FlagComponent, IPersistentData
     {
         public NatFlagData natFlagData { get; set; }
 
         public new object PersistentData { get => natFlagData; set => natFlagData = value as NatFlagData ?? new NatFlagData(); }
 
+        private NationalFlag flagOption { get; set; }
+
         [Eco, ClientInterfaceProperty, GuestHidden]
         [Serialized, SyncToView]
-        public NationalFlag FlagOption { get; set; }
+        public NationalFlag FlagOption { get => flagOption; set { flagOption = value; this.Changed(nameof(FlagOption)); } }
 
         [RPC, Autogen("Set Flag")]
         public void SetFlag(Player player)
