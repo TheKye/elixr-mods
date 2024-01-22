@@ -110,7 +110,6 @@ namespace Eco.Mods.TechTree
         public override IDynamicValue CaloriesBurn => caloriesBurn;
         public override IDynamicValue Tier => tier;
         public override IDynamicValue SkilledRepairCost => skilledRepairCost;
-        public override int MaxTake => 3;
         public override float DurabilityRate => DurabilityMax / 500f;
         public override Item RepairItem => Item.Get<IronBarItem>();
         public override int FullRepairAmount => 4;

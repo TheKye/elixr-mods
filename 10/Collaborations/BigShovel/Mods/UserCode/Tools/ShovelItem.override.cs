@@ -22,6 +22,8 @@ namespace Eco.Mods.TechTree
     using Eco.Gameplay.Placement;
     using Eco.World.Blocks;
     using Eco.Mods.TechTree;
+    using Eco.Gameplay.Components.Storage;
+    using Eco.Shared.Services;
 
     [Serialized]
     [LocDisplayName("Shovel")]
@@ -30,16 +32,32 @@ namespace Eco.Mods.TechTree
     [CanAirInteraction]
     public abstract partial class ShovelItem : ToolItem, IInteractor
     {
+
+        /// <summary>
+        /// Enable This option if you wish to have the Stack Size Multiplier affect the max take, 
+        /// If you set the stack size multiplier to 2, the max take will automatically be times by 2
+        /// the value can only be true or false
+        /// </summary>
+        public static bool StackMultiplierAffectsMaxTake = false;
+
+        /// <summary>
+        /// This is the Max Take for the Shovel, this has been moved to its own variable due to the addition of the <see cref="StackMultiplierAffectsMaxTake"/> Value to have the stack size multiplier adjust the max take as well
+        /// Adjust this value to the desired amount. The StackMultiplierAffectsMaxTake will only affect this in code below so you don't need to worry about code below
+        /// </summary>
+        public static int maxTake = 10;
+
+
         private static SkillModifiedValue caloriesBurn = CreateCalorieValue(20, typeof(SelfImprovementSkill), typeof(ShovelItem));
         private static IDynamicValue skilledRepairCost = new ConstantValue(1);
         private static IDynamicValue tier = new ConstantValue(0);
 
+        
         public override GameActionDescription DescribeBlockAction => GameActionDescription.DoStr("dig up", "digging up");
         public override IDynamicValue CaloriesBurn => caloriesBurn;
         public override IDynamicValue Tier => tier;
         public override IDynamicValue SkilledRepairCost => skilledRepairCost;
         public override int FullRepairAmount => 1;
-        public override int MaxTake => 10;
+        public override int MaxTake => StackMultiplierAffectsMaxTake ? maxTake * (int)DifficultySettings.Obj.Config.DifficultyModifiers.UstackSizeModifier : maxTake;
         public override bool IsValidForInteraction(Item item) => base.IsValidForInteraction(item) && (item?.GetType().HasTag(TagManager.GetTagOrFail("Diggable")) ?? false);
         public override ItemCategory ItemCategory => ItemCategory.Shovel;
 
