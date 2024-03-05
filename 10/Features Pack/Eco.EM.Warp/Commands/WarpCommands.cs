@@ -113,8 +113,7 @@
 
             GroupsManager.API.SaveData();
         }
-
-        [ChatSubCommand("Warp", "Warp to specified named warp", "warpto", ChatAuthorizationLevel.User)]
+        
         public static void Warpto(User user, string pointName)
         {
             if (string.IsNullOrWhiteSpace(pointName))

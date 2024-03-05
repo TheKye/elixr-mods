@@ -50,6 +50,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(SingleArchMidFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -83,6 +84,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(SingleArchTopFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -116,6 +118,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(SingleArchRoofFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -151,6 +154,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(BaseLeftFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -184,6 +188,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(BaseRightFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -218,6 +223,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(BaseMidFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -251,6 +257,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(MidMidFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class MidMidMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -284,6 +291,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(MidLeftFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -317,6 +325,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(MidRightFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class MidRightMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -350,6 +359,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(TopMidFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class TopMidMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -383,6 +393,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(TopLeftFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -416,6 +427,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(TopRightFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class TopRightMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -449,6 +461,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(RoofLeftFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -482,6 +495,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(RoofRightFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -515,6 +529,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(RoofMidFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -548,6 +563,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(InnerCornerBaseFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -581,6 +597,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(InnerCornerMidFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -614,6 +631,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(InnerCornerTopFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -647,6 +665,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(OutterCornerBaseFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -680,6 +699,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(OutterCornerMidFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredGraniteBlock :
     Block, IRepresentsItem
     {
@@ -713,6 +733,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(OutterCornerTopFormType), typeof(MortaredGraniteItem))]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredGraniteBlock :
     Block, IRepresentsItem
     {

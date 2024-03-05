@@ -6,9 +6,12 @@ using Eco.Gameplay.Utils;
 using Eco.Shared.Localization;
 using Eco.Shared.Networking;
 using Eco.Shared.Serialization;
+using Eco.Shared.Utils;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,33 +19,39 @@ using System.Threading.Tasks;
 namespace Eco.EM.Warp.Objects
 {
     [Serialized, AutogenClass, LocDisplayName("Warp"), NoIcon]
-    public partial class WarpComponent : WorldObjectComponent, IHasClientControlledContainers
+    public partial class WarpComponent : WorldObjectComponent, IHasClientControlledContainers, INotifyPropertyChanged
     {
         public override bool Enabled => true;
-        private IEnumerable<WarpPoint> warpPoints = WarpManager.Data.ListPoints();
-         
+        private WarpData warpPoints { get; set; }
+        private string SelectedWarpPoint { get; set; }
 
-        [Serialized] public string SelectedWarpPoint { get; set; }
-
-        [Eco, ClientInterfaceProperty, ThreadSafe]
-        public IEnumerable<WarpPoint> WarpPoint
+        public WarpComponent()
         {
-            get { return warpPoints; }
+        }
+
+        [Eco]
+        public WarpData WarpPoint
+        {
+            get => warpPoints;
             set
             {
-                if (warpPoints != value)
-                {
-                    warpPoints = value;
-                    SelectedWarpPoint = value.FirstOrDefault().PointName;
-                    this.Changed(nameof(SelectedWarpPoint));
-                    this.Changed(nameof(WarpPoint));
-                }
+                if (value == warpPoints)
+                    return;
+                warpPoints = value;
+                SelectedWarpPoint = value.Points.First().PointName;
+                this.Changed(nameof(WarpPoint));
+
             }
         }
 
         [RPC, Autogen]
         public void Warp(Player player)
         {
+            if (string.IsNullOrEmpty(SelectedWarpPoint))
+            {
+                player.ErrorLocStr("No warp point selected");
+                return;
+            }
             WarpCommands.SignWarpto(player.User, SelectedWarpPoint);
         }
     }

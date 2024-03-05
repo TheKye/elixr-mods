@@ -20,6 +20,8 @@ using System.Numerics;
 using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Occupancy;
+using Eco.Shared.Networking;
+using Eco.Shared.Utils;
 
 namespace Eco.EM.Machines.Trucking.Trucks
 {
@@ -29,9 +31,40 @@ namespace Eco.EM.Machines.Trucking.Trucks
     [AirPollution(0.9f)]
     [Ecopedia("Crafted Objects", "Vehicles", createAsSubPage: true)]
     [LocDescription("Modern Truck With a B-Double Trailer attached for Big Logistics transporting also known as an \"18 Wheeler\"")]
-    public partial class BDoubleTruckItem : WorldObjectItem<BDoubleTruckObject>, IPersistentData
+    public partial class BDoubleTruckItem : WorldObjectItem<BDoubleTruckObject>, IPersistentData, IFreezable
     {
         [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
+                
+        [Serialized] bool frozen;
+        [Serialized] float groundDistance;
+
+        NetPhysicsEntity netEntity;
+        public NetPhysicsEntity NetEntity => this.netEntity;
+
+        public bool Frozen { get => this.frozen; set => this.frozen = value; }
+
+        public float GroundDistance { get => this.groundDistance; set => this.groundDistance = value; }
+        
+        public int ID => this.netEntity.ID;
+        public bool Active => this.netEntity.Active;
+        public double NetObjectCreationRealtime { get; set; } = TimeUtil.Seconds;
+
+        public void SendInitialState(BSONObject bsonObj, INetObjectViewer viewer)
+        {
+            if (this.frozen)
+            {
+                bsonObj["frozen"] = true;
+                bsonObj["groundDistance"] = this.groundDistance;
+            }
+
+            ((INetObject)this.netEntity).SendInitialState(bsonObj, viewer);
+        }
+        public void ReceiveInitialState(BSONObject bsonObj) => ((INetObject)this.netEntity).ReceiveInitialState(bsonObj);
+        public void SendUpdate(BSONObject bsonObj, INetObjectViewer viewer) => ((INetObject)this.netEntity).SendUpdate(bsonObj, viewer);
+        public void ReceiveUpdate(BSONObject bsonObj) => EcoObjectManager.Modify(this, obj => ((INetObject)obj.netEntity).ReceiveUpdate(bsonObj));
+        public bool IsRelevant(INetObjectViewer viewer) => ((INetObject)this.netEntity).IsRelevant(viewer);
+        public bool IsNotRelevant(INetObjectViewer viewer) => ((INetObject)this.netEntity).IsNotRelevant(viewer);
+        public bool IsUpdated(INetObjectViewer viewer) => !this.frozen && ((INetObject)this.netEntity).IsUpdated(viewer);
     }
 
     public class BDoubleTruckRecipe : Recipe, IConfigurableRecipe

@@ -50,6 +50,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(SingleArchMidFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class SingleArchMidMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -83,6 +84,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(SingleArchTopFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class SingleArchTopMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -116,6 +118,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(SingleArchRoofFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class SingleArchRoofMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -151,6 +154,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(BaseLeftFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class BaseLeftMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -184,6 +188,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(BaseRightFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class BaseRightMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -218,6 +223,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(BaseMidFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class BaseMidMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -251,6 +257,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(MidMidFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class MidMidMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -284,6 +291,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(MidLeftFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class MidLeftMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -317,6 +325,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(MidRightFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class MidRightMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -350,6 +359,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(TopMidFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class TopMidMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -383,6 +393,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(TopLeftFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class TopLeftMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -416,6 +427,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(TopRightFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class TopRightMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -449,6 +461,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(RoofLeftFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class RoofLeftMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -482,6 +495,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(RoofRightFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class RoofRightMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -515,6 +529,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(RoofMidFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class RoofMidMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -548,6 +563,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(InnerCornerBaseFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class InnerCornerBaseMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -581,6 +597,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(InnerCornerMidFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class InnerCornerMidMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -614,6 +631,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(InnerCornerTopFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class InnerCornerTopMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -647,6 +665,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(OutterCornerBaseFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class OutterCornerBaseMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -680,6 +699,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(OutterCornerMidFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class OutterCornerMidMortaredGneissBlock :
     Block, IRepresentsItem
     {
@@ -713,6 +733,7 @@ namespace Eco.EM.Building.Arches
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(1)]
     [IsForm(typeof(OutterCornerTopFormType), typeof(MortaredGneissItem))]
+    [Tag("Constructable")]
     public partial class OutterCornerTopMortaredGneissBlock :
     Block, IRepresentsItem
     {

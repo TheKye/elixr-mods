@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>Eco.EM.Housing.Furniture</RootNamespace>
-    <Version>3.4.0</Version>
+    <Version>3.5.0</Version>
     <Authors>Elixr Mods</Authors>
     <Company>Elixr Solutions</Company>
     <Product>EM Furniture</Product>
@@ -29,32 +29,12 @@
   </Target>
 
   <ItemGroup>
-    <Compile Remove="Objects\BedroomDresserObject.cs" />
-    <Compile Remove="Objects\BedroomSmallDresserObject.cs" />
-    <Compile Remove="Objects\FakePlantRound.cs" />
-    <Compile Remove="Objects\FakePlantSquare.cs" />
-    <Compile Remove="Objects\HouseLetterbox.cs" />
-    <Compile Remove="Objects\KingsBedObject.cs" />
-    <Compile Remove="Objects\KitchenCabinetObject.cs" />
-    <Compile Remove="Objects\LavaRug.cs" />
-    <Compile Remove="Objects\LionStatueObject.cs" />
-    <Compile Remove="Objects\StoneTable.cs" />
+    <PackageReference Include="Eco.ReferenceAssemblies" Version="0.10.1.3-beta-release-592" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Objects\BedroomDresserObject.cs" />
-    <None Include="Objects\BedroomSmallDresserObject.cs" />
-    <None Include="Objects\FakePlantRound.cs" />
-    <None Include="Objects\FakePlantSquare.cs" />
-    <None Include="Objects\HouseLetterbox.cs" />
-    <None Include="Objects\KingsBedObject.cs" />
-    <None Include="Objects\KitchenCabinetObject.cs" />
-    <None Include="Objects\LavaRug.cs" />
-    <None Include="Objects\LionStatueObject.cs" />
-    <None Include="Objects\StoneTable.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
+    <Reference Include="Eco.EM.Framework">
+      <HintPath>..\..\..\..\EM Framework\bin\10\Framework\net7.0\Eco.EM.Framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

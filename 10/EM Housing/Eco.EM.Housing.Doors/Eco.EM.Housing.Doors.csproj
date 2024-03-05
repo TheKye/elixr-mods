@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>Eco.EM.Housing.Doors</RootNamespace>
-    <Version>3.4.0</Version>
+    <Version>3.5.0</Version>
     <Authors>Elixr Mods</Authors>
     <Company>Elixr Solutions</Company>
     <Product>EM Doors</Product>

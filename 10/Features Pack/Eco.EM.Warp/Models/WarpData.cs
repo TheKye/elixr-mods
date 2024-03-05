@@ -1,23 +1,33 @@
-﻿using Eco.EM.Framework;
+﻿using Eco.Core.Controller;
+using Eco.Core.Utils;
+using Eco.EM.Framework;
 using Eco.EM.Framework.Groups;
 using Eco.EM.Framework.Utils;
 using Eco.Gameplay.Players;
+using Eco.Gameplay.Utils;
+using Eco.Mods.TechTree;
 using Eco.Shared.Math;
+using Eco.Shared.Networking;
+using Eco.Shared.Serialization;
 using Eco.Shared.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using StringUtils = Eco.EM.Framework.Utils.StringUtils;
 
 namespace Eco.EM.Warp
 {
-    [Serializable]
+    [Serialized]
     public class WarpData
     {
         public DateTime LastReset { get; private set; } = DateTime.MinValue;
         public DateTime NextReset { get; private set; } = DateTime.MinValue;
 
         public Dictionary<string, WarpUserData> Users { get; private set; }
+
+        [Serialized, SyncToView, ThreadSafe, HideRootListEntry]
         public List<WarpPoint> Points { get; private set; }
+
 
         public WarpData()
         {
@@ -154,9 +164,32 @@ namespace Eco.EM.Warp
             return minCoolDown;
         }
 
+        internal ControllerList<WarpPoint> ListWarps()
+        {
+            ControllerList<WarpPoint> points = null;
+
+            foreach (var p in Points)
+                points.Add(p);
+            return points;
+        }
+
         internal List<WarpPoint> ListPoints()
         {
             return Points;
+        }
+
+        internal string GetPointName(WarpPoint warp)
+        {
+            return warp.PointName;
+        }
+
+        internal List<string> ListPointsStr()
+        {
+            List<string> p = new();
+
+            foreach (var point in Points)
+                p.Add(point.PointName);
+            return p;
         }
 
         internal WarpPoint GetPoint(string pointName)
@@ -193,6 +226,15 @@ namespace Eco.EM.Warp
                 Users.ForEach(u => u.Value.ResetTeleports());
                 WarpManager.SaveData();
             }
+        }
+
+        internal ThreadSafeList<WarpPoint> ListPointsThreadSafe()
+        {
+            ThreadSafeList<WarpPoint> newlist = new();
+
+            foreach (var p in Points)
+                newlist.Add(p);
+            return newlist;
         }
     }
 }

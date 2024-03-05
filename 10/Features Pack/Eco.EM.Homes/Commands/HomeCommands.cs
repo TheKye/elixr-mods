@@ -18,8 +18,8 @@ namespace Eco.EM.Homes
         [ChatCommand("Elixr Mods Home's Plugin.")]
         public static void EMHomes() { }
 
-        [ChatCommand("Lets you know how many Homes you have left for the day")]
-        public static void Homes(User user)
+        [ChatCommand("Lets you know how many Homes you have left for the day", "em-homes")]
+        public static void EMCheckHomes(User user)
         {
             var userData = HomeManager.Data.GetHomeUserData(user.Name);
             var total = HomeManager.Data.GetMaxTeleports(user) - userData.Teleports;

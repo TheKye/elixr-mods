@@ -4,7 +4,7 @@ pause
 ::Set Default Paths
 set path=%cd%\bin\10.0
 set dir=%cd%
-set unitydir=%dir%\Built Unity Assets\9.6
+set unitydir=%dir%\Built Unity Assets\10
 
 ::Output Destination
 set dest=%dir%\bin\BuildOutput

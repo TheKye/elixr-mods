@@ -29,6 +29,7 @@ using Eco.Shared.SharedTypes;
 using Eco.Shared.Networking;
 using Eco.Gameplay.Civics.Demographics;
 using Eco.EM.Warp.Objects;
+using Eco.EM.Framework.Text;
 
 namespace Eco.EM.Warp
 {
@@ -36,7 +37,7 @@ namespace Eco.EM.Warp
     [RequireComponent(typeof(CustomTextComponent))]
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(WarpComponent))]
-    public partial class WarpPointObject : WorldObject, IRepresentsItem, IPlayerUseTracking, INotifyPropertyChanged, IHasInteractions
+    public partial class WarpPointObject : WorldObject, IRepresentsItem, IPlayerUseTracking, INotifyPropertyChanged
     {
         public override LocString DisplayName => Localizer.DoStr("Community Warp Point");
         public virtual Type RepresentedItemType => typeof(WarpPointItem);
@@ -46,9 +47,8 @@ namespace Eco.EM.Warp
         protected override void Initialize()
         {
             GetComponent<CustomTextComponent>().Initialize(700);
-
             SetName(NameRollback);
-
+            
             // watch for changes to the point name
             this.WatchPropAndCall(this, nameof(Name), () =>
             {
@@ -78,15 +78,11 @@ namespace Eco.EM.Warp
             });
         }
 
-        [Interaction(InteractionTrigger.InteractKey,"Use", flags: InteractionFlags.BlocksOtherInteraction)]
-        public void Used(Player player, InteractionTriggerInfo triggerInfo, InteractionTarget target)
+        public override void Tick()
         {
-            if (!player.User.IsAdmin)
-            {
-                player.ErrorLocStr("Only an admin may change the content on this object.");
-                return;
-            }
-            base.Use(player, target, triggerInfo);
+            base.Tick();
+            var textC = GetComponent<CustomTextComponent>();
+            textC.TextData.Text = ProfanityFilter.Clean(this.Name);
         }
 
         static WarpPointObject()

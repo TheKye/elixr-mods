@@ -4,13 +4,15 @@ using Eco.Core.Items;
 using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Housing;
 using Eco.Gameplay.Housing.PropertyValues;
 using Eco.Gameplay.Interactions;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Skills;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
 using Eco.Shared.Math;
@@ -60,15 +62,14 @@ namespace Eco.EM.Housing.Furniture
     [MaxStackSize(10)]
     [Weight(600)]
     [LocDisplayName("Kitchen Cabinet")]
-    [Tag("Housing", 1)]
+    [Tag("Housing")]
+    [LocDescription("A Cabinet for storing food in in your kitchen.")]
     public partial class KitchenCabinetItem : WorldObjectItem<KitchenCabinetObject>, IConfigurableHousing
-    {
-        public override LocString DisplayDescription => Localizer.DoStr("A Cabinet for storing food in in your kitchen.");
-        
+    {        
         private static readonly HousingModel defaults = new(
         typeof(KitchenCabinetItem),
         "Kitchen Cabinet",
-        RoomCategory.Kitchen.Name,
+        RoomCategory.Kitchen,
         skillValue: 3,
         typeForRoomLimit: "Food Storage",
         diminishingReturn: 0.1f);
@@ -92,7 +93,7 @@ namespace Eco.EM.Housing.Furniture
             IngredientList = new()
             {
                 new EMIngredient("Lumber", true, 30),
-                new EMIngredient("ClothItem", false, 10),
+                new EMIngredient("Fabric", true, 10),
                 new EMIngredient("LeatherHideItem", false, 5)
             },
             ProductList = new()

@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using Eco.EM.Framework.Resolvers;
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Components.Auth;
+using Eco.Gameplay.Components.Storage;
 using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Gameplay.Objects;
+using Eco.Gameplay.Occupancy;
 using Eco.Gameplay.Skills;
 using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
@@ -33,9 +36,9 @@ namespace Eco.EM.Housing.Furniture
 
     [Serialized, LocDisplayName("House Letterbox")]
     [MaxStackSize(100)]
+    [LocDescription("To leave your friends messages(WIP) You can leave items in the mail box for people however!")]
     public class HouseLetterboxItem : WorldObjectItem<HouseLetterboxObject>
     {
-        public override LocString DisplayDescription => Localizer.DoStr("To leave your friends messages(WIP) You can leave items in the mail box for people however!");
         
     }
 

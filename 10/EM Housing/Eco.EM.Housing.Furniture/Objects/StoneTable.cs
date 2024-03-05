@@ -7,7 +7,6 @@ using Eco.Gameplay.Items;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Property;
 using Eco.Gameplay.Skills;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
 using Eco.Shared.Math;
@@ -15,19 +14,20 @@ using Eco.Shared.Serialization;
 using Eco.Gameplay.Housing.PropertyValues;
 using Eco.EM.Framework.Resolvers;
 using Eco.Core.Items;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Housing.Furniture
 {
     [Serialized, Weight(500) ,LocDisplayName("Stone Table"), MaxStackSize(50)]
-    [Tag("Housing", 1)]
+    [Tag("Housing")]
+    [LocDescription("A stone table for placing things on")]
     public partial class StoneTableItem : WorldObjectItem<StoneTableObject>, IConfigurableHousing
-    {
-        public override LocString DisplayDescription => Localizer.DoStr("A stone table for placing things on");
-        
+    {        
         private static readonly HousingModel defaults = new(
         typeof(StoneTableItem),
         "Stone Table",
-        "Decoration",
+        RoomCategory.LivingRoom,
         skillValue: 2,
         typeForRoomLimit: "Table",
         diminishingReturn: 0.1f);

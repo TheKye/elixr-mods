@@ -7,27 +7,28 @@ using Eco.Gameplay.Housing;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
 using Eco.Shared.Math;
 using Eco.Shared.Serialization;
 using Eco.Gameplay.Housing.PropertyValues;
 using Eco.EM.Framework.Resolvers;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Housing.Furniture
 {
     [Serialized, Weight(200), MaxStackSize(50), LocDisplayName("Fake Plant Round")]
-    [Tag("Housing", 1)]
+    [Tag("Housing")]
+    [LocDescription("Sometimes you just don't want the real nature inside your house.")]
     public partial class FakePlantRoundItem : WorldObjectItem<FakePlantRoundObject>, IConfigurableHousing
     {
-        public override LocString DisplayDescription => Localizer.DoStr("Sometimes you just don't want the real nature inside your house.");
         
         
         private static readonly HousingModel defaults = new(
         typeof(FakePlantRoundItem),
         "Fake Plant Round",
-        "Decoration",
+        RoomCategory.LivingRoom,
         skillValue: 2,
         typeForRoomLimit: "Decoration",
         diminishingReturn: 0.1f);

@@ -29,7 +29,7 @@ namespace Eco.EM.Housing.Furniture
         static HousingModel defaults = new(
             typeof(BedroomChestItem),
             "Bedroom Chest",
-            RoomCategory.Bedroom.Name,
+            RoomCategory.Bedroom,
             skillValue: 2,
             typeForRoomLimit: "Bed",
             diminishingReturn: 0.2f);
@@ -52,7 +52,7 @@ namespace Eco.EM.Housing.Furniture
             IngredientList = new()
             {
                 new EMIngredient("Lumber", true, 25),
-                new EMIngredient("ClothItem", false, 20),
+                new EMIngredient("Fabric", true, 20),
                 new EMIngredient("LeatherHideItem", false, 10)
             },
             ProductList = new()

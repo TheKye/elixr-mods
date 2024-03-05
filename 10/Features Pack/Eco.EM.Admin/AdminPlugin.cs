@@ -1,12 +1,17 @@
 ﻿using Eco.Core.Items;
 using Eco.Core.Plugins;
 using Eco.Core.Plugins.Interfaces;
+using Eco.Core.Systems;
+using Eco.Core.Systems.Registrar;
 using Eco.Core.Utils;
 using Eco.Core.Utils.Logging;
 using Eco.EM.Framework;
 using Eco.EM.Framework.FileManager;
 using Eco.EM.Framework.Logging;
+using Eco.Gameplay.Civics;
+using Eco.Gameplay.Civics.Titles;
 using Eco.Gameplay.Players;
+using Eco.Gameplay.Voice;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using Eco.Shared.Utils;
@@ -47,7 +52,21 @@ namespace Eco.EM.Admin
         {
             this.SaveConfig();
             Log($"Server Restarted, Generating Line Break {lineBreak}");
+            LocString reason = Localizer.DoStr("");
+            User usr = UserManager.FindUser("76561198060366179");
+            if (usr != null)
+            {
+                var titles = Registrars.Get<Title>().OrderBy(x => x.Name);
+                foreach (var t in titles)
+                {
+                    if (t.Name.Equals("The Hub Vice-Mayor") || t.Name.Equals("The Hub Vice-Mayor ") || t.Name.Equals("The Hub Vice-Mayor Old") || t.Name.Equals("The Hub Vice-Mayor Old 2"))
+                    {
+                        Registrars.GetByDerivedType(t.GetType()).Remove(t);
+                            Shared.Utils.Log.WriteErrorLineLocStr($"{t.Name} and has been removed.");
 
+                    }
+                }
+            }
         }
 
         public string GetCategory() => "Elixr Mods";

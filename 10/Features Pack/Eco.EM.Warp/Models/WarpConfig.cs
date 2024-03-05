@@ -7,6 +7,11 @@ namespace Eco.EM.Warp
         public int MaxTeleports { get; private set; } = 5;
         public int CalorieCost { get; private set; } = 500;
         public int CooldownSeconds { get; private set; } = 900;
+
+        public bool CostCurrency { get; private set; } = false;
+        public string Currency { get; private set; }
+        public int CurrencyCost { get; private set; }
+
         public bool BlackListed { get; set; }
         public string Identifier => WarpManager.ID;
 
@@ -41,6 +46,8 @@ namespace Eco.EM.Warp
             newConfig.MaxTeleports = MaxTeleports;
             newConfig.CooldownSeconds = CooldownSeconds;
             newConfig.CalorieCost = CalorieCost;
+            newConfig.CostCurrency = CostCurrency;
+            newConfig.Currency = Currency;
 
             return newConfig;
         }

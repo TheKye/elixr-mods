@@ -7,27 +7,25 @@ using Eco.Gameplay.Housing;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
 using Eco.Shared.Math;
 using Eco.Shared.Serialization;
 using Eco.Gameplay.Housing.PropertyValues;
 using Eco.EM.Framework.Resolvers;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Housing.Furniture
 {
     [Serialized, Weight(500), MaxStackSize(50), LocDisplayName("Lava Rug")]
-    [Tag("Housing", 1)]
+    [Tag("Housing")]
+    [LocDescription("The floor is lava!!")]
     public partial class LavaRugItem : WorldObjectItem<LavaRugObject>, IConfigurableHousing
     {
-        public override LocString DisplayDescription => Localizer.DoStr("The floor is lava!!");
-        
-
         private static readonly HousingModel defaults = new(
         typeof(LavaRugItem),
         "Lava Rug",
-        "Decoration",
+        RoomCategory.LivingRoom,
         skillValue: 3,
         typeForRoomLimit: "Rug",
         diminishingReturn: 0.1f);
@@ -52,7 +50,7 @@ namespace Eco.EM.Housing.Furniture
             {
                 new EMIngredient("Rock", true, 40),
                 new EMIngredient("NaturalFiber", true, 30),
-                new EMIngredient("ClothItem", false, 15),
+                new EMIngredient("Fabric", true, 15),
             },
             ProductList = new()
             {

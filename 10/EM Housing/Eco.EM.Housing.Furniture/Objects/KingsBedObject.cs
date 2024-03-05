@@ -6,7 +6,6 @@ using Eco.Gameplay.Housing;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using Eco.Core.Items;
@@ -15,6 +14,8 @@ using Eco.Shared.Math;
 using Eco.Gameplay.Housing.PropertyValues;
 using Eco.EM.Framework.Resolvers;
 using Eco.Shared.Items;
+using Eco.Gameplay.Occupancy;
+using Eco.Gameplay.Items.Recipes;
 
 namespace Eco.EM.Housing.Furniture
 {
@@ -24,13 +25,13 @@ namespace Eco.EM.Housing.Furniture
 
     [RequireComponent(typeof(BedComponent))]
     [RequireComponent(typeof(MountComponent))]
+    
     public partial class KingsBedObject : WorldObject, IRepresentsItem
     {
         public override LocString DisplayName => Localizer.DoStr("Kings Bed");
         public virtual Type RepresentedItemType => typeof(KingsBedItem);
 
         public override TableTextureMode TableTexture => TableTextureMode.Wood;
-        public override LocString PickupConfirmation => GetComponent<BedComponent>().BedPickupConfirmation();
 
         static KingsBedObject()
         {
@@ -66,16 +67,14 @@ namespace Eco.EM.Housing.Furniture
     }
 
     [Serialized, Weight(600), MaxStackSize(10), LocDisplayName("Kings Bed")] 
-    [Tag("Housing", 1)] 
+    [Tag("Housing")]
+    [LocDescription("A big beautiful king sized bed fit for a king Or Queen.")]
     public partial class KingsBedItem : WorldObjectItem<KingsBedObject>, IConfigurableHousing
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A big beautiful king sized bed fit for a king Or Queen.");
-        
-
         private static readonly HousingModel defaults = new(
         typeof(KingsBedItem),
         "Kings Bed",
-        RoomCategory.Bedroom.Name,
+        RoomCategory.Bedroom,
         skillValue: 6,
         typeForRoomLimit: "Bed",
         diminishingReturn: 0.0f);
@@ -100,7 +99,7 @@ namespace Eco.EM.Housing.Furniture
             {
                 new EMIngredient("BedFrameItem", false, 1, true),
                 new EMIngredient("IronBarItem", false, 50),
-                new EMIngredient("ClothItem", false, 50)
+                new EMIngredient("Fabric", true, 50)
             },
             ProductList = new()
             {

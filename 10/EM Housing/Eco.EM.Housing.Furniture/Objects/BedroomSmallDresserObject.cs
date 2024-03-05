@@ -6,7 +6,6 @@ using Eco.Gameplay.Housing;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Objects;
 using Eco.Gameplay.Skills;
-using Eco.Gameplay.Systems.Tooltip;
 using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
 using Eco.Shared.Math;
@@ -14,19 +13,22 @@ using Eco.Shared.Serialization;
 using Eco.Gameplay.Housing.PropertyValues;
 using Eco.EM.Framework.Resolvers;
 using Eco.Core.Items;
+using Eco.Gameplay.Items.Recipes;
+using Eco.Gameplay.Components.Storage;
+using Eco.Gameplay.Occupancy;
 
 namespace Eco.EM.Housing.Furniture
 {
     [Serialized, Weight(600), LocDisplayName("Bedroom Small Dresser"), MaxStackSize(100)]
-    [Tag("Housing", 1)]
+    [Tag("Housing")]
+    [LocDescription("A Small Dresser for Storing your Clothes")]
     public partial class BedroomSmallDresserItem : WorldObjectItem<BedroomSmallDresserObject>, IConfigurableHousing
     {
-        public override LocString DisplayDescription => Localizer.DoStr("A Small Dresser for Storing your Clothes");
         
         private static readonly HousingModel defaults = new(
         typeof(BedroomSmallDresserItem),
         "Bedroom Small Dresser",
-        RoomCategory.Bedroom.Name,
+        RoomCategory.Bedroom,
         skillValue: 3,
         typeForRoomLimit: "Storage",
         diminishingReturn: 0.3f);
@@ -49,7 +51,7 @@ namespace Eco.EM.Housing.Furniture
             IngredientList = new()
             {
                 new EMIngredient("Lumber", true, 25),
-                new EMIngredient("ClothItem", false, 20)
+                new EMIngredient("Fabric", true, 20)
             },
             ProductList = new()
             {

@@ -18,6 +18,12 @@ namespace Eco.EM.Daily
         [ChatCommand("Elixr Mods Community Daily Plugin", ChatAuthorizationLevel.Admin)]
         public static void Daily() { }
 
+        [ChatCommand("Opens the Daily Manager UI.", "daily-manager", ChatAuthorizationLevel.Admin)]
+        public static void DailyMan(User user)
+        {
+            RewardPackTableObject.Instance.OpenUI(user.Player);
+        }
+
         [ChatSubCommand("Daily", "Configures a setting in the daily config. Settings: xp, startTier, time.", "daily-config", ChatAuthorizationLevel.Admin)]
         public static void ConfigureDaily(User user, string setting, int value)
         {
