@@ -1,4 +1,4 @@
-﻿using Eco.Gameplay.Audio;
+﻿//using Eco.Gameplay.Audio; // no longer exists Not sure where it was moved to
 using Eco.Gameplay.Components;
 using Eco.Gameplay.Interactions;
 using Eco.Gameplay.Objects;
@@ -104,7 +104,7 @@ namespace Eco.EM.Building.Windows
 
         public void SetOpen()
         {
-            AudioManager.PlayAudio("Doors/DoorOpenSfx", Position);
+            //AudioManager.PlayAudio("Doors/DoorOpenSfx", Position); //Remove till we see where audio manager has been moved 
             SetAnimatedState("Open", true);
             Open = true;
             RPCManager.Call("Open", netEntity, null);
@@ -112,7 +112,7 @@ namespace Eco.EM.Building.Windows
 
         public void SetClosed()
         {
-            AudioManager.PlayAudio("Doors/DoorCloseSfx", Position);
+            //AudioManager.PlayAudio("Doors/DoorCloseSfx", Position); //Remove till we see where audio manager has been moved 
             SetAnimatedState("Open", false);
             Open = false;
             RPCManager.Call("Close", netEntity, null);
