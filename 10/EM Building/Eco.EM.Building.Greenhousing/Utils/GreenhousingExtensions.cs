@@ -4,6 +4,7 @@ using Eco.Mods.TechTree;
 using Eco.Shared;
 using Eco.Shared.Localization;
 using Eco.Shared.Math;
+using Eco.Shared.Time; //Added using reference
 using Eco.Shared.Utils;
 using Eco.Simulation.Agents;
 using Eco.Simulation.Types;
