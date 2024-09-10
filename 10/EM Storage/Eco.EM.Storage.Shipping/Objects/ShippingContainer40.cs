@@ -75,7 +75,7 @@ namespace Eco.EM.Storage.Shipping
                     abovePos.Y += 1;
                 }
                 while (WorldUtils.WorldObjectsAtPos(abovePos) != null);
-                WorldObjectPlacementUtils.TryPlaceWorldObjectNow(context, (WorldObjectItem)context.User.Inventory.Toolbar.SelectedItem, context.User.Inventory.Toolbar.SelectedStack, pos: abovePos, rot: playerFace);
+                WorldObjectPlacementUtils.TryPlaceWorldObjectNow(context, (WorldObjectItem)context.User.Inventory.Toolbar.SelectedItem, context.User.Inventory.Toolbar.SelectedStack, pos: abovePos, rot: playerFace, placeOnSurfaceOfObjectID: 1); //placeOnSurfaceOfObjectID: 1 is a temporary work around. Believe this variable is to identify the object the item is being placed on. Have been unable to find the correct way to send the actual object ID to the method yet
                 return;
             }
         }
