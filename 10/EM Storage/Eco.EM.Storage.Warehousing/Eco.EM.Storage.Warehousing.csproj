@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>Eco.EM.Storage.Warehousing</RootNamespace>
-    <Version>3.4.0</Version>
+    <Version>3.4.1</Version>
     <Authors>Elixr Mods</Authors>
     <Company>Elixr Solutions</Company>
     <Product>EM Warehousing</Product>
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\..\bin\10.0\EM Storage</OutputPath>
+    <OutputPath>..\..\..\bin\11.0\EM Storage</OutputPath>
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
