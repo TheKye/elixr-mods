@@ -56,7 +56,7 @@ namespace Eco.EM.Storage.Stockpiling
             base.PostInitialize();
             var storage = this.GetComponent<PublicStorageComponent>();
             storage.Initialize(EMStorageSlotResolver.Obj.ResolveSlots(this));
-            storage.Storage.AddInvRestriction(new TagRestriction("Rock", "Ore", "Coal", "CrushedRock", "ConcentratedOre", "MortaredStone"));
+            storage.Storage.AddInvRestriction(new TagRestriction("Rock", "Ore", "Coal", "CrushedRock", "ConcentratedOre", "MortaredStone"));//added mortared stone tag
             storage.Inventory.AddInvRestriction(new StackAllLimitRestriction(EMStorageSlotResolver.Obj.ResolveStackMultiplier(this)));
             GetComponent<StockpileComponent>().Initialize(DefaultDim);
             GetComponent<LinkComponent>().Initialize(EMLinkRadiusResolver.Obj.ResolveLinkRadius(this));
