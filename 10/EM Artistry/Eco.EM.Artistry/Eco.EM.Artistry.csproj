@@ -163,7 +163,7 @@
 		<EmbeddedResource Include="Ecopedia\ModDocumentation%3bEM Artistry%3bPainting.xml" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
+  </ItemGroup>
 </Project>
