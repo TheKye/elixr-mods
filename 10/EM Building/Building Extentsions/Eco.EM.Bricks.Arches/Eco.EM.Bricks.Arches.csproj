@@ -33,7 +33,7 @@
     <ProjectReference Include="..\..\Eco.EM.Building.Bricks\Eco.EM.Building.Bricks.csproj" />
   </ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
+		<PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
 	</ItemGroup>
 
 </Project>

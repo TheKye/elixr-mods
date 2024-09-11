@@ -41,56 +41,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Eco.Core">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.EM.Framework">
-      <HintPath>..\..\..\..\..\EM-Framework\bin\11\Framework\net7.0\Eco.EM.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.Gameplay">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.Gameplay.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.ModKit">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.ModKit.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.Mods">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.Mods.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.Networking.ENet">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.Networking.ENet.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.Plugins">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.Plugins.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.Shared">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.Shared.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.Simulation">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.Simulation.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.Stats">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.Stats.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.WebServer">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.WebServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.WindowsForms">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.WindowsForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.World">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.World.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.WorldGenerator">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\Eco.WorldGenerator.dll</HintPath>
-    </Reference>
-    <Reference Include="EcoServer">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\EcoServer.dll</HintPath>
-    </Reference>
-    <Reference Include="NodeGraphControl">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\NodeGraphControl.dll</HintPath>
-    </Reference>
-    <Reference Include="StrangeCloud.Service.Client.CSharp">
-      <HintPath>..\..\..\..\..\EM-Framework\dlls\StrangeCloud.Service.Client.CSharp.dll</HintPath>
-    </Reference>
+    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
   </ItemGroup>
 </Project>

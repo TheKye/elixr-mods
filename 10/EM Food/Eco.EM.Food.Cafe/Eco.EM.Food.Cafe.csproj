@@ -85,8 +85,8 @@
 	  <None Include="Objects\Blender.cs" />
 	  <None Include="Objects\DeepFryer.cs" />
 	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
+  </ItemGroup>
 
 </Project>

@@ -65,8 +65,8 @@
     <None Include="Objects\MortarAndPestle.cs" />
     <None Include="Skills\zymologySkill.cs" />
   </ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
+  </ItemGroup>
 
 </Project>

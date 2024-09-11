@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Eco.ReferenceAssemblies" Version="0.10.0.4-beta-release-557" />
+    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
   </ItemGroup>
 
 </Project>

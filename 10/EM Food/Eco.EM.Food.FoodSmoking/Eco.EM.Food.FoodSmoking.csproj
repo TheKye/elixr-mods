@@ -63,8 +63,7 @@
     <None Include="Items\VegetableJerky.cs" />
     <None Include="Objects\SmokeHouse.cs" />
   </ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
-	</ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
+  </ItemGroup>
 </Project>
