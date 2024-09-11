@@ -1,0 +1,47 @@
+﻿<ecopedia icon="PaintBrushItem">
+  <section type="header">Painting</section>
+	<section>
+The Painting system is quite easy to use.
+	</section>
+	<section>
+Here we will run you through how to use it.
+	</section>
+
+	<section>
+In order to be able to use the painting system you need to have other mods that support it installed. 
+
+Some mods that support it can be found in the EM Building bundle:
+
+- Bricks
+- Concrete
+- Windows
+
+All support the painting system
+	</section>
+
+	<section>
+First you will need a Paint Brush.
+
+Next you will need a Paint Bucket.
+
+With the Paint Bucket and the Paint Brush in your inventory you are ready to start painting.
+	</section>
+
+	<section>
+To set the color you wish to paint with you just need to right click on the Paint Brush, it will then bring up a menu for you to select the color you want to use.
+
+Select the color and click "Submit"
+
+This will then give you the Color Paintbrush you want.
+
+Next make sure you have the Corresponding color Paint Bucket for the Paint Brush you want.
+
+Then just walk up to the block you wish to paint and the system should take care of the rest.
+	</section>
+
+	<section>
+To avoid Waste, Each Paint Bucket can be re-used. Once it runs out of paint it will turn into an empty bucket.
+
+Each Paint bucket has enough paint to be able to paint 100 Blocks.
+	</section>
+</ecopedia>

@@ -1,0 +1,102 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="AutoGen\Tool\CompositeBow.override.cs" />
+	  <Compile Remove="AutoGen\Tool\IronAxe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\IronHammer.override.cs" />
+	  <Compile Remove="AutoGen\Tool\IronHoe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\IronMachete.override.cs" />
+	  <Compile Remove="AutoGen\Tool\IronPickaxe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\IronShovel.override.cs" />
+	  <Compile Remove="AutoGen\Tool\IronSickle.override.cs" />
+	  <Compile Remove="AutoGen\Tool\ModernAxe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\ModernHammer.override.cs" />
+	  <Compile Remove="AutoGen\Tool\ModernHoe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\ModernMachete.override.cs" />
+	  <Compile Remove="AutoGen\Tool\ModernPickaxe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\ModernScythe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\ModernShovel.override.cs" />
+	  <Compile Remove="AutoGen\Tool\RecurveBow.override.cs" />
+	  <Compile Remove="AutoGen\Tool\SteelAxe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\SteelHammer.override.cs" />
+	  <Compile Remove="AutoGen\Tool\SteelHoe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\SteelMachete.override.cs" />
+	  <Compile Remove="AutoGen\Tool\SteelPickaxe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\SteelRoadTool.override.cs" />
+	  <Compile Remove="AutoGen\Tool\SteelShovel.override.cs" />
+	  <Compile Remove="AutoGen\Tool\SteelSickle.override.cs" />
+	  <Compile Remove="AutoGen\Tool\StoneAxe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\StoneHammer.override.cs" />
+	  <Compile Remove="AutoGen\Tool\StoneMachete.override.cs" />
+	  <Compile Remove="AutoGen\Tool\StonePickaxe.override.cs" />
+	  <Compile Remove="AutoGen\Tool\StoneRoadTool.override.cs" />
+	  <Compile Remove="AutoGen\Tool\StoneSickle.override.cs" />
+	  <Compile Remove="AutoGen\Tool\WoodenBow.override.cs" />
+	  <Compile Remove="ModularTools\RecycleRecipes.cs" />
+	  <Compile Remove="ModularTools\ToolHandles.cs" />
+	  <Compile Remove="ModularTools\ToolPieces.cs" />
+	  <Compile Remove="Tools\BlockHarvestItem.override.cs" />
+	  <Compile Remove="Tools\HammerItem.override.cs" />
+	  <Compile Remove="Tools\HoeItem.override.cs" />
+	  <Compile Remove="Tools\MacheteItem.override.cs" />
+	  <Compile Remove="Tools\PickaxeItem.override.cs" />
+	  <Compile Remove="Tools\RoadToolItem.override.cs" />
+	  <Compile Remove="Tools\ShovelItem.override.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="AutoGen\Tool\CompositeBow.override.cs" />
+	  <None Include="AutoGen\Tool\IronAxe.override.cs" />
+	  <None Include="AutoGen\Tool\IronHammer.override.cs" />
+	  <None Include="AutoGen\Tool\IronHoe.override.cs" />
+	  <None Include="AutoGen\Tool\IronMachete.override.cs" />
+	  <None Include="AutoGen\Tool\IronPickaxe.override.cs" />
+	  <None Include="AutoGen\Tool\IronShovel.override.cs" />
+	  <None Include="AutoGen\Tool\IronSickle.override.cs" />
+	  <None Include="AutoGen\Tool\ModernAxe.override.cs" />
+	  <None Include="AutoGen\Tool\ModernHammer.override.cs" />
+	  <None Include="AutoGen\Tool\ModernHoe.override.cs" />
+	  <None Include="AutoGen\Tool\ModernMachete.override.cs" />
+	  <None Include="AutoGen\Tool\ModernPickaxe.override.cs" />
+	  <None Include="AutoGen\Tool\ModernScythe.override.cs" />
+	  <None Include="AutoGen\Tool\ModernShovel.override.cs" />
+	  <None Include="AutoGen\Tool\RecurveBow.override.cs" />
+	  <None Include="AutoGen\Tool\SteelAxe.override.cs" />
+	  <None Include="AutoGen\Tool\SteelHammer.override.cs" />
+	  <None Include="AutoGen\Tool\SteelHoe.override.cs" />
+	  <None Include="AutoGen\Tool\SteelMachete.override.cs" />
+	  <None Include="AutoGen\Tool\SteelPickaxe.override.cs" />
+	  <None Include="AutoGen\Tool\SteelRoadTool.override.cs" />
+	  <None Include="AutoGen\Tool\SteelShovel.override.cs" />
+	  <None Include="AutoGen\Tool\SteelSickle.override.cs" />
+	  <None Include="AutoGen\Tool\StoneAxe.override.cs" />
+	  <None Include="AutoGen\Tool\StoneHammer.override.cs" />
+	  <None Include="AutoGen\Tool\StoneMachete.override.cs" />
+	  <None Include="AutoGen\Tool\StonePickaxe.override.cs" />
+	  <None Include="AutoGen\Tool\StoneRoadTool.override.cs" />
+	  <None Include="AutoGen\Tool\StoneSickle.override.cs" />
+	  <None Include="AutoGen\Tool\WoodenBow.override.cs" />
+	  <None Include="ModularTools\RecycleRecipes.cs" />
+	  <None Include="ModularTools\ToolHandles.cs" />
+	  <None Include="ModularTools\ToolPieces.cs" />
+	  <None Include="Tools\BlockHarvestItem.override.cs" />
+	  <None Include="Tools\HammerItem.override.cs" />
+	  <None Include="Tools\HoeItem.override.cs" />
+	  <None Include="Tools\MacheteItem.override.cs" />
+	  <None Include="Tools\PickaxeItem.override.cs" />
+	  <None Include="Tools\RoadToolItem.override.cs" />
+	  <None Include="Tools\ShovelItem.override.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Eco.ReferenceAssemblies" Version="0.10.0.4-beta-release-557" />
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
+	  <Exec Command="cd $(SolutionDir)&#xD;&#xA;cd bin&#xD;&#xA;mkdir ModularTools\Mods\UserCode\ModularTools&#xD;&#xA;mkdir ModularTools\Mods\UserCode\AutoGen&#xD;&#xA;mkdir ModularTools\Mods\UserCode\Tools&#xD;&#xA;&#xD;&#xA;(robocopy &quot;$(SolutionDir)9.6\Collaborations\ModularTools\AutoGen&quot; &quot;$(SolutionDir)bin\ModularTools\Mods\UserCode\AutoGen&quot; /s)  ^&amp; IF %25ERRORLEVEL%25 LSS 8 SET ERRORLEVEL = 0&#xD;&#xA;(robocopy &quot;$(SolutionDir)9.6\Collaborations\ModularTools\ModularTools&quot; &quot;$(SolutionDir)bin\ModularTools\Mods\UserCode\ModularTools&quot; /s)  ^&amp; IF %25ERRORLEVEL%25 LSS 8 SET ERRORLEVEL = 0&#xD;&#xA;(robocopy &quot;$(SolutionDir)9.6\Collaborations\ModularTools\Tools&quot; &quot;$(SolutionDir)bin\ModularTools\Mods\UserCode\Tools&quot; /s)  ^&amp; IF %25ERRORLEVEL%25 LSS 8 SET ERRORLEVEL = 0" />
+	</Target>
+
+</Project>

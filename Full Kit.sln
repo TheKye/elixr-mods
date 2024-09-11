@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9.6", "9.6", "{83C4A14A-54F9-4109-A77E-0D52D119A69A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10", "10", "{83C4A14A-54F9-4109-A77E-0D52D119A69A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EM Building", "EM Building", "{0C9F8A20-0700-4884-A6A3-E45F4A88463E}"
 EndProject
@@ -33,95 +33,93 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collaborations", "Collabora
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Extentsions", "Building Extentsions", "{3BA5A165-E827-49C1-B7A6-AD6870265ADC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Artistry", "9.6\EM Artistry\Eco.EM.Artistry\Eco.EM.Artistry.csproj", "{4981955C-62D6-4520-B651-03C994A67757}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Artistry", "10\EM Artistry\Eco.EM.Artistry\Eco.EM.Artistry.csproj", "{4981955C-62D6-4520-B651-03C994A67757}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Arches", "9.6\EM Building\Eco.EM.Building.Arches\Eco.EM.Building.Arches.csproj", "{EF1B9AE4-65E1-48DB-A2F4-A4D24D970BE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Arches", "10\EM Building\Eco.EM.Building.Arches\Eco.EM.Building.Arches.csproj", "{EF1B9AE4-65E1-48DB-A2F4-A4D24D970BE1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Blocks", "9.6\EM Building\Eco.EM.Building.Blocks\Eco.EM.Building.Blocks.csproj", "{5E634EDF-31D5-4CCD-BD66-BE49A80E8274}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Blocks", "10\EM Building\Eco.EM.Building.Blocks\Eco.EM.Building.Blocks.csproj", "{5E634EDF-31D5-4CCD-BD66-BE49A80E8274}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Bricks.Arches", "9.6\EM Building\Building Extentsions\Eco.EM.Bricks.Arches\Eco.EM.Bricks.Arches.csproj", "{DD14DC3D-A439-47C1-A37E-A1A0025DBCA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Bricks.Arches", "10\EM Building\Building Extentsions\Eco.EM.Bricks.Arches\Eco.EM.Bricks.Arches.csproj", "{DD14DC3D-A439-47C1-A37E-A1A0025DBCA8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Bricks.Corners", "9.6\EM Building\Building Extentsions\Eco.EM.Building.Bricks.Corners\Eco.EM.Building.Bricks.Corners.csproj", "{84839B72-50D3-46F7-AFC6-A0DDAC2A3C97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Bricks.Corners", "10\EM Building\Building Extentsions\Eco.EM.Building.Bricks.Corners\Eco.EM.Building.Bricks.Corners.csproj", "{84839B72-50D3-46F7-AFC6-A0DDAC2A3C97}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Concrete.Corners", "9.6\EM Building\Building Extentsions\Eco.EM.Building.Concrete.Corners\Eco.EM.Building.Concrete.Corners.csproj", "{DD207620-E233-4F98-94E7-D2047A18232E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Concrete.Corners", "10\EM Building\Building Extentsions\Eco.EM.Building.Concrete.Corners\Eco.EM.Building.Concrete.Corners.csproj", "{DD207620-E233-4F98-94E7-D2047A18232E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Windows.Corners", "9.6\EM Building\Building Extentsions\Eco.EM.Building.Windows.Corners\Eco.EM.Building.Windows.Corners.csproj", "{B2E4EC16-8563-485E-81EE-F082C2E1D148}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Windows.Corners", "10\EM Building\Building Extentsions\Eco.EM.Building.Windows.Corners\Eco.EM.Building.Windows.Corners.csproj", "{B2E4EC16-8563-485E-81EE-F082C2E1D148}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Bricks", "9.6\EM Building\Eco.EM.Building.Bricks\Eco.EM.Building.Bricks.csproj", "{9C4E8303-8F4F-47E8-A81E-12E5334567F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Bricks", "10\EM Building\Eco.EM.Building.Bricks\Eco.EM.Building.Bricks.csproj", "{9C4E8303-8F4F-47E8-A81E-12E5334567F5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Concrete", "9.6\EM Building\Eco.EM.Building.Concrete\Eco.EM.Building.Concrete.csproj", "{916CA311-899B-41A2-AA64-922E2AD1FCC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Concrete", "10\EM Building\Eco.EM.Building.Concrete\Eco.EM.Building.Concrete.csproj", "{916CA311-899B-41A2-AA64-922E2AD1FCC7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Greenhousing", "9.6\EM Building\Eco.EM.Building.Greenhousing\Eco.EM.Building.Greenhousing.csproj", "{6743F831-BF3F-4DF6-837B-2B8794D36375}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Greenhousing", "10\EM Building\Eco.EM.Building.Greenhousing\Eco.EM.Building.Greenhousing.csproj", "{6743F831-BF3F-4DF6-837B-2B8794D36375}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Roadworking", "9.6\EM Building\Eco.EM.Building.Roadworking\Eco.EM.Building.Roadworking.csproj", "{63439321-8C1C-44C1-8913-63E6113AFDDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Roadworking", "10\EM Building\Eco.EM.Building.Roadworking\Eco.EM.Building.Roadworking.csproj", "{63439321-8C1C-44C1-8913-63E6113AFDDD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Shelving", "9.6\EM Building\Eco.EM.Building.Shelving\Eco.EM.Building.Shelving.csproj", "{94A365CD-B780-422F-ABD3-6A21BD35131B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Shelving", "10\EM Building\Eco.EM.Building.Shelving\Eco.EM.Building.Shelving.csproj", "{94A365CD-B780-422F-ABD3-6A21BD35131B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Tools", "9.6\EM Building\Eco.EM.Building.Tools\Eco.EM.Building.Tools.csproj", "{4783BB95-D9C6-40E2-BCFD-66031066E4A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Tools", "10\EM Building\Eco.EM.Building.Tools\Eco.EM.Building.Tools.csproj", "{4783BB95-D9C6-40E2-BCFD-66031066E4A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Windows", "9.6\EM Building\Eco.EM.Building.Windows\Eco.EM.Building.Windows.csproj", "{291B1B1C-C693-40E8-9CA7-3FC326EE827A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Windows", "10\EM Building\Eco.EM.Building.Windows\Eco.EM.Building.Windows.csproj", "{291B1B1C-C693-40E8-9CA7-3FC326EE827A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Flags", "9.6\EM Flags\Eco.EM.Flags\Eco.EM.Flags.csproj", "{93CDF54D-F3BC-46D3-AA64-7FF5A6457EDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Flags", "10\EM Flags\Eco.EM.Flags\Eco.EM.Flags.csproj", "{93CDF54D-F3BC-46D3-AA64-7FF5A6457EDB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.Cafe", "9.6\EM Food\Eco.EM.Food.Cafe\Eco.EM.Food.Cafe.csproj", "{FC673E45-2B58-4856-9F6A-C951619D1265}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.Cafe", "10\EM Food\Eco.EM.Food.Cafe\Eco.EM.Food.Cafe.csproj", "{FC673E45-2B58-4856-9F6A-C951619D1265}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.Cuisine", "9.6\EM Food\Eco.EM.Food.Cuisine\Eco.EM.Food.Cuisine.csproj", "{FF0456DB-7048-4F5A-8C2B-2D69D8007CE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.Cuisine", "10\EM Food\Eco.EM.Food.Cuisine\Eco.EM.Food.Cuisine.csproj", "{FF0456DB-7048-4F5A-8C2B-2D69D8007CE6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.Farming", "9.6\EM Food\Eco.EM.Food.Farming\Eco.EM.Food.Farming.csproj", "{1B662948-547B-4FA7-95E9-A48A074AA68A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.Farming", "10\EM Food\Eco.EM.Food.Farming\Eco.EM.Food.Farming.csproj", "{1B662948-547B-4FA7-95E9-A48A074AA68A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.FoodSmoking", "9.6\EM Food\Eco.EM.Food.FoodSmoking\Eco.EM.Food.FoodSmoking.csproj", "{A04102E9-A571-462F-BD9E-E632A7676502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.FoodSmoking", "10\EM Food\Eco.EM.Food.FoodSmoking\Eco.EM.Food.FoodSmoking.csproj", "{A04102E9-A571-462F-BD9E-E632A7676502}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.Hunting", "9.6\EM Food\Eco.EM.Food.Hunting\Eco.EM.Food.Hunting.csproj", "{E354173A-A33E-4C53-9887-5BE0F42F53EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.Hunting", "10\EM Food\Eco.EM.Food.Hunting\Eco.EM.Food.Hunting.csproj", "{E354173A-A33E-4C53-9887-5BE0F42F53EE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.Zymology", "9.6\EM Food\Eco.EM.Food.Zymology\Eco.EM.Food.Zymology.csproj", "{BCDF92E4-3F42-4489-9CD9-2E0BED8BCE17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Food.Zymology", "10\EM Food\Eco.EM.Food.Zymology\Eco.EM.Food.Zymology.csproj", "{BCDF92E4-3F42-4489-9CD9-2E0BED8BCE17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Games.BoardGames", "9.6\EM Games\Eco.EM.Games.BoardGames\Eco.EM.Games.BoardGames.csproj", "{963BFCC8-FE1E-42FF-AE5E-83637940F917}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Games.BoardGames", "10\EM Games\Eco.EM.Games.BoardGames\Eco.EM.Games.BoardGames.csproj", "{963BFCC8-FE1E-42FF-AE5E-83637940F917}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Games.BoardTools", "9.6\EM Games\Eco.EM.Games.BoardTools\Eco.EM.Games.BoardTools.csproj", "{E08498D7-8E2D-40B1-98C5-E1FE60B97B35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Games.BoardTools", "10\EM Games\Eco.EM.Games.BoardTools\Eco.EM.Games.BoardTools.csproj", "{E08498D7-8E2D-40B1-98C5-E1FE60B97B35}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Housing.Doors", "9.6\EM Housing\Eco.EM.Housing.Doors\Eco.EM.Housing.Doors.csproj", "{4F56C028-4950-45DB-A2C1-BD833753A19E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Housing.Doors", "10\EM Housing\Eco.EM.Housing.Doors\Eco.EM.Housing.Doors.csproj", "{4F56C028-4950-45DB-A2C1-BD833753A19E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Housing.Furniture", "9.6\EM Housing\Eco.EM.Housing.Furniture\Eco.EM.Housing.Furniture.csproj", "{6094532F-9C8C-4C0D-B8C1-5350A07C2D66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Housing.Furniture", "10\EM Housing\Eco.EM.Housing.Furniture\Eco.EM.Housing.Furniture.csproj", "{6094532F-9C8C-4C0D-B8C1-5350A07C2D66}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Machines.Trucking", "9.6\EM Machines\Eco.EM.Machines.Trucking\Eco.EM.Machines.Trucking.csproj", "{8EE727A0-35D0-4B13-9B49-77D5FC6E074C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Machines.Trucking", "10\EM Machines\Eco.EM.Machines.Trucking\Eco.EM.Machines.Trucking.csproj", "{8EE727A0-35D0-4B13-9B49-77D5FC6E074C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Machines.Vehicles", "9.6\EM Machines\Eco.EM.Machines.Vehicles\Eco.EM.Machines.Vehicles.csproj", "{40FE4C6F-74C9-4568-9AA1-F4E08B780547}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Machines.Vehicles", "10\EM Machines\Eco.EM.Machines.Vehicles\Eco.EM.Machines.Vehicles.csproj", "{40FE4C6F-74C9-4568-9AA1-F4E08B780547}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.SciFi", "9.6\EM Sci Fi\Eco.EM.SciFi\Eco.EM.SciFi.csproj", "{03A172E7-277F-4E98-8338-30FA1D4BD15F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.SciFi", "10\EM Sci Fi\Eco.EM.SciFi\Eco.EM.SciFi.csproj", "{03A172E7-277F-4E98-8338-30FA1D4BD15F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Storage.Shipping", "9.6\EM Storage\Eco.EM.Storage.Shipping\Eco.EM.Storage.Shipping.csproj", "{80B8A957-39BF-46AB-8D2D-74A778B45215}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Storage.Shipping", "10\EM Storage\Eco.EM.Storage.Shipping\Eco.EM.Storage.Shipping.csproj", "{80B8A957-39BF-46AB-8D2D-74A778B45215}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Storage.Stockpiling", "9.6\EM Storage\Eco.EM.Storage.Stockpiling\Eco.EM.Storage.Stockpiling.csproj", "{0C371CDB-7524-4A08-BCBF-3A871549066D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Storage.Stockpiling", "10\EM Storage\Eco.EM.Storage.Stockpiling\Eco.EM.Storage.Stockpiling.csproj", "{0C371CDB-7524-4A08-BCBF-3A871549066D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Storage.Warehousing", "9.6\EM Storage\Eco.EM.Storage.Warehousing\Eco.EM.Storage.Warehousing.csproj", "{B15B0FEA-1725-4E0F-8503-BCA73B759C56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Storage.Warehousing", "10\EM Storage\Eco.EM.Storage.Warehousing\Eco.EM.Storage.Warehousing.csproj", "{B15B0FEA-1725-4E0F-8503-BCA73B759C56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Admin", "9.6\Features Pack\Eco.EM.Admin\Eco.EM.Admin.csproj", "{B8B833BD-9FC2-4A13-9F26-AD722F8BD4A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Admin", "10\Features Pack\Eco.EM.Admin\Eco.EM.Admin.csproj", "{B8B833BD-9FC2-4A13-9F26-AD722F8BD4A2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.AutomaticDoors", "9.6\Features Pack\Eco.EM.AutomaticDoors\Eco.EM.AutomaticDoors.csproj", "{18E7F1FC-CFB3-431E-B96D-5DA0183F47D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.AutomaticDoors", "10\Features Pack\Eco.EM.AutomaticDoors\Eco.EM.AutomaticDoors.csproj", "{18E7F1FC-CFB3-431E-B96D-5DA0183F47D4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Commands", "9.6\Features Pack\Eco.EM.Commands\Eco.EM.Commands.csproj", "{C2764ACA-439E-47D1-B02A-61F7C788C259}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Commands", "10\Features Pack\Eco.EM.Commands\Eco.EM.Commands.csproj", "{C2764ACA-439E-47D1-B02A-61F7C788C259}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Daily", "9.6\Features Pack\Eco.EM.Daily\Eco.EM.Daily.csproj", "{9FD1E4AF-8744-4203-8472-8F8329606A04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Daily", "10\Features Pack\Eco.EM.Daily\Eco.EM.Daily.csproj", "{9FD1E4AF-8744-4203-8472-8F8329606A04}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Homes", "9.6\Features Pack\Eco.EM.Homes\Eco.EM.Homes.csproj", "{8F9D101F-49B7-46E0-9B5F-0370526237CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Homes", "10\Features Pack\Eco.EM.Homes\Eco.EM.Homes.csproj", "{8F9D101F-49B7-46E0-9B5F-0370526237CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Informatics", "9.6\Features Pack\Eco.EM.Informatics\Eco.EM.Informatics.csproj", "{C5BFE215-D52D-4DE4-A573-FB4584EC231E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Informatics", "10\Features Pack\Eco.EM.Informatics\Eco.EM.Informatics.csproj", "{C5BFE215-D52D-4DE4-A573-FB4584EC231E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.MOTD", "9.6\Features Pack\Eco.EM.MOTD\Eco.EM.MOTD.csproj", "{3D71F1A1-7879-409A-A534-B80E750A719E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.MOTD", "10\Features Pack\Eco.EM.MOTD\Eco.EM.MOTD.csproj", "{3D71F1A1-7879-409A-A534-B80E750A719E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.TP", "9.6\Features Pack\Eco.EM.TP\Eco.EM.TP.csproj", "{5B4D055D-138A-4B03-BD69-CAA6E8FB51BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.TP", "10\Features Pack\Eco.EM.TP\Eco.EM.TP.csproj", "{5B4D055D-138A-4B03-BD69-CAA6E8FB51BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Warp", "9.6\Features Pack\Eco.EM.Warp\Eco.EM.Warp.csproj", "{184E879F-8F26-4C3B-904D-247E664AB0EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Warp", "10\Features Pack\Eco.EM.Warp\Eco.EM.Warp.csproj", "{184E879F-8F26-4C3B-904D-247E664AB0EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigShovel", "9.6\Collaborations\BigShovel\BigShovel.csproj", "{09AA2C70-41D7-4266-917B-925EFFD02FE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularTools", "10\Collaborations\ModularTools\ModularTools.csproj", "{F6F507DF-97A4-4AD8-9055-F26FE8474F70}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularTools", "9.6\Collaborations\ModularTools\ModularTools.csproj", "{F6F507DF-97A4-4AD8-9055-F26FE8474F70}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TailingsReprocessing", "9.6\Collaborations\TailingsReprocessing\TailingsReprocessing.csproj", "{D8065F2B-9F27-401D-A806-85EDD52740F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TailingsReprocessing", "10\Collaborations\TailingsReprocessing\TailingsReprocessing.csproj", "{D8065F2B-9F27-401D-A806-85EDD52740F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{E339CB12-267E-4442-A9A2-F73C40627BE5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Misc", "9.6\Misc\Eco.EM.Misc.csproj", "{17B61567-0D9D-48C6-A476-F77FC590DD97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Misc", "10\Misc\Eco.EM.Misc.csproj", "{17B61567-0D9D-48C6-A476-F77FC590DD97}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A1EF799D-BECF-4B6F-B47C-7AD04E14FFEE}"
 	ProjectSection(SolutionItems) = preProject
@@ -130,25 +128,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Specialty Blocks", "Specialty Blocks", "{406455C4-6F6B-4247-B992-2E2F15D9D06B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Housing.Kitchen", "9.6\EM Housing\Eco.EM.Housing.Kitchen\Eco.EM.Housing.Kitchen.csproj", "{FF96401C-6E6D-49AD-9D0F-588603F504C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Housing.Kitchen", "10\EM Housing\Eco.EM.Housing.Kitchen\Eco.EM.Housing.Kitchen.csproj", "{FF96401C-6E6D-49AD-9D0F-588603F504C1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Machines.Boating", "9.6\EM Machines\Eco.EM.Machines.Boating\Eco.EM.Machines.Boating.csproj", "{B3071609-15DA-4E3C-ACA2-9B815F64E975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Machines.Boating", "10\EM Machines\Eco.EM.Machines.Boating\Eco.EM.Machines.Boating.csproj", "{B3071609-15DA-4E3C-ACA2-9B815F64E975}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Decorative", "9.6\EM Building\Eco.EM.Building.Decorative\Eco.EM.Building.Decorative.csproj", "{56D90E7F-0F64-4606-BD33-8E058DDE913E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Building.Decorative", "10\EM Building\Eco.EM.Building.Decorative\Eco.EM.Building.Decorative.csproj", "{56D90E7F-0F64-4606-BD33-8E058DDE913E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WipeTheWorld", "9.6\WipeTheWorld\WipeTheWorld\WipeTheWorld.csproj", "{C0D32E36-257D-49E1-B5F8-F2F9BB5B83C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WipeTheWorld", "10\WipeTheWorld\WipeTheWorld\WipeTheWorld.csproj", "{C0D32E36-257D-49E1-B5F8-F2F9BB5B83C8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.GreenEnergy", "9.6\EM Energy\Eco.EM.Energy.GreenEnergy\Eco.EM.Energy.GreenEnergy.csproj", "{A29111CB-2CD7-4F0E-A0A1-1C4236719BC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.GreenEnergy", "10\EM Energy\Eco.EM.Energy.GreenEnergy\Eco.EM.Energy.GreenEnergy.csproj", "{A29111CB-2CD7-4F0E-A0A1-1C4236719BC2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.Sensors", "9.6\EM Energy\Eco.EM.Energy.Sensors\Eco.EM.Energy.Sensors.csproj", "{94954D67-3ACF-4D40-8CFF-C44452ECD1D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.Sensors", "10\EM Energy\Eco.EM.Energy.Sensors\Eco.EM.Energy.Sensors.csproj", "{94954D67-3ACF-4D40-8CFF-C44452ECD1D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.Electronics", "9.6\EM Energy\Eco.EM.Energy.Electronics\Eco.EM.Energy.Electronics.csproj", "{9C3BB8C6-008A-4A97-BE3A-AD10BDF70E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.Electronics", "10\EM Energy\Eco.EM.Energy.Electronics\Eco.EM.Energy.Electronics.csproj", "{9C3BB8C6-008A-4A97-BE3A-AD10BDF70E6B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.Fuel", "9.6\EM Energy\Eco.EM.Energy.Fuel\Eco.EM.Energy.Fuel.csproj", "{626878E1-A50F-492B-8C66-BB1B8BD73E27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.Fuel", "10\EM Energy\Eco.EM.Energy.Fuel\Eco.EM.Energy.Fuel.csproj", "{626878E1-A50F-492B-8C66-BB1B8BD73E27}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.NuclearEnergy", "9.6\EM Energy\Eco.EM.Energy.NuclearEnergy\Eco.EM.Energy.NuclearEnergy.csproj", "{3F5A7D10-428B-41BF-914E-BC7DFFBB814A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.NuclearEnergy", "10\EM Energy\Eco.EM.Energy.NuclearEnergy\Eco.EM.Energy.NuclearEnergy.csproj", "{3F5A7D10-428B-41BF-914E-BC7DFFBB814A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Pm", "9.6\Features Pack\Eco.EM.Pm\Eco.EM.Pm.csproj", "{B97516A1-1945-4D1A-B2A7-813B64508774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Pm", "10\Features Pack\Eco.EM.Pm\Eco.EM.Pm.csproj", "{B97516A1-1945-4D1A-B2A7-813B64508774}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigShovel", "10\Collaborations\BigShovel\BigShovel.csproj", "{E31F1D3F-9D23-43C8-9F91-F71F7EA16673}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -316,10 +316,6 @@ Global
 		{184E879F-8F26-4C3B-904D-247E664AB0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{184E879F-8F26-4C3B-904D-247E664AB0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{184E879F-8F26-4C3B-904D-247E664AB0EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09AA2C70-41D7-4266-917B-925EFFD02FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09AA2C70-41D7-4266-917B-925EFFD02FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09AA2C70-41D7-4266-917B-925EFFD02FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09AA2C70-41D7-4266-917B-925EFFD02FE4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6F507DF-97A4-4AD8-9055-F26FE8474F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6F507DF-97A4-4AD8-9055-F26FE8474F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6F507DF-97A4-4AD8-9055-F26FE8474F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -372,6 +368,10 @@ Global
 		{B97516A1-1945-4D1A-B2A7-813B64508774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B97516A1-1945-4D1A-B2A7-813B64508774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B97516A1-1945-4D1A-B2A7-813B64508774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E31F1D3F-9D23-43C8-9F91-F71F7EA16673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E31F1D3F-9D23-43C8-9F91-F71F7EA16673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E31F1D3F-9D23-43C8-9F91-F71F7EA16673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E31F1D3F-9D23-43C8-9F91-F71F7EA16673}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -431,7 +431,6 @@ Global
 		{3D71F1A1-7879-409A-A534-B80E750A719E} = {E495F492-BB97-4771-B2AA-22410CC83942}
 		{5B4D055D-138A-4B03-BD69-CAA6E8FB51BC} = {E495F492-BB97-4771-B2AA-22410CC83942}
 		{184E879F-8F26-4C3B-904D-247E664AB0EC} = {E495F492-BB97-4771-B2AA-22410CC83942}
-		{09AA2C70-41D7-4266-917B-925EFFD02FE4} = {8D5AED5B-D3F9-4AE4-9B45-CBED78AAC306}
 		{F6F507DF-97A4-4AD8-9055-F26FE8474F70} = {8D5AED5B-D3F9-4AE4-9B45-CBED78AAC306}
 		{D8065F2B-9F27-401D-A806-85EDD52740F5} = {8D5AED5B-D3F9-4AE4-9B45-CBED78AAC306}
 		{E339CB12-267E-4442-A9A2-F73C40627BE5} = {83C4A14A-54F9-4109-A77E-0D52D119A69A}
@@ -447,6 +446,7 @@ Global
 		{626878E1-A50F-492B-8C66-BB1B8BD73E27} = {A49F1602-F229-4163-8E32-DCC2A1599029}
 		{3F5A7D10-428B-41BF-914E-BC7DFFBB814A} = {A49F1602-F229-4163-8E32-DCC2A1599029}
 		{B97516A1-1945-4D1A-B2A7-813B64508774} = {E495F492-BB97-4771-B2AA-22410CC83942}
+		{E31F1D3F-9D23-43C8-9F91-F71F7EA16673} = {8D5AED5B-D3F9-4AE4-9B45-CBED78AAC306}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A740FC1C-A212-4013-AF3E-9877DDE97E70}

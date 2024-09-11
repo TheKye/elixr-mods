@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>Eco.EM.Food.Zymology</RootNamespace>
+    <Company>Elixr Solutions</Company>
+    <Authors>Elixr Mods</Authors>
+    <Product>EM Zymology</Product>
+    <Version>3.4.0</Version>
+    <Copyright>Elixr Solutions 2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://elixrmods.com/</PackageProjectUrl>
+    <PackageIcon></PackageIcon>
+    <RepositoryUrl>https://git.elixr-solutions.com/elixrmods/elixr-mods</RepositoryUrl>
+    <RepositoryType>Private GitLab</RepositoryType>
+    <NeutralLanguage>en</NeutralLanguage>
+    <AssemblyName>Eco.EM.Food.Zymology</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>ElixrMods.Food.Zymology</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\bin\10.0\EM Food</OutputPath>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
+    <Exec Command="cd $(TargetDir)&#xD;&#xA;del *.config&#xD;&#xA;del *.json&#xD;&#xA;del A*&#xD;&#xA;del B*&#xD;&#xA;del C*&#xD;&#xA;del D*&#xD;&#xA;del F*&#xD;&#xA;del G*&#xD;&#xA;del H*&#xD;&#xA;del I*&#xD;&#xA;del J*&#xD;&#xA;del K*&#xD;&#xA;del L*&#xD;&#xA;del M*&#xD;&#xA;del N*&#xD;&#xA;del O*&#xD;&#xA;del P*&#xD;&#xA;del Q*&#xD;&#xA;del R*&#xD;&#xA;del S*&#xD;&#xA;del T*&#xD;&#xA;del U*&#xD;&#xA;del V*&#xD;&#xA;del W*&#xD;&#xA;del X*&#xD;&#xA;del Y*&#xD;&#xA;del Z*&#xD;&#xA;del Eco.Core.dll&#xD;&#xA;del Eco.Gameplay.dll&#xD;&#xA;del Eco.Modkit.dll&#xD;&#xA;del Eco.Mods.dll&#xD;&#xA;del Eco.Networking.ENet.dll&#xD;&#xA;del Eco.Plugins.dll&#xD;&#xA;del Eco.Shared.dll&#xD;&#xA;del Eco.Simulation.dll&#xD;&#xA;del Eco.Stats.dll&#xD;&#xA;del Eco.Tests.dll&#xD;&#xA;del Eco.WebServer.dll&#xD;&#xA;del Eco.WindowsForms.dll&#xD;&#xA;del Eco.World.dll&#xD;&#xA;del Eco.WorldGenerator.dll&#xD;&#xA;del Eco.EM.Framework*&#xD;&#xA;del Eco.EM.Artistry*" />
+  </Target>
+
+  <ItemGroup>
+    <Compile Remove="Items\Beer.cs" />
+    <Compile Remove="Items\Butter.cs" />
+    <Compile Remove="Items\CornSyrup.cs" />
+    <Compile Remove="Items\FishOil.cs" />
+    <Compile Remove="Items\HuckleberryWine.cs" />
+    <Compile Remove="Items\Maltose.cs" />
+    <Compile Remove="Items\Sake.cs" />
+    <Compile Remove="Items\SpecialtyGrains.cs" />
+    <Compile Remove="Items\UrchinOil.cs" />
+    <Compile Remove="Items\VegetableOil.cs" />
+    <Compile Remove="Items\WholeMeal.cs" />
+    <Compile Remove="Items\Wort.cs" />
+    <Compile Remove="Objects\AgingBarrel.cs" />
+    <Compile Remove="Objects\FermentingBarrel.cs" />
+    <Compile Remove="Objects\MortarAndPestle.cs" />
+    <Compile Remove="Skills\zymologySkill.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Items\Beer.cs" />
+    <None Include="Items\Butter.cs" />
+    <None Include="Items\CornSyrup.cs" />
+    <None Include="Items\FishOil.cs" />
+    <None Include="Items\HuckleberryWine.cs" />
+    <None Include="Items\Maltose.cs" />
+    <None Include="Items\Sake.cs" />
+    <None Include="Items\SpecialtyGrains.cs" />
+    <None Include="Items\UrchinOil.cs" />
+    <None Include="Items\VegetableOil.cs" />
+    <None Include="Items\WholeMeal.cs" />
+    <None Include="Items\Wort.cs" />
+    <None Include="Objects\AgingBarrel.cs" />
+    <None Include="Objects\FermentingBarrel.cs" />
+    <None Include="Objects\MortarAndPestle.cs" />
+    <None Include="Skills\zymologySkill.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>Eco.EM.TailingsReprocessing</RootNamespace>
+    <Authors>Elixr Mods</Authors>
+    <Company>Elixr Solutions</Company>
+    <Product>EM TailingsPack</Product>
+    <Version>3.4.0</Version>
+    <Copyright>Elixr Solutions 2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://elixrmods.com/</PackageProjectUrl>
+    <PackageIcon></PackageIcon>
+    <RepositoryUrl>https://git.elixr-solutions.com/elixrmods/elixr-mods</RepositoryUrl>
+    <RepositoryType>Private GitLab</RepositoryType>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Eco.ReferenceAssemblies" Version="0.10.0.4-beta-release-557" />
+	</ItemGroup>
+
+</Project>

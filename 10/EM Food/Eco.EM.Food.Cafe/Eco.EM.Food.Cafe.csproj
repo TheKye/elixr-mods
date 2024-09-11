@@ -1,0 +1,92 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<RootNamespace>Eco.EM.Food.Cafe</RootNamespace>
+		<Company>Elixr Solutions</Company>
+		<Authors>Elixr Mods</Authors>
+		<Product>EM Cafe</Product>
+		<Version>3.4.0</Version>
+		<Copyright>Elixr Solutions 2020</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://elixrmods.com/</PackageProjectUrl>
+		<PackageIcon></PackageIcon>
+		<RepositoryUrl>https://git.elixr-solutions.com/elixrmods/elixr-mods</RepositoryUrl>
+		<RepositoryType>Private GitLab</RepositoryType>
+		<NeutralLanguage>en</NeutralLanguage>
+		<AssemblyName>Eco.EM.Food.Cafe</AssemblyName>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageId>ElixrMods.Food.Cafe</PackageId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>..\..\..\bin\10.0\EM Food</OutputPath>
+	</PropertyGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
+		<Exec Command="cd $(TargetDir)&#xD;&#xA;del *.config&#xD;&#xA;del *.json&#xD;&#xA;del A*&#xD;&#xA;del B*&#xD;&#xA;del C*&#xD;&#xA;del D*&#xD;&#xA;del F*&#xD;&#xA;del G*&#xD;&#xA;del H*&#xD;&#xA;del I*&#xD;&#xA;del J*&#xD;&#xA;del K*&#xD;&#xA;del L*&#xD;&#xA;del M*&#xD;&#xA;del N*&#xD;&#xA;del O*&#xD;&#xA;del P*&#xD;&#xA;del Q*&#xD;&#xA;del R*&#xD;&#xA;del S*&#xD;&#xA;del T*&#xD;&#xA;del U*&#xD;&#xA;del V*&#xD;&#xA;del W*&#xD;&#xA;del X*&#xD;&#xA;del Y*&#xD;&#xA;del Z*&#xD;&#xA;del Eco.Core.dll&#xD;&#xA;del Eco.Gameplay.dll&#xD;&#xA;del Eco.Modkit.dll&#xD;&#xA;del Eco.Mods.dll&#xD;&#xA;del Eco.Networking.ENet.dll&#xD;&#xA;del Eco.Plugins.dll&#xD;&#xA;del Eco.Shared.dll&#xD;&#xA;del Eco.Simulation.dll&#xD;&#xA;del Eco.Stats.dll&#xD;&#xA;del Eco.Tests.dll&#xD;&#xA;del Eco.WebServer.dll&#xD;&#xA;del Eco.WindowsForms.dll&#xD;&#xA;del Eco.World.dll&#xD;&#xA;del Eco.WorldGenerator.dll&#xD;&#xA;del Eco.EM.Framework*&#xD;&#xA;del Eco.EM.Artistry*" />
+	</Target>
+
+	<ItemGroup>
+	  <Compile Remove="CafeBasePlugin.cs" />
+	  <Compile Remove="Items\Batter.cs" />
+	  <Compile Remove="Items\BatteredFish.cs" />
+	  <Compile Remove="Items\BatteredHotChips.cs" />
+	  <Compile Remove="Items\BeefBurger.cs" />
+	  <Compile Remove="Items\Brioche.cs" />
+	  <Compile Remove="Items\Cheese.cs" />
+	  <Compile Remove="Items\Coffee.cs" />
+	  <Compile Remove="Items\CoffeeBean.cs" />
+	  <Compile Remove="Items\Cream.cs" />
+	  <Compile Remove="Items\CrispyRolls.cs" />
+	  <Compile Remove="Items\FizzyPineapple.cs" />
+	  <Compile Remove="Items\GoatMilk.cs" />
+	  <Compile Remove="Items\IceCream.cs" />
+	  <Compile Remove="Items\MacAndCheese.cs" />
+	  <Compile Remove="Items\Mayonaise.cs" />
+	  <Compile Remove="Items\MilkShake.cs" />
+	  <Compile Remove="Items\PapayaMilkshake.cs" />
+	  <Compile Remove="Items\PineappleJuice.cs" />
+	  <Compile Remove="Items\SoyCoffee.cs" />
+	  <Compile Remove="Items\SoyMilk.cs" />
+	  <Compile Remove="Items\SteakBurger.cs" />
+	  <Compile Remove="Items\StraightCutChips.cs" />
+	  <Compile Remove="Items\TurkeyEgg.cs" />
+	  <Compile Remove="Objects\Blender.cs" />
+	  <Compile Remove="Objects\DeepFryer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="CafeBasePlugin.cs" />
+	  <None Include="Items\Batter.cs" />
+	  <None Include="Items\BatteredFish.cs" />
+	  <None Include="Items\BatteredHotChips.cs" />
+	  <None Include="Items\BeefBurger.cs" />
+	  <None Include="Items\Brioche.cs" />
+	  <None Include="Items\Cheese.cs" />
+	  <None Include="Items\Coffee.cs" />
+	  <None Include="Items\CoffeeBean.cs" />
+	  <None Include="Items\Cream.cs" />
+	  <None Include="Items\CrispyRolls.cs" />
+	  <None Include="Items\FizzyPineapple.cs" />
+	  <None Include="Items\GoatMilk.cs" />
+	  <None Include="Items\IceCream.cs" />
+	  <None Include="Items\MacAndCheese.cs" />
+	  <None Include="Items\Mayonaise.cs" />
+	  <None Include="Items\MilkShake.cs" />
+	  <None Include="Items\PapayaMilkshake.cs" />
+	  <None Include="Items\PineappleJuice.cs" />
+	  <None Include="Items\SoyCoffee.cs" />
+	  <None Include="Items\SoyMilk.cs" />
+	  <None Include="Items\SteakBurger.cs" />
+	  <None Include="Items\StraightCutChips.cs" />
+	  <None Include="Items\TurkeyEgg.cs" />
+	  <None Include="Objects\Blender.cs" />
+	  <None Include="Objects\DeepFryer.cs" />
+	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
+  </ItemGroup>
+
+</Project>
