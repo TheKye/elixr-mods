@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    
     <RootNamespace>Eco.EM.TailingsReprocessing</RootNamespace>
     <Authors>Elixr Mods</Authors>
     <Company>Elixr Solutions</Company>

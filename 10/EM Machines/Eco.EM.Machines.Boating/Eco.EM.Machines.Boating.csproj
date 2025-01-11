@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		
 		<RootNamespace>Eco.EM.Machines.Boating</RootNamespace>
 		<Company>Elixr Solutions</Company>
 		<Authors>Elixr Mods</Authors>
@@ -47,8 +47,5 @@
 	  <None Include="Vehicles\PoliceBoat.cs" />
 	  <None Include="Vehicles\SmallWoodenBoat.cs" />
 	  <None Include="Vehicles\WoodenBarge.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
 	</ItemGroup>
 </Project>

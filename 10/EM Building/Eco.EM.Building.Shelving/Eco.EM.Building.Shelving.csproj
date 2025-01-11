@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    
     <RootNamespace>Eco.EM.Building.Shelving</RootNamespace>
     <Company>Elixr Solutions</Company>
     <Authors>Elixr Mods</Authors>
@@ -29,6 +29,6 @@
   </Target>
 
   <ItemGroup>
-    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
+    
   </ItemGroup>
 </Project>

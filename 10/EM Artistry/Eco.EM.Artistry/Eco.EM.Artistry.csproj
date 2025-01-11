@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFramework>net7.0</TargetFramework>
 	<RootNamespace>Eco.EM.Artistry</RootNamespace>
 	<Authors>Elixr Solutions</Authors>
 	<Company>Elixr Solutions</Company>
@@ -162,8 +161,4 @@
 		<EmbeddedResource Include="Ecopedia\ModDocumentation%3bEM Artistry.xml" />
 		<EmbeddedResource Include="Ecopedia\ModDocumentation%3bEM Artistry%3bPainting.xml" />
 	</ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
-  </ItemGroup>
 </Project>

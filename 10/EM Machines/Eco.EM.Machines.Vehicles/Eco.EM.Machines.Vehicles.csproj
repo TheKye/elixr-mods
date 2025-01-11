@@ -2,7 +2,7 @@
 
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		
 		<RootNamespace>Eco.EM.Machines.Vehicles</RootNamespace>
 		<Company>Elixr Solutions</Company>
 		<Authors>Elixr Mods</Authors>
@@ -47,8 +47,5 @@
 	  <None Include="ModularTruck\GarbageTruckItem.cs" />
 	  <None Include="ModularTruck\MiningTruckItem.cs" />
 	  <None Include="ModularTruck\ModularTruck.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
 	</ItemGroup>
 </Project>

@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFramework>net7.0</TargetFramework>
 	  <RootNamespace>Eco.EM.Bricks.Arches</RootNamespace>
 	  <Company>Elixr Solutions</Company>
 	  <Authors>Elixr Mods</Authors>
@@ -32,8 +31,4 @@
     <ProjectReference Include="..\..\Eco.EM.Building.Arches\Eco.EM.Building.Arches.csproj" />
     <ProjectReference Include="..\..\Eco.EM.Building.Bricks\Eco.EM.Building.Bricks.csproj" />
   </ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
-	</ItemGroup>
-
 </Project>

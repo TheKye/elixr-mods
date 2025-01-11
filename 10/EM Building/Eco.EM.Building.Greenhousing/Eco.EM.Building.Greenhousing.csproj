@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFramework>net7.0</TargetFramework>
+	
 	<RootNamespace>Eco.EM.Building.Greenhousing</RootNamespace>
 	<Company>Elixr Solutions</Company>
 	<Authors>Elixr Mods</Authors>
@@ -38,7 +38,7 @@
 	<EmbeddedResource Include="Ecopedia\ModDocumentation%3bEM Building%3bGreenhousing.xml" />
   </ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
+		
 		<PackageReference Include="NetFabric.Hyperlinq" Version="3.0.0-beta48" />
 	</ItemGroup>
 </Project>

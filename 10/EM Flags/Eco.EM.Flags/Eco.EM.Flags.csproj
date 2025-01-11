@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFramework>net7.0</TargetFramework>
+	
 	<RootNamespace>Eco.EM.Flags</RootNamespace>
 	<Authors>Elixr Mods</Authors>
 	<Company>Elixr Solutions</Company>
@@ -24,15 +24,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 	<OutputPath>..\..\..\bin\10.0\Flags</OutputPath>
   </PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="Fody" Version="6.8.0">
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="StrangeLoopGames.PropertyChanged.Fody" Version="3.4.2-slg.3" />
-	</ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
-  </ItemGroup>
 	<ItemGroup>
 	<Compile Remove="ModFlags\BudFlag.cs" />
 	<Compile Remove="ModFlags\EcoManiacsFlag.cs" />

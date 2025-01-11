@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    
     <RootNamespace>Eco.EM.Energy.Fuel</RootNamespace>
     <Version>3.2.0</Version>
     <Authors>Elixr Mods</Authors>
@@ -45,6 +45,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
+    
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFramework>net7.0</TargetFramework>
+	
 	<RootNamespace>Eco.EM.Games.BoardGames</RootNamespace>
 	<Authors>Elixr Mods</Authors>
 	<Company>Elixr Solutions</Company>
@@ -47,8 +47,4 @@
     <None Include="Objects\Battleship\PinMiss.cs" />
     <None Include="Objects\Battleship\Submarine.cs" />
   </ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
-	</ItemGroup>
 </Project>

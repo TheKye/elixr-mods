@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
 		<RootNamespace>Eco.EM.Building.Bricks.Corners</RootNamespace>
 		<Company>Elixr Solutions</Company>
 		<Authors>Elixr Mods</Authors>
@@ -31,9 +30,6 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\..\Eco.EM.Building.Blocks\Eco.EM.Building.Blocks.csproj" />
 	  <ProjectReference Include="..\..\Eco.EM.Building.Bricks\Eco.EM.Building.Bricks.csproj" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
 	</ItemGroup>
 
 </Project>

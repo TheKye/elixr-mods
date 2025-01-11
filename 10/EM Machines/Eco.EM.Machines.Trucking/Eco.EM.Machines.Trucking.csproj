@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		
 		<RootNamespace>Eco.EM.Machines.Trucking</RootNamespace>
 		<Company>Elixr Solutions</Company>
 		<Authors>Elixr Mods</Authors>
@@ -35,8 +35,5 @@
 
 	<ItemGroup>
 	  <None Include="Trucks\Bus.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="ElixrMods.Framework" Version="3.5.2" />
 	</ItemGroup>
 </Project>

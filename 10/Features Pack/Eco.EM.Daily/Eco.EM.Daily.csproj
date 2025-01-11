@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFramework>net7.0</TargetFramework>
+	
 	<RootNamespace>Eco.EM.Daily</RootNamespace>
 	<Company>Elixr Solutions</Company>
 	<Product>EM Daily</Product>
@@ -29,6 +29,6 @@
 		<Content Include="FodyWeavers.xml" />
 	</ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ElixrMods.Framework" Version="3.6.0-rc" />
+    
   </ItemGroup>
 </Project>
