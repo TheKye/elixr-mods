@@ -10,12 +10,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="Fody" Version="6.8.0">
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="StrangeLoopGames.PropertyChanged.Fody" Version="3.4.2-slg.3" />
-	</ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="ElixrMods.Framework" Version="4.0.0.1" />
   </ItemGroup>

@@ -42,4 +42,11 @@
 	<None Include="ModFlags\WhiteTigerFlag.cs" />
 	<None Include="zTemplateForFlagPurchases\TemplatePurchasedFlag.cs" />
   </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Fody" Version="6.8.0">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="StrangeLoopGames.PropertyChanged.Fody" Version="3.4.2-slg.3" />
+	</ItemGroup>
 </Project>
