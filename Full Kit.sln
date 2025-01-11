@@ -148,8 +148,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Energy.NuclearEnergy
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eco.EM.Pm", "10\Features Pack\Eco.EM.Pm\Eco.EM.Pm.csproj", "{B97516A1-1945-4D1A-B2A7-813B64508774}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigShovel", "10\Collaborations\BigShovel\BigShovel.csproj", "{E31F1D3F-9D23-43C8-9F91-F71F7EA16673}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -368,10 +366,6 @@ Global
 		{B97516A1-1945-4D1A-B2A7-813B64508774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B97516A1-1945-4D1A-B2A7-813B64508774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B97516A1-1945-4D1A-B2A7-813B64508774}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E31F1D3F-9D23-43C8-9F91-F71F7EA16673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E31F1D3F-9D23-43C8-9F91-F71F7EA16673}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E31F1D3F-9D23-43C8-9F91-F71F7EA16673}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E31F1D3F-9D23-43C8-9F91-F71F7EA16673}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -446,7 +440,6 @@ Global
 		{626878E1-A50F-492B-8C66-BB1B8BD73E27} = {A49F1602-F229-4163-8E32-DCC2A1599029}
 		{3F5A7D10-428B-41BF-914E-BC7DFFBB814A} = {A49F1602-F229-4163-8E32-DCC2A1599029}
 		{B97516A1-1945-4D1A-B2A7-813B64508774} = {E495F492-BB97-4771-B2AA-22410CC83942}
-		{E31F1D3F-9D23-43C8-9F91-F71F7EA16673} = {8D5AED5B-D3F9-4AE4-9B45-CBED78AAC306}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A740FC1C-A212-4013-AF3E-9877DDE97E70}

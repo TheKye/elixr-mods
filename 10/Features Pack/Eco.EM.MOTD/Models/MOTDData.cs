@@ -49,7 +49,7 @@ namespace EM.ECO.MOTD
                 case "{{USER}}":
                     return user.Name;
                 case "{{SERVER}}":
-                    return NetworkManager.Config.Description;
+                    return NetworkManager.Config.DetailedDescription;
                 case "{{UPTIME}}":
                     return Math.Round(WorldTime.Day).ToString();
                 case "{{DISCORD}}":

@@ -56,14 +56,14 @@ namespace Eco.EM.Admin
             }
             AdminCommands.CarryAll(player.User, true);
         }
-
+        /*
         [ChatCommand("Turn on Meteor", "meteor-on", ChatAuthorizationLevel.Admin)]
         public static void MeteorOn(User user)
         {
-            DisasterPlugin.Settings.CreateMeteor = true;
+            DisasterPlugin.Settings. = true;
             ChatBaseExtended.CBInfo("Meteor has been enabled", user);
         }
-
+        */
         [ChatCommand("Send an announcement to all the users in the server, it appears in their notifications bar so they will get it", "send-global", ChatAuthorizationLevel.Admin)]
         public static void SendAnnouncement(User user, string message)
         {
@@ -88,8 +88,7 @@ namespace Eco.EM.Admin
         [ChatCommand("Turn off Meteor", "meteor-off", ChatAuthorizationLevel.Admin)]
         public static void MeteorOff(User user)
         {
-            DisasterPlugin.Settings.CreateMeteor = false;
-            DisasterPlugin.TheMeteor.BlowUp();
+            DisasterPlugin.TheMeteor.ShootMeteor();
             ChatBaseExtended.CBInfo("Meteor has been disabled", user);
         }
 
@@ -270,7 +269,7 @@ namespace Eco.EM.Admin
                 case true:
                     foreach (var u in UserManager.Users)
                     {
-                        var succeed = u.Inventory.TryAddItems(itemToGive.GetType(), amount);
+                        var succeed = u.Inventory.TryAddItemsNonUnique(itemToGive.GetType(), amount);
                         if (!succeed)
                             GameData.Obj.VoidStorageManager.FillNewVoidStorage(stacks, Localizer.DoStr("Granted Items"), u, Vector3i.NegOne, "");
                         u.Mail(Localizer.DoStr($"The Admin of this server has granted you {amount} {(amount > 1 ? (string.IsNullOrWhiteSpace(itemToGive.DisplayNamePlural) ? itemToGive.DisplayName : itemToGive.DisplayNamePlural ): itemToGive.DisplayName)}, If the item is not in your inventory, check your void storage"), Shared.Services.NotificationCategory.Notifications);
@@ -280,7 +279,7 @@ namespace Eco.EM.Admin
                 case false:
                     foreach (var u in UserManager.OnlineUsers)
                     {
-                        var succeed = u.Inventory.TryAddItems(itemToGive.GetType(), amount);
+                        var succeed = u.Inventory.TryAddItemsNonUnique(itemToGive.GetType(), amount);
                         if (!succeed)
                             GameData.Obj.VoidStorageManager.FillNewVoidStorage(stacks, Localizer.DoStr("Granted Items"), u, Vector3i.NegOne, "");
                         u.Mail(Localizer.DoStr($"The Admin of this server has granted you {amount} {(amount > 1 ? (string.IsNullOrWhiteSpace(itemToGive.DisplayNamePlural) ? itemToGive.DisplayName : itemToGive.DisplayNamePlural ): itemToGive.DisplayName)}, If the item is not in your inventory, check your void storage"), Shared.Services.NotificationCategory.Notifications);

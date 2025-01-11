@@ -2,7 +2,7 @@ using System;
 using Eco.Gameplay.Blocks;
 using Eco.Shared.Localization;
 
-namespace Eco.EM.Building.Arches
+namespace Eco.EM.Building.Arches.BlockFormTypes
 {
 
     public partial class BaseLeftFormType : FormType
@@ -94,7 +94,7 @@ namespace Eco.EM.Building.Arches
         public override int SortOrder => 9;
         public override int MinTier => 1;
     }
- 
+
     public partial class RoofLeftFormType : FormType
     {
         public override string Name => "RoofLeft";
@@ -105,7 +105,7 @@ namespace Eco.EM.Building.Arches
         public override int MinTier => 1;
     }
 
-    public partial class RoofMidFormType : FormType
+    public partial class ARoofMidFormType : FormType
     {
         public override string Name => "RoofMid";
         public override LocString DisplayName => Localizer.DoStr("Arch Roof Mid");

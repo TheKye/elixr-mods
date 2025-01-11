@@ -26,7 +26,7 @@ namespace Eco.EM.Admin.AdminExtentsions
 
             statsDisplay.Append("User: " + user.Name + "\n");
             statsDisplay.Append("SteamID: " + user.SteamId + "\n");
-            statsDisplay.Append("SLGID: " + user.SlgId + "\n");
+            statsDisplay.Append("SLGID: " + user.StrangeId + "\n");
             statsDisplay.Append("Is Admin: " + string.Format(user.IsAdmin ? "Yes".Green() : "No".Red()) + "\n");
             statsDisplay.Append("IP: " + ip + "\n");
             statsDisplay.Append("Current Playtime: " + calc + "\n"); 

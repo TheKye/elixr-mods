@@ -28,7 +28,7 @@ namespace Eco.EM.Building.Greenhousing
             failReason = "";
             var room = RoomData.Obj.GetNearestRoom((Vector3i)pos + Vector3i.Up);
 
-            if (room == Room.Global || !room.RoomStats.Contained) { failReason = "this location is not inside"; return false; }
+            if (!room.RoomStats.Contained) { failReason = "this location is not inside"; return false; }
             if (!Heated(room, pos)) { failReason = "this location is not supported by a Heat Lamp"; return false; }
             if (!Irrigated(room, pos)) { failReason = "this location is not supported by irrigation"; return false; }
             if (room.RoomStats.AverageTier < 1.7) { failReason = "the average tier of materials must be at least 1.7"; return false; }

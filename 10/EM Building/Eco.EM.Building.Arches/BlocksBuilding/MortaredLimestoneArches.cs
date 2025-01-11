@@ -5,6 +5,7 @@ using Eco.Shared.Serialization;
 using Eco.World.Blocks;
 using Eco.Mods.TechTree;
 using Eco.Core.Items;
+using Eco.EM.Building.Arches.BlockFormTypes;
 
 namespace Eco.EM.Building.Arches
 {

@@ -7,8 +7,9 @@ using Eco.Mods.TechTree;
 using Eco.EM.Building.Bricks;
 using Eco.EM.Building.Arches;
 using Eco.Core.Items;
+using Eco.EM.Building.Arches.BlockFormTypes;
 
-namespace Eco.EM.Building.Bricks.Arches
+namespace Eco.EM.Bricks.Arches.Blocks
 {
     #region Single Arches
     #region Base

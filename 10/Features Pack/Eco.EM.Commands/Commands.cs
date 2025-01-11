@@ -65,7 +65,7 @@
             string Title = string.Format(Localizer.DoStr("Stats for {0}"), target.Name);
             StringBuilder PlayerStats = new();
 
-            if (target.IsAdminOrDev && !target.IsAdmin)
+            if (target.IsSlgDev && !target.IsAdmin)
                 Title += " " + Localizer.DoStr("[DEV]");
             else if (target.IsAdmin)
                 Title += " " + Localizer.DoStr("[ADMIN]");

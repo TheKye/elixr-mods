@@ -30,12 +30,12 @@ namespace Eco.EM.Games.BoardGames
         {
             var inventory = player.User.Inventory.ToolbarBackpack;
 
-            var success1 = inventory.TryAddItems(typeof(StonePawnItem), 8);
-            var success2 = inventory.TryAddItems(typeof(StoneQueenItem), 1);
-            var success3 = inventory.TryAddItems(typeof(StoneKnightItem), 2);
-            var success4 = inventory.TryAddItems(typeof(StoneBishopItem), 2);
-            var success5 = inventory.TryAddItems(typeof(StoneRookItem), 2);
-            var success6 = inventory.TryAddItems(typeof(StoneKingItem), 1);
+            var success1 = inventory.TryAddItemsNonUnique(typeof(StonePawnItem), 8);
+            var success2 = inventory.TryAddItemsNonUnique(typeof(StoneQueenItem), 1);
+            var success3 = inventory.TryAddItemsNonUnique(typeof(StoneKnightItem), 2);
+            var success4 = inventory.TryAddItemsNonUnique(typeof(StoneBishopItem), 2);
+            var success5 = inventory.TryAddItemsNonUnique(typeof(StoneRookItem), 2);
+            var success6 = inventory.TryAddItemsNonUnique(typeof(StoneKingItem), 1);
 
             if (success1.Success && success2.Success && success3.Success && success4.Success && success5.Success && success6.Success)
             {
@@ -112,12 +112,12 @@ namespace Eco.EM.Games.BoardGames
         {
             var inventory = player.User.Inventory.ToolbarBackpack;
 
-            var success1 = inventory.TryAddItems(typeof(WoodPawnItem), 8);
-            var success2 = inventory.TryAddItems(typeof(WoodQueenItem), 1);
-            var success3 = inventory.TryAddItems(typeof(WoodKnightItem), 2);
-            var success4 = inventory.TryAddItems(typeof(WoodBishopItem), 2);
-            var success5 = inventory.TryAddItems(typeof(WoodRookItem), 2);
-            var success6 = inventory.TryAddItems(typeof(WoodKingItem), 1);
+            var success1 = inventory.TryAddItemsNonUnique(typeof(WoodPawnItem), 8);
+            var success2 = inventory.TryAddItemsNonUnique(typeof(WoodQueenItem), 1);
+            var success3 = inventory.TryAddItemsNonUnique(typeof(WoodKnightItem), 2);
+            var success4 = inventory.TryAddItemsNonUnique(typeof(WoodBishopItem), 2);
+            var success5 = inventory.TryAddItemsNonUnique(typeof(WoodRookItem), 2);
+            var success6 = inventory.TryAddItemsNonUnique(typeof(WoodKingItem), 1);
 
             if (success1.Success && success2.Success && success3.Success && success4.Success && success5.Success && success6.Success)
             {

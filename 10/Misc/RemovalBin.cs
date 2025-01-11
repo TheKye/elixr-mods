@@ -115,7 +115,7 @@ namespace Eco.Mods.TechTree
                 else
                 {
                     inven.Inventory.TryRemoveItems(item);
-                    inven.Inventory.TryAddItem(typeof(CompostItem));
+                    inven.Inventory.TryAddItemNonUnique(typeof(CompostItem));
                 }
             }
             return;
@@ -147,7 +147,7 @@ namespace Eco.Mods.TechTree
                     else
                     {
                         inven.Inventory.TryRemoveItems(item);
-                        inven.Inventory.TryAddItem(typeof(CompostItem));
+                        inven.Inventory.TryAddItemNonUnique(typeof(CompostItem));
                     }
                 }
             return;

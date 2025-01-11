@@ -87,11 +87,11 @@ namespace Eco.EM.Warp
 
         static WarpPointObject()
         {
-            AddOccupancy<WarpPointObject>(new List<BlockOccupancy>(){
-            new BlockOccupancy(new Vector3i(0, 0, 0), typeof(WorldObjectBlock)),
-            new BlockOccupancy(new Vector3i(0, 1, 0), typeof(WorldObjectBlock)),
-            new BlockOccupancy(new Vector3i(0, 2, 0), typeof(WorldObjectBlock)),
-            });
+            AddOccupancy<WarpPointObject>([
+            new(new Vector3i(0, 0, 0), typeof(WorldObjectBlock)),
+            new(new Vector3i(0, 1, 0), typeof(WorldObjectBlock)),
+            new(new Vector3i(0, 2, 0), typeof(WorldObjectBlock)),
+            ]);
         }
 
         protected override void OnDestroy()
@@ -112,17 +112,17 @@ namespace Eco.EM.Warp
         static WarpPointItem() { }
 
 
-        public override Task<bool> CanPlaceObject(Player player, Vector3i position, Eco.Shared.Math.Quaternion rotation)
+        public override Task<bool> CanPlaceObject(Player player, Vector3 pos, Shared.Math.Quaternion rotation)
         {
             var text = "new point";
 
-            if (!WarpManager.Data.AddPoint(text, (Vector3)position, rotation))
+            if (!WarpManager.Data.AddPoint(text, (Vector3)pos, rotation))
             {
                 ChatBaseExtended.CBError(Defaults.appName + $"A warp point already exists that has not had it's name set, please set or remove that point first", player.User);
                 return Task.FromResult(false);
             }
 
-            if (!base.CanPlaceObject(player, position, rotation).Result)
+            if (!base.CanPlaceObject(player, pos, rotation).Result)
             {
                 WarpManager.Data.RemovePoint(text);
                 return Task.FromResult(false);

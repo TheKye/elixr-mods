@@ -54,7 +54,7 @@ namespace ECO.EM.CustomRequests
                 // attempt to add inventory
                 foreach (var kvp in Box.Contents)
                 {
-                    if (!player.User.Inventory.TryAddItems(kvp.Key, kvp.Value, player.User))
+                    if (!player.User.Inventory.TryAddItemsNonUnique(kvp.Key, kvp.Value, player.User))
                         stacks.Add(new ItemStack(kvp.Key, kvp.Value));                           
                 }
 

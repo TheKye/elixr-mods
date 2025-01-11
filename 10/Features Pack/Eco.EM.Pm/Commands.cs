@@ -15,6 +15,7 @@ using System.Collections.Generic;
     using Eco.Gameplay.Systems.Messaging.Chat.Commands;
     using Eco.EM.Framework.Utils;
     using Eco.Gameplay.Systems.Messaging.Mail;
+    using Eco.Shared.Logging;
 
     [ChatCommandHandler]
     public class FWCommands

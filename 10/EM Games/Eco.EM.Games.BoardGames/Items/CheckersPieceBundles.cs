@@ -31,8 +31,8 @@ namespace Eco.EM.Games.BoardGames
         {
             var inventory = player.User.Inventory.ToolbarBackpack;
 
-            var success1 = inventory.TryAddItems(typeof(RedCheckerPieceItem), 12);
-            var success2 = inventory.TryAddItems(typeof(RedCheckerKingItem), 6);
+            var success1 = inventory.TryAddItemsNonUnique(typeof(RedCheckerPieceItem), 12);
+            var success2 = inventory.TryAddItemsNonUnique(typeof(RedCheckerKingItem), 6);
             if (success1.Success && success2.Success)
             {
                 inventory.TryRemoveItem(typeof(CheckersPieceBundleItem));
@@ -108,8 +108,8 @@ namespace Eco.EM.Games.BoardGames
         {
             var inventory = player.User.Inventory.ToolbarBackpack;
 
-            var success1 = inventory.TryAddItems(typeof(BlackCheckerPieceItem), 12);
-            var success2 = inventory.TryAddItems(typeof(BlackCheckerKingItem), 6);
+            var success1 = inventory.TryAddItemsNonUnique(typeof(BlackCheckerPieceItem), 12);
+            var success2 = inventory.TryAddItemsNonUnique(typeof(BlackCheckerKingItem), 6);
 
             if (success1.Success && success2.Success)
             {

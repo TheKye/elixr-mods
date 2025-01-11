@@ -14,6 +14,7 @@ using Eco.Shared.Localization;
 using Eco.Shared.Serialization;
 using Eco.Shared.Utils;
 using Eco.Shared.Items;
+using Eco.Shared.Logging;
 using Eco.Gameplay.Interactions;
 using Eco.Gameplay.Property;
 using Eco.Core.Utils;
@@ -71,7 +72,7 @@ namespace Eco.Mods.TechTree
 				return;
 			}
 
-			if (gasInven.Stacks.Count() == 0) 
+			if (!gasInven.Stacks.Any()) 
 			{
 				Log.WriteErrorLineLocStr("Out of Order");
 				context.ErrorLocStr("Out of Order");
@@ -82,7 +83,7 @@ namespace Eco.Mods.TechTree
 			{
 				foreach(var istack in gasInven.Stacks)
 				{
-					if (gasInven.Stacks.Count() == 0) break;
+					if (!gasInven.Stacks.Any()) break;
 					if (istack.Item.GetType() == typeof(GasolineItem))
 					{
 						var fuelSlot = vehicleDeed.GetComponent<FuelSupplyComponent>().Inventory;
@@ -137,14 +138,14 @@ namespace Eco.Mods.TechTree
 	[LocDescription("Allows the selling of fuel. Range of 15m to storages. Consumes 50w of Electrical Power")]
 	public partial class GasPumpItem : WorldObjectItem<GasPumpObject>, IPersistentData
 	{
-		[Serialized] public object PersistentData { get; set; }
+		[Serialized] public object? PersistentData { get; set; }
 		
 		static GasPumpItem()
 		{
-			WorldObject.AddOccupancy<GasPumpObject>(new List<BlockOccupancy>(){
-			new BlockOccupancy(new Vector3i(0, 0, 0)),
-			new BlockOccupancy(new Vector3i(0, 1, 0)),
-			});
+			WorldObject.AddOccupancy<GasPumpObject>([
+			new(new Vector3i(0, 0, 0)),
+            new(new Vector3i(0, 1, 0)),
+			]);
 		}
 	 
 	}
@@ -158,19 +159,18 @@ namespace Eco.Mods.TechTree
 			var product = new Recipe(
 				"Gas Pump",  
 				Localizer.DoStr("Gas Pump"),
-				new IngredientElement[]
-				{
-					new IngredientElement(typeof(SteelBarItem), 5, typeof(IndustrySkill)),
-					new IngredientElement(typeof(PlasticItem), 20, typeof(IndustrySkill)),
-					new IngredientElement(typeof(ScrewsItem), 5, typeof(IndustrySkill)),
-					new IngredientElement(typeof(BasicCircuitItem), 2, typeof(IndustrySkill)),
-					new IngredientElement(typeof(GlassItem), 2, typeof(IndustrySkill)),
-					new IngredientElement(typeof(SyntheticRubberItem), 2, typeof(IndustrySkill)),
-				},
+				[
+					new(typeof(SteelBarItem), 5, typeof(IndustrySkill)),
+					new(typeof(PlasticItem), 20, typeof(IndustrySkill)),
+					new(typeof(ScrewsItem), 5, typeof(IndustrySkill)),
+					new(typeof(BasicCircuitItem), 2, typeof(IndustrySkill)),
+					new(typeof(GlassItem), 2, typeof(IndustrySkill)),
+					new(typeof(SyntheticRubberItem), 2, typeof(IndustrySkill)),
+				],
 					new CraftingElement<GasPumpItem>()
 				);
 				
-			this.Recipes = new List<Recipe> { product };
+			this.Recipes = [product];
 			this.ExperienceOnCraft = 1;
 			this.LaborInCalories = CreateLaborInCaloriesValue(500, typeof(IndustrySkill));
 			this.CraftMinutes = CreateCraftTimeValue(typeof(GasPumpRecipe), 5,

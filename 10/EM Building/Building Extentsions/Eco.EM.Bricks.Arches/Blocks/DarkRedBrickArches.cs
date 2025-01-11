@@ -7,8 +7,9 @@ using Eco.Mods.TechTree;
 using Eco.EM.Building.Bricks;
 using Eco.EM.Building.Arches;
 using Eco.Core.Items;
+using Eco.EM.Building.Arches.BlockFormTypes;
 
-namespace Eco.EM.Building.Bricks.Arches
+namespace Eco.EM.Bricks.Arches.Blocks
 {
     #region Single Arches
     #region Base
@@ -530,7 +531,7 @@ namespace Eco.EM.Building.Bricks.Arches
     [Serialized]
     [Wall, Constructed, Solid, BuildRoomMaterialOption]
     [BlockTier(2)]
-    [IsForm(typeof(RoofMidFormType), typeof(DarkRedBrickItem))]
+    [IsForm(typeof(ARoofMidFormType), typeof(DarkRedBrickItem))]
     [Tag("Constructable")]
     public partial class RoofMidDarkRedBrickBlock :
     Block, IRepresentsItem

@@ -36,7 +36,7 @@ namespace Eco.EM.Daily
                 // attempt to add inventory
                 foreach (var item in pack.Contents)
                 {
-                    changes.AddItems(Item.Get(item.PackItemType).Type, (int)item.Amount);
+                    changes.AddItemsNonUnique(Item.Get(item.PackItemType).Type, (int)item.Amount);
                 }
 
                 if (changes.CanApplyNonDisposing())

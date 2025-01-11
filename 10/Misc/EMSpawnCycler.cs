@@ -37,7 +37,7 @@ namespace Eco.EM.CustomisedRequests
                 {
                     var rnd = new Random();
                     Vector3 spawnpost = new(rnd.Range(0, worldDimensions * 10 - 1), rnd.Range(60, 75), rnd.Range(0, worldDimensions * 10 - 1));
-                    Log.WriteErrorLineLocStr($"{spawnpost}");
+                    Eco.Shared.Logging.Log.WriteErrorLineLocStr($"{spawnpost}");
                     u.Player.SetPosition(spawnpost);
                     newUsers.Remove(u);
                 }

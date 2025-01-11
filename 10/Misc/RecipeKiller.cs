@@ -13,7 +13,7 @@ namespace Eco.Mods.TechTree
     public class RecipeKiller : Singleton<RecipeKiller>, IModKitPlugin, IModInit
     {
         //pass (OldRecipeType, ItemType, OldTableType (tabletype can be null if not removing))
-        public static List<(Type, Type, Type)> recipeTypesToKill = new();
+        public static List<(Type, Type, Type)> recipeTypesToKill = [];
 
         public static void PostInitialize()
         {
@@ -23,17 +23,17 @@ namespace Eco.Mods.TechTree
                 Dictionary<Type, RequiresSkillAttribute[]> cachedAttributes = (Dictionary<Type, RequiresSkillAttribute[]>)cache.GetType().GetField("cachedAttributes", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(cache);
                 if (cachedAttributes.ContainsKey(kill.Item1))
                 {
-                    cachedAttributes[kill.Item1] = new RequiresSkillAttribute[0];
+                    cachedAttributes[kill.Item1] = [];
                 }
 
                 Dictionary<Type, IEnumerable<RecipeFamily>> skillToRecipes = (Dictionary<Type, IEnumerable<RecipeFamily>>)typeof(RecipeFamily).GetField("skillToRecipes", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static).GetValue(null);
-                foreach (var skill in RecipeManager.GetRecipe(kill.Item1).Family.RequiredSkills)
+                foreach (var skill in RecipeManager.GetRecipeFamily(kill.Item1).RequiredSkills)
                 {
                     if (skillToRecipes.ContainsKey(skill.SkillType))
                     {
-                        List<RecipeFamily> newEnumerable = new();
+                        List<RecipeFamily> newEnumerable = [];
                         foreach (var recipe in skillToRecipes[skill.SkillType])
-                            if (recipe != RecipeManager.GetRecipe(kill.Item1).Family)
+                            if (recipe != RecipeManager.GetRecipeFamily(kill.Item1))
                                 newEnumerable.Add(recipe);
 
                         skillToRecipes[skill.SkillType] = newEnumerable.AsEnumerable();
@@ -43,20 +43,20 @@ namespace Eco.Mods.TechTree
                 Dictionary<Type, RecipeFamily[]> staticRecipes = (Dictionary<Type, RecipeFamily[]>)typeof(CraftingComponent).GetField("staticRecipes", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static).GetValue(null);
                 if (kill.Item3 != null && staticRecipes.ContainsKey(kill.Item3))
                 {
-                    List<RecipeFamily> newList = new();
+                    List<RecipeFamily> newList = [];
                     staticRecipes[kill.Item3].ForEach((x) =>
                     {
                         var recipeName = x.GetType().Name;
                         if (recipeName != kill.Item1.Name)
                             newList.Add(x);
                     });
-                    staticRecipes[kill.Item3] = newList.ToArray();
+                    staticRecipes[kill.Item3] = [.. newList];
                 }
 
                 Dictionary<Type, List<Type>> recipeToTable = (Dictionary<Type, List<Type>>)typeof(CraftingComponent).GetField("recipeToTable", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static).GetValue(null);
                 if (kill.Item3 != null)
                 {
-                    List<Type> newList = new();
+                    List<Type> newList = [];
                     recipeToTable[kill.Item1].ForEach((x) =>
                     {
                         var tableName = x.Name;
@@ -70,7 +70,7 @@ namespace Eco.Mods.TechTree
                 Dictionary<Type, List<RecipeFamily>> itemToRecipe = (Dictionary<Type, List<RecipeFamily>>)typeof(CraftingComponent).GetField("itemToRecipe", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static).GetValue(null);
                 if (itemToRecipe.ContainsKey(kill.Item2))
                 {
-                    List<RecipeFamily> newList = new();
+                    List<RecipeFamily> newList = [];
                     itemToRecipe[kill.Item2].ForEach((x) =>
                     {
                         var recipeName = x.GetType().Name;
@@ -84,9 +84,9 @@ namespace Eco.Mods.TechTree
                 Dictionary<Type, IEnumerable<RecipeFamily>> itemToRecipesWithProduct = (Dictionary<Type, IEnumerable<RecipeFamily>>)typeof(RecipeFamily).GetField("itemToRecipesWithProduct", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static).GetValue(null);
                 if (itemToRecipesWithProduct.ContainsKey(kill.Item2))
                 {
-                    List<RecipeFamily> newEnumerable = new();
+                    List<RecipeFamily> newEnumerable = [];
                     foreach (var recipe in itemToRecipesWithProduct[kill.Item2])
-                        if (recipe != RecipeManager.GetRecipe(kill.Item1).Family)
+                        if (recipe != RecipeManager.GetRecipeFamily(kill.Item1))
                             newEnumerable.Add(recipe);
 
                     itemToRecipesWithProduct[kill.Item2] = newEnumerable.AsEnumerable();
@@ -97,9 +97,9 @@ namespace Eco.Mods.TechTree
                 {
                     if (itemToRecipesWithTag.ContainsKey(tag))
                     {
-                        List<RecipeFamily> newEnumerable = new();
+                        List<RecipeFamily> newEnumerable = [];
                         foreach (var recipe in itemToRecipesWithTag[tag])
-                            if (recipe != RecipeManager.GetRecipe(kill.Item1).Family)
+                            if (recipe != RecipeManager.GetRecipeFamily(kill.Item1))
                                 newEnumerable.Add(recipe);
 
                         itemToRecipesWithTag[tag] = newEnumerable.AsEnumerable();

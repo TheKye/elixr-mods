@@ -6,6 +6,7 @@ using Eco.Gameplay.Systems.Chat;
 using Eco.Gameplay.Systems.Messaging.Chat.Commands;
 using Eco.Mods.TechTree;
 using Eco.Shared.Localization;
+using Eco.Shared.Time;
 using Eco.Shared.Utils;
 using Eco.Simulation;
 using Eco.Simulation.Time;
@@ -70,11 +71,11 @@ namespace Eco.EM.Admin
         // These are the xp milestones BEFORE difficulty (Collaboration). High collaboration will double these, Low collaboration will halve.
         // To set to 0 stars for new players change the the xp required for level 1 and ensure starting stars is 0.
         // The XP progression for new stars              { 1,  2,  3,   4,   5,	  6 ,  7,   }
-        public static readonly int[] newSpecialtyCosts = { 20, 50, 100, 200, 400, 800, 1600 };
+        public static readonly int[] newSpecialtyCosts = [20, 50, 100, 200, 400, 800, 1600];
 
 
         // Don't change anything below.
-        private float Multiplier => DifficultySettings.Obj.Config.DifficultyModifiers.SpecialtyCostMultiplier;
+        private float Multiplier => DifficultySettings.Obj.Config.GameSettings.AdvancedGameSettings.SkillCostMultiplier;
 
         [ChatCommand("XP level related commands")]
         public static void XPCosts() { }
@@ -82,14 +83,14 @@ namespace Eco.EM.Admin
         [ChatSubCommand("XpCosts", "Display the cost in xp of your next level up", "nextXP", ChatAuthorizationLevel.User)]
         public static void GetNextCost(User user)
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
 
-            sb.AppendLine($"The current difficulty multiplier is {DifficultySettings.Obj.Config.DifficultyModifiers.SpecialtyCostMultiplier} ");
+            sb.AppendLine($"The current difficulty multiplier is {DifficultySettings.Obj.Config.GameSettings.AdvancedGameSettings.SkillCostMultiplier} ");
             sb.AppendLine($"Current costs modified for difficulty: ");
 
-            for (int i = 1; i < SkillManager.Obj.Settings.LevelUps.Length; i++)
+            for (int i = 1; i < SkillManager.Settings.LevelUps.Length; i++)
             {
-                sb.AppendLine($"Level {i} = {SkillManager.Obj.Settings.LevelUps[i] * DifficultySettings.Obj.Config.DifficultyModifiers.SpecialtyCostMultiplier}.");
+                sb.AppendLine($"Level {i} = {SkillManager.Settings.LevelUps[i] * DifficultySettings.Obj.Config.GameSettings.AdvancedGameSettings.SkillCostMultiplier}.");
             }
 
             sb.AppendLine();
@@ -108,12 +109,12 @@ namespace Eco.EM.Admin
 
         public void Initialize(TimedTask timer)
         {
-            SkillManager.Obj.Settings.LevelUps = newSpecialtyCosts;
+            SkillManager.Settings.LevelUps = newSpecialtyCosts;
 
             // Checks for first Login by User and does stuff.
             UserManager.NewUserJoinedEvent.Add(u =>
             {
-                if (u.SlgId != "DiscordLinkSlg")
+                if (u.StrangeId != "DiscordLinkSlg")
                 {
                     // Set the initial XP of new users joining based on BASE XP if toggled and the benefit is not accumulative.
                     if (AdjustAsWorldAges && !AdjustAfterInitialBonusApplied) SetInitialXP(u);

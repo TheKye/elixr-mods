@@ -13,6 +13,7 @@ using Eco.Gameplay.Civics.Titles;
 using Eco.Gameplay.Players;
 using Eco.Gameplay.Voice;
 using Eco.Shared.Localization;
+using Eco.Shared.Logging;
 using Eco.Shared.Serialization;
 using Eco.Shared.Utils;
 using System;
@@ -62,7 +63,7 @@ namespace Eco.EM.Admin
                     if (t.Name.Equals("The Hub Vice-Mayor") || t.Name.Equals("The Hub Vice-Mayor ") || t.Name.Equals("The Hub Vice-Mayor Old") || t.Name.Equals("The Hub Vice-Mayor Old 2"))
                     {
                         Registrars.GetByDerivedType(t.GetType()).Remove(t);
-                            Shared.Utils.Log.WriteErrorLineLocStr($"{t.Name} and has been removed.");
+                            Eco.Shared.Logging.Log.WriteErrorLineLocStr($"{t.Name} and has been removed.");
 
                     }
                 }

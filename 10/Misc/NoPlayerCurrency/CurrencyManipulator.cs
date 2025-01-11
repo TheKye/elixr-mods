@@ -9,6 +9,7 @@ using System.Linq;
 // Please feel free to join our community Discord which aims to brings together modders of Eco to share knowledge, 
 // collaborate on projects and improve the overall experience for Eco modders.
 // https://discord.gg/69UQPD2HBR
+/*
 namespace Eco.EM.Misc.NoPlayerCurrency
 {
     /// <summary>
@@ -51,7 +52,7 @@ namespace Eco.EM.Misc.NoPlayerCurrency
             // Don't do anything if the player is the discord bot or if the player has already got the baseline currency
             UserManager.NewUserJoinedEvent.Add(u =>
             {
-                if (u.SlgId == "DiscordLinkSlg") return;
+                if (u.StrangeId == "DiscordLinkSlg") return;
                 if (CurrencyManager.UsernameToCurrency[u.Name] == BaselineCurrency) return;
 
                 // Set-up logging in player with the baseline currency and nuke the reference to their personal credit
@@ -80,7 +81,7 @@ namespace Eco.EM.Misc.NoPlayerCurrency
         private static User ActivateController()
         {
             UserManager.RequireAuthentication = false;
-            var user = UserManager.GetOrCreateUser("1234", "1234", BOTName);
+            var user = UserManager.GetOrCreateUser("1234", BOTName);
             user.IsLocal();
             UserManager.RequireAuthentication = true;
             return user;
@@ -91,3 +92,4 @@ namespace Eco.EM.Misc.NoPlayerCurrency
         public string GetCategory() => "";
     }
 }
+*/

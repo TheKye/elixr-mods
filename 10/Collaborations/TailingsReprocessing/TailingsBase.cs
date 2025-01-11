@@ -6,6 +6,7 @@ using Eco.Shared.Utils;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Eco.Shared.Logging;
 
 namespace Eco.EM.Tailings
 {
